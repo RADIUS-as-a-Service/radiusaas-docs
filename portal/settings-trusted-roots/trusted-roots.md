@@ -1,0 +1,19 @@
+---
+description: >-
+  This section handles certificates which are allowed to authenticate. Every
+  certificate derived from any of the CAs listed below will get access.
+---
+
+# Trusted Roots for Client Authentication
+
+#### Add&#x20;
+
+To **Add** a trusted root, click **Add** select your format and click **Save.**&#x20;
+
+![](../../.gitbook/assets/radius-add-certificates.gif)
+
+#### Delete
+
+To **Delete** one of your root CAs, expand the corresponding row, click **Delete** and confirm your choice.
+
+![](<../../.gitbook/assets/image (32).png>)
