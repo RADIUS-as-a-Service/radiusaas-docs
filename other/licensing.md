@@ -9,6 +9,15 @@ The subscription license for RADIUSaaS is user-based. _User_ is defined as a per
 * The **minimum amount** of users that can be licensed is **50**.
 * Our license does **not permit to distribute** the licensed amount of users between different M365 tenants.
 
+### Subscription Scope
+
+A RADIUSaaS subscription may be used for the clients and users of **one** organization.&#x20;
+
+It is **not** allowed to&#x20;
+
+* Use one RADIUSaaS subscription for multiple organizations
+* Split one RADIUSaaS subscription and/or re-sell it to multiple organizations
+
 ## Azure Marketplace
 
 ### Pricing Model
