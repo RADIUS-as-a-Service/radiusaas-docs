@@ -23,9 +23,9 @@ It is **not** allowed to&#x20;
 
 * Every plan consists of a **base fee** which includes a certain amount of users per month or per year (depending on the renewal interval of the plan). For example, the **base fee** of _RADIUSaaS 50 (M)_ includes 50 users per month.
 * If more than the included amount of users is required, **additional users** can be added to the  plan. For each additional user, we charge an additional monthly or annual per-user fee, depending on the renewal interval of the underlying plan.&#x20;
-* The logic on our landing page will always choose the cheapest user segment based on your desired amount of total users. For example, if you require 300 users on a monthly basis, we will charge you with the _RADIUSaaS 250 (M)_ **base fee plus 50 additional users** in the segment _RADIUSaaS 250 (M)_.
+* The logic on our landing page will always choose the cheapest user segment based on your desired amount of total users. For example, if you require 300 users on a monthly basis, we will charge you with the _RADIUSaaS 250 (M)_ base fee **plus 50 additional users** in the segment _RADIUSaaS 250 (M)_.
 * You will be prompted for your desired (additional) user count on our landing page during the subscription enrolment process.
-* Upon initial subscription enrolment or during intermediate subscription upgrade, our landing page will inform you about the licensing costs you have to expect to be charged with by Microsoft.&#x20;
+* Upon initial subscription enrolment or during an intermediate subscription upgrade, our landing page will inform you about the licensing costs you have to expect to be charged with by Microsoft.&#x20;
 
 ### Invoicing
 
@@ -42,7 +42,7 @@ It is **not** allowed to&#x20;
 
 #### User Segments
 
-All user segments are available for _RADIUSaaS (M)_ and _RADIUSaaS (Y)_, while the fees in the annual  plan are discounted by 10% in comparison to the monthly plan.
+All user segments are available for _RADIUSaaS (M)_ and _RADIUSaaS (Y)._ The annual plan is discounted by 10% in comparison to the monthly plan (calculated over the period of 12 months).
 
 | **User Segment**      | **Included Users in Base Fee** | **Maximum Total User** |
 | --------------------- | ------------------------------ | ---------------------- |
@@ -52,16 +52,16 @@ All user segments are available for _RADIUSaaS (M)_ and _RADIUSaaS (Y)_, while t
 | RADIUSaaS (M/Y) 5000  | 5,000                          | 9,999                  |
 | RADIUSaaS (M/Y) 10000 | 10,000                         | unlimited              |
 
-For prices in Euro (EUR), please check out our <mark style="color:green;"></mark> [website](https://www.radius-as-a-service.com/pricing/). For prices in your currency, please directly refer to the Azure Marketplace in your [Azure Portal](https://portal.azure.com).
+For prices in Euro (EUR), please check out our <mark style="color:green;"></mark> [website](https://www.radius-as-a-service.com/pricing/). For prices in _your_ currency, please directly refer to the Azure Marketplace in your [Azure Portal](https://portal.azure.com).
 
 ### User Up- and Downgrades
 
 #### Upgrades
 
-* If you would like to upgrade your user count, you can do that any time during the current subscription cycle by navigating to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) <mark style="color:green;"></mark> and clicking on "Open SaaS Account on publisher's site" (see screenshot below). This will re-direct you to our landing page where the amount of users can be upgraded.
+* If you would like to upgrade your user count, you can do that any time during the current subscription cycle by navigating to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) <mark style="color:green;"></mark> and by clicking on "Open SaaS Account on publisher's site" (see screenshot below). This will re-direct you to our landing page where the amount of users can be upgraded.
 * In case the upgrade occurs within the current subscription interval, only the prorated amount of fees incurred by the additional users will be reported to Microsoft for this interval.
-* Our landing page will inform you about the new fees for a complete subscription cycle.
-* After confirming your choice and once we have updated the license for you, you will receive a confirmation email from us.
+* Our landing page will inform you about the new fees for a **complete** subscription cycle.
+* After confirming your choice and once we have updated the license in our backend, you will receive a confirmation email from us.
 
 ![](../.gitbook/assets/radius-saas-base-trimmed-landing-page.png)
 
@@ -97,7 +97,7 @@ In case you have special requirements or constraints that require more than 30 d
 
 To get started with your RADIUSaaS subscription,
 
-* navigate to your [Azure Portal](https://portal.azure.com), find the **Marketplace** and search for **RADIUSaaS** (alternatively, when you are landing via the Azure Marketplace storefront, by clicking "Get it now" you will be automatically directed to the correct offering in the Azure Portal).
+* Navigate to your [Azure Portal](https://portal.azure.com), find the **Marketplace** and search for **RADIUSaaS** (alternatively, when you are landing via the Azure Marketplace storefront, by clicking "Get it now" you will be automatically directed to the correct offering in the Azure Portal).
 
 &#x20;![](<../.gitbook/assets/Screenshot 2021-11-19 at 09.38.45 (1).png>)     ![](<../.gitbook/assets/Screenshot 2021-11-19 at 09.42.00.png>)
 
@@ -106,7 +106,7 @@ To get started with your RADIUSaaS subscription,
 ![](<../.gitbook/assets/Screenshot 2021-11-19 at 09.43.54 (1).png>)
 
 {% hint style="info" %}
-&#x20;Please do not be confused by the random order of the add-ons. This is currently investigated by Microsoft. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
+Please do not be confused by the random order of the add-ons. This is currently investigated by Microsoft. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
 {% endhint %}
 
 * Once you have successfully deployed the SaaS subscription into your Azure SaaS portal, please navigate to our subscription landing page by clicking "Configure account now"
