@@ -97,9 +97,9 @@ In case you have special requirements or constraints that require more than 30 d
 
 To get started with your RADIUSaaS subscription,
 
-* Navigate to your [Azure Portal](https://portal.azure.com), find the **Marketplace** and search for **RADIUSaaS** (alternatively, when you are landing via the Azure Marketplace storefront, by clicking "Get it now" you will be automatically directed to the correct offering in the Azure Portal).
+* Locate RADIUSaaS on the **Marketplace** in your [**Azure Portal**](https://portal.azure.com/#create/glueckkanja-gabag.radiusaas-transactable-prod/preview).
 
-&#x20;![](<../.gitbook/assets/Screenshot 2021-11-19 at 09.38.45 (1).png>)     ![](<../.gitbook/assets/Screenshot 2021-11-19 at 09.42.00.png>)
+![](<../.gitbook/assets/Screenshot 2021-12-06 at 16.20.15.png>)
 
 * Click "Set up + subscribe" and select your preferred plan based on the desired **renewal interval** (monthly or annual). We recommend to keep **Recurring billing** **on** so that you do not have to worry about a manual renewal of your subscription. Click "Review + subscribe" to deploy the subscription to your Azure SaaS.
 
