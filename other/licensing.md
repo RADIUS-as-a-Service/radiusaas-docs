@@ -83,9 +83,7 @@ For prices in Euro (EUR), please check out our <mark style="color:green;"></mark
 
 ### **Trials**
 
-By default, when you purchase a plan from the Azure Marketplace, we will apply a 30-day trial period, for which we will not charge any subscription fees. Furthermore, if you decide to cancel the subscription during this period, we will not report any fees to Microsoft.&#x20;
-
-This means, if you choose _RADIUSaaS (M)_, the first month will be for free. If you choose _RADIUSaaS (Y)_, you will only be charged for eleven months during the first subscription interval.
+By default, when you purchase a plan from the Azure Marketplace, we will apply a 30-day trial period, for which we will not charge any subscription fees.&#x20;
 
 This applies only to those customers who have never had a trial period before.
 
