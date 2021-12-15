@@ -29,7 +29,7 @@ It is **not** allowed to&#x20;
 
 ### Invoicing
 
-* During the first subscription interval, your subscription fees are not immediately due after completing the subscription enrolment. Instead we will report them to Microsoft after your cancellation grace period or trial period (whatever finishes last) expires.&#x20;
+* During the first subscription interval, your subscription fees are not immediately due after completing the subscription enrolment. Instead we will report them to Microsoft after your cancellation grace period has expired.&#x20;
 * Upon every renewal date, we will report your fees to Microsoft immediately.
 * The related items should appear on your Microsoft invoice (PayAsYouGo) the month after we have reported your fees to Microsoft.
 
