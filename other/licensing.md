@@ -1,14 +1,30 @@
 # Licensing
 
-## General
+{% hint style="success" %}
+The subscription for RADIUSaaS is **user-based**.&#x20;
+{% endhint %}
 
-The subscription license for RADIUSaaS is user-based. _User_ is defined as a person who is assigned to at least one device that is enabled to authenticate towards a network via RADIUSaaS. One single _User_ may be assigned to up to five stationary devices **and** five mobile devices (5+5).
+## User definition
 
-#### Limitations
+The subscription of a "user" is required for each user, who or whose device is enabled to authenticate against RADIUSaaS.
 
-* The **minimum amount** of users that can be licensed is **50**.
+{% hint style="info" %}
+In many cases the required number of RADIUSaaS users equals the amount of users, who are assigned to the corresponding network profile (e.g. WIFI profile) in the management system (e.g. Microsoft Endpoint Manager).
+{% endhint %}
 
-### Subscription Scope
+The minimum amount of users that can be subscribed for one organization is 50.
+
+A user subscription is bound to a single user for at least one calendar month and cannot be shared with other users.
+
+## Device limits per user
+
+One single _User_ may be assigned to up to
+
+* five stationary devices (PC, laptop)\
+  and
+* five mobile devices (mobile phone, tablet).
+
+## Subscription scope
 
 A RADIUSaaS subscription may be used for the clients and users of **one** organization.&#x20;
 
