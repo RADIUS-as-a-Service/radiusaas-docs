@@ -56,7 +56,7 @@ where
   and&#x20;
 * `Downtime` is the accumulated amount of time where the RADIUSaaS service is unavailable. The RADIUSaaS service is considered unavailable, when there is no connectivity between the RADIUSaaS service and the internet.
 
-In case of service downtime, affected customers are eligible and may apply for the following service credits for the affected calendar month:
+In the event of a service outage, affected customers are entitled to apply for the following credits for the affected calendar month:
 
 * service availability < 99.5% => 10%
 * service availability < 99.0% => 25%
