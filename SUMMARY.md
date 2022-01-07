@@ -43,9 +43,9 @@
 ## Other
 
 * [Troubleshooting](other/trubleshooting.md)
-* [Licensing](other/licensing.md)
 
 ***
 
+* [Licensing](licensing.md)
 * [Support & Service Level](support-and-service-level.md)
 * [RADIUSaaS Website](https://www.radius-as-a-service.com)
