@@ -8,7 +8,7 @@ The following diagram shows the RADIUS authentication flow:
 
 ![](../.gitbook/assets/radius-authentication-sequence.png)
 
-In the first authentication sequence, the communication is secured by an MD5 based hashing algorithm (partially encrypted via the “Shared secret”). No secrets are transported in this phase.
+In the first authentication sequence, the communication is secured by an MD5 based hashing algorithm (partially encrypted with the shared secret). No secrets are transported in this phase.
 
 In the second sequence, a TLS-based EAP (e.g. EAP-TLS) encrypts the traffic. The EAP-TLS traffic it tunneled in the UDP traffic. If you use certificate based authentication, no secrets are transported in this phase.
 
