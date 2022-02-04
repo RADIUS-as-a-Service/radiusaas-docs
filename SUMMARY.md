@@ -43,6 +43,7 @@
 ## Other
 
 * [Troubleshooting](other/trubleshooting.md)
+* [FAQ](other/faq.md)
 
 ***
 
