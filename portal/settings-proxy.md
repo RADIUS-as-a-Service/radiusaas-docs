@@ -7,9 +7,13 @@ description: >-
 
 # Proxy
 
-### Performance&#x20;
+### Performance / Scaling
 
 Each proxy can handle up to 1500 **concurrent** connections flawlessly.&#x20;
+
+#### Scaling
+
+We've never seen any issues if you choose Europe as proxy location, no matter where your clients are located. Nonetheless it can increase your performance to choose the Proxy at one location which is as near as possible to your offices.
 
 ### Add&#x20;
 

@@ -14,6 +14,10 @@
   * [XML](portal/settings-trusted-roots/xml.md)
 * [Log](portal/log.md)
 * [Permissions](portal/permissions.md)
+* [Rules](portal/rules/README.md)
+  * [General Structure](portal/rules/general-structure.md)
+  * [WiFi](portal/rules/wifi.md)
+  * [LAN](portal/rules/lan.md)
 
 ## Azure
 
