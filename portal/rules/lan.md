@@ -16,7 +16,7 @@ Under the **Authentication** hive, your first choice is whether you want to allo
 
 ### **Certificate-based Authentication**
 
-For certificate-based authentication you have the following choices to further contrain incoming authentication requests.
+For certificate-based authentication you have the following choices to further constrain incoming authentication requests.
 
 #### Allow only specific CAs (Trusted Roots)
 

@@ -16,7 +16,7 @@ Under the **Authentication** hive, your first choice is whether you want to allo
 
 ### **Certificate-based Authentication**
 
-For certificate-based authentication you have the following choices to further contrain incoming authentication requests.
+For certificate-based authentication you have the following choices to further constrain incoming authentication requests.
 
 #### Allow only specific CAs (Trusted Roots)
 
@@ -51,7 +51,7 @@ Under the **Configuration** hive you are able to configure additional filter cri
 To set an SSID Filter, either select **Names** or **Groups**.&#x20;
 
 * If you select **Names**, you can specify multiple **SSIDs.**
-* If you selecy **Groups** you can reference one or more of your pre-defined **SSID-Groups**.&#x20;
+* If you select **Groups** you can reference one or more of your pre-defined **SSID-Groups**.&#x20;
 
 ![](<../../.gitbook/assets/image (68).png>)
 

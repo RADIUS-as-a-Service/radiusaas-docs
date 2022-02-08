@@ -11,7 +11,7 @@ Before digging into the different configuration options of the Rule Engine, let'
 
 ## General&#x20;
 
-All rules you have configured will be applied **after** successful credential authentication, which means the rules only become effective after valid authentication credentials have been provided. This implies, in order to pass the first authentication wall, valid **Trusted Roots** (certificate-based authentication) or **Users** (username+password-based authentication) have to be added to your instance.&#x20;
+All rules you have configured will be applied **after** successful credential authentication, which means the rules only become effective after valid authentication credentials have been provided. This implies, in order to pass the first authentication wall, valid **Trusted Roots** (certificate-based authentication) or **Users** (Username+Password-based authentication) have to be added to your instance.&#x20;
 
 ### Default Rule
 
@@ -36,7 +36,7 @@ In case you end up having a large number of rules, we recommend - for the sake o
 ### Authentication
 
 * Allow only specific authentication sources
-  * e.g. WiFi or LAN (VPN support is in the works)
+  * e.g. WiFi or LAN (VPN support is in progress)
 * Allow only specific authentication types
   * e.g. Certificate or Username+Password
 
