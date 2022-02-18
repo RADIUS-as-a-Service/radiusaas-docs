@@ -6,14 +6,14 @@
 * All subscription plans consist of a **base fee** which includes a certain amount of users per subscription cycle - depending on the **user segment**. For example, the **base fee** for the user segment _RADIUSaaS (M) 50_ includes 50 users per month.
 * If more than the included amount of users is required, **additional users** can be added to the  plan. For each additional user, we charge an additional per-user fee.
 
-
-
 ## Invoicing
 
 * During the first subscription interval, your subscription fees are not immediately due after completing the subscription enrolment. Instead we will start billing once your cancellation grace period has expired.&#x20;
 * Upon every renewal date, you will be billed immediately.
 * The related items should appear on your Microsoft Azure invoice (Pay-As-You-Go) the month after we have reported your fees to Microsoft.
-* In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja-gab".![](<../.gitbook/assets/image (64).png>)
+* In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja-gab".
+
+![](<../.gitbook/assets/image (73).png>)
 
 {% hint style="info" %}
 For a more detailed cost breakdown of your base and additional user fees, please refer to the invoice in your Azure portal.
@@ -46,6 +46,12 @@ The following user segments are available for both, monthly and annual plans.&#x
 
 For prices in Euro (EUR), please check out our <mark style="color:green;"></mark> [website](https://www.radius-as-a-service.com/pricing/). For prices in _your_ currency, please directly refer to the **Marketplace** in the [Azure Portal](https://portal.azure.com).
 
+### RADIUSaaS & SCEPman Bundle
+
+We offer RADIUSaaS as well as our cloud-CA solution [SCEPman](https://www.scepman.com) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](azure-marketplace.md#user-segments).&#x20;
+
+The information provided throughout this article is analogously applicable for RADIUSaaS & SCEPman Bundle subscriptions.
+
 ## User Up- and Downgrades
 
 ### Upgrades
@@ -73,7 +79,7 @@ In case you would like to test RADIUSaaS, please [get in contact with us](https:
 
 To get started with your RADIUSaaS subscription,
 
-* Locate RADIUSaaS on the **Marketplace** in your [**Azure Portal**](https://portal.azure.com/#create/glueckkanja-gabag.radiusaas-transactable-prod/preview).&#x20;
+* Locate RADIUSaaS on the **Marketplace** in your [**Azure Portal**](https://portal.azure.com/#create/glueckkanja-gabag.radiusaas-transactable-prod/preview)&#x20;
 * Select the RADIUSaaS **Plan** based on your preferred renewal interval and click "Subscribe"
 
 ![](<../.gitbook/assets/image (65).png>)
