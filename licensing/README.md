@@ -79,7 +79,7 @@ For prices in Euro (EUR), please check out our <mark style="color:green;"></mark
 * Our landing page will inform you about the new fees for a **complete** subscription cycle.
 * After confirming your choice and once we have updated the license in our backend, you will receive a confirmation email from us.
 
-![](.gitbook/assets/radius-saas-base-trimmed-landing-page.png)
+![](../.gitbook/assets/radius-saas-base-trimmed-landing-page.png)
 
 #### Downgrades
 
@@ -87,7 +87,7 @@ For prices in Euro (EUR), please check out our <mark style="color:green;"></mark
 * If you want to perform a downgrade, please cancel your current subscription from your <mark style="color:green;"></mark> [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) towards the end of the current cycle by clicking "Cancel subscription" (see screenshot below) and re-subscribe to your desired plan with the desired user amount once the cancellation becomes effective.
 * Please [get in contact with us](https://www.radius-as-a-service.com/help/) directly or send us an email to [sales@radiusaas.com](mailto:sales@radiusaas.com) <mark style="color:green;"></mark> **prior to the downgrade**, so we can update the license on your RADIUSaaS instance without having to de-commission it. This way, we can ensure an uninterrupted service of your RADIUSaaS instance during the user downgrade.
 
-![](.gitbook/assets/radius-saas-base-trimmed-cancel-subscription.png)
+![](../.gitbook/assets/radius-saas-base-trimmed-cancel-subscription.png)
 
 #### Change of Renewal Cycle
 
@@ -107,11 +107,11 @@ To get started with your RADIUSaaS subscription,
 
 * Locate RADIUSaaS on the **Marketplace** in your [**Azure Portal**](https://portal.azure.com/#create/glueckkanja-gabag.radiusaas-transactable-prod/preview).
 
-![](<.gitbook/assets/Screenshot 2021-12-06 at 16.20.15.png>)
+![](<../.gitbook/assets/Screenshot 2021-12-06 at 16.20.15.png>)
 
 * Click "Set up + subscribe" and select your preferred plan based on the desired **renewal interval** (monthly or annual). We recommend to keep **Recurring billing** **on** so that you do not have to worry about a manual renewal of your subscription. Click "Review + subscribe" to deploy the subscription to your Azure SaaS.
 
-![](<.gitbook/assets/Screenshot 2021-11-19 at 09.43.54 (1).png>)
+![](<../.gitbook/assets/Screenshot 2021-11-19 at 09.43.54 (1).png>)
 
 {% hint style="info" %}
 The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing costs.

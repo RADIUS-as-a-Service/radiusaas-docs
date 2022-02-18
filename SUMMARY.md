@@ -51,6 +51,7 @@
 
 ***
 
-* [Licensing](licensing.md)
+* [Licensing](licensing/README.md)
+  * [Azure Marketplace](licensing/azure-marketplace.md)
 * [Support & Service Level](support-and-service-level.md)
 * [RADIUSaaS Website](https://www.radius-as-a-service.com)

@@ -6,7 +6,7 @@
 2. Give the rule a **Name** that explains for what the rule is used for. Furthermore, a descriptive name will help you to identify authentication requests processed by this rule in your logs easily later on.
 3. Do not forget to **Enable** the rule!
 
-![](<../../.gitbook/assets/image (65).png>)
+![](<../../.gitbook/assets/image (65) (1).png>)
 
 ## **Authentication**&#x20;
 
@@ -30,7 +30,7 @@ This is a historical setting. If your clients are authenticating with certificat
 
 In case you have entered your Tenant IDs as described [here](../settings-trusted-roots/intune-cert.md#configure-intune-ids), the default behaviour of RADIUSaaS is that only machines presenting a certificate with extension OID **1.2.840.113556.5.14** and a whitelisted value for the Tenand ID will get access to the network. With the rule engine, you now have the option to further restrict the access to specific Intune IDs for a specific rule or to ignore the certificate extension. This allows you to have a multi-deployment setup, where some clients come with certificates providing the respective OID and some do not.&#x20;
 
-![](<../../.gitbook/assets/image (77).png>)
+![](<../../.gitbook/assets/image (77) (1).png>)
 
 ### Username/Password-based Authentication
 
@@ -79,6 +79,6 @@ The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The f
 
 As an example, the following rule will assign the VLAN ID 15 based on the Subject Name attribute **OU** prefixed with **vlan-**.
 
-![](<../../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (78) (1).png>)
 
 ![](<../../.gitbook/assets/image (67).png>)
