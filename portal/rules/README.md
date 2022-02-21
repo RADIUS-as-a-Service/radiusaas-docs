@@ -7,6 +7,12 @@ description: >-
 
 # Rules
 
+{% hint style="info" %}
+The Rules feature is currently in Beta phase and therefore available on request, only.&#x20;
+
+[Please let us know](https://www.radius-as-a-service.com/help/), if you want us to activate it in your RADIUSaaS instance.
+{% endhint %}
+
 Before digging into the different configuration options of the Rule Engine, let's start with a general description on how every authentication request will be handled.&#x20;
 
 ## General&#x20;
