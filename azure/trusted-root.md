@@ -8,7 +8,7 @@ If you've uploaded your own certificate or created your [own CA](../portal/setti
 
 ### Adding a trusted root profile for your clients&#x20;
 
-1. Log in to your [Azure portal](https://porta.azure.com)
+1. Log in to your [Azure portal](https://portal.azure.com)
 2. Navigate to **Microsoft Intune** and click **Device configuration**
 3. Then click **Create Profile**
 4. Select the correct **Platform** for your device

@@ -12,7 +12,7 @@ If User certificates where deployed, follow the steps under [User Certificates](
 
 The following list and screenshot show you all necessary configurations:
 
-1. Log in to your [Azure portal](https://porta.azure.com)
+1. Log in to your [Azure portal](https://portal.azure.com)
 2. Navigate to **Microsoft Intune(Endpoint Manager)** -> **Devices** -> **Windows**  -> **Configuration profiles**
 3. Then click **Create Profile**
 4. As **Platform** select **Windows 8.1 and later**
