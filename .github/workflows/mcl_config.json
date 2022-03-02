@@ -1,0 +1,29 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": ".*yourname.radius-as-a-service.com.*"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "\\\\_",
+      "replacement": "_"
+    },
+    {
+      "pattern": "\\\\_",
+      "replacement": "_"
+    },
+    {
+      "pattern": "\\\\_",
+      "replacement": "_"
+    },
+    {
+      "pattern": "\\\\_",
+      "replacement": "_"
+    },
+    {
+      "pattern": "\\\\_",
+      "replacement": "_"
+    }
+  ]
+}
