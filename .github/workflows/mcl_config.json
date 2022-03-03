@@ -14,7 +14,7 @@
     },
     {
       "pattern": "\\\\&",
-      "replacement": "&"
+      "replacement": "\&"
     },
     {
       "pattern": "\\\\_",
