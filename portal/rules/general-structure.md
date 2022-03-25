@@ -18,7 +18,7 @@ To restrict the access to only allow authentication requests originating from sp
 1. Add the respective **MAC** **address(es)** or **SSID(s)** directly in the Rule collection
 2. Create Groups that allow you to add multiple targets and manage them more efficiently. This way, items can be added or removed without the need to touch the Rule itself, as the Rule will only reference the Group.&#x20;
 
-![](<../../.gitbook/assets/image (66).png>)
+![](<../../.gitbook/assets/image (66) (1).png>)
 
 ## Custom Certificate Extensions
 

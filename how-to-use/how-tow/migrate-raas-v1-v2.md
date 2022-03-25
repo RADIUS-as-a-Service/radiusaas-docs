@@ -20,6 +20,6 @@ If your WiFi infrastructure does not support RadSec to the following:
 
 Leave the old instances as secondary and third fallback server intact, so if your configuration does not work initially, your clients will still be able to authenticate.&#x20;
 
-Once you are able to see successful authentications to your V2 instance in the [logs](../../portal/log.md#logs), disable or remove the IP addresses from your RADIUS Server lists.&#x20;
+Once you are able to see successful authentications to your V2 instance in the [logs](../../portal/insights/log.md#logs), disable or remove the IP addresses from your RADIUS Server lists.&#x20;
 
 A day or week later, after everything is working stable, please inform us, that you have successfully migrated and that you do not need your V1 instance anymore so we can start  disenrolling it. If we do not see any new incoming requests to your old instances for a certain period, we will then finally disable it.&#x20;

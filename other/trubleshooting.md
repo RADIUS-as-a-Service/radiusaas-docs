@@ -17,7 +17,7 @@ Check that you've done the following:&#x20;
 * Told your RADIUS Server which certificates are allowed to connect as described [here](../portal/settings-trusted-roots/trusted-roots.md#add)
 * Imported the active RADIUS Server certificate as trusted root on your client as described [here](../azure/trusted-root.md#to-add-a-trusted-root-profile-for-your-clients)
 
-Also check your [Logs](../portal/log.md#logs). There is a detailed description of the error. May it's [this](trubleshooting.md#fatal-decrypt-error) issue.
+Also check your [Logs](../portal/insights/log.md#logs). There is a detailed description of the error. May it's [this](trubleshooting.md#fatal-decrypt-error) issue.
 
 
 
@@ -33,7 +33,7 @@ Make sure that you have referenced the Server certificate in your WiFi Profile:
 
 ### Unknown CA
 
-if you see something like this in your [Logs](../portal/log.md#logs):
+if you see something like this in your [Logs](../portal/insights/log.md#logs):
 
 ```
 Mon Jul 12 12:38:09 2021 : ERROR: (14872) eap_tls:   ERROR: SSL says error 20 : unable to get local issuer certificate
@@ -50,7 +50,7 @@ It can be one of this options:&#x20;
 
 ### Fatal decrypt error
 
-If you can see something like this in your [Logs](../portal/log.md#logs):
+If you can see something like this in your [Logs](../portal/insights/log.md#logs):
 
 ```
 Wed Apr  7 08:14:39 2021 : Auth: (312) Login incorrect (eap_tls: TLS Alert write:fatal:decrypt error): [host/00128t09-cbna-469c-9768-2783d28eikl9/<via Auth-Type = eap>] (from client contoso port 1 cli 84-FD-D1-8C-0E-33)
