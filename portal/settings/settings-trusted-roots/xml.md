@@ -8,5 +8,5 @@ description: Needed for device certificates
 
 To generate your XML, collapse the **XML** section, enter your **SSID** and click **Download**.
 
-![](../../.gitbook/assets/radius-wifi-lan-policy.gif)
+![](../../../.gitbook/assets/radius-wifi-lan-policy.gif)
 

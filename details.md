@@ -26,11 +26,11 @@ A Certificate Revocation List (CRL) is currently not supported.&#x20;
 
 #### Admin Portal
 
-Each customer has access to their own personal instance through their own RADIUSaaS Admin Portal, which can be used for tasks such as [creating users](portal/users.md#add), changing [allowed certificates](portal/settings-trusted-roots/), [adding proxies](portal/settings-proxy.md), creating [rules](portal/rules/) or performing troubleshooting using RADIUSaaS Insights.&#x20;
+Each customer has access to their own personal instance through their own RADIUSaaS Admin Portal, which can be used for tasks such as [creating users](portal/users.md#add), changing [allowed certificates](portal/settings/settings-trusted-roots/), [adding proxies](portal/settings/settings-proxy.md), creating [rules](portal/settings/rules/) or performing troubleshooting using RADIUSaaS Insights.&#x20;
 
 #### RADIUS to RadSec Proxy
 
-Our RADIUS server only allows [RadSec](details.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, our RADIUSaaS features a [proxy](portal/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use our service with traditional UDP.
+Our RADIUS server only allows [RadSec](details.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, our RADIUSaaS features a [proxy](portal/settings/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use our service with traditional UDP.
 
 #### Guests and IOT Devices&#x20;
 

@@ -8,7 +8,7 @@
 This is a **mandatory** step.
 {% endhint %}
 
-To establish trust between your RadSec-capable network gear and RADIUSaaS, upload the RadSec server certificate as described [here](../../portal/settings-server/certificates.md#radsec-connection-certificates).
+To establish trust between your RadSec-capable network gear and RADIUSaaS, upload the RadSec server certificate as described [here](../../portal/settings/settings-server/certificates.md#radsec-connection-certificates).
 
 Your network gear vendor should either provide this certificate or provide guidance on how to create one (CSR or via FQDN).&#x20;
 
@@ -24,8 +24,8 @@ Since the client will establish a TLS tunnel directly to RADIUSaaS during networ
 If you are planning to use RADIUSaaS along with **Android** devices, you must create a custom CA or upload your own certificate that was signed by a CA. The default self-signed server certificate will not allow Android devices to connect to RADIUSaaS.
 {% endhint %}
 
-1. Create a custom CA, upload your own certificate or use the default self-signed server certificate as described [here](../../portal/settings-server/certificates.md#server-certificates).&#x20;
-2. Download the **active** server certificate as described [here](../../portal/settings-server/certificates.md#download). You will need it later on for the Intune device profile.
+1. Create a custom CA, upload your own certificate or use the default self-signed server certificate as described [here](../../portal/settings/settings-server/certificates.md#server-certificates).&#x20;
+2. Download the **active** server certificate as described [here](../../portal/settings/settings-server/certificates.md#download). You will need it later on for the Intune device profile.
 
 ### Step 3: Trusted Root CA
 
@@ -33,7 +33,7 @@ If you are planning to use RADIUSaaS along with **Android** devices, you must cr
 This is a **mandatory** step.
 {% endhint %}
 
-1. Tell your RADIUSaaS instance which certificates will be allowed to connect as described [here](../../portal/settings-trusted-roots/trusted-roots.md#add) .
+1. Tell your RADIUSaaS instance which certificates will be allowed to connect as described [here](../../portal/settings/settings-trusted-roots/trusted-roots.md#add) .
 
 ### Step 4: Network Gear Configuration
 
@@ -46,9 +46,9 @@ This is a **mandatory** step.
 For some popular vendors, we have prepared representative step-by-step guides [here](../access-point-setup/radsec-available/). While we are not able to provide documentation for every vendor, in general, the following steps apply:
 
 1. Import your active RADIUS Server Certificate to your WiFi infrastructure.
-2. Add the RadSec certificate, which your APs are using to your **RadSec allowed Connection** list as described [here](../../portal/settings-server/certificates.md#add-a-new-certificate).
+2. Add the RadSec certificate, which your APs are using to your **RadSec allowed Connection** list as described [here](../../portal/settings/settings-server/certificates.md#add-a-new-certificate).
 3. Create a new RADIUS profile.
-4. Set the IP address and the port of your server in your RADIUS profile. Therefore, use the [public RadSec IP address](../../portal/settings-server/ports-and-ip-addresses.md#server-ip-address) and the standard RadSec port (2083).
+4. Set the IP address and the port of your server in your RADIUS profile. Therefore, use the [public RadSec IP address](../../portal/settings/settings-server/ports-and-ip-addresses.md#server-ip-address) and the standard RadSec port (2083).
 5. Assign the created profile to your SSID(s).
 
 #### Wired (LAN) Switches
@@ -93,6 +93,6 @@ This is an **optional** step.
 
 If you would like to configure additional rules, for example to assign VLAN IDs or limit authentication requests to certain trusted CA or WiFi access points, please check out the RADIUSaaS Rule Engine.
 
-{% content-ref url="../../portal/rules/" %}
-[rules](../../portal/rules/)
+{% content-ref url="../../portal/settings/rules/" %}
+[rules](../../portal/settings/rules/)
 {% endcontent-ref %}

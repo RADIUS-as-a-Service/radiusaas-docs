@@ -8,7 +8,7 @@ RADIUSaaS leverages Azure AD as identity provider for the logon-authentication t
 Therefore administrators enjoy the comfort of working with their own Azure AD accounts and do not have to setup additional accounts.
 {% endhint %}
 
-![](../.gitbook/assets/radius-permissions.gif)
+![](../../.gitbook/assets/radius-permissions.gif)
 
 Please enter **Azure AD UPNs** in the provided fields and **separate them with comma and space**.&#x20;
 

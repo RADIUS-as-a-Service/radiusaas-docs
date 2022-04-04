@@ -6,14 +6,14 @@ description: >-
 
 # Ports & IP Addresses
 
-![](<../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65).png>)
 
 ## Radsec / TCP
 
 ### **Server IP Address**
 
 {% hint style="warning" %}
-This IP address only speaks [RadSec](../../details.md#what-is-radsec)!
+This IP address only speaks [RadSec](../../../details.md#what-is-radsec)!
 {% endhint %}
 
 The public IP Address at which your server is available. ****&#x20;
@@ -27,7 +27,7 @@ The standard RadSec port.
 ### Server IP Address and Location
 
 {% hint style="warning" %}
-This IP address only speaks [RADIUS](../../details.md#what-is-radius)!
+This IP address only speaks [RADIUS](../../../details.md#what-is-radius)!
 {% endhint %}
 
 Geo-location of the RADIUS proxy/proxies as well as the respective public IP address(es).

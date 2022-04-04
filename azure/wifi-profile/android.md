@@ -15,7 +15,7 @@ The following list and screenshot show you all necessary configurations:
 7. As **Wi-Fi type** select **Enterprise**
 8. Enter your **SSID**
 9. As **EAP type** choose **EAP - TLS**
-10. Next, as **Radius server name** add the DNS name from your [**Server Certificate**](../../portal/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value.&#x20;
+10. Next, as **Radius server name** add the DNS name from your [**Server Certificate**](../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value.&#x20;
 11. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 12. Under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
 13. Finally, under **Certificates** select the SCEP profile you would like to use for authentication.

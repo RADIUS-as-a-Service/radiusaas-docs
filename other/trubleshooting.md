@@ -6,7 +6,7 @@
 
 ![](<../.gitbook/assets/image (43).png>)
 
-Check that your client has a certificate to authenticate. And you're using the correct [XML](../portal/settings-trusted-roots/xml.md#wifi)
+Check that your client has a certificate to authenticate. And you're using the correct [XML](../portal/settings/settings-trusted-roots/xml.md#wifi)
 
 ### Trusted Root issues&#x20;
 
@@ -14,10 +14,10 @@ Check that your client has a certificate to authenticate. And you're using the c
 
 Check that you've done the following:&#x20;
 
-* Told your RADIUS Server which certificates are allowed to connect as described [here](../portal/settings-trusted-roots/trusted-roots.md#add)
+* Told your RADIUS Server which certificates are allowed to connect as described [here](../portal/settings/settings-trusted-roots/trusted-roots.md#add)
 * Imported the active RADIUS Server certificate as trusted root on your client as described [here](../azure/trusted-root.md#to-add-a-trusted-root-profile-for-your-clients)
 
-Also check your [Logs](../portal/log.md#logs). There is a detailed description of the error. May it's [this](trubleshooting.md#fatal-decrypt-error) issue.
+Also check your [Logs](../portal/insights/log.md#logs). There is a detailed description of the error. May it's [this](trubleshooting.md#fatal-decrypt-error) issue.
 
 
 
@@ -33,7 +33,7 @@ Make sure that you have referenced the Server certificate in your WiFi Profile:
 
 ### Unknown CA
 
-if you see something like this in your [Logs](../portal/log.md#logs):
+if you see something like this in your [Logs](../portal/insights/log.md#logs):
 
 ```
 Mon Jul 12 12:38:09 2021 : ERROR: (14872) eap_tls:   ERROR: SSL says error 20 : unable to get local issuer certificate
@@ -44,13 +44,13 @@ Mon Jul 12 12:38:09 2021 : Auth: (14872) Login incorrect (eap_tls: SSL says erro
 
 It can be one of this options:&#x20;
 
-1. Your RADIUS server don't know the issuer of the certificate which was used for authentication. Add your CA as described [here](../portal/settings-trusted-roots/trusted-roots.md#add).
+1. Your RADIUS server don't know the issuer of the certificate which was used for authentication. Add your CA as described [here](../portal/settings/settings-trusted-roots/trusted-roots.md#add).
 2. Your Client don't know the **Server certificate** and rejects the connection. Check that you've added your **Server certificate** as described [here](../azure/trusted-root.md#adding-a-trusted-root-profile-for-your-clients).
-3. You've changed/added a new **Server certificate** and your XML profile on the client is wrong. Check that you've generated your [XML](../portal/settings-trusted-roots/xml.md#wifi) after adding the certificates and push that to your clients.&#x20;
+3. You've changed/added a new **Server certificate** and your XML profile on the client is wrong. Check that you've generated your [XML](../portal/settings/settings-trusted-roots/xml.md#wifi) after adding the certificates and push that to your clients.&#x20;
 
 ### Fatal decrypt error
 
-If you can see something like this in your [Logs](../portal/log.md#logs):
+If you can see something like this in your [Logs](../portal/insights/log.md#logs):
 
 ```
 Wed Apr  7 08:14:39 2021 : Auth: (312) Login incorrect (eap_tls: TLS Alert write:fatal:decrypt error): [host/00128t09-cbna-469c-9768-2783d28eikl9/<via Auth-Type = eap>] (from client contoso port 1 cli 84-FD-D1-8C-0E-33)

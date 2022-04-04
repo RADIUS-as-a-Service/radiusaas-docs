@@ -10,8 +10,8 @@ This is a **mandatory** step.
 
 In order to bridge the RADIUS protocol from your network appliances to our internal RADIUS server's RadSec ports, please add RADIUS proxies to your instance as described here:
 
-{% content-ref url="../../portal/settings-proxy.md" %}
-[settings-proxy.md](../../portal/settings-proxy.md)
+{% content-ref url="../../portal/settings/settings-proxy.md" %}
+[settings-proxy.md](../../portal/settings/settings-proxy.md)
 {% endcontent-ref %}
 
 ### Step 2: Server Certificate
@@ -26,8 +26,8 @@ Since the client will establish a TLS tunnel directly to RADIUSaaS during networ
 If you are planning to use RADIUSaaS along with **Android** devices, you must create a custom CA or upload your own certificate that was signed by a CA. The default self-signed server certificate will not allow Android devices to connect to RADIUSaaS.
 {% endhint %}
 
-1. Create a custom CA, upload your own certificate or use the default self-signed server certificate as described [here](../../portal/settings-server/certificates.md#server-certificates).&#x20;
-2. Download the **active** server certificate as described [here](../../portal/settings-server/certificates.md#download). You will need it later on for the Intune device profile.
+1. Create a custom CA, upload your own certificate or use the default self-signed server certificate as described [here](../../portal/settings/settings-server/certificates.md#server-certificates).&#x20;
+2. Download the **active** server certificate as described [here](../../portal/settings/settings-server/certificates.md#download). You will need it later on for the Intune device profile.
 
 ### Step 3: Trusted Root CA
 
@@ -35,7 +35,7 @@ If you are planning to use RADIUSaaS along with **Android** devices, you must cr
 This is a **mandatory** step.
 {% endhint %}
 
-1. Tell your RADIUSaaS instance which certificates will be allowed to connect as described [here](../../portal/settings-trusted-roots/trusted-roots.md#add) .
+1. Tell your RADIUSaaS instance which certificates will be allowed to connect as described [here](../../portal/settings/settings-trusted-roots/trusted-roots.md#add) .
 
 ### Step 4: Network Gear Configuration
 
@@ -45,12 +45,12 @@ This is a **mandatory** step.
 
 #### WiFi Access Points
 
-For some popular vendors, we have prepared representative step-by-step guides [here](../access-point-setup/proxy-needed.md). While we are not able to provide documentation for every vendor, in general, the following steps apply:
+For some popular vendors, we have prepared representative step-by-step guides [here](../access-point-setup/proxy-needed/). While we are not able to provide documentation for every vendor, in general, the following steps apply:
 
 1. Create a new RADIUS profile.
 2. Configure an external RADIUS server
-   1. As server IP address, configure the IP address of your [**proxy**](../../portal/settings-server/ports-and-ip-addresses.md#server-ip-address-and-location)**.**
-   2. Take the shared secret from your [**Server Settings**](../../portal/settings-server/ports-and-ip-addresses.md#shared-secret) page
+   1. As server IP address, configure the IP address of your [**proxy**](../../portal/settings/settings-server/ports-and-ip-addresses.md#server-ip-address-and-location)**.**
+   2. Take the shared secret from your [**Server Settings**](../../portal/settings/settings-server/ports-and-ip-addresses.md#shared-secret) page
    3. Configure the standard ports for RADIUS authentication (1812) and accounting (1813 - optional)
 3. Assign the profile to the relevant SSID(s).
 
@@ -96,6 +96,6 @@ This is an **optional** step.
 
 If you would like to configure additional rules, for example to assign VLAN IDs or limit authentication requests to certain trusted CA or WiFi access points, please check out the RADIUSaaS Rule Engine.
 
-{% content-ref url="../../portal/rules/" %}
-[rules](../../portal/rules/)
+{% content-ref url="../../portal/settings/rules/" %}
+[rules](../../portal/settings/rules/)
 {% endcontent-ref %}

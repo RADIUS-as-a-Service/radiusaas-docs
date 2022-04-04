@@ -10,7 +10,7 @@
 6. Click **Create** and provide a descriptive name and optional **Description**
 7. Choose your **Network Interface**
 8. As **EAP type** choose **EAP - TLS**
-9. Next, as **Certificate server names** add the DNS name from your [**Server Certificate**](../../portal/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value.&#x20;
+9. Next, as **Certificate server names** add the DNS name from your [**Server Certificate**](../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value.&#x20;
 10. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 11. Finally, under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
 

@@ -8,7 +8,7 @@ The [first table](./#server-certificates) shows all available certificates your 
 
 #### List of allowed RadSec Connection Certificates
 
-The [second table](./#radsec-connection-certificates) contains all certificates that are allowed to establish a [RadSec](../../details.md#what-is-radsec) connection.&#x20;
+The [second table](./#radsec-connection-certificates) contains all certificates that are allowed to establish a [RadSec](../../../details.md#what-is-radsec) connection.&#x20;
 
 ## Server Certificates
 
@@ -30,11 +30,11 @@ To create your custom CA, follow these simple steps:&#x20;
 2. Choose **Create your own CA**
 3. Click on **Create**
 
-![](<../../.gitbook/assets/image (49).png>)
+![](<../../../.gitbook/assets/image (49).png>)
 
 After the creation, you will see a new certificate available in your table:
 
-![](<../../.gitbook/assets/image (48).png>)
+![](<../../../.gitbook/assets/image (48).png>)
 
 ### Bring your own Certificate
 
@@ -54,7 +54,7 @@ As certificates expire from time to time or your preference on which certificate
 
 To download your **Server Certificate**  click **Download** in the corresponding row.
 
-![](<../../.gitbook/assets/image (46).png>)
+![](<../../../.gitbook/assets/image (46).png>)
 
 ## RadSec Connection Certificates
 
@@ -70,22 +70,22 @@ To allow new clients to establish a RadSec connection to your instance, follow t
 
 After this you should see your imported certificate in your table.
 
-![](<../../.gitbook/assets/image (51).png>)
+![](<../../../.gitbook/assets/image (51).png>)
 
 ### Delete
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;
 
-![](<../../.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52).png>)
 
 ## Certificate expiration&#x20;
 
 Certificates will expire from time to time. Five months before your certificate is going to be expired, you dashboard will give you a hint that your certificate is about to expire.
 
-![](<../../.gitbook/assets/image (56).png>)
+![](<../../../.gitbook/assets/image (56).png>)
 
 If you're seeing this triangle, follow this guide how you can change your certificate:&#x20;
 
-{% content-ref url="../../how-to-use/renew-certificate.md" %}
-[renew-certificate.md](../../how-to-use/renew-certificate.md)
+{% content-ref url="../../../how-to-use/renew-certificate.md" %}
+[renew-certificate.md](../../../how-to-use/renew-certificate.md)
 {% endcontent-ref %}
