@@ -3,51 +3,54 @@
 * [Welcome](README.md)
 * [Details](details.md)
 
+## Configuration <a href="#how-to-use" id="how-to-use"></a>
+
+* [Getting Started](how-to-use/get-started/README.md)
+  * [RadSec](how-to-use/get-started/radsec.md)
+  * [RADIUS](how-to-use/get-started/radius.md)
+* [Access Point Setup](how-to-use/access-point-setup/README.md)
+  * [RadSec](how-to-use/access-point-setup/radsec-available/README.md)
+    * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)
+  * [RADIUS](how-to-use/access-point-setup/proxy-needed.md)
+* [Insights](how-to-use/insights/README.md)
+  * [Rule Engine](how-to-use/insights/rule-engine/README.md)
+    * [Meraki](how-to-use/insights/rule-engine/meraki.md)
+    * [Sophos UTM](how-to-use/insights/rule-engine/sophos-utm.md)
+    * [UniFi](how-to-use/insights/rule-engine/unifi.md)
+* [Server Certificate Renewal](how-to-use/renew-certificate.md)
+
 ## Admin Portal <a href="#portal" id="portal"></a>
 
 * [Users](portal/users.md)
-* [Server Settings](portal/settings-server.md)
-* [Proxy](portal/settings-proxy.md)
+* [Server Settings](portal/settings-server/README.md)
+  * [Certificates](portal/settings-server/certificates.md)
+  * [Ports & IP Addresses](portal/settings-server/ports-and-ip-addresses.md)
+* [RADIUS Proxy](portal/settings-proxy.md)
 * [Authentication Certificates](portal/settings-trusted-roots/README.md)
   * [Trusted Roots for Client Authentication](portal/settings-trusted-roots/trusted-roots.md)
   * [Intune Certificate](portal/settings-trusted-roots/intune-cert.md)
   * [XML](portal/settings-trusted-roots/xml.md)
-* [Insights](portal/insights/README.md)
-  * [Rule Engine](portal/insights/rule-engine.md)
-  * [Log](portal/insights/log.md)
+* [Log](portal/log.md)
 * [Permissions](portal/permissions.md)
 * [Rules](portal/rules/README.md)
   * [General Structure](portal/rules/general-structure.md)
   * [WiFi](portal/rules/wifi.md)
   * [LAN](portal/rules/lan.md)
 
-## Azure
+## Intune Profiles <a href="#azure" id="azure"></a>
 
 * [Trusted Root](azure/trusted-root.md)
 * [WiFi Profile](azure/wifi-profile/README.md)
   * [Windows](azure/wifi-profile/windows.md)
-  * [Apple Devices](azure/wifi-profile/apple-devices.md)
+  * [iOS/iPadOS & macOS](azure/wifi-profile/apple-devices.md)
   * [Android](azure/wifi-profile/android.md)
 * [Wired Profile](azure/wired-profile/README.md)
   * [Windows](azure/wired-profile/windows.md)
-  * [Mac](azure/wired-profile/mac.md)
-
-## How To <a href="#how-to-use" id="how-to-use"></a>
-
-* [Access Point Setup](how-to-use/access-point-setup/README.md)
-  * [RadSec available](how-to-use/access-point-setup/radsec-available/README.md)
-    * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)
-  * [Proxy needed](how-to-use/access-point-setup/proxy-needed/README.md)
-    * [Meraki](how-to-use/access-point-setup/proxy-needed/meraki.md)
-    * [Sophos UTM](how-to-use/access-point-setup/proxy-needed/sophos-utm.md)
-    * [UniFi](how-to-use/access-point-setup/proxy-needed/unifi.md)
-* [How To](how-to-use/how-tow/README.md)
-  * [Renew Certificate](how-to-use/how-tow/renew-certificate.md)
-  * [Getting Started](how-to-use/how-tow/get-started.md)
-  * [Migrating from RADIUSaaS V1 to V2](how-to-use/how-tow/migrate-raas-v1-v2.md)
+  * [macOS](azure/wired-profile/mac.md)
 
 ## Other
 
+* [RADIUSaaS V1 to V2 Migration](other/migrate-raas-v1-v2.md)
 * [Troubleshooting](other/trubleshooting.md)
 * [FAQ](other/faq.md)
 

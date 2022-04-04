@@ -1,11 +1,11 @@
 ---
 description: >-
-  If your WiFi controller does not support RadSec, you are required to set up a
-  proxy. Proxy settings are available under
+  If your network gear does not support RadSec natively, you are required to set
+  up a proxy. Proxy settings are available under
   https://YOURNAME.radius-as-a-service.com/settings/proxy
 ---
 
-# Proxy
+# RADIUS Proxy
 
 ### Performance / Scaling
 

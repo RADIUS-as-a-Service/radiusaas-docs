@@ -1,8 +1,20 @@
 ---
 description: >-
-  This page group explains what needs to be done in order to get your clients
-  connected with your Wired access policies
+  Please follow below guides to configure profiles for your wired access
+  policies in Intune and different client device types.
 ---
 
 # Wired Profile
+
+## Windows
+
+{% content-ref url="windows.md" %}
+[windows.md](windows.md)
+{% endcontent-ref %}
+
+## Apple
+
+{% content-ref url="mac.md" %}
+[mac.md](mac.md)
+{% endcontent-ref %}
 

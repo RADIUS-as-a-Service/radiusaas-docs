@@ -82,14 +82,14 @@ To get started with your RADIUSaaS subscription,
 * Locate RADIUSaaS on the **Marketplace** in your [**Azure Portal**](https://portal.azure.com/#create/glueckkanja-gabag.radiusaas-transactable-prod/preview)&#x20;
 * Select the RADIUSaaS **Plan** based on your preferred renewal interval and click "Subscribe"
 
-![](<../.gitbook/assets/image (65).png>)
+![](<../.gitbook/assets/image (65) (1).png>)
 
 * Create or select the **Resource group** you would like to deploy the subscription to
 * Assign a **Name** to later identify your RADIUSaaS subscription
 * We recommend to keep **Recurring billing** on **** so that you do not have to worry about a manual renewal of your subscription.
 * Click "Review + subscribe" and in the next blade "Subscribe" to deploy the subscription to your Azure SaaS portal.
 
-![](<../.gitbook/assets/image (77).png>)
+![](<../.gitbook/assets/image (77) (1).png>)
 
 {% hint style="info" %}
 The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing costs.

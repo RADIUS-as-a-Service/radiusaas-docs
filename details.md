@@ -26,7 +26,7 @@ A Certificate Revocation List (CRL) is currently not supported.&#x20;
 
 #### Admin Portal
 
-Each customer has access to their own personal instance through their own Admin Portal, which can be used for tasks such as [creating users](portal/users.md#add), changing your [allowed certificates](portal/settings-trusted-roots/), [adding proxies](portal/settings-proxy.md) or viewing  server [logs](portal/insights/log.md).&#x20;
+Each customer has access to their own personal instance through their own RADIUSaaS Admin Portal, which can be used for tasks such as [creating users](portal/users.md#add), changing [allowed certificates](portal/settings-trusted-roots/), [adding proxies](portal/settings-proxy.md), creating [rules](portal/rules/) or performing troubleshooting using RADIUSaaS Insights.&#x20;
 
 #### RADIUS to RadSec Proxy
 
@@ -41,8 +41,8 @@ In those cases or guests scenarios, you can [add users](portal/users.md#add) to 
 
 Please follow the steps on the following page to get your clients ready authenticating with RADIUS-as-a-Service!
 
-{% content-ref url="how-to-use/how-tow/get-started.md" %}
-[get-started.md](how-to-use/how-tow/get-started.md)
+{% content-ref url="how-to-use/get-started/" %}
+[get-started](how-to-use/get-started/)
 {% endcontent-ref %}
 
 

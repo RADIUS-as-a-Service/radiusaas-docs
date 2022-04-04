@@ -6,13 +6,13 @@ description: >-
 
 # Trusted Roots for Client Authentication
 
-#### Add&#x20;
+## Add
 
 To **Add** a trusted root, click **Add** select your format and click **Save.**&#x20;
 
 ![](../../.gitbook/assets/radius-add-certificates.gif)
 
-#### Delete
+## Delete
 
 To **Delete** one of your root CAs, expand the corresponding row, click **Delete** and confirm your choice.
 

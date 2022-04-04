@@ -8,7 +8,7 @@ The Sophos appliance does not allow to assign different RADIUS servers to differ
 
 * IP Address of you **Proxy**
 * Authentication port **1812**
-* Shared secret which is visible on your [Server Settings](../../../portal/settings-server.md) page
+* Shared secret which is visible on your [Server Settings](../../../portal/settings-server/) page
 
 ### RADIUS Profile
 

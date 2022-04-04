@@ -6,17 +6,24 @@ Before creating the **Wi-Fi** profile, create a **Trusted root certificate** pro
 
 The following list and screenshot show you all necessary configurations:
 
-1. Log in to your [Azure portal](https://portal.azure.com)​
-2. Navigate to **Microsoft Intune(Endpoint Manager)** -> **Devices** -> **Android** -> **Configuration profiles**
-3. Then click **Create Profile**
+1. Log in to your [Azure portal](https://portal.azure.com)
+2. Navigate to **Microsoft Intune** and click **Device** and subsequently **Configuration profiles**
+3. Then click **Create profile**
 4. As **Platform** select your Android device type
-5. As **Profile type** select **Wi-Fi**
-6. Then as **Wi-Fi type** choose **Enterprise**
-7. As **EAP type** choose **EAP - TLS**
-8. Next, as **Certificate server names** add the DNS name from your [**Server Certificate**](../../portal/settings-server.md#server-certificate)****
-9. Select the created **Trusted root certificate** profile
-10. Finally under **Client Authentication** select your certificate profile
+5. Search the **Profile type** templates for **Wi-Fi** and select it
+6. Click **Create** and provide a descriptive name and optional **Description**
+7. As **Wi-Fi type** select **Enterprise**
+8. Enter your **SSID**
+9. As **EAP type** choose **EAP - TLS**
+10. Next, as **Radius server name** add the DNS name from your [**Server Certificate**](../../portal/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value.&#x20;
+11. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
+12. Under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
+13. Finally, under **Certificates** select the SCEP profile you would like to use for authentication.
 
+All other settings can be configured according to your own needs and preferences.
 
+{% hint style="info" %}
+Some Android kiosk devices require a value for **Identity privacy (outer identity)**. Please consider this when you are having issues authenticating against the WiFi network with such devices.
+{% endhint %}
 
-![](../../.gitbook/assets/ksnip\_20220106-104756.png)
+![](<../../.gitbook/assets/image (69).png>)
