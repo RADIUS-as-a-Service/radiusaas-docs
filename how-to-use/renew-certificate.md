@@ -15,7 +15,7 @@ description: >-
 
 ### Certificate Creation
 
-![](<../.gitbook/assets/image (81).png>)
+![](<../.gitbook/assets/image (81) (1).png>)
 
 1. Create/upload a new server certificate (download the certificate afterwards as you will need it for the Intune profiles later on).
    * If you would like to use the free certificates that can directly be created from the RADIUSaaS Admin Portal, please create your own CA as described [here](../portal/settings/settings-server/certificates.md#custom-cas).
