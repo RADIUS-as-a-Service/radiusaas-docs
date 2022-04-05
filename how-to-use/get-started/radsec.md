@@ -85,7 +85,7 @@ To configure a wired (LAN) profile for your stationary devices in Intune, follow
 [wired-profile](../../azure/wired-profile/)
 {% endcontent-ref %}
 
-## Step 6: Rules
+### Step 6: Rules
 
 {% hint style="info" %}
 This is an **optional** step.

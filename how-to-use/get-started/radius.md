@@ -88,7 +88,11 @@ To configure a wired (LAN) profile for your stationary devices in Intune, follow
 [wired-profile](../../azure/wired-profile/)
 {% endcontent-ref %}
 
-## Step 6: Rules
+{% hint style="info" %}
+Other MDM solutions, e.g. Jamf Pro, allow the creation of trusted certificate and network profiles in a very similar fashion. Please [reach out to us](https://www.radius-as-a-service.com/help/) in case you require support with your non-Intune MDM solution.
+{% endhint %}
+
+### Step 6: Rules
 
 {% hint style="info" %}
 This is an **optional** step.
