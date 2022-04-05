@@ -19,7 +19,7 @@
 
 ## Admin Portal <a href="#portal" id="portal"></a>
 
-* [Insights](portal/insights/README.md)
+* [🆕 Insights](portal/insights/README.md)
   * [Rule Engine](portal/insights/rule-engine.md)
   * [Log](portal/insights/log.md)
 * [Users](portal/users.md)
@@ -33,7 +33,7 @@
     * [XML](portal/settings/settings-trusted-roots/xml.md)
   * [RADIUS Proxy](portal/settings/settings-proxy.md)
   * [Permissions](portal/settings/permissions.md)
-  * [Rules](portal/settings/rules/README.md)
+  * [🆕 Rules](portal/settings/rules/README.md)
     * [General Structure](portal/settings/rules/general-structure.md)
     * [WiFi](portal/settings/rules/wifi.md)
     * [LAN](portal/settings/rules/lan.md)
