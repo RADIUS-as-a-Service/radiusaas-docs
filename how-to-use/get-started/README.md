@@ -15,7 +15,7 @@ Let's start with the requirements.
 * [ ] Intune access and rights to create device configuration profiles
 * [ ] Access to the network gear management portal
 
-## Native RadSec Support available
+## Native RadSec support available
 
 In case your network appliances support native RadSec, please follow this guide:
 
