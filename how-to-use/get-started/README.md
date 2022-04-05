@@ -23,7 +23,7 @@ In case your network appliances support native RadSec, please follow this guide:
 [radsec.md](radsec.md)
 {% endcontent-ref %}
 
-## RADIUSaaS-only support available
+## RADIUS-only support available
 
 In case your network appliances support RADIUS-only, please follow this guide:
 
