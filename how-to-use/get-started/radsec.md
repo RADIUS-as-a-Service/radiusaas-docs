@@ -46,9 +46,10 @@ This is a **mandatory** step.
 For some popular vendors, we have prepared representative step-by-step guides [here](../access-point-setup/radsec-available/). While we are not able to provide documentation for every vendor, in general, the following steps apply:
 
 1. Import your active RADIUS Server Certificate to your WiFi infrastructure.
-2. Add the RadSec certificate, which your APs are using to your **RadSec allowed Connection** list as described [here](../../portal/settings/settings-server/certificates.md#add-a-new-certificate).
+2. Add the CA certificate from which your APs obtain their RadSec connection certificate to your **RadSec allowed Connection** list as described [here](../../portal/settings/settings-server/certificates.md#add-a-new-certificate).
 3. Create a new RADIUS profile.
 4. Set the IP address and the port of your server in your RADIUS profile. Therefore, use the [public RadSec IP address](../../portal/settings/settings-server/ports-and-ip-addresses.md#server-ip-address) and the standard RadSec port (2083).
+   1. If you get asked to enter a shared secret, set it to "radsec".
 5. Assign the created profile to your SSID(s).
 
 #### Wired (LAN) Switches

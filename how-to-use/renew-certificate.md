@@ -18,7 +18,7 @@ description: >-
 ![](<../.gitbook/assets/image (81).png>)
 
 1. Create/upload a new server certificate (download the certificate afterwards as you will need it for the Intune profiles later on).
-   * If you would like to use the free certificates that can directly be created from the RADIUSaaS Admin Portal, please create your own CA as described [here](../portal/settings/settings-server/#custom-cas).
+   * If you would like to use the free certificates that can directly be created from the RADIUSaaS Admin Portal, please create your own CA as described [here](../portal/settings/settings-server/certificates.md#custom-cas).
    * If you would like to use your own certificate instead, select **PEM encoded Certificate** in the **Add** certificate dialog, select the certificate name and upload the public and private key.
 2. Generate a new XML if you are deploying **device certificates** as described [here](../portal/settings/settings-trusted-roots/xml.md#wifi).
 
