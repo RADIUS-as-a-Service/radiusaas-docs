@@ -9,7 +9,7 @@ We recommend to provide descriptive names for your rules, as this will allow the
 Every Rule can have a **Name, Description** and is specified for a specific authentication type.\
 Currently you can define a rule for **WiFi** or **LAN**. Furthermore, you can **Enable** or **Disable** your rule.
 
-![](<../../../.gitbook/assets/image (71).png>)
+![](<../../../.gitbook/assets/image (71) (1).png>)
 
 ## SSID, Access Points and Switch MAC Groups
 

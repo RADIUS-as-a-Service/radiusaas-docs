@@ -2,7 +2,7 @@
 description: Under the insights group Dashboards and Log views can be found
 ---
 
-# Insights
+# 🆕 Insights
 
 ### Dashboards
 

@@ -79,6 +79,6 @@ The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The f
 
 As an example, the following rule will assign the VLAN ID 15 based on the Subject Name attribute **OU** prefixed with **vlan-**.
 
-![](<../../../.gitbook/assets/image (78) (1).png>)
+![](<../../../.gitbook/assets/image (78) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (67) (1).png>)

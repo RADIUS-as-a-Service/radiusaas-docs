@@ -5,7 +5,7 @@ description: >-
   network access or by assigning VLAN IDs.
 ---
 
-# Rules
+# 🆕 Rules
 
 {% hint style="info" %}
 The Rules feature is currently in Beta phase and therefore available on request, only.&#x20;

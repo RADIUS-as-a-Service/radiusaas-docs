@@ -29,7 +29,7 @@ Make sure that you have referenced the Server certificate in your WiFi Profile:
 
 ![](<../.gitbook/assets/image (61).png>)
 
-## RADIUS Server view
+## Server View
 
 ### Unknown CA
 
