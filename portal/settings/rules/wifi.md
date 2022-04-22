@@ -30,7 +30,7 @@ This is a historical setting. If your clients are authenticating with certificat
 
 In case you have entered your Tenant IDs as described [here](../settings-trusted-roots/intune-cert.md#configure-intune-ids), the default behaviour of RADIUSaaS is that only machines presenting a certificate with extension OID **1.2.840.113556.5.14** and a whitelisted value for the Tenand ID will get access to the network. With the rule engine, you now have the option to further restrict the access to specific Intune IDs for a specific rule or to ignore the certificate extension. This allows you to have a multi-deployment setup, where some clients come with certificates providing the respective OID and some do not.&#x20;
 
-![](<../../../.gitbook/assets/image (77) (1) (1).png>)
+![](<../../../.gitbook/assets/image (77) (1) (1) (1).png>)
 
 ### Username/Password-based Authentication
 
@@ -53,7 +53,7 @@ To set an SSID Filter, either select **Names** or **Groups**.&#x20;
 * If you select **Names**, you can specify multiple **SSIDs.**
 * If you select **Groups** you can reference one or more of your pre-defined **SSID-Groups**.&#x20;
 
-![](<../../../.gitbook/assets/image (68).png>)
+![](<../../../.gitbook/assets/image (68) (1).png>)
 
 ### Access Point filter
 
@@ -90,4 +90,4 @@ As an example, the following rule will assign the VLAN ID 15 based on the Subjec
 
 ![](<../../../.gitbook/assets/image (78) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (67) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1).png>)

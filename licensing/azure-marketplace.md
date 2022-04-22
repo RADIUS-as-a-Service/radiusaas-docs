@@ -13,7 +13,7 @@
 * The related items should appear on your Microsoft Azure invoice (Pay-As-You-Go) the month after we have reported your fees to Microsoft.
 * In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja-gab".
 
-![](<../.gitbook/assets/image (73).png>)
+![](<../.gitbook/assets/image (73) (1).png>)
 
 {% hint style="info" %}
 For a more detailed cost breakdown of your base and additional user fees, please refer to the invoice in your Azure portal.
@@ -89,7 +89,7 @@ To get started with your RADIUSaaS subscription,
 * We recommend to keep **Recurring billing** on **** so that you do not have to worry about a manual renewal of your subscription.
 * Click "Review + subscribe" and in the next blade "Subscribe" to deploy the subscription to your Azure SaaS portal.
 
-![](<../.gitbook/assets/image (77) (1).png>)
+![](<../.gitbook/assets/image (77) (1) (1).png>)
 
 {% hint style="info" %}
 The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing costs.

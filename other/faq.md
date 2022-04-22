@@ -38,5 +38,5 @@ In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the f
   * Set the **Homepage URL** to [`https://radius-as-a-service.com`](https://radius-as-a-service.com)``
   * Optionally, apply your **Conditional Access** policies
   * Configure the following permissions (either an Admin or User consent level):\
-    ![](<../.gitbook/assets/image (78).png>)
+    <img src="../.gitbook/assets/image (78).png" alt="" data-size="original">
   * Under **Users and groups** assign every relevant RADIUSaaS admin that shall be able to access the platform.

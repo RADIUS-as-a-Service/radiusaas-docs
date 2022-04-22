@@ -24,4 +24,4 @@ To restrict the access to only allow authentication requests originating from sp
 
 If you have your own PKI and want to assign VLAN IDs based on the value of a custom certificate extension (OID), you can make that mapping information available to RADIUSaaS under **Custom Certificate Extensions.** Once you have specified such a custom extension, you can reference it in any rule and assign VLANs based on the raw or filtered extension value.
 
-![](<../../../.gitbook/assets/image (73) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1).png>)
