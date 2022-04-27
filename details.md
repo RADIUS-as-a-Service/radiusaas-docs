@@ -18,7 +18,7 @@ RADIUSaaS supports multiple CAs in parallel.
 
 #### OCSP
 
-To proof revocation of certificates, our RADIUSaaS leverages OSCP.&#x20;
+To proof revocation of certificates, our RADIUSaaS leverages OCSP.&#x20;
 
 A Certificate Revocation List (CRL) is currently not supported.&#x20;
 
