@@ -18,7 +18,7 @@ If you upload this to Intune, only the hierarchically last certificate will be p
 Ensure, you have reviewed [Part 1](trusted-root.md#edit-your-downloaded-certificate).
 {% endhint %}
 
-1. Log in to your [Azure portal](https://portal.azure.com)
+1. Log in to your [Azure portal](https://portal.azure.com/)
 2. Navigate to **Microsoft Intune** and click **Device** and subsequently **Configuration profiles**
 3. Then click **Create profile**
 4. Select the correct **Platform** for your device

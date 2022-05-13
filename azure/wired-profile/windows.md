@@ -2,12 +2,21 @@
 
 ## Configurations Steps
 
-To deploy a wired authentication profile, a custom XML is required. RADIUSaaS generates this XML for you
+1. Log in to your [Azure portal](https://portal.azure.com/)
+2. Navigate to **Microsoft Intune** and click **Device** and subsequently **Configuration profiles**
+3. Then click **Create profile**
+4. As **Platform** select **Windows 10 and later**
+5. Search the **Profile type** templates for **Wired network** and select it
+6. Click **Create** and provide a descriptive name and optional **Description**
+7. fill out the **Configuration settings** as it suits your environment
+8. Configure the **Authentication Method** to **User** if you want to use user-type certificates for authentication or **Machine** if you would like to use device-type certificates for authentication.
+9. For **EAP Type** choose **EAP-TLS**
+10. Next, as **Certificate server names** add the DNS name from your _active_ RADIUS [**Server Certificate**](../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value. \
+    ![](<../../.gitbook/assets/image (82).png>)
+11. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
+12. Under **Client Authentication** select **SCEP certificate** as **Authentication method**&#x20;
+13. Finally, **Client certificate for client authentication (Identity certificate)** select the SCEP profile you would like to use for authentication.
 
-1. Download the XML from [here](../../portal/settings/settings-trusted-roots/xml.md#wired).
-2. Create a custom profile in Microsoft Intune for the LAN profile using the following settings (see [Use custom settings for Windows 10 devices in Intune](https://docs.microsoft.com/en-us/intune/custom-settings-windows-10)). In **Custom OMA-URI Settings**, select **Add**, and then enter the following values:
-   * Name: _Modern Workplace-Windows 10 LAN Profile_
-   * Description: Enter a description that gives an overview of the setting, and any other important details.
-   * OMA-URI (case sensitive): Enter _./Device/Vendor/MSFT/WiredNetwork/LanXML_
-   * Data type: select **String (XML file)**.
-   * Custom XML: Upload the exported XML file.
+All other settings can be configured according to your own needs and preferences
+
+![](<../../.gitbook/assets/2022-05-13 17\_21\_11-Wired network .png>)

@@ -16,7 +16,7 @@ description: >-
 * Validity time for the Intune certificates is 1 year.
 * There is no mechanism to revoke certificates (like OCSP).
 
-Instead of using Intune certificates, we recommend to use certificates from a PKI like [SCEPman](https://scepman.com).
+Instead of using Intune certificates, we recommend to use certificates from a PKI like [SCEPman](https://scepman.com/).
 
 ## Configure Intune IDs
 

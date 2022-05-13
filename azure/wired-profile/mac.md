@@ -2,7 +2,7 @@
 
 ## Configuration Steps <a href="#before-creating-the-wi-fi-profile-create-a-trusted-root-certificate-profile-as-described-here-change" id="before-creating-the-wi-fi-profile-create-a-trusted-root-certificate-profile-as-described-here-change"></a>
 
-1. Log in to your [Azure portal](https://portal.azure.com)
+1. Log in to your [Azure portal](https://portal.azure.com/)
 2. Navigate to **Microsoft Intune** and click **Device** and subsequently **Configuration profiles**
 3. Then click **Create profile**
 4. As **Platform** select **macOS**

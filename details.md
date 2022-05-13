@@ -10,7 +10,7 @@ RADIUS is an efficient protocol for authentication purposes that uses the UDP tr
 
 ## Authentication Certificates
 
-The easiest way to push device or user certificates to your clients is [SCEPman](https://www.scepman.com), as it is super-easy to deploy and integrates seamlessly with Intune.\
+The easiest way to push device or user certificates to your clients is [SCEPman](https://www.scepman.com/), as it is super-easy to deploy and integrates seamlessly with Intune.\
 \
 You can also use your own on-premise PKI.&#x20;
 
