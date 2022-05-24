@@ -38,16 +38,21 @@
     * [WiFi](portal/settings/rules/wifi.md)
     * [LAN](portal/settings/rules/lan.md)
 
-## Intune Profiles <a href="#azure" id="azure"></a>
+## Profile Deployment <a href="#azure" id="azure"></a>
 
-* [Trusted Root](azure/trusted-root.md)
-* [WiFi Profile](azure/wifi-profile/README.md)
-  * [Windows](azure/wifi-profile/windows.md)
-  * [iOS/iPadOS & macOS](azure/wifi-profile/apple-devices.md)
-  * [Android](azure/wifi-profile/android.md)
-* [Wired Profile](azure/wired-profile/README.md)
-  * [Windows](azure/wired-profile/windows.md)
-  * [macOS](azure/wired-profile/mac.md)
+* [Microsoft Intune](azure/microsoft-intune/README.md)
+  * [Trusted Root](azure/microsoft-intune/trusted-root.md)
+  * [WiFi Profile](azure/microsoft-intune/wifi-profile/README.md)
+    * [Windows](azure/microsoft-intune/wifi-profile/windows.md)
+    * [iOS/iPadOS & macOS](azure/microsoft-intune/wifi-profile/apple-devices.md)
+    * [Android](azure/microsoft-intune/wifi-profile/android.md)
+  * [Wired Profile](azure/microsoft-intune/wired-profile/README.md)
+    * [Windows](azure/microsoft-intune/wired-profile/windows.md)
+    * [macOS](azure/microsoft-intune/wired-profile/mac.md)
+* [Jamf](azure/jamf/README.md)
+  * [Trusted Root](azure/jamf/trusted-root.md)
+  * [WiFi Profile](azure/jamf/wifi-profile.md)
+  * [Wired Profile](azure/jamf/wired-profile.md)
 
 ## Other
 

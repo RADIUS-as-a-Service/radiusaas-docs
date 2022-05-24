@@ -56,7 +56,7 @@ For some popular vendors, we have prepared representative step-by-step guides [h
 
 Currently, we have not prepared sample guides for switch appliances yet. However, the configuration steps are similar to the ones for WiFi Access Points. In case you face difficulties, please [reach out to us](https://www.radius-as-a-service.com/help/).
 
-### Step 5: Intune Profile Configuration
+### Step 5: Configure your MDM Deployment Profiles
 
 {% hint style="warning" %}
 This is a **mandatory** step.
@@ -64,31 +64,51 @@ This is a **mandatory** step.
 
 #### Server Certificate
 
-To enable trust between the client and RADIUSaaS, configure a trusted certificate profile as described here:
+To enable trust between the client and RADIUSaaS, configure a trusted certificate profile in your preferred MDM solution:
 
-{% content-ref url="../../azure/trusted-root.md" %}
-[trusted-root.md](../../azure/trusted-root.md)
+**Microsoft Intune**
+
+{% content-ref url="../../azure/microsoft-intune/trusted-root.md" %}
+[trusted-root.md](../../azure/microsoft-intune/trusted-root.md)
+{% endcontent-ref %}
+
+#### Jamf
+
+{% content-ref url="../../azure/jamf/trusted-root.md" %}
+[trusted-root.md](../../azure/jamf/trusted-root.md)
 {% endcontent-ref %}
 
 #### WiFi Profile
 
-To configure a WiFi profile in Intune, follow this guide:
+To configure a WiFi profile in your preferred MDM solution, follow one of these guides:
 
-{% content-ref url="../../azure/wifi-profile/" %}
-[wifi-profile](../../azure/wifi-profile/)
+**Microsoft Intune**
+
+{% content-ref url="../../azure/microsoft-intune/wifi-profile/" %}
+[wifi-profile](../../azure/microsoft-intune/wifi-profile/)
+{% endcontent-ref %}
+
+**Jamf**
+
+{% content-ref url="../../azure/jamf/wifi-profile.md" %}
+[wifi-profile.md](../../azure/jamf/wifi-profile.md)
 {% endcontent-ref %}
 
 #### Wired (LAN) Profile
 
-To configure a wired (LAN) profile for your stationary devices in Intune, follow this guide:
+To configure a wired (LAN) profile for your stationary devices in your preferred MDM solution, follow one of these guides:
 
-{% content-ref url="../../azure/wired-profile/" %}
-[wired-profile](../../azure/wired-profile/)
+**Microsoft Intune**
+
+{% content-ref url="../../azure/microsoft-intune/wired-profile/" %}
+[wired-profile](../../azure/microsoft-intune/wired-profile/)
 {% endcontent-ref %}
 
-{% hint style="info" %}
-Other MDM solutions, e.g. Jamf Pro, allow the creation of trusted certificate and network profiles in a very similar fashion. Please [reach out to us](https://www.radius-as-a-service.com/help/) in case you require support with your non-Intune MDM solution.
-{% endhint %}
+**Jamf**
+
+{% content-ref url="../../azure/jamf/wired-profile.md" %}
+[wired-profile.md](../../azure/jamf/wired-profile.md)
+{% endcontent-ref %}
 
 ### Step 6: Rules
 

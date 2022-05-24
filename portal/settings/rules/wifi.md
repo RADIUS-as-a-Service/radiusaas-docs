@@ -6,7 +6,7 @@
 2. Give the rule a **Name** that explains for what the rule is used for. Furthermore, a descriptive name will help you to identify authentication requests processed by this rule in your logs easily later on.
 3. Do not forget to **Enable** the rule!
 
-![](<../../../.gitbook/assets/image (64) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
 ## **Authentication**&#x20;
 
@@ -22,7 +22,7 @@ For certificate-based authentication you have the following choices to further c
 
 This allows you to narrow down incoming authentication requests to specific trusted root CAs. Those CAs can be a subset of all Trusted Roots you have configured on the RADIUSaaS platform.
 
-![](<../../../.gitbook/assets/image (62) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1).png>)
 
 #### Filter for Intune IDs&#x20;
 
@@ -40,7 +40,7 @@ The **Owner** field is currently not used.
 
 &#x20;
 
-![](<../../../.gitbook/assets/image (74).png>)
+![](<../../../.gitbook/assets/image (74) (1).png>)
 
 ## Configuration
 
@@ -62,7 +62,7 @@ To set a **MAC-Address-based** access point filter, either select **Addresses** 
 * If you select **Addresses**, you can specify multiple Access Point MAC addresses**.**&#x20;
 * If you select **Groups,** you can reference one or more of your pre-defined **MAC-Address-Groups**.&#x20;
 
-![](<../../../.gitbook/assets/image (80) (1).png>)
+![](<../../../.gitbook/assets/image (80) (1) (1).png>)
 
 ### VLAN assignment
 
@@ -88,6 +88,6 @@ The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The f
 
 As an example, the following rule will assign the VLAN ID 15 based on the Subject Name attribute **OU** prefixed with **vlan-**.
 
-![](<../../../.gitbook/assets/image (78) (1) (1).png>)
+![](<../../../.gitbook/assets/image (78) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (67) (1) (1).png>)

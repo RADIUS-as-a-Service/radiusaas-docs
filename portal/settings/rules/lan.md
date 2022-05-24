@@ -22,7 +22,7 @@ For certificate-based authentication you have the following choices to further c
 
 This allows you to narrow down incoming authentication requests to specific trusted root CAs. Those CAs can be a subset of all Trusted Roots you have configured on the RADIUSaaS platform.
 
-![](<../../../.gitbook/assets/image (62) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1).png>)
 
 #### Filter for Intune IDs&#x20;
 
@@ -40,7 +40,7 @@ The **Owner** field is currently not used.
 
 &#x20;
 
-![](<../../../.gitbook/assets/image (74).png>)
+![](<../../../.gitbook/assets/image (74) (1).png>)
 
 ## Configuration
 
@@ -79,6 +79,6 @@ The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The f
 
 As an example, the following rule will assign the VLAN ID 15 based on the Subject Name attribute **OU** prefixed with **vlan-**.
 
-![](<../../../.gitbook/assets/image (78) (1) (1).png>)
+![](<../../../.gitbook/assets/image (78) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (67) (1) (1).png>)
