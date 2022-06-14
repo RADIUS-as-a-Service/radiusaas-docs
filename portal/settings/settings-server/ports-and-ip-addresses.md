@@ -6,7 +6,7 @@ description: >-
 
 # Ports & IP Addresses
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65) (1).png>)
 
 ## Radsec / TCP
 

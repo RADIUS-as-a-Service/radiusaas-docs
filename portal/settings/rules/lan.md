@@ -6,7 +6,7 @@
 2. Give the rule a **Name** that explains for what the rule is used for. Furthermore, a descriptive name will help you to identify authentication requests processed by this rule in your logs easily later on.
 3. Do not forget to **Enable** the rule!
 
-![](<../../../.gitbook/assets/image (65) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1).png>)
 
 ## **Authentication**&#x20;
 

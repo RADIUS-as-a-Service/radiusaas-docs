@@ -82,7 +82,7 @@ To get started with your RADIUSaaS subscription,
 * Locate RADIUSaaS on the **Marketplace** in your [**Azure Portal**](https://portal.azure.com/#create/glueckkanja-gabag.radiusaas-transactable-prod/preview)&#x20;
 * Select the RADIUSaaS **Plan** based on your preferred renewal interval and click "Subscribe"
 
-![](<../.gitbook/assets/image (65) (1).png>)
+![](<../.gitbook/assets/image (65) (1) (1).png>)
 
 * Create or select the **Resource group** you would like to deploy the subscription to
 * Assign a **Name** to later identify your RADIUSaaS subscription
