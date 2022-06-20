@@ -12,7 +12,7 @@ Let's start with the requirements.
 
 * [ ] Assessment complete: RadSec support available or RADIUS-only?
 * [ ] Device or user client authentication certificates?
-* [ ] Intune access and rights to create device configuration profiles
+* [ ] Intune and/or Jamf access and rights to create device configuration profiles
 * [ ] Access to the network gear management portal
 
 ## Native RadSec support available
