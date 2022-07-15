@@ -20,11 +20,11 @@ description: >-
 10. Select the applicable **Security type** (iOS/iPadOS only)
 11. Then for **EAP type** choose **EAP - TLS**
 12. Next, as **Certificate server names** add the DNS name from your _active_ RADIUS [**Server Certificate**](../../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value. \
-    ![](<../../../.gitbook/assets/image (73).png>)
+    ![](<../../../.gitbook/assets/image (73) (1).png>)
 13. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 14. Under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
 15. Finally, under **Certificates** select the SCEP profile you would like to use for authentication.
 
 All other settings can be configured according to your own needs and preferences.
 
-![](<../../../.gitbook/assets/image (77) (1).png>)
+![](<../../../.gitbook/assets/image (77) (1) (1).png>)

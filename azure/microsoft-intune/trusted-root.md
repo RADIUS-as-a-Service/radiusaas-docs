@@ -1,16 +1,14 @@
 # Trusted Root
 
-### Part 1: Edit your downloaded Server Certificate
+### Part 1: Use only the root certificate
 
 {% hint style="info" %}
 Only relevant if you are bringing your own RADIUS server certificate or are using the Custom CA.
 {% endhint %}
 
-If you've uploaded your [**own certificate**](../../portal/settings/settings-server/certificates.md#bring-your-own-certificate) or created your [**Custom CA**](../../portal/settings/settings-server/certificates.md#custom-cas) as **Server Certificate**, you will under most circumstances see the entire certificate chain as part of the [downloaded](../../portal/settings/settings-server/certificates.md#download) Server Certificate file.&#x20;
+When downloading the Server certificate, use only the green marked certificate
 
-If you upload this to Intune, only the hierarchically last certificate will be pushed to your client, which is typically not the root certificate we intend to push to the client. To circumvent this, please open the downloaded file (it is a PEM-encoded \*.cer file) with a standard text editor and remove all certificates except for the root certificate. If you have leveraged the Custom CA, please remove the blue part as shown in the sample below.
-
-![](<../../.gitbook/assets/image (55).png>)
+![](<../../.gitbook/assets/image (78).png>)
 
 ### Part 2: Adding a Trusted Certificate Profile for your Clients&#x20;
 

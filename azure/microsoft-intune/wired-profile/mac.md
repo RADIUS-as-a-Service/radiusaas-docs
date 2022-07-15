@@ -11,8 +11,8 @@
 7. Choose your **Network Interface**
 8. As **EAP type** choose **EAP - TLS**
 9. Next, as **Certificate server names** add the DNS name from your _active_ RADIUS [**Server Certificate**](../../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value. \
-   ![](<../../../.gitbook/assets/image (77).png>)
+   ![](<../../../.gitbook/assets/image (77) (1).png>)
 10. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 11. Finally, under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
 
-![](<../../../.gitbook/assets/image (62) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1).png>)

@@ -4,5 +4,7 @@ You can access basically every log which we get. That also means that you may no
 
 You can filter the Log to a general overview or to only see what is reaching your proxy for example.&#x20;
 
-![](../../.gitbook/assets/log-view.gif)
+
+
+![](../../.gitbook/assets/logs.gif)
 

@@ -8,7 +8,7 @@ RADIUSaaS leverages Azure AD as identity provider for the logon-authentication t
 Therefore administrators enjoy the comfort of working with their own Azure AD accounts and do not have to setup additional accounts.
 {% endhint %}
 
-![](../../.gitbook/assets/radius-permissions.gif)
+![](<../../.gitbook/assets/image (71).png>)
 
 Please enter **Azure AD UPNs** in the provided fields and **separate them with comma and space**.&#x20;
 
@@ -34,10 +34,10 @@ Azure AD UPNs entered in this field have the permission to access the RADIUSaaS 
 * See and change users
 * See and change settings including permissions
 
+### Viewers
+
+Users can see everything but are not able to make any changes
+
 ### Users
 
-Reserved for upcoming features and **currently not used**.
-
-### Guests
-
-Reserved for upcoming features and **currently not used**.
+Users can access the Users portal, where they are able to create Users for them or their guests

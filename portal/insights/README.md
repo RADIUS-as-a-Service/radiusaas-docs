@@ -16,5 +16,5 @@ In your Overview you have a short overview about the status for the logged in us
 
 Under Authentications you have tables to get a overview on how many times someone have been logged in and a overview about, why are authentications failing.&#x20;
 
-![](<../../.gitbook/assets/image (66).png>)
+![](<../../.gitbook/assets/image (66) (1).png>)
 

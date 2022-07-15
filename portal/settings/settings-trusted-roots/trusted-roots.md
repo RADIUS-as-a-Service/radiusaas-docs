@@ -10,10 +10,10 @@ description: >-
 
 To **Add** a trusted root, click **Add** select your format and click **Save.**&#x20;
 
-![](../../../.gitbook/assets/radius-add-certificates.gif)
+![](<../../../.gitbook/assets/add-root (1).gif>)
 
 ## Delete
 
 To **Delete** one of your root CAs, expand the corresponding row, click **Delete** and confirm your choice.
 
-![](<../../../.gitbook/assets/image (32).png>)
+![](<../../../.gitbook/assets/image (81).png>)
