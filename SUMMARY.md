@@ -19,7 +19,7 @@
 
 ## Admin Portal <a href="#portal" id="portal"></a>
 
-* [🆕 Insights](portal/insights/README.md)
+* [Insights](portal/insights/README.md)
   * [Rule Engine](portal/insights/rule-engine.md)
   * [Log](portal/insights/log.md)
 * [Users](portal/users.md)
@@ -41,7 +41,7 @@
 
 ***
 
-* [My Invited Users](my-invited-users.md)
+* [🆕 My Invited Users](my-invited-users.md)
 
 ## Profile Deployment <a href="#azure" id="azure"></a>
 
