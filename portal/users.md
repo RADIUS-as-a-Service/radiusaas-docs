@@ -27,7 +27,7 @@ To **Delete** users, select all users which should be deleted in the list, click
 \
 
 
-![](<../.gitbook/assets/image (86).png>)
+![](<../.gitbook/assets/image (86) (1).png>)
 
 &#x20;
 
@@ -35,4 +35,4 @@ To **Delete** users, select all users which should be deleted in the list, click
 
 To change a user's password, disable/re-enable a user or select a new validity period, simply click on the **eye** symbol next to the user entry, change all needed entries and save them.
 
-![](<../.gitbook/assets/image (85).png>)
+![](<../.gitbook/assets/image (85) (1).png>)

@@ -34,7 +34,7 @@
   * [RADIUS Proxy](portal/settings/settings-proxy.md)
   * [Permissions](portal/settings/permissions.md)
   * [User Settings](portal/settings/user-settings.md)
-  * [🆕 Rules](portal/settings/rules/README.md)
+  * [Rules](portal/settings/rules/README.md)
     * [General Structure](portal/settings/rules/general-structure.md)
     * [WiFi](portal/settings/rules/wifi.md)
     * [LAN](portal/settings/rules/lan.md)

@@ -30,11 +30,11 @@ To create your custom CA, follow these simple steps:&#x20;
 2. Choose **Create your own CA**
 3. Click on **Create**
 
-![](<../../../.gitbook/assets/image (73).png>)
+![](<../../../.gitbook/assets/image (73) (1).png>)
 
 After the creation, you will see a new certificate available in your table:
 
-![](<../../../.gitbook/assets/image (84).png>)
+![](<../../../.gitbook/assets/image (84) (1).png>)
 
 ### Bring your own Certificate
 
@@ -54,11 +54,11 @@ As certificates expire from time to time or your preference on which certificate
 
 To download your **Server Certificate**  click **Download** in the corresponding row.
 
-![](<../../../.gitbook/assets/image (68).png>)
+![](<../../../.gitbook/assets/image (68) (1).png>)
 
 It will open a dialog, and show the complete certificate path. The root certificate will be marked in green.
 
-![](<../../../.gitbook/assets/image (75).png>)
+![](<../../../.gitbook/assets/image (75) (1).png>)
 
 ## RadSec Connection Certificates
 
@@ -80,13 +80,13 @@ After this you should see your imported certificate in your table.
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;
 
-![](<../../../.gitbook/assets/image (77).png>)
+![](<../../../.gitbook/assets/image (77) (1).png>)
 
 ## Certificate expiration&#x20;
 
 Certificates will expire from time to time. Five months before your certificate is going to be expired, you dashboard will give you a hint that your certificate is about to expire.
 
-![](<../../../.gitbook/assets/image (74).png>)
+![](<../../../.gitbook/assets/image (74) (1).png>)
 
 If you're seeing this triangle, follow this guide how you can change your certificate:&#x20;
 

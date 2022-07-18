@@ -14,10 +14,10 @@ Every setting will effect any user created on the platform
 
 Every setting will only affect the **My Users** portal
 
-![](<../../.gitbook/assets/image (65).png>)
+![](<../../.gitbook/assets/image (65) (1).png>)
 
 ### Passwords
 
 Settings will set, how the password generator behaves
 
-![](<../../.gitbook/assets/image (70).png>)
+![](<../../.gitbook/assets/image (70) (1).png>)

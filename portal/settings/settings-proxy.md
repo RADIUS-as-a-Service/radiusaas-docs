@@ -28,7 +28,7 @@ To ensure smooth operation, consider the following number of proxies based on yo
 
 To Add a new proxy, simply click **Add**, choose your **Region** and click **Create.**&#x20;
 
-![](<../../.gitbook/assets/image (76).png>)
+![](<../../.gitbook/assets/image (76) (1).png>)
 
 ****\
 ****After the installation has finished, it can take up to 15 minutes until your proxy has established a connection to your RADIUS server.
@@ -41,4 +41,4 @@ To Add a new proxy, simply click **Add**, choose your **Region** and click **Cre
 
 To **Delete** a proxy, simply click **Delete** of corresponding table row and confirm your choice.&#x20;
 
-![](<../../.gitbook/assets/image (72).png>)
+![](<../../.gitbook/assets/image (72) (1).png>)

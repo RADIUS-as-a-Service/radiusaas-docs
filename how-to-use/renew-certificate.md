@@ -15,7 +15,7 @@ description: >-
 
 ### Certificate Creation
 
-![](<../.gitbook/assets/image (83).png>)
+![](<../.gitbook/assets/image (83) (1).png>)
 
 1. Create/upload a new server certificate (download the certificate afterwards as you will need it for the Intune profiles later on).
    * If you would like to use the free certificates that can directly be created from the RADIUSaaS Admin Portal, please create your own CA as described [here](../portal/settings/settings-server/certificates.md#custom-cas).
@@ -38,7 +38,7 @@ description: >-
 2. Update your **existing** WiFi or wired profile(s) by adding a second common name under "**Trusted Server Certificate Names**"
 3. Wait **until all your clients** have received the updated profile(s).
 
-![](<../.gitbook/assets/image (64).png>)
+![](<../.gitbook/assets/image (64) (1).png>)
 
 ### WiFi & LAN infrastructure
 

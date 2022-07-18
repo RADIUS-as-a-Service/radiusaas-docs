@@ -9,7 +9,7 @@ We recommend to provide descriptive names for your rules, as this will allow the
 Every Rule can have a **Name, Description** and is specified for a specific authentication type.\
 Currently you can define a rule for **WiFi** or **LAN**. Furthermore, you can **Enable** or **Disable** your rule.
 
-![](<../../../.gitbook/assets/image (71) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65).png>)
 
 ## SSID, Access Points and Switch MAC Groups
 
@@ -18,10 +18,10 @@ To restrict the access to only allow authentication requests originating from sp
 1. Add the respective **MAC** **address(es)** or **SSID(s)** directly in the Rule collection
 2. Create Groups that allow you to add multiple targets and manage them more efficiently. This way, items can be added or removed without the need to touch the Rule itself, as the Rule will only reference the Group.&#x20;
 
-![](<../../../.gitbook/assets/image (66) (1) (1).png>)
+![](<../../../.gitbook/assets/image (83).png>)
 
 ## Custom Certificate Extensions
 
 If you have your own PKI and want to assign VLAN IDs based on the value of a custom certificate extension (OID), you can make that mapping information available to RADIUSaaS under **Custom Certificate Extensions.** Once you have specified such a custom extension, you can reference it in any rule and assign VLANs based on the raw or filtered extension value.
 
-![](<../../../.gitbook/assets/image (73) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (86).png>)

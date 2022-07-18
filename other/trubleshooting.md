@@ -25,7 +25,7 @@ If your Clients need to verify on connecting the first time, and you're seeing t
 
 Make sure that you have referenced the Server certificate in your WiFi Profile:
 
-![](<../.gitbook/assets/image (68) (1).png>)
+![](<../.gitbook/assets/image (68) (1) (1).png>)
 
 ## Server View
 

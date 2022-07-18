@@ -15,7 +15,7 @@ To configure a Wired network profile in Jamf, please follow these instructions:
 * As "**Identity Certificate**" select the client authentication certificate you would like to use for WiFi authentication. In case you are using SCEPman as CA, please select the SCEP Proxy you have previously set up during the [configuration](https://docs.scepman.com/certificate-deployment/jamf/general) of SCEPman.
 * Under "**Trusted Server Certificate Names**" click "**Add**" and add the DNS name from your _active_ RADIUS [**Server Certificate**](../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value.&#x20;
 
-![](<../../.gitbook/assets/image (74) (1).png>)
+![](<../../.gitbook/assets/image (74) (1) (1).png>)
 
 * Configure all other options as per your requirements.
 * Click "**Save**"

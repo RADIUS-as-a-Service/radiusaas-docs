@@ -10,11 +10,11 @@ To configure a WiFi profile in Jamf, please follow these instructions:
 * Provide your "**Service Set Identifier (SSID)**"
 * As "**Security Type**" select "**WPA2 Enterprise**"
 
-![](<../../.gitbook/assets/image (80) (1).png>)
+![](<../../.gitbook/assets/image (80) (1) (1).png>)
 
 * Under "**Network Security Settings**" and "**Protocols**" select "**TLS**"
 
-![](<../../.gitbook/assets/image (79) (1).png>)
+![](<../../.gitbook/assets/image (79) (1) (1).png>)
 
 * Navigate to "**Network Security Settings**" --> "**Trust**"
 * As "**Identity Certificate**" select the client authentication certificate you would like to use for WiFi authentication. In case you are using SCEPman as CA, please select the SCEP Proxy you have previously set up during the [configuration](https://docs.scepman.com/certificate-deployment/jamf/general) of SCEPman.

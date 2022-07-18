@@ -16,4 +16,4 @@ To **Add** a trusted root, click **Add** select your format and click **Save.**&
 
 To **Delete** one of your root CAs, expand the corresponding row, click **Delete** and confirm your choice.
 
-![](<../../../.gitbook/assets/image (81).png>)
+![](<../../../.gitbook/assets/image (81) (1).png>)

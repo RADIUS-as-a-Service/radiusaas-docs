@@ -16,7 +16,7 @@ The following list and screenshot show you all necessary configurations:
 8. Enter your **SSID**
 9. As **EAP type** choose **EAP - TLS**
 10. Next, as **Radius server name** add the DNS name from your _active_ RADIUS [**Server Certificate**](../../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value. \
-    ![](<../../../.gitbook/assets/image (69) (1).png>)
+    ![](<../../../.gitbook/assets/image (69) (1) (1).png>)
 11. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 12. Under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
 13. Finally, under **Certificates** select the SCEP profile you would like to use for authentication.
@@ -27,4 +27,4 @@ All other settings can be configured according to your own needs and preferences
 Some Android kiosk devices require a value for **Identity privacy (outer identity)**. Please consider this when you are having issues authenticating against the WiFi network with such devices.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (69) (1) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1) (1).png>)
