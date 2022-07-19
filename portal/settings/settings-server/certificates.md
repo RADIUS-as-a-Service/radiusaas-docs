@@ -30,7 +30,7 @@ To create your custom CA, follow these simple steps:&#x20;
 2. Choose **Create your own CA**
 3. Click on **Create**
 
-![](<../../../.gitbook/assets/image (73) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1).png>)
 
 After the creation, you will see a new certificate available in your table:
 

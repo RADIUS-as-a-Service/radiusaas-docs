@@ -22,7 +22,7 @@ For certificate-based authentication you have the following choices to further c
 
 This allows you to narrow down incoming authentication requests to specific trusted root CAs. Those CAs can be a subset of all Trusted Roots you have configured on the RADIUSaaS platform.
 
-![](<../../../.gitbook/assets/image (87) (1).png>)
+![](<../../../.gitbook/assets/image (87) (2).png>)
 
 #### Filter for Intune IDs&#x20;
 

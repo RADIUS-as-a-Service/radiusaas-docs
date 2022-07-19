@@ -18,17 +18,12 @@ description: >-
 8. Enter your **SSID**. The **Connection Name** can assume the same name.
 9. Configure the **Authentication Method** to **User** if you want to use user-type certificates for authentication or **Machine** if you would like to use device-type certificates for authentication.
 10. Then for **EAP type** choose **EAP - TLS**
-11. Next, as **Certificate server names** add the DNS and Common name from your _active_ RADIUS [**Server Certificate**](../../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** and **CN** value.&#x20;
-
-\
-
-
-![](<../../../.gitbook/assets/image (77).png>)
-
-1. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
-2. Under **Client Authentication** select **SCEP certificate** as **Authentication method**&#x20;
-3. Finally, **Client certificate for client authentication (Identity certificate)** select the SCEP profile you would like to use for authentication.
+11. Next, as **Certificate server names** add the DNS name from your _active_ RADIUS [**Server Certificate**](../../../portal/settings/settings-server/certificates.md) **** as well as the the common name (CN). This can be found by expanding the active Server Certificate and copying the **SAN** value. **Please consider, that the common name is case-sensitive.**\
+    <img src="../../../.gitbook/assets/image (73).png" alt="" data-size="original">
+12. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
+13. Under **Client Authentication** select **SCEP certificate** as **Authentication method**&#x20;
+14. Finally, **Client certificate for client authentication (Identity certificate)** select the SCEP profile you would like to use for authentication.
 
 All other settings can be configured according to your own needs and preferences.
 
-![](<../../../.gitbook/assets/image (82).png>)
+![](<../../../.gitbook/assets/image (87).png>)

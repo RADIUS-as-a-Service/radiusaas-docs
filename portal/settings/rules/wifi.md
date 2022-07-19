@@ -32,7 +32,7 @@ This is a historical setting. If your clients are authenticating with certificat
 
 In case you have entered your Tenant IDs as described [here](../settings-trusted-roots/intune-cert.md#configure-intune-ids), the default behaviour of RADIUSaaS is that only machines presenting a certificate with extension OID **1.2.840.113556.5.14** and a whitelisted value for the Tenand ID will get access to the network. With the rule engine, you now have the option to further restrict the access to specific Intune IDs for a specific rule or to ignore the certificate extension. This allows you to have a multi-deployment setup, where some clients come with certificates providing the respective OID and some do not.&#x20;
 
-![](<../../../.gitbook/assets/image (88).png>)
+![](<../../../.gitbook/assets/image (88) (1).png>)
 
 ### Username/Password-based Authentication
 

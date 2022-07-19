@@ -27,7 +27,7 @@ The only exception is the "**Any authentication allowed**" rule, that will be ha
 
 In case you end up having a large number of rules, we recommend - for the sake of maintaining high performance - to order the rules in a way that the most likely rules are hit first.
 
-![](<../../../.gitbook/assets/image (73).png>)
+![](<../../../.gitbook/assets/image (73) (1).png>)
 
 ## Rule Options - Overview
 

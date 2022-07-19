@@ -13,7 +13,7 @@
 * The related items should appear on your Microsoft Azure invoice (Pay-As-You-Go) the month after we have reported your fees to Microsoft.
 * In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja-gab".
 
-![](<../.gitbook/assets/image (73) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (73) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 For a more detailed cost breakdown of your base and additional user fees, please refer to the invoice in your Azure portal.
