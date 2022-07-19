@@ -13,7 +13,7 @@
 9. Under **802.1X** make sure, that **Do not enforce** is selected. This way your network adapter will continue to work in environments (e.g. home office), where 802.1X is not available.
 10. For **EAP Type** choose **EAP-TLS**
 11. Next, as **Certificate server names** add the DNS name from your _active_ RADIUS [**Server Certificate**](../../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value. \
-    ![](<../../../.gitbook/assets/image (82) (1) (1).png>)
+    ![](<../../../.gitbook/assets/image (82) (1) (1) (1).png>)
 12. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 13. Under **Client Authentication** select **SCEP certificate** as **Authentication method**&#x20;
 14. Finally, **Client certificate for client authentication (Identity certificate)** select the SCEP profile you would like to use for authentication.

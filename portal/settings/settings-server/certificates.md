@@ -80,7 +80,7 @@ After this you should see your imported certificate in your table.
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;
 
-![](<../../../.gitbook/assets/image (77) (1).png>)
+![](<../../../.gitbook/assets/image (77) (1) (1).png>)
 
 ## Certificate expiration&#x20;
 

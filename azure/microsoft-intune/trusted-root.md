@@ -8,7 +8,7 @@ Only relevant if you are bringing your own RADIUS server certificate or are usin
 
 When downloading the Server certificate, use only the green marked certificate
 
-![](<../../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (78) (1).png>)
 
 ### Part 2: Adding a Trusted Certificate Profile for your Clients&#x20;
 
