@@ -7,7 +7,9 @@ description: >-
 
 # RADIUS Proxy
 
-### Performance / Scaling
+### Architecture
+
+#### Performance
 
 Each proxy can handle up to 1500 **concurrent** connections flawlessly.&#x20;
 
@@ -23,6 +25,17 @@ To ensure smooth operation, consider the following number of proxies based on yo
 |   100 - 4000   |       2      |
 |  4000 - 10000  |       4      |
 | 10000 - 100000 |       8      |
+
+#### Regions
+
+You can deploy the proxy servers in the following regions:
+
+* Canada
+* Europe
+* India
+* Singapore
+* UK
+* USA
 
 ### Add&#x20;
 
