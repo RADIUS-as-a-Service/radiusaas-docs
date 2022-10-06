@@ -36,8 +36,6 @@ In case you have entered your Tenant IDs as described [here](../settings-trusted
 
 After enabling **Username/Password-based** authentication, you can apply additional filtering by configuring a Regex on the **Username**. Default is all Usernames
 
-The **Owner** field is currently not used.
-
 &#x20;
 
 ![](<../../../.gitbook/assets/image (85).png>)
