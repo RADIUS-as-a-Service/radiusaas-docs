@@ -9,6 +9,10 @@ description: >-
 
 ### Architecture
 
+{% hint style="warning" %}
+Since there are at least two proxies part of your license, we strongly recommend to set up two proxies in different regions for redundancy. Most network gear vendors support the configuration of a primary and secondary (backup) RADIUS server, which we recommend to leverage with the two proxies.
+{% endhint %}
+
 #### Performance
 
 Each proxy can handle up to 1500 **concurrent** connections flawlessly.&#x20;
