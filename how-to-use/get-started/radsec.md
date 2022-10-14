@@ -8,7 +8,7 @@
 This is a **mandatory** step.
 {% endhint %}
 
-To establish trust between your RadSec-capable network gear and RADIUSaaS, upload the RadSec server certificate as described [here](../../portal/settings/settings-server/certificates.md#download).
+To establish trust between your RadSec-capable network gear and RADIUSaaS, upload the RadSec server certificate as described [here](https://docs.radiusaas.com/portal/settings/settings-server/certificates#radsec-connection-certificates).
 
 Your network gear vendor should either provide this certificate or provide guidance on how to create one (CSR or via FQDN).&#x20;
 
