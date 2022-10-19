@@ -23,12 +23,13 @@ We've never seen any issues if you choose Europe as proxy location, no matter wh
 
 To ensure smooth operation, consider the following number of proxies based on your users(your needs may change if your offices are more globally distributed):
 
-|      User      | Proxy amount |
-| :------------: | :----------: |
-|    0 - 100     |       1      |
-|   100 - 4000   |       2      |
-|  4000 - 10000  |       4      |
-| 10000 - 100000 |       8      |
+|       User       | Proxy amount |
+| :--------------: | :----------: |
+|     50 - 2500    |       2      |
+|   2501 - 10,000  |       3      |
+|  10,001 - 25,000 |       4      |
+|  25,001 - 50,000 |       6      |
+| 50,001 - 100,000 |      10      |
 
 #### Regions
 

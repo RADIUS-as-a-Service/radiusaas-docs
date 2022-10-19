@@ -30,12 +30,12 @@ Each customer has access to their own personal instance through their own RADIUS
 
 #### RADIUS to RadSec Proxy
 
-Our RADIUS server only allows [RadSec](details.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, our RADIUSaaS features a [proxy](portal/settings/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use our service with traditional UDP.
+The service's internal RADIUS server only allows [RadSec](details.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, RADIUSaaS features a [proxy](portal/settings/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use the service with traditional UDP.
 
 #### Guests and IOT Devices&#x20;
 
-Some of your devices may not able to receive certificates. Reasons could be that they are not managed by any policy provider or they simply are technically not able to work with certificates. \
-In those cases or guests scenarios, you can [add users](portal/users.md#add) to your instance and restrict the access to a specific time frame if needed. This allows you to authenticate printers, TV's or other devices with the same instance.
+Some of your devices may not be able to receive certificates. Reasons could be that they are not managed by any policy provider/MDM system or they are simply technically not able to work with certificates. \
+In those cases or guests scenarios, you can [add users](portal/users.md#add) to your instance and restrict the access to a specific time frame, if needed. This allows you to authenticate printers, TVs or other devices with a single instance of the service.
 
 ## Getting Started
 
