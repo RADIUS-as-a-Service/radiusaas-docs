@@ -38,7 +38,28 @@ After the creation, you will see a new certificate available in your table:
 
 ### Bring your own Certificate
 
-In case you do not want to use any of the standard certificates which we are providing you can upload up to two of your own certificates.
+In case you do not want to use any of the standard certificates which we are providing, you can upload up to two of your own certificates
+
+#### SCEPman Server Certificate
+
+You may leverage SCEPman Certificate Master to generate a server certificate for you. Please follow those steps:
+
+1. Navigate to your SCEPman Certificate Master web portal.
+2. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend to adapt the SAN of the default server certificate, i.g. `radius.<your RADIUSaaS instance name>.net`.
+3. Since RADIUSaaS requires the complete certificate chain in the PEM format, please run the following command to add SCEPman's root CA to the chain and to perform the format conversion (certificate-test.pfx is the name of the downloaded server certificate).
+
+```
+$ openssl pkcs12 -in certificate-test.pfx -out servercert.cert -nodes
+$ curl https://YOURSCEPMANINSTANCE.COM/certsrv/mscep/mscep.dll/pkiclient.exe\?operation\=GetCACert | openssl x509 -inform der >> servercert.cert
+```
+
+{% hint style="info" %}
+Please note: By default, SCEPman Certificate Master issues certificates that are valid for 730 days. If you'd like to change this, please refer to SCEPman's [documentation](https://docs.scepman.com/advanced-configuration/application-settings/certificates#appconfig-validityperioddays).
+{% endhint %}
+
+#### Add the Certificate
+
+To add your own server certificate, e.g. one issued by SCEPman, please follow those steps.
 
 1. Click **Add**
 2. Choose **PEM encoded Certificate**
