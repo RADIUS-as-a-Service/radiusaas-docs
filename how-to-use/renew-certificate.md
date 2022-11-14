@@ -8,8 +8,16 @@ description: >-
 
 **Before continuing, you need to answer the following questions:**&#x20;
 
-* Do you want to buy your own certificate or do you want to use the free certificate which your instance can create for you?
+* Do you want to buy/bring your own certificate (e.g. from SCEPman) or do you want to use the free certificate which your instance can create for you?
 * Are you deploying user- or device client authentication certificates?&#x20;
+
+{% hint style="warning" %}
+We recommend to start the renewal process of the RADIUS server certificate **8 - 10 weeks** before it expires.
+
+**Reason:**
+
+If you are using the **default self-signed** server certificate we provide, RADIUSaaS will **auto-renew** the server certificate 30 days **prior** to its expiry (**Valid until** date). If you miss this dead line, you can no longer control the activation of a new RADIUS server certificate.
+{% endhint %}
 
 ## Part 1
 
