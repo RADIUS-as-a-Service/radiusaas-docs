@@ -8,4 +8,8 @@ RADIUSaaS offers easy and secure authentication for accessing network resources.
 
 ![](.gitbook/assets/radius-aas-flow.png)
 
+{% embed url="https://www.youtube.com/watch?v=shXVZmb-GJo" %}
+RADIUSaaS Overview & Architecture
+{% endembed %}
+
 These docs cover technical aspects of RADIUSaaS. All other information can be found on [https://radius-as-a-service.com/](https://radius-as-a-service.com/).

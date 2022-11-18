@@ -30,3 +30,7 @@ In case your network appliances support RADIUS-only, please follow this guide:
 {% content-ref url="radius.md" %}
 [radius.md](radius.md)
 {% endcontent-ref %}
+
+{% embed url="https://youtu.be/shXVZmb-GJo?t=287" %}
+Configurations od RADIUSaaS
+{% endembed %}
