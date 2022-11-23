@@ -37,6 +37,25 @@ The service's internal RADIUS server only allows [RadSec](details.md#what-is-rad
 Some of your devices may not be able to receive certificates. Reasons could be that they are not managed by any policy provider/MDM system or they are simply technically not able to work with certificates. \
 In those cases or guests scenarios, you can [add users](portal/users.md#add) to your instance and restrict the access to a specific time frame, if needed. This allows you to authenticate printers, TVs or other devices with a single instance of the service.
 
+#### Regions
+
+**RADIUSaaS' core service** can be deployed into datacenters in the following regions and countries:
+
+* Australia
+* European Union
+* United Kingdom
+* United States of America
+
+**RADIUS proxies** can be deployed into datacenters in the following regions and countries:
+
+* Australia
+* Canada
+* Europe
+* India
+* Singapore
+* United Kingdom
+* United States of America
+
 ## Getting Started
 
 Please follow the steps on the following page to get your clients ready authenticating with RADIUS-as-a-Service!
