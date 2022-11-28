@@ -46,11 +46,11 @@ You may leverage SCEPman Certificate Master to generate a server certificate for
 
 1. Navigate to your SCEPman Certificate Master web portal.
 2. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend to adapt the SAN of the default server certificate, i.g. `radius.<your RADIUSaaS instance name>.net`.
-3. Since RADIUSaaS requires the complete certificate chain in the PEM format, please run the following command to add SCEPman's root CA to the chain and to perform the format conversion (certificate-test.pfx is the name of the downloaded server certificate).
+3. Since RADIUSaaS requires the complete certificate chain in the PEM format, please run the following OpenSSL command to add SCEPman's root CA to the chain and to perform the format conversion (`certificate-test.pfx` is the name of the downloaded server certificate generated via SCEPman Certificate Master).
 
 ```
-$ openssl pkcs12 -in certificate-test.pfx -out servercert.cert -nodes
-$ curl https://YOURSCEPMANINSTANCE.COM/certsrv/mscep/mscep.dll/pkiclient.exe\?operation\=GetCACert | openssl x509 -inform der >> servercert.cert
+openssl pkcs12 -in certificate-test.pfx -out servercert.cert -nodes
+curl https://YOURSCEPMANINSTANCE.COM/certsrv/mscep/mscep.dll/pkiclient.exe\?operation\=GetCACert | openssl x509 -inform der >> servercert.cert
 ```
 
 {% hint style="info" %}
