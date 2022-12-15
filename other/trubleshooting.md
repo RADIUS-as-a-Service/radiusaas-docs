@@ -46,7 +46,7 @@ It can be one of this options:&#x20;
 2. Your Client doesn't know the **Server certificate** and rejects the connection. Check that you've added your **Server certificate** as described [here](../azure/microsoft-intune/trusted-root.md#adding-a-trusted-root-profile-for-your-clients).
 3. You've changed/added a new **Server certificate** and your XML profile on the client is using the old one. In that case, please double-check that you've either updated your WiFi/Wired profile or re-generated your [XML](../portal/settings/settings-trusted-roots/xml.md#wifi) after adding the certificates and pushed that to your clients.&#x20;
 
-### Fatal decrypt error
+### Fatal decrypt | Access denied
 
 If you can see something like this in your [Logs](../portal/insights/log.md#logs):
 
@@ -57,6 +57,16 @@ Wed Apr  7 08:14:41 2021 : Error: tls: TLS_accept: Error in error
 ```
 
 ... then it is probably a bug of the TPM software on your Windows machines. More information on that can be found in the [SCEPman documentation](https://docs.scepman.com/certificate-deployment/microsoft-intune/windows-10).
+
+If you can see something like this in your [Logs](../portal/insights/log.md#logs):
+
+```
+Wed Dec 14 07:24:24 2022 : ERROR: (95878) eap_tls: ERROR: (TLS) Alert read:fatal:access denied
+Wed Dec 14 07:24:24 2022 : Auth: (95878) Login incorrect (eap_tls: (TLS) Alert read:fatal:access denied): [host/kad933-161d-4aa8-aeaa-b5a4d3d53b12]
+Wed Dec 14 07:11:06 2022 : ERROR: (95717) eap_tls: ERROR: (TLS) Alert read:fatal:access denied
+```
+
+... there can be two reasons. The one is that your WiFi profile is referencing the wrong root certificate. Please make sure that your profile is setup correctly. If it is and you still facing this issue, try to set your KSP to **Software KSP**.&#x20;
 
 {% hint style="warning" %}
 The setting Key Storage Provider (KSP) determines the storage location of the private key for the end-user certificates. Storage in the TPM is more secure than software storage, because the TPM provides an additional layer of security to prevent key theft. However, there is **a bug in some older TPM firmware versions** that invalidates some signatures created with a TPM-backed private key. In such cases, the certificate cannot be used for EAP authentication as it is common for Wi-Fi and VPN connections. Affected TPM firmware versions include:
