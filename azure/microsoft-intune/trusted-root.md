@@ -1,12 +1,12 @@
 # Trusted Root
 
-### Part 1: Use only the root certificate
+### Part 1: Download the RADIUS Server Certificate
 
 {% hint style="info" %}
-Only relevant if you are bringing your own RADIUS server certificate or are using the Custom CA.
+Only relevant if you are bringing your own RADIUS server certificate or are using the Custom CA. This is not required, if you have brought your own server certificate (e.g. from SCEPman) and if that certificate has been signed by the SCEP-issuing CA.
 {% endhint %}
 
-When downloading the Server certificate, use only the green marked certificate
+When [downloading](../../portal/settings/settings-server/certificates.md#download) the Server certificate, use only the green-marked certificate. This will download the root CA certificate of the issuing CA.
 
 ![](<../../.gitbook/assets/image (78) (1).png>)
 

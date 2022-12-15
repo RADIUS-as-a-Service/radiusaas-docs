@@ -61,7 +61,6 @@
 
 ## Other
 
-* [RADIUSaaS V1 to V2 Migration](other/migrate-raas-v1-v2.md)
 * [Troubleshooting](other/trubleshooting.md)
 * [FAQ](other/faq.md)
 
