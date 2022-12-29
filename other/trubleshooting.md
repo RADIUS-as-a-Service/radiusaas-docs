@@ -1,14 +1,16 @@
 # Troubleshooting
 
-## Client View
+## Connection Issues
 
-### Wrong XML&#x20;
+### Client View
+
+#### Wrong XML&#x20;
 
 ![](<../.gitbook/assets/image (43).png>)
 
 Check that your client has a certificate to authenticate and that you are using the correct [WiFi configuration profile](../azure/microsoft-intune/wifi-profile/) or [XML](../portal/settings/settings-trusted-roots/xml.md#wifi).
 
-### Trusted Root issues&#x20;
+#### Trusted Root issues&#x20;
 
 ![](<../.gitbook/assets/image (44).png>)
 
@@ -23,13 +25,13 @@ If your Clients need to verify on connecting the first time, and you're seeing t
 
 ![](<../.gitbook/assets/image (60).png>)
 
-Make sure that you have referenced the Server certificate in your WiFi Profile:
+Make sure that you have referenced the RADIUS server certificate in your WiFi profile and provided the server certificate's SAN attribute (FQDN) and common name (CN):
 
-![](<../.gitbook/assets/image (68) (1) (1).png>)
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-## Server View
+### Server View
 
-### Unknown CA
+#### Unknown CA
 
 if you see something like this in your [Logs](../portal/insights/log.md#logs):
 
@@ -46,7 +48,7 @@ It can be one of this options:&#x20;
 2. Your Client doesn't know the **Server certificate** and rejects the connection. Check that you've added your **Server certificate** as described [here](../azure/microsoft-intune/trusted-root.md#adding-a-trusted-root-profile-for-your-clients).
 3. You've changed/added a new **Server certificate** and your XML profile on the client is using the old one. In that case, please double-check that you've either updated your WiFi/Wired profile or re-generated your [XML](../portal/settings/settings-trusted-roots/xml.md#wifi) after adding the certificates and pushed that to your clients.&#x20;
 
-### Fatal decrypt | Access denied
+#### Fatal decrypt | Access denied
 
 If you can see something like this in your [Logs](../portal/insights/log.md#logs):
 
@@ -77,3 +79,26 @@ The setting Key Storage Provider (KSP) determines the storage location of the pr
 
 If you use TPM with this firmware, either update your firmware to a newer version or select "Software KSP" as key storage provider.
 {% endhint %}
+
+## Admin Portal Issues
+
+### Login
+
+In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the following requirements have to be met:
+
+* The UPN/email address you provided as technical admin has to be authenticatable against **any** Azure AD.
+* The UPN/email address you provided as technical admin must have been registered on your RADIUSaaS instance as described [here](../portal/settings/permissions.md). In case it is the initial user, please [contact us](https://www.radius-as-a-service.com/help/) if you believe we registered the wrong user.
+* The Azure AD user object behind the UPN/email address has to be entitled to grant the RADIUSaaS Enterprise Application the following permissions (see screenshot below):
+  * **Read** the Basic User Profile
+  * **Maintain** access to data you have given it access to (allow request of refresh token)\
+    ![](../.gitbook/assets/Screenshot\_2022-04-11\_at\_09\_31\_26.png)
+* In case your Azure AD user has no rights to grant the required permissions, no corresponding **Enterprise Application** will be auto-created in your Azure AD. To circumvent this, either ask you IT department to grant your user the needed permissions or alternatively, they may manually create the required Enterprise Application and assign your user to it.
+* To manually create the Enterprise Application, please follow these steps:
+  * **Create** a new Enterprise Application
+  * Give it a **name** such as "RADIUSaaS Admin Center"
+  * Enable **users sign-in**
+  * Set the **Homepage URL** to [`https://radius-as-a-service.com`](https://radius-as-a-service.com)``
+  * Optionally, apply your **Conditional Access** policies
+  * Configure the following permissions (either an Admin or User consent level):\
+    <img src="../.gitbook/assets/image (78) (1) (1) (1).png" alt="" data-size="original">
+  * Under **Users and groups** assign every relevant RADIUSaaS admin that shall be able to access the platform.

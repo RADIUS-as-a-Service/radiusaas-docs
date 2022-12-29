@@ -62,7 +62,8 @@
 ## Other
 
 * [Troubleshooting](other/trubleshooting.md)
-* [FAQ](other/faq.md)
+* [FAQs](other/faqs/README.md)
+  * [Security & Privacy](other/faqs/security-and-privacy.md)
 
 ***
 

@@ -22,4 +22,4 @@ To configure a Wired network profile in Jamf, please follow these instructions:g
 * Click "**Save**"
 * Under "**Scope**" assign the profile to the relevant audience
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
