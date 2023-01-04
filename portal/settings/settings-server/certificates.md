@@ -19,10 +19,8 @@ The certificate which will be created automatically during set up of your RADIUS
 ### Custom CAs
 
 {% hint style="warning" %}
-A custom CA or your own bought certificate is required if you are planning to authenticate Android devices.
+A custom CA or your own certificate is required if you are planning to authenticate **Android** devices.
 {% endhint %}
-
-In some cases, you might be required to create your own custom CA. For example, Android devices (version > Android 9) will not allow to install a end user certificate as trusted CA. So you need a CA certificate. To achieve this you're able to create your own CA in with your instance.
 
 To create your custom CA, follow these simple steps:&#x20;
 
@@ -77,7 +75,7 @@ To download your **Server Certificate**  click **Download** in the corresponding
 
 ![](<../../../.gitbook/assets/image (68) (1).png>)
 
-It will open a dialog, and show the complete certificate path. The root certificate will be marked in green.
+It will open a dialog, and show the complete certificate path. The root certificate will always be marked in green. In case you are using the default self-signed server certificate, only one certificate will appear in the download list.
 
 ![](<../../../.gitbook/assets/image (75) (1).png>)
 
