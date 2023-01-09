@@ -17,10 +17,6 @@ The following list and screenshot show you all necessary configurations:
 9. As **EAP type** choose **EAP - TLS**
 10. Next, as **Radius server name** add the DNS and Common name from your _active_ RADIUS [**Server Certificate**](../../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** and **CN** value.
 
-\
-&#x20;\
-
-
 ![](<../../../.gitbook/assets/image (76).png>)
 
 11\. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
