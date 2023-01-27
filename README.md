@@ -4,20 +4,6 @@ description: RADIUSaaS | Hassle Free Wifi Auth
 
 # Welcome
 
-{% hint style="warning" %}
-Today, we were experiencing outages in Microsoft Azure in multiple regions, which were related to the network infrastructure. Several services were be impacted.
-
-See also Microsoft's statements
-
-* [status.azure.com](https://status.azure.com/)
-* [status.office.com](https://status.office.com/)
-* [Twitter](https://twitter.com/MSFT365Status/status/1618149579341369345)
-
-
-
-The issue seems to be resolved.
-{% endhint %}
-
 RADIUSaaS offers easy and secure authentication for accessing network resources. It delivers the comfort, reliability, and scalability of a native cloud SaaS. Supported protocols are RADIUS as well as RadSec. Authentication is based on certificates. RADIUSaaS is generally capable of validating every certificate that can be used for client authentication. However, to be able to lock someone with a revoked certificate out of your network, choose a CA which provides a publicly accessible OCSP endpoint. RADIUSaaS automatically generates XML configuration files for WIFI and LAN profiles.
 
 ![](.gitbook/assets/radius-aas-flow.png)
