@@ -11,7 +11,7 @@ description: >-
 To **Add** a trusted root, click **Add,** select the import format/source and click **Save.**&#x20;
 
 {% hint style="warning" %}
-If you have a tiered PKI infrastructure (e.g. a **Microsoft PKI**), remember to **upload** the **entire chain**, i.e. the root CA certificate as well as all relevant issuing CA certificates (RADIUSaaS supports the upload of a combined file or of separate files for each CA)..
+If you have a tiered PKI infrastructure (e.g. a **Microsoft PKI**), remember to **upload** the **entire chain of trust**, i.e. the root CA certificate and all relevant issuing CA certificates (RADIUSaaS supports the upload of a combined file or of separate files for each CA).
 {% endhint %}
 
 ![](<../../../.gitbook/assets/add-root (1).gif>)
