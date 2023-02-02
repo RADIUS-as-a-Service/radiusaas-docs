@@ -30,7 +30,7 @@ If you are planning to use RADIUSaaS along with **Android** devices, you must cr
 2. Download the **active** server certificate as described [here](../../portal/settings/settings-server/certificates.md#download). You will need it later on for the Intune device profile.
 
 {% hint style="danger" %}
-If you are using a **custom CA** or have brought your **own certificate**, ensure to **download** **the root CA certificate** (highlighted in green). This root certificate must later be deployed to your endpoint devices - not the server certificate itself. In case you are using SCEPman to create a server certificate, you probabaly already have the SCEPman root CA certificate deployed into the trust store of your endpoints.
+If you are using a **custom CA** or have brought your **own certificate**, ensure to **download** **the root CA certificate** (highlighted in green). This root certificate must later be deployed to your endpoint devices - not the server certificate itself. In case you are using SCEPman to create a server certificate, you probably already have the SCEPman root CA certificate deployed into the trust store of your endpoints.
 {% endhint %}
 
 ### Step 3: Trusted Root CA

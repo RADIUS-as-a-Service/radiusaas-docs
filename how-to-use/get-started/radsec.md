@@ -18,14 +18,18 @@ Your network gear vendor should either provide this certificate or provide guida
 This is a **mandatory** step.
 {% endhint %}
 
-Since the client will establish a TLS tunnel directly to RADIUSaaS during network authentication, a trusted TLS certificate is required. This can be generated directly from the RADIUSaaS Admin Portal or imported if you already own a suitable certificate.
+Since the endpoint device will establish a TLS tunnel to RADIUSaaS during network authentication, a trusted TLS certificate is required. This can be generated directly from the RADIUSaaS Admin Portal or imported if you already own a suitable certificate.
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 If you are planning to use RADIUSaaS along with **Android** devices, you must create a custom CA or upload your own certificate that was signed by a CA. The default self-signed server certificate will not allow Android devices to connect to RADIUSaaS.
 {% endhint %}
 
 1. Create a custom CA, upload your own certificate or use the default self-signed server certificate as described [here](../../portal/settings/settings-server/certificates.md#server-certificates).&#x20;
 2. Download the **active** server certificate as described [here](../../portal/settings/settings-server/certificates.md#download). You will need it later on for the Intune device profile.
+
+{% hint style="danger" %}
+If you are using a **custom CA** or have brought your **own certificate**, ensure to **download** **the root CA certificate** (highlighted in green). This root certificate must later be deployed to your endpoint devices - not the server certificate itself. In case you are using SCEPman to create a server certificate, you probably already have the SCEPman root CA certificate deployed into the trust store of your endpoints.
+{% endhint %}
 
 ### Step 3: Trusted Root CA
 
