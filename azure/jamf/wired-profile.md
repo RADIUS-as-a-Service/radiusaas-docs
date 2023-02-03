@@ -8,7 +8,7 @@ To configure a Wired network profile in Jamf, please follow these instructions:g
 * As "**Network Interface**" select the relevant ethernet, e.g. "**First Active Ethernet**"
 * Under "**Network Security Settings**" and "**Protocols**" select "**TLS**"
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 * Navigate to "**Network Security Settings**" --> "**Trust**"
 * As "**Identity Certificate**" select the client authentication certificate you have configured in your SCEP payload of this Configuration Profile before. In case you are using SCEPman as CA, please select the SCEP Proxy you have previously set up during the [configuration](https://docs.scepman.com/certificate-deployment/jamf/general) of SCEPman.

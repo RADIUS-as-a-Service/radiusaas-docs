@@ -28,4 +28,4 @@ To configure a WiFi profile in Jamf, please follow these instructions:
 * Click "**Save**"
 * Under "**Scope**" assign the profile to the relevant audience
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>

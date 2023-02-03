@@ -63,7 +63,9 @@
 
 * [Troubleshooting](other/trubleshooting.md)
 * [FAQs](other/faqs/README.md)
+  * [Log](other/faqs/log.md)
   * [Security & Privacy](other/faqs/security-and-privacy.md)
+  * [Certificates](other/faqs/certificates.md)
 
 ***
 
