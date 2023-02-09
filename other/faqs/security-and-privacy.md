@@ -10,15 +10,22 @@ description: >-
 
 ### 1. From what data center is RADIUSaaS operating?
 
-RADIUSaaS' core service can currently be deployed in the following data centers:
+RADIUSaaS' core service can currently be deployed in the following regions:
 
-1. Azure **Germany West Central** located in Frankfurt/Main, Germany
-2. DigitalOcean **AMS3 Datacenter** located in Amsterdam, Netherlands
-3. DigitalOcean **LON1 Datacenter** located in London, United Kingdom
-4. Azure **West US** located located in California, United States
-5. DigitalOcean **SYD1 Datacenter** located in Sydney, Australia
+* Australia
+* Europe
+* United Kingdom
+* United States of America
 
-In case RADIUS proxies are required, they can be chosen from any [region](https://docs.digitalocean.com/products/platform/availability-matrix/) that DigitalOcean, Inc. provides: Canada, Europe, Singapore, India, Australia, UK and USA.
+In case RADIUS proxies are required, they can be deployed in the following countries/regions:
+
+* Australia
+* Canada
+* Europe
+* India
+* Singapore
+* United Kingdom
+* United States of America
 
 ### 2. Which data is processed by RADIUSaaS?
 
