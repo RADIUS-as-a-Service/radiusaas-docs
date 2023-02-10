@@ -56,7 +56,7 @@ Example: You have 5 WIFI controllers and 3 RADIUSaaS proxies. You may configure 
 | ----------------- | --------------------- |
 | 1 and 4           | 1, 2, 3               |
 | 2 and 5           | 2, 3, 1               |
-| 3                 | 3, 2, 1               |
+| 3                 | 3, 1, 2               |
 
 ### Add&#x20;
 
