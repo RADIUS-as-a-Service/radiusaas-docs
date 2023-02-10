@@ -17,6 +17,8 @@ Since there are at least two proxies part of your license, we strongly recommend
 
 Each proxy can handle up to 1500 **concurrent** connections flawlessly.&#x20;
 
+This corresponds to a time-based performance of **10.000 authentications per minute per proxy**.
+
 #### Scaling
 
 We've never seen any issues if you choose Europe as proxy location, no matter where your clients are located. Nonetheless it can increase your performance to choose the Proxy at one location which is as near as possible to your offices.
@@ -41,6 +43,20 @@ You can deploy the proxy servers in the following regions:
 * Singapore
 * UK
 * USA
+
+#### Load balancing
+
+If you have a setup with >1000 users, we highly recommend to ensure, that your network equipment will send equal amounts of authentications to each proxy.
+
+For network equipment, where you can define the priority of the RADIUS services, you can ensure load-balancing by defining different priority orders for your different network equipment instances.
+
+Example: You have 5 WIFI controllers and 3 RADIUSaaS proxies. You may configure the following priority orders in your WIFI controllers:
+
+| Wifi Controller # | Proxy Priority Order |
+| ----------------- | -------------------- |
+| 1 and 4           | 1, 2, 3              |
+| 2 and 5           | 2, 3, 1              |
+| 3                 | 3, 2, 1              |
 
 ### Add&#x20;
 
