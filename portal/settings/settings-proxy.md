@@ -52,11 +52,11 @@ For network equipment, where you can define the priority of the RADIUS services,
 
 Example: You have 5 WIFI controllers and 3 RADIUSaaS proxies. You may configure the following priority orders in your WIFI controllers:
 
-| Wifi Controller # | Proxy Priority Order |
-| ----------------- | -------------------- |
-| 1 and 4           | 1, 2, 3              |
-| 2 and 5           | 2, 3, 1              |
-| 3                 | 3, 2, 1              |
+| Wifi Controller # | RADIUS Priority Order |
+| ----------------- | --------------------- |
+| 1 and 4           | 1, 2, 3               |
+| 2 and 5           | 2, 3, 1               |
+| 3                 | 3, 2, 1               |
 
 ### Add&#x20;
 
