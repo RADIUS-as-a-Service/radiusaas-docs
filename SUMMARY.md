@@ -38,10 +38,14 @@
     * [General Structure](portal/settings/rules/general-structure.md)
     * [WiFi](portal/settings/rules/wifi.md)
     * [LAN](portal/settings/rules/lan.md)
+  * [🆕 Log Exporter](portal/settings/log-exporter/README.md)
+    * [Log Analytics](portal/settings/log-exporter/log-analytics.md)
+    * [Teams](portal/settings/log-exporter/teams.md)
+    * [Generic Webhook](portal/settings/log-exporter/generic-webhook.md)
 
 ***
 
-* [🆕 My Invited Users](my-invited-users.md)
+* [My Invited Users](my-invited-users.md)
 
 ## Profile Deployment <a href="#azure" id="azure"></a>
 

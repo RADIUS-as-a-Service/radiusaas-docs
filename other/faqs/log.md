@@ -6,7 +6,7 @@ description: Questions regarding common log entries
 
 ### EAP Session is not matching state
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
 
 The RADIUS protocol is stateless and since it is normally transmitted over UDP, it has to take care of which packet has arrived, if it is corrupted, etc. So each request goes through a process of steps that must be performed (e.g. association, request, challenge, challenge-response). For these steps, both sides (client and server) have a state that is included in the packet sent and a state that is stored locally. These states must match the step they are currently in.
 
@@ -18,6 +18,6 @@ If their devices can connect, such errors can be ignored. If this is not the cas
 
 ### Proxy session resumption
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 Your proxy will create a TCP session with your RadSec instance. This session has to be reinitiated every 30 seconds. As long as there is no error within those messages, these log entries will be expected.

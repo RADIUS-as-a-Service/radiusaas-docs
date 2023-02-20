@@ -10,7 +10,7 @@ To configure a WiFi profile in Jamf, please follow these instructions:
 * Provide your "**Service Set Identifier (SSID)**"
 * As "**Security Type**" select "**Any (Enterprise)**"
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 * Under "**Network Security Settings**" and "**Protocols**" select "**TLS**"
 
@@ -21,11 +21,11 @@ To configure a WiFi profile in Jamf, please follow these instructions:
 * Under "**Trusted Certificates**" all certificates you have configured as "**Certificate**" payloads, will appear here. Check them all.
 * Under "**Trusted Server Certificate Names**" click "**Add**" and add the DNS name from your _active_ RADIUS [**Server Certificate**](../../portal/settings/settings-server/certificates.md). This can be found by expanding the active Server Certificate and copying the **SAN** value. Additionally, add a second entry for the common name (CN) of the _active_ RADIUS Server Certificate.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Unselect "**Allow Trust Exceptions**"
 * Configure all other options as per your requirements.
 * Click "**Save**"
 * Under "**Scope**" assign the profile to the relevant audience
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>

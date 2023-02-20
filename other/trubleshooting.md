@@ -27,7 +27,7 @@ If your Clients need to verify on connecting the first time, and you're seeing t
 
 Make sure that you have referenced the RADIUS server certificate in your WiFi profile and provided the server certificate's SAN attribute (FQDN) and common name (CN):
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Server View
 

@@ -20,6 +20,24 @@ Click **Add** and provide **User Name** and **Password** and choose your **Valid
 
 ![](../.gitbook/assets/create-user.gif)
 
+### CSV import
+
+To import your users from a CSV file, click on **Import(CSV)**
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+A new Pop-Up should come up, where you're able to upload your CSV file. Check and change the values on your behalf and click **Create**.
+
+{% hint style="warning" %}
+Your Usernames are **Display names** for your RADIUS system. A error occurs while uploading, delete the users before uploading the CSV again. Otherwise you will have duplicated users.
+{% endhint %}
+
+{% hint style="info" %}
+The required columns are **Username, Password** and **Owner**
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/bulk-add user.gif" alt=""><figcaption></figcaption></figure>
+
 ### Delete
 
 To **Delete** users, select all users which should be deleted in the list, click **Delete** and confirm your choice.

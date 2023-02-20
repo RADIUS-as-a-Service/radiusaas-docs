@@ -12,15 +12,11 @@ The [second table](./#radsec-connection-certificates) contains all certificates 
 
 ## Server Certificates
 
-### Default Certificate
+### Default Certificates
 
-The certificate which will be created automatically during set up of your RADIUSaaS instance is a self-signed end user certificate.&#x20;
+The default certificate which your RADIUS server and proxy will use is one from a internal created CA(individual for every customer) in order to allow deployments where Android devices will be used.
 
 ### Custom CAs
-
-{% hint style="warning" %}
-A custom CA or your own certificate is required if you are planning to authenticate **Android** devices.
-{% endhint %}
 
 To create your custom CA, follow these simple steps:&#x20;
 
