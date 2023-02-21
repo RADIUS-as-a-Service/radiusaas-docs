@@ -16,7 +16,7 @@ We recommend to start the renewal process of the RADIUS server certificate **8 -
 
 **Reason:**
 
-If you are using the **default self-signed** server certificate we provide, RADIUSaaS will **auto-renew** the server certificate 30 days **prior** to its expiry (**Valid until** date). If you miss this dead line, you can no longer control the activation of a new RADIUS server certificate.
+If you are using the **legacy** **self-signed** server certificate we used to provide, RADIUSaaS will **auto-renew** the server certificate 30 days **prior** to its expiry (**Valid until** date). If you miss this dead line, you can no longer control the activation of a new RADIUS server certificate.
 {% endhint %}
 
 ## Part 1
@@ -68,4 +68,4 @@ After the updated profiles have successfully been deployed to all your clients (
 **Only** proceed with the next step if you are certain that all your clients received the new/updated profiles. Otherwise, they will not be able to connect to your network afterwards.
 {% endhint %}
 
-1. Activate the new server certificate as described [here](../portal/settings/settings-server/#certificate-activation).
+* Activate the new server certificate as described [here](../portal/settings/settings-server/#certificate-activation).

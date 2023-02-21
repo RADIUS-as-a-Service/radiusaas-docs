@@ -1,22 +1,35 @@
 # Log Analytics
 
-### Required Values
+## Prerequisites
+
+To ingest RADIUSaaS logs into an **Azure Log Analytics Workspace**, please make sure that a workspace was already created and that you have the following **required values** available:
 
 * Customer ID
 * Shared Key
 * Event Name
 
-### Data
+## Configuration Steps
 
+Follow these steps to add a **Log Analytics** export target:
+
+* Navigate to your **RADIUSaaS Admin Portal**
+* Click **+ Export Target**
+* Select **Azure Loganalytics Exporter**
+* Provide a **Name** and **Description**
+* Configure the **Message Filters** to your needs
+* Structure the **Data** to be ingested into your Log Analytics Workspace
+
+{% hint style="warning" %}
 Some data which you might send to your Log Analytics workspace will include new line characters. \
-To get a valid json for every entry, the template engine has a global "tojson" parser which will apply for all variables you access.&#x20;
+To get a valid JSON for every entry, the template engine has a global "tojson" parser which will apply for all variables you access.&#x20;
 
-Therefore don't quote any jinja variable.
+Therefore, **do not quote any jinja variable**.
+{% endhint %}
 
-## Correct
+**Correct**
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+****![](<../../../.gitbook/assets/image (5).png>)****
 
-## Wrong
+**Wrong**
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+****![](<../../../.gitbook/assets/image (1).png>)****

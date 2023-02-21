@@ -1,19 +1,36 @@
 # Teams
 
-To get messages to Teams, you have to configure a **Webhook connector** in the specific channel.&#x20;
+## Prerequisites
+
+To ingest RADIUSaaS logs into a **Microsoft Teams Channel**, only Microsoft Teams itself as well as privileges to add **connectors** to the relevant **channel** are required.
+
+## Configuration Steps
+
+Follow those steps to push RADIUSaaS logs to a **Microsoft Teams Channel**:
+
+* Navigate to **Microsoft Teams**
+* Right-click on the **Channel** and select **Connectors**
 
 <figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
-Create a **Incomming Webhook** connector
+* Create an **Incoming Webhook** connector by searching for this connector type and subsequently clicking **Configure**
 
 <figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
+* Provide a **Name** for the connector
+
 <figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
-After you've clicked **create,** a new URL should pop up
+* Click **Create** to generate the **Webhook Connector URL**
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+Now it is time to configure the export target in the Log Exporter. Therefore,
 
-Use that URL as **Teams channel Webhook URL**
+* Navigate to your **RADIUSaaS Admin Portal**
+* Click **+ Export Target**
+* Select **Teams Exporter**
+* Provide a **Name** and **Description**
+* Configure the **Message Filters** to your needs
+* Paste the **Webhook Connector URL** in the field **Teams channel Webhook URL**
+* Configure the **Message** to be sent to your Microsoft Teams Channel
 
 <figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>

@@ -8,8 +8,6 @@ description: >-
 
 ![](<../../../.gitbook/assets/image (79) (1).png>)
 
-
-
 ## Radsec / TCP
 
 ### **Server IP Address**
@@ -46,7 +44,7 @@ The standard **** RADIUS accounting port
 
 The shard secret that encrypts the RADIUS communication between your network gear and RADIUSaaS.
 
-If you have multiple Proxies, you can change the shared secret for each IP address when you click **Show shared secrets**. If you have nothing set, the default shared secret will be used.
+If you have multiple **Proxies**, you can change the shared secret for each IP address when you click **Show shared secrets**. If you have nothing set, the default shared secret will be used for all **Proxies**.
 
 <figure><img src="../../../.gitbook/assets/different-shared-secrest.gif" alt=""><figcaption></figcaption></figure>
 
