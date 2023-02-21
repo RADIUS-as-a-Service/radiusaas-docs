@@ -38,7 +38,7 @@ The required columns are **Username, Password** and **Owner**
 {% endhint %}
 
 {% hint style="warning" %}
-Your Usernames are **Display names** for your RADIUS system. If an error occurs while uploading the CSV file, delete the users before uploading the CSV again. Otherwise you will have duplicated users.
+RADIUSaaS does not consider the **Username** a unique property. This means two or more **identical** **User** accounts may exist. Hence, if an error occurs while uploading the CSV file and users have already been created during the partial upload, please delete those users before uploading the CSV again to prevent duplicates.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/bulk-add user.gif" alt=""><figcaption></figcaption></figure>
