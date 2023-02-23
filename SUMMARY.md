@@ -11,6 +11,7 @@
 * [Access Point Setup](how-to-use/access-point-setup/README.md)
   * [RadSec](how-to-use/access-point-setup/radsec-available/README.md)
     * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)
+    * [Juniper Mist](how-to-use/access-point-setup/radsec-available/juniper-mist.md)
   * [RADIUS](how-to-use/access-point-setup/proxy-needed/README.md)
     * [Meraki](how-to-use/access-point-setup/proxy-needed/meraki.md)
     * [UniFi](how-to-use/access-point-setup/proxy-needed/unifi.md)
