@@ -24,16 +24,16 @@ We have never never seen any issues if you choose **Europe** as proxy location, 
 
 To ensure smooth operation, consider the following number of proxies based on the number of users you have licensed (your needs may change if your offices are more globally distributed):
 
-|       User       | Proxy amount |
-| :--------------: | :----------: |
-|     50 - 2500    |       2      |
-|   2501 - 10,000  |       3      |
-|  10,001 - 25,000 |       4      |
-|  25,001 - 50,000 |       6      |
-| 50,001 - 100,000 |      10      |
+|       User       | Proxy Count |
+| :--------------: | :---------: |
+|     50 - 2500    |      2      |
+|   2501 - 10,000  |      3      |
+|  10,001 - 25,000 |      4      |
+|  25,001 - 50,000 |      6      |
+| 50,001 - 100,000 |      10     |
 
 {% hint style="info" %}
-In case your RADIUSaaS instance comes with a [Universal IP Address](settings-server/ports-and-ip-addresses.md#universal-ip-address-tcp-+-udp), we will reduce your  proxy count by one, since the Universal IP Address should be used as the primary RADIUS server.
+In case your RADIUSaaS instance comes with a [Universal IP Address](settings-server/ports-and-ip-addresses.md#universal-ip-address-tcp-+-udp), your proxy count is reduced by one, since the Universal IP Address should be used as the primary RADIUS server.
 {% endhint %}
 
 #### Regions

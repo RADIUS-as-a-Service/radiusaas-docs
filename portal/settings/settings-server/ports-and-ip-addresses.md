@@ -46,6 +46,10 @@ In case you want to use the RADIUS protocol on this IP address, the relevant sha
 
 ## RadSec IP Address (TCP)
 
+{% hint style="info" %}
+Not available if the [Universal IP Address](ports-and-ip-addresses.md#universal-ip-address-tcp-+-udp) is available.
+{% endhint %}
+
 This type of public IP address supports the **RadSec protocol only**. Consequently, it listens on port 2083.
 
 <figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
