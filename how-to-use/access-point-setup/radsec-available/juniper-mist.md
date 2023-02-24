@@ -24,7 +24,7 @@ You can choose any other setting on your behalf. Described are the necessary set
 
 3.  Add your RADIUS Root certificate under **RadSec Certificates**
 
-    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 4.  Add your Access Point certificate (created in step 2 of[#prepare-certificates](juniper-mist.md#prepare-certificates "mention")) to **AP RadSec Certificate**
@@ -42,9 +42,9 @@ You can choose any other setting on your behalf. Described are the necessary set
     <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 9.  For **Server Addresses** use either the **IP** or the **DNS** Name of your RadSec server
 
-    <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
+    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ****
 
