@@ -9,7 +9,7 @@ description: >-
 ### Architecture
 
 {% hint style="warning" %}
-Since there are at least two RADIUS-speaking public IP addresses included in your subscription, we strongly recommend to configure those two IP addresses so they can be used as primary and fallback/secondary RADIUS server on your network gear and appliances. Thereby, the second public IP address should be located in a different geo-region that the primary address.
+Since there are at least two RADIUS-speaking public IP addresses included in your subscription, we strongly recommend to configure those two IP addresses so they can be used as primary and secondary RADIUS server on your network gear and appliances. Thereby, the second public IP address should be located in a different geo-region than the primary address.
 {% endhint %}
 
 #### Performance
