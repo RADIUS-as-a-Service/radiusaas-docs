@@ -1,9 +1,5 @@
 # Juniper Mist
 
-To establish a valid RadSec connection with your Juniper Mist APs, your access points need a valid client certificate and must know the root certificate of your RADIUS server. In addition, your RADIUS server must trust the CA from which your access points obtain their certificates.
-
-Go through the following steps:
-
 ## Prepare certificates
 
 1. Download the Root certificate of your RADIUS Server as described here: [#download](../../../portal/settings/settings-server/certificates.md#download "mention")
