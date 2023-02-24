@@ -8,7 +8,7 @@
 This is a **mandatory** step.
 {% endhint %}
 
-In order to bridge the RADIUS protocol from your network appliances to our internal RADIUS server's RadSec ports, please add RADIUS proxies to your instance as described here:
+A RADIUS proxy is required if your instance does not provide a [Universal IP Address](../../portal/settings/settings-server/ports-and-ip-addresses.md#universal-ip-address-tcp-+-udp) and if you want to configure a secondary/redundant RADIUS server on your network appliance/service - something we highly recommend.
 
 {% content-ref url="../../portal/settings/settings-proxy.md" %}
 [settings-proxy.md](../../portal/settings/settings-proxy.md)

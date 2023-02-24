@@ -6,56 +6,94 @@ description: >-
 
 # Ports & IP Addresses
 
-![](<../../../.gitbook/assets/image (79) (1).png>)
+## Overview
 
-## Radsec / TCP
+RADIUSaaS provides public IP addresses that allow your network appliances and services to communicate with our service from anywhere via the internet. Thereby, we offer three flavors of IP addresses that support different protocols and listen on different ports.
 
-### **Server IP Address**
+## Universal IP Address (TCP + UDP)
 
-{% hint style="warning" %}
-This IP address only speaks [RadSec](../../../details.md#what-is-radsec)!
+{% hint style="info" %}
+Not available on all RADIUSaaS instances.
 {% endhint %}
 
-The public IP Address at which your server is available. ****&#x20;
+This type of public IP address **supports both** AAA protocols, **RADIUS** and **RadSec**. Consequently, it listens on port 1812, 1813 for RADIUS and on port 2083 for RadSec.
 
-### **Radsec Port**
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
-The standard RadSec port.
+### Properties
 
-## Radius / UDP
+#### RadSec DNS
 
-### Server IP Address and Location
+The DNS entry through which the RadSec service can be reached.&#x20;
+
+Please note that most network appliances do not support DNS-based RadSec addressing yet.
+
+#### Server IP Addresses
+
+Public IP address(s) on which the RadSec and RADIUS service is available.&#x20;
+
+A second IP address is shown if we have configured a secondary RADIUSaaS instance for you.
+
+#### Ports
+
+This section displays the (standard) ports for the RadSec, RADIUS Authentication, and RADIUS Accounting services.
+
+#### Shared Secret
+
+The shard secret encrypts the RADIUS communication between your network gear and RADIUSaaS.
+
+In case you want to use the RADIUS protocol on this IP address, the relevant shared secret can be configured in the **default shared secret text box** right above the **Optional Settings** section.
+
+## RadSec IP Address (TCP)
+
+This type of public IP address supports the **RadSec protocol only**. Consequently, it listens on port 2083.
+
+<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+
+### Properties
+
+#### RadSec DNS
+
+The DNS entry through which the RadSec service can be reached.&#x20;
+
+Please note that most network appliances do not support DNS-based RadSec addressing yet.
+
+#### **Server IP Addresses**
 
 {% hint style="warning" %}
-This IP address only speaks [RADIUS](../../../details.md#what-is-radius) over UDP Port 1812/1813!
+These IP addresses only speak [RadSec](../../../details.md#what-is-radsec) over TCP port 2083!
+{% endhint %}
+
+Public IP address(s) on which the RadSec service is available.&#x20;
+
+A second IP address is shown if we have configured a secondary RADIUSaaS instance for you.
+
+#### Ports
+
+This section displays the (standard) port for the RadSec.
+
+## RADIUS IP Address (UDP)
+
+This section is available when you have configured at least on [RADIUS Proxy](../settings-proxy.md). For each proxy, a separate public IP address is available. The public IP addresses in this section support the RADIUS protocol only and thus listen on ports 1812/1813.
+
+<figure><img src="../../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+
+### Properties
+
+#### Server IP Addresses and Location
+
+{% hint style="warning" %}
+These IP addresses only speak [RADIUS](../../../details.md#what-is-radius) over UDP ports 1812/1813!
 {% endhint %}
 
 Geo-location of the RADIUS proxy/proxies as well as the respective public IP address(es).
 
-### UDP Auth Port
+#### Shared Secrets
 
-The standard **** RADIUS authentication port
-
-### UDP Acc Port
-
-The standard **** RADIUS accounting port
-
-### Shared Secret
-
-The shard secret that encrypts the RADIUS communication between your network gear and RADIUSaaS.
-
-If you have multiple **Proxies**, you can change the shared secret for each IP address when you click **Show shared secrets**. If you have nothing set, the default shared secret will be used for all **Proxies**.
+By default **all RADIUS Proxies** use the same **default shared secret** as configured in the text box above the **Optional Settings** section. In case you would like to **individualize** the shared secrets for each proxy, enable **Show shared secrets** and configure the secrets as per your needs.
 
 <figure><img src="../../../.gitbook/assets/different-shared-secrest.gif" alt=""><figcaption></figcaption></figure>
 
-## Optional Settings
+#### Ports
 
-### OCSP Hard-Fail
-
-{% hint style="warning" %}
-In case you **enable** this setting, authentication requests will be **rejected** if your CA's OCSP responder is not available/reachable.
-{% endhint %}
-
-This setting determines how RADIUSaaS behaves, when the OCSP responder of your trusted CA cannot be reached.&#x20;
-
-By default, we **recommend to disable OCSP hard-fail** to increase the availability of the service by allowing authentication requests to be accepted even if the OCSP responder cannot be reached. With this **soft-fail** mechanism, and in case OCSP is not reachable, RADIUSaaS will only check if the incoming certificate was signed by one of the [trusted CAs](../settings-trusted-roots/trusted-roots.md) (and process the optional [Rules](../rules/)).
+This section displays the (standard) ports for the RADIUS Authentication and RADIUS Accounting services.

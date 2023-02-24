@@ -71,7 +71,7 @@ To download your **Server Certificate**  click **Download** in the corresponding
 
 ![](<../../../.gitbook/assets/image (68) (1).png>)
 
-It will open a dialog, and show the complete certificate path. The root certificate will always be marked in green. In case you are using the default self-signed server certificate, only one certificate will appear in the download list.
+It will open a dialog, and show the complete certificate path. The **root certificate** will always be marked in green.
 
 ![](<../../../.gitbook/assets/image (75) (1).png>)
 

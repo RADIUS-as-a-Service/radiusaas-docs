@@ -2,9 +2,9 @@
 
 ## Requirements
 
-In order for your access points to establish a valid RadSec session, there are requirements that must be met, regardless of which manufacturer your access points are from
+Before your access points are able to establish a valid RadSec session, there are requirements that must be met, regardless of which manufacturer your access points are from.
 
-* Access Points need a valid **Client certificate**
-* Access Points need to trust the root certificate of your RADIUS Server
-* RADIUS Server need to trust the CA of where your Access Points get their certificate from
+* Access Points require a valid **client certificate**
+* Access Points must **trust the CA** that has issued your **RADIUS server certificate**.
+* RADIUSaaS needs to **trust the CA** that has issued the client certificate on your Access Points.
 
