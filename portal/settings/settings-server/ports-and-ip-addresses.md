@@ -26,8 +26,6 @@ This type of public IP address **supports both** AAA protocols, **RADIUS** and *
 
 The DNS entry through which the RadSec service can be reached.&#x20;
 
-Please note that most network appliances do not support DNS-based RadSec addressing yet.
-
 #### Server IP Addresses
 
 Public IP address(s) on which the RadSec and RADIUS service is available.&#x20;
@@ -59,8 +57,6 @@ This type of public IP address supports the **RadSec protocol only**. Consequent
 #### RadSec DNS
 
 The DNS entry through which the RadSec service can be reached.&#x20;
-
-Please note that most network appliances do not support DNS-based RadSec addressing yet.
 
 #### **Server IP Addresses**
 

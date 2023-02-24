@@ -10,12 +10,13 @@
   * [RADIUS](how-to-use/get-started/radius.md)
 * [Access Point Setup](how-to-use/access-point-setup/README.md)
   * [RadSec](how-to-use/access-point-setup/radsec-available/README.md)
-    * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)
+    * [Aruba](how-to-use/access-point-setup/radsec-available/aruba.md)
     * [Juniper Mist](how-to-use/access-point-setup/radsec-available/juniper-mist.md)
+    * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)
   * [RADIUS](how-to-use/access-point-setup/proxy-needed/README.md)
     * [Meraki](how-to-use/access-point-setup/proxy-needed/meraki.md)
-    * [UniFi](how-to-use/access-point-setup/proxy-needed/unifi.md)
     * [Sophos UTM](how-to-use/access-point-setup/proxy-needed/sophos-utm.md)
+    * [UniFi](how-to-use/access-point-setup/proxy-needed/unifi.md)
 * [Server Certificate Renewal](how-to-use/renew-certificate.md)
 
 ## Admin Portal <a href="#portal" id="portal"></a>

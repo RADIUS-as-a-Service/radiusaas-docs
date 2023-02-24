@@ -32,4 +32,4 @@ Therefore, **do not quote any jinja variable**.
 
 **Wrong**
 
-****![](<../../../.gitbook/assets/image (1) (4).png>)****
+****![](<../../../.gitbook/assets/image (1) (1).png>)****

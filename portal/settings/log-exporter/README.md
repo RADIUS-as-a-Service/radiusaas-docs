@@ -23,7 +23,7 @@ The Log Exporter allows you to configure a specific **Message Filter** for each 
 
 The **Message Filter** that can be configured for each target helps you to only receive those logs, that are really relevant for your monitoring and alerting system.
 
-<figure><img src="../../../.gitbook/assets/image (2) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 The filter can be configured to only consider logs from certain sources/sub-system from the RADIUSaaS platform:
 
@@ -52,6 +52,6 @@ No matter which target type(s) you have selected, you will have to edit the data
 
 The Log Exporter has access to every field in a log message that is hierarchically located under the`_source` property. It is made available through the `data` object in the **Message** editor.
 
-<figure><img src="../../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
