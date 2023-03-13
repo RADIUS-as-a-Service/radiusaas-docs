@@ -16,7 +16,7 @@ If their devices can connect, such errors can be ignored. If this is not the cas
 
 
 
-### Proxy session resumption
+### Proxy Session Resumption
 
 <figure><img src="../../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption></figcaption></figure>
 

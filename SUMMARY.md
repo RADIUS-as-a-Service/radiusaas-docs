@@ -45,6 +45,7 @@
     * [Teams](portal/settings/log-exporter/teams.md)
     * [Log Analytics](portal/settings/log-exporter/log-analytics.md)
     * [Generic Webhook](portal/settings/log-exporter/generic-webhook.md)
+    * [Examples](portal/settings/log-exporter/examples.md)
 
 ***
 
@@ -70,9 +71,9 @@
 
 * [Troubleshooting](other/trubleshooting.md)
 * [FAQs](other/faqs/README.md)
+  * [Certificates](other/faqs/certificates.md)
   * [Log](other/faqs/log.md)
   * [Security & Privacy](other/faqs/security-and-privacy.md)
-  * [Certificates](other/faqs/certificates.md)
 
 ***
 
