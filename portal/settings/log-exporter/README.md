@@ -1,7 +1,7 @@
 ---
 description: >-
-  The Log Exporter allows you to push RADIUSaaS Logs to an external monitoring
-  and alerting system
+  The Log Exporter allows you to push RADIUSaaS Logs to an external SIEM,
+  monitoring and alerting system
 ---
 
 # 🆕 Log Exporter
