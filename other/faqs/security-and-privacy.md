@@ -63,7 +63,9 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 
     For troubleshooting and analysis purposes, the RADIUSaaS platform logs all relevant data it processes (see [Question 2](security-and-privacy.md#2.-which-data-is-processed-by-radiusaas) except for the RADIUS Shared Secret and the private key of the server certificate).
 
-    The logs are stored directly on the RADIUSaaS platform within an _Elasticsearch_ database and segregated for every client via a dedicated space.
+    The logs are stored directly on the RADIUSaaS platform within an _Elasticsearch_ database and segregated for every client via a dedicated space.\
+    \
+    **Log retention time: 75 days.**
 3.  Certificates
 
     RADIUSaaS requires several server certificates as well as root certificates to facilitate proper operation. All those certificates are securely **stored in an Azure KeyVault**.
@@ -72,7 +74,11 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 
     Other secret data, e.g. the RADIUS Shared Secret as well as the service's configuration are securely **stored in an Azure KeyVault**.
 
-### 4. Which tenant permissions does the admin have to consent to?
+### 4. Is there an archiving mechanism for logs?
+
+There is no built-in log archiving mechanism. However, the [Log Exporter](../../portal/settings/log-exporter/) feature can be used to ingest RADIUS logs into your own logging and archiving services.
+
+### 5. Which tenant permissions does the admin have to consent to?
 
 1.  `Basic User Profile`:
 
@@ -81,7 +87,7 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 
     With this permission RADIUSaaS receives the right to request a refresh token so that the user can stay logged-on.
 
-### 5. What data is made available by granting the consent(s) from 4.?
+### 6. What data is made available by granting the consent(s) from 4.?
 
 1.  `Basic User Profile`:
 
@@ -90,7 +96,7 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 
     No specific data is made available by granting consent to this permission.
 
-### 6. Which externally accessible endpoints does RADIUSaaS expose?
+### 7. Which externally accessible endpoints does RADIUSaaS expose?
 
 1. RADIUS Server Backend API
    * Provides configuration information to the RadSec proxy
@@ -101,7 +107,7 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 4. Kubernetes Cluster Management API
    * Required to operate the service
 
-### 7. How are the endpoints from Question 6 protected?
+### 8. How are the endpoints from Question 6 protected?
 
 1. RADIUS Server Backend API
    * Secured via a static JWT token
@@ -115,45 +121,51 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 
 ## Identity
 
-### 8. What authorization schemes are used to gain access to RADIUSaaS?
+### 9. What authorization schemes are used to gain access to RADIUSaaS?
 
 * Administrative access is realized through OAuth 2.0 authentication with Azure AD for users that are registered on the platform.
 
-### 9. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
+### 10. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 
 * Yes. The RADIUSaaS Admin portal provides features to assign roles to every user (available roles: administrator, viewer, guest)
 * In order to properly operate and maintain the service, there are super-admin accounts for a limited circle of glueckkanja-gab AG employees, that have full access to all client instances of the RADIUSaaS service.
 
-### 10. Can access credentials be recovered? If yes, how?
+### 11. Can access credentials be recovered? If yes, how?
 
 * Login credentials: Depends on the configured AAD policies in the customer tenant.
 * Username + password credentials as well as all certificates for network access can be recovered from Azure KeyVault with a retention policy of 90 days after they have been deleted.
 
 ## Data Protection
 
-### 11. How is _data at-rest_ protected against unauthorized access?
+### 12. How is _data at-rest_ protected against unauthorized access?
 
 #### **Configuration Data and Secrets**
 
 * Configuration data is stored in Azure KeyVault and protected via access credentials that are in turn stored as _Kubernetes Secrets_.
 
+#### **Kubernetes Service**
+
+* The volumes and disks used to host our service are [encrypted](https://learn.microsoft.com/en-us/azure/aks/enable-host-encryption).
+
 #### **Logs**
 
+* The Elasticsearch Database is hosted on the encrypted Kubernetes Service disks.
 * The logs are stored in an Elasticsearch Database and segregated via dedicated spaces.
 * Access to those spaces is given via username + password credentials that are in turn stored as _Kubernetes Secrets_.
+* The Elasticsearch Database itself is not encrypted.
 
-### 12. How is _data in transit_ protected against unauthorized access?
+### 13. How is _data in transit_ protected against unauthorized access?
 
-* The authentication flows of the device trying to access the network are wrapped into a TLS-tunnel
+* The authentication flows of the device trying to access the network are wrapped into a TLS-tunnel (>= TLS 1.2)
 * The association between NAS and the RADIUS server is obfuscated via the RADIUS Shared Secret (MD5 hash algorithm)
 
 ## Security by Design
 
-### 13. Does RADIUSaaS employ a defense in depth strategy?
+### 14. Does RADIUSaaS employ a defense in depth strategy?
 
 RADIUSaaS relies on well-established protocols to handle network authentication flows (RADIUS, RadSec, EAP-TLS, EAP-TTLS-X). Due to the strong focus on certificate-based authentication, capturing the traffic is meaningless as long as the eavesdropper does not have access to a trusted certificate.
 
-### 14. Is the UDP-based RADIUS protocol secure?
+### 15. Is the UDP-based RADIUS protocol secure?
 
 We are recommending to use the modern RadSec protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
 
@@ -173,7 +185,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * additionally there are no secrets transported, if certificate-based authentication is used.
 {% endhint %}
 
-### 15. What technologies, stacks, platforms were used to design RADIUSaaS?
+### 16. What technologies, stacks, platforms were used to design RADIUSaaS?
 
 * `Kubernetes`
 * `EFK Stack (Elasticsearch, Filebeats, Kibana)`
@@ -184,7 +196,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 
 ## GDPR and Data-residency <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
 
-### 16. Is data leaving Europe?
+### 17. Is data leaving Europe?
 
 * Core Services: Depends on configuration
   * RADIUSaaS's core services can be hosted in the data centers described in [Question 1](security-and-privacy.md#1.-from-what-data-center-is-radiusaas-operating).
@@ -192,7 +204,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * RadSec Proxy: Depends on configuration
   * If you require a RadSec proxy due to limitations of the network gear in regards to native RadSec support, you may select a proxy from various regions, Europe amongst others. In that case, your data stays within the borders of the European Union.
 
-### 17. What 3rd-Party cloud-providers does RADIUSaaS rely on and why?
+### 18. What 3rd-Party cloud-providers does RADIUSaaS rely on and why?
 
 * Microsoft Corporation (Azure)
   * Provision of cloud services
@@ -204,11 +216,11 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 
 ## Miscellaneous <a href="#user-content-miscellaneous" id="user-content-miscellaneous"></a>
 
-### 18. Is RADIUSaaS part of a bug-bounty program?
+### 19. Is RADIUSaaS part of a bug-bounty program?
 
 No
 
-### 19. What QA measures are in place?
+### 20. What QA measures are in place?
 
 * There are dedicated RADIUSaaS labs for development purposes
 * The deployment and installation of the service is realized through TerraForm, ensuring consistency and idempotence of each instance deployment
@@ -220,3 +232,32 @@ No
   * Integration tests
   * Stress tests
   * Experience-based testing
+
+### 21. Is there a patching process in place?
+
+Yes. Patches, hot-fixes, bugfixes and feature updates are introduced using our CI/CD process that leverages different testing pipelines to ensure that only code that satisfies our QA hurdles gets released. Newly released code is automatically made available to all our customers. Using Infrastructure as Code (Terraform) enables us to deliver consistent, reproducible and high-quality updates to our customers.
+
+The Kubernetes-based architecture of our service ensures that code updates are seamless for our customers and do not lead to any service outages.&#x20;
+
+### 22. What are the SLAs for patches?
+
+* Patches for CVEs / security vulnerabilities: Once the vulnerability becomes public knowledge or as soon as we identify a vulnerability within our own code, a hot-fix will be provided no longer than 24 hours after we have become aware of the vulnerability.&#x20;
+* Other patches: No SLA.
+
+### 23. Does RADIUSaaS perform backups?
+
+#### Secrets and configuration data
+
+We leverage Azure KeyVault to securely store secrets (e.g. certificates) and all other configuration data of the service. Azure KeyVault is a highly-available [geo-redundant service](https://learn.microsoft.com/en-us/azure/key-vault/general/disaster-recovery-guidance) that replicates all of its content in a second datacenter, thus providing implicit back-up services.&#x20;
+
+#### RADIUS and RadSec servers
+
+Stateless. No back-up required.
+
+#### Logs
+
+Currently not backed-up.
+
+### 24. Are there backup restore tests?
+
+Yes. The restoration from back-ups is tested with every update/release of the service. There are approximately 4 - 8 releases per year.
