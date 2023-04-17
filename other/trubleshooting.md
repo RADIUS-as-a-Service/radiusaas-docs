@@ -97,7 +97,7 @@ In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the f
   * **Create** a new Enterprise Application
   * Give it a **name** such as "RADIUSaaS Admin Center"
   * Enable **users sign-in**
-  * Set the **Homepage URL** to [`https://radius-as-a-service.com`](https://radius-as-a-service.com)``
+  * Set the **Homepage URL** to [`https://radius-as-a-service.com`](https://radius-as-a-service.com)
   * Optionally, apply your **Conditional Access** policies
   * Configure the following permissions (either an Admin or User consent level):\
     <img src="../.gitbook/assets/image (78) (1) (1) (1).png" alt="" data-size="original">

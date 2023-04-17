@@ -18,7 +18,7 @@ Not available on all RADIUSaaS instances.
 
 This type of public IP address **supports both** AAA protocols, **RADIUS** and **RadSec**. Consequently, it listens on port 1812, 1813 for RADIUS and on port 2083 for RadSec.
 
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Properties
 

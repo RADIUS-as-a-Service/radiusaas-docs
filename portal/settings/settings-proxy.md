@@ -71,8 +71,8 @@ To Add a new proxy, simply click **Add**, choose your **Region** and click **Cre
 
 ![](<../../.gitbook/assets/image (76) (1) (1).png>)
 
-****\
-****After the installation has finished, it can take up to 15 minutes until your proxy has established a connection to your RADIUS server.
+\
+After the installation has finished, it can take up to 15 minutes until your proxy has established a connection to your RADIUS server.
 
 ![](<../../.gitbook/assets/image (66) (1).png>)
 

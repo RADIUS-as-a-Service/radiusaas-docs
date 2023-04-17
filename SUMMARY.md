@@ -14,6 +14,7 @@
     * [Juniper Mist](how-to-use/access-point-setup/radsec-available/juniper-mist.md)
     * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)
   * [RADIUS](how-to-use/access-point-setup/proxy-needed/README.md)
+    * [ExtremeCloud IQ CoPilot](how-to-use/access-point-setup/proxy-needed/extremecloud-iq-copilot.md)
     * [Meraki](how-to-use/access-point-setup/proxy-needed/meraki.md)
     * [Sophos UTM](how-to-use/access-point-setup/proxy-needed/sophos-utm.md)
     * [UniFi](how-to-use/access-point-setup/proxy-needed/unifi.md)

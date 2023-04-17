@@ -38,7 +38,7 @@ Switch back to your WebFig, add a new RADIUS profile and enter the following inf
 * **Accounting Port:** 2083
 * **Certificate:** the generated before&#x20;
 
-![](<../../../.gitbook/assets/image (39).png>)
+![](<../../../.gitbook/assets/image (39) (1).png>)
 
 Go to **Wireless** add a new **Security Profile** and enter the following information:&#x20;
 
@@ -54,4 +54,4 @@ Go to **Wireless** add a new **Security Profile** and enter the following inform
 
 Switch to your **WiFi Interfaces** and apply your **Security Profile** to the interface.
 
-![](<../../../.gitbook/assets/image (41).png>)
+![](<../../../.gitbook/assets/image (41) (1).png>)

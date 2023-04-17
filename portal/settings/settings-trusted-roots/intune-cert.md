@@ -39,4 +39,4 @@ To get your Intune Tenant ID, follow these steps:&#x20;
 
 The Tenant ID of the following certificate is: **bb4397cb6891c64db17f766487518a6a**
 
-![](<../../../.gitbook/assets/image (33).png>)
+![](<../../../.gitbook/assets/image (33) (1).png>)

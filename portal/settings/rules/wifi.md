@@ -2,7 +2,7 @@
 
 ## Basics
 
-1. To create a WiFi rule, add an **item** under the **Rule collection** hive **** and select **WiFi Rule.**&#x20;
+1. To create a WiFi rule, add an **item** under the **Rule collection** hive and select **WiFi Rule.**&#x20;
 2. Give the rule a **Name** that explains for what the rule is used for. Furthermore, a descriptive name will help you to identify authentication requests processed by this rule in your logs easily later on.
 3. Do not forget to **Enable** the rule!
 
