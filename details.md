@@ -2,7 +2,7 @@
 
 ## What is RADIUS?
 
-Whenever large companies need network authentication, [RADIUS (RFC 2865)](https://tools.ietf.org/html/rfc2865) is the protocol of choice. RADIUS is an AAA protocol which stands for **authentication, authorization and accounting**. It is therefore best suited for controlling access to networks like Wi-Fi, Wired (802.1X, EAP) or VPN. The protocol was developed by Livingston Enterprises, Inc. in 1991 and is now part of the IETF standards.
+Whenever large companies need network authentication, [RADIUS (RFC 2865)](https://tools.ietf.org/html/rfc2865) is the protocol of choice. RADIUS is an AAA protocol which stands for **authentication, authorization and accounting**. It is therefore best suited for controlling access to networks like WiFi, Wired (802.1X, EAP) or VPN. The protocol was developed by Livingston Enterprises, Inc. in 1991 and is now part of the IETF standards.
 
 ## What is RadSec?
 
