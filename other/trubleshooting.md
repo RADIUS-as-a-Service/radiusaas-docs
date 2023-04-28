@@ -58,7 +58,7 @@ Wed Apr  7 08:14:41 2021 : ERROR: (320) eap_tls: ERROR: TLS Alert write:fatal:de
 Wed Apr  7 08:14:41 2021 : Error: tls: TLS_accept: Error in error
 ```
 
-... then it is probably a bug of the TPM software on your Windows machines. More information on that can be found in the [SCEPman documentation](https://docs.scepman.com/certificate-deployment/microsoft-intune/windows-10).
+... then it is probably a bug of the TPM software on your Windows machines. More information on that can be found in the [SCEPman documentation](https://docs.scepman.com/certificate-deployment/microsoft-intune/windows-10#key-storage-provider-ksp-enroll-to-trusted-platform-module-tpm-ksp-otherwise-fail).
 
 If you can see something like this in your [Logs](../portal/insights/log.md#logs):
 
@@ -68,7 +68,7 @@ Wed Dec 14 07:24:24 2022 : Auth: (95878) Login incorrect (eap_tls: (TLS) Alert r
 Wed Dec 14 07:11:06 2022 : ERROR: (95717) eap_tls: ERROR: (TLS) Alert read:fatal:access denied
 ```
 
-... there can be two reasons. The one is that your WiFi profile is referencing the wrong root certificate. Please make sure that your profile is setup correctly. If it is and you still facing this issue, try to set your KSP to **Software KSP**.&#x20;
+... there can be two reasons. The one is that your WiFi profile is referencing the wrong root certificate. Please make sure that your profile is setup correctly. If it is and you still facing this issue, try to set your KSP to [**Software KSP**](https://docs.scepman.com/certificate-deployment/microsoft-intune/windows-10#key-storage-provider-ksp-enroll-to-trusted-platform-module-tpm-ksp-otherwise-fail).&#x20;
 
 {% hint style="warning" %}
 The setting Key Storage Provider (KSP) determines the storage location of the private key for the end-user certificates. Storage in the TPM is more secure than software storage, because the TPM provides an additional layer of security to prevent key theft. However, there is **a bug in some older TPM firmware versions** that invalidates some signatures created with a TPM-backed private key. In such cases, the certificate cannot be used for EAP authentication as it is common for Wi-Fi and VPN connections. Affected TPM firmware versions include:
