@@ -47,6 +47,10 @@ openssl pkcs12 -in certificate-test.pfx -out servercert.cert -nodes
 curl https://YOURSCEPMANINSTANCE.COM/certsrv/mscep/mscep.dll/pkiclient.exe\?operation\=GetCACert | openssl x509 -inform der >> servercert.cert
 ```
 
+{% hint style="warning" %}
+On Windows, [OpenSSL 1.x](https://slproweb.com/products/Win32OpenSSL.html) must be used to successfully execute these commands..
+{% endhint %}
+
 {% hint style="info" %}
 Please note: By default, SCEPman Certificate Master issues certificates that are valid for 730 days. If you'd like to change this, please refer to SCEPman's [documentation](https://docs.scepman.com/advanced-configuration/application-settings/certificates#appconfig-validityperioddays).
 {% endhint %}
