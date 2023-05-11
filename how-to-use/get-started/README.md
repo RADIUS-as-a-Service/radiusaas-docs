@@ -31,6 +31,10 @@ In case your network appliances support RADIUS-only, please follow this guide:
 [radius.md](radius.md)
 {% endcontent-ref %}
 
+{% hint style="info" %}
+If we have already provisioned a trial of RADIUSaaS for you, there is no **need to** subscribe to the service via Azure Marketplace.
+{% endhint %}
+
 {% embed url="https://youtu.be/shXVZmb-GJo?t=287" %}
-Configurations od RADIUSaaS
+Getting started with RADIUSaaS
 {% endembed %}
