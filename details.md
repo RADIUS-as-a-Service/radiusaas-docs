@@ -39,6 +39,8 @@ In those cases or guests scenarios, you can [add users](portal/users.md#add) to 
 
 #### Regions
 
+RADIUSaaS can be used globally.
+
 **RADIUSaaS' core service** can be deployed into datacenters in the following regions and countries:
 
 * Australia
