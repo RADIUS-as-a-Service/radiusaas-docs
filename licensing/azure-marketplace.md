@@ -36,13 +36,7 @@ The annual plan is discounted by 10% in comparison to the monthly plan (calculat
 
 The following user segments are available for both, monthly and annual plans.&#x20;
 
-| **User Segment**      | **Included Users in Base Fee** | **Maximum Total Users** |
-| --------------------- | ------------------------------ | ----------------------- |
-| RADIUSaaS (M/Y) 50    | 50                             | 249                     |
-| RADIUSaaS (M/Y) 250   | 250                            | 999                     |
-| RADIUSaaS (M/Y) 1000  | 1,000                          | 4,999                   |
-| RADIUSaaS (M/Y) 5000  | 5,000                          | 9,999                   |
-| RADIUSaaS (M/Y) 10000 | 10,000                         | unlimited               |
+<table data-header-hidden><thead><tr><th width="240.02162801098973">Plan</th><th width="244.07580174927114">Included Users</th><th></th></tr></thead><tbody><tr><td><strong>User Segment</strong></td><td><strong>Included Users in Base Fee</strong></td><td><strong>Maximum Total Users</strong></td></tr><tr><td>RADIUSaaS (M/Y) 50</td><td>50</td><td>249</td></tr><tr><td>RADIUSaaS (M/Y) 250</td><td>250</td><td>999</td></tr><tr><td>RADIUSaaS (M/Y) 1000</td><td>1,000</td><td>4,999</td></tr><tr><td>RADIUSaaS (M/Y) 5000</td><td>5,000</td><td>9,999</td></tr><tr><td>RADIUSaaS (M/Y) 10000</td><td>10,000</td><td>unlimited</td></tr></tbody></table>
 
 For prices in Euro (EUR), please check out our [website](https://www.radius-as-a-service.com/pricing/). For prices in _your_ currency, please directly refer to the **Marketplace** in the [Azure Portal](https://portal.azure.com/).
 

@@ -33,12 +33,12 @@ Below settings are the necessary settings to establish a functional RadSec conne
     <figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 8.  Under **RadSec**, select **Enabled** and set the **Server Name** to the **SAN** attribute of your RADIUS Server certificate
 
-    <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 9.  For **Server Addresses** use either the [**IP address**](../../../portal/settings/settings-server/ports-and-ip-addresses.md) or the [**DNS** **name**](../../../portal/settings/settings-server/ports-and-ip-addresses.md) of your RadSec service endpoint.
 
 
 
-    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### A complete Run-Through
 

@@ -55,11 +55,7 @@ For network equipment, where you can define the priority of the RADIUS servers, 
 
 **Example:** You have 5 WiFi controllers and 3 RADIUS Proxies. You may then configure the following priority orders in your WiFi controllers:
 
-| Wifi Controller # | RADIUS Priority Order |
-| ----------------- | --------------------- |
-| 1 and 4           | 1, 2, 3               |
-| 2 and 5           | 2, 3, 1               |
-| 3                 | 3, 1, 2               |
+<table><thead><tr><th width="196.5">Wifi Controller #</th><th>RADIUS Priority Order</th></tr></thead><tbody><tr><td>1 and 4</td><td>1, 2, 3</td></tr><tr><td>2 and 5</td><td>2, 3, 1</td></tr><tr><td>3</td><td>3, 1, 2</td></tr></tbody></table>
 
 #### Properties
 

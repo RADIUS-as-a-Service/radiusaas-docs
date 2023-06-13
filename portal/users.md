@@ -26,7 +26,7 @@ To import your users from a CSV file
 
 * Click on **Import(CSV)**
 
-<figure><img src="../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * A pop-up appears, from where you're able to upload your CSV file.&#x20;
 * Once uploaded, the pop-up displays an interactive table mirroring the content of the CSV file

@@ -21,3 +21,11 @@ If their devices can connect, such errors can be ignored. If this is not the cas
 <figure><img src="../../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Your proxy will create a TCP session with your RadSec instance. This session has to be reinitiated every 30 seconds. As long as there is no error within those messages, these log entries will be expected.
+
+### Error in error
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+On the one hand, your RadSec Server is globally available, so anyone on the Internet can try to connect to it. On the other hand, there are internal metrics that check if your RadSec Server is available. These checks are currently based on a TCP connection. This connection is not in RADIUS format and therefore results in an error log entry that you can see.
+
+This message basically means that a connection was made to your RadSec port, but it did not communicate with it correctly. In the future the check will be a valid RADIUS message, but for now you don't have to worry about it.
