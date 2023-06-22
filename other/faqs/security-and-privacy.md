@@ -167,15 +167,15 @@ RADIUSaaS relies on well-established protocols to handle network authentication 
 
 ### 15. Is the UDP-based RADIUS protocol secure?
 
-We are recommending to use the modern RadSec protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
+We are recommending to use the modern [RadSec](../../details.md#what-is-radsec) protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
 
 The following diagram shows the RADIUS authentication flow:
 
 ![](../../.gitbook/assets/radius-authentication-sequence.png)
 
-In the first authentication sequence, the communication is secured by an MD5 based hashing algorithm (partially encrypted with the shared secret). No secrets are transported in this phase.
+In the first part of the authentication sequence, the communication is secured by an MD5-based hashing algorithm (partially encrypted with the shared secret). **No secrets** are transported in this phase.
 
-In the second sequence, a TLS-based EAP (e.g. EAP-TLS) encrypts the traffic. The EAP-TLS traffic it tunneled in the UDP traffic. If you use certificate based authentication, no secrets are transported in this phase.
+In the second part of the authentication sequence, a TLS-based EAP (e.g. EAP-TLS) encrypts the traffic. The EAP-TLS traffic is then transported via UDP to the RADIUS proxy. This is the phase when credentials such as the certificate or the password is exchanged with RADIUSaaS. If you use certificate-based authentication, no secrets are transported in this phase as only the public key is exchanged. The private key remains on the client device at all times.
 
 {% hint style="success" %}
 Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20;
