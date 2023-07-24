@@ -32,7 +32,7 @@ After the creation, you will see a new certificate available in your table:
 
 ### Bring your own Certificate
 
-In case you do not want to use any of the standard certificates which we are providing, you can upload up to two of your own certificates
+In case you do not want to use any of the standard certificates which we are providing, you can upload up to two of your own certificates.
 
 #### SCEPman Server Certificate
 
