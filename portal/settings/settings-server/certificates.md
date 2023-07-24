@@ -14,14 +14,14 @@ The [second table](./#radsec-connection-certificates) contains all certificates 
 
 ### Default Certificates
 
-By default, RADIUSaaS generates a RADIUS server certificate signed by a Certificate Authority (CA) that is available on our service solely for this very purpose. We refer to it as the **Custom CA**. The Custom CA is unique for every customer.
+By default, RADIUSaaS generates a RADIUS server certificate signed by a Certificate Authority (CA) that is available on our service solely for this very purpose. We refer to it as the **Custom CA**. The Custom CA is unique for each customer.
 
 ### Custom CAs
 
 To create your Custom CA, follow these simple steps:&#x20;
 
 1. Click **Add**
-2. Choose **Create your own CA**
+2. Choose **Let RaaS create a CA for you**
 3. Click on **Create**
 
 ![](<../../../.gitbook/assets/image (73) (1) (1).png>)
@@ -40,16 +40,14 @@ You may leverage SCEPman Certificate Master to generate a server certificate for
 
 1. Navigate to your SCEPman Certificate Master web portal.
 2. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend to adapt the SAN of the default server certificate, i.g. `radius.<your RADIUSaaS instance name>.net`.
-3. Since RADIUSaaS requires the complete certificate chain in the PEM format, please run the following OpenSSL command to add SCEPman's root CA to the chain and to perform the format conversion (`certificate-test.pfx` is the name of the downloaded server certificate generated via SCEPman Certificate Master).
+3.  Set the **Download file format** to **PEM with certificate chain** and download the certificate. <mark style="color:red;">**Important:**</mark> <mark style="color:red;"></mark><mark style="color:red;">Take temporary note of the password since it cannot be recovered from Certificate Master.</mark>\
 
-```
-openssl pkcs12 -in certificate-test.pfx -out servercert.cert -nodes
-curl https://YOURSCEPMANINSTANCE.COM/certsrv/mscep/mscep.dll/pkiclient.exe\?operation\=GetCACert | openssl x509 -inform der >> servercert.cert
-```
 
-{% hint style="warning" %}
-On Windows, [OpenSSL 1.x](https://slproweb.com/products/Win32OpenSSL.html) must be used to successfully execute these commands..
-{% endhint %}
+    <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+4.  Navigate to your RADIUSaaS instance and upload the server certificate file. Subsequently, provide the password and click **Save**.\
+
+
+    <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Please note: By default, SCEPman Certificate Master issues certificates that are valid for 730 days. If you'd like to change this, please refer to SCEPman's [documentation](https://docs.scepman.com/advanced-configuration/application-settings/certificates#appconfig-validityperioddays).

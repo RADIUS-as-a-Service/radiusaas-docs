@@ -26,7 +26,7 @@ Your proxy will create a TCP session with your RadSec instance. This session has
 
 ### Error in error
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 On the one hand, your RadSec Server is globally available, so anyone on the Internet can try to connect to it. On the other hand, there are internal metrics that check if your RadSec Server is available. These checks are currently based on a TCP connection. This connection is not in RADIUS format and therefore results in an error log entry that you can see.
 
