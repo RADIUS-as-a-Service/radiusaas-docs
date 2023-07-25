@@ -124,7 +124,7 @@ The scope of the query provided below is as follows:
     "Client-MAC": {{ data.get('Client-MAC') }},
     "Username": {{ data.get('User-Name') }},
     "Applied-Rule": {{ data.get('Applied-Rule') }},
-    "VLAN": {{ data.get('Assigned-VLAN', 'No VLAN assigned') }}
+    "VLAN": {{ data.get('Assigned-VLAN', 'No VLAN assigned') }},
     {% if data.get('Auth-Source-Type') == "WiFi" %}
         "SSID": {{ data.get('SSID') }},
         "AP-MAC": {{ data.get('AP-MAC') }},
