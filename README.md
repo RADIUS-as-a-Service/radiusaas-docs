@@ -5,11 +5,11 @@ description: RADIUSaaS | Hassle Free WiFi Auth
 # Welcome
 
 {% hint style="warning" %}
-SCEPman version 2.5.982 has a bug that makes some OCSP responses incompatible with some clients including RADIUSaaS.&#x20;
+SCEPman version 2.5.982 introduced an extended timestamp format that makes some OCSP responses incompatible with some clients including RADIUSaaS.&#x20;
 
 **This can result in valid certificates being rejected temporarily. In the case of WiFi authentications, clients may need multiple connection attempts.**
 
-The bug is fixed in [SCEPman version 2.5.985](broken-reference).&#x20;
+The behavior is reverted in [SCEPman version 2.5.985](broken-reference).&#x20;
 
 If you are still using SCEPman 2.5.982, please stop and start your App Service [to enforce an update](https://docs.scepman.com/advanced-configuration/update-strategy#evergreen-approach), preferably outside of peak usage.
 {% endhint %}
