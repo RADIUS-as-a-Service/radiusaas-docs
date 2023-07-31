@@ -10,6 +10,11 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
 
+Corresponding error messages:
+
+* "No EAP session matching state"
+* "Unable to set parent list"
+
 The RADIUS protocol is stateless and since it is normally transmitted over UDP, it has to validate if all packages have arrived, if their integrity persists, if they can be correctly assembled in the correct order, etc., essentially mitigating the flaws of the UDP protocol.
 
 Each authentication request goes through a process of steps that must be performed (e.g. association, request, challenge, challenge-response). For these steps, both sides (client and server) have a state that is included in the packet sent and a state that is stored locally. These states must match the step that client and server are currently in, respectively.
