@@ -74,7 +74,7 @@
 * [FAQs](other/faqs/README.md)
   * [Certificates](other/faqs/certificates.md)
   * [Log](other/faqs/log.md)
-  * [MAC Authentication Bypass (MAB)](other/faqs/mac-authentication-bypass-mab.md)
+  * [MAC-based authentication](other/faqs/mac-based-authentication.md)
   * [Security & Privacy](other/faqs/security-and-privacy.md)
 
 ***
