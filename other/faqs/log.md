@@ -1,5 +1,7 @@
 ---
-description: Questions regarding common log entries
+description: >-
+  This page gives you guidance on how to interpret one of the below error
+  messages.
 ---
 
 # Log

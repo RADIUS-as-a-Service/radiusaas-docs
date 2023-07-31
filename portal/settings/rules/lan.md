@@ -46,6 +46,10 @@ Under the **Configuration** hive you are able to configure additional filter cri
 
 ### Switch Filter
 
+{% hint style="info" %}
+This MAC address filter allows you to permit specific **switches** to communicate with RADIUSaaS. **This is not a MAC address filter for endpoints!**
+{% endhint %}
+
 To set a **MAC-Address-based** switch filter, either select **Addresses** or **Groups**.&#x20;
 
 * If you select **Addresses**, you can specify multiple switch MAC addresses**.**&#x20;

@@ -8,39 +8,7 @@ description: >-
 
 ## Overview
 
-RADIUSaaS provides public IP addresses that allow your network appliances and services to communicate with our service from anywhere via the internet. Thereby, we offer three flavors of IP addresses that support different protocols and listen on different ports.
-
-## Universal IP Address (TCP + UDP)
-
-{% hint style="info" %}
-Not available on all RADIUSaaS instances.
-{% endhint %}
-
-This type of public IP address **supports both** AAA protocols, **RADIUS** and **RadSec**. Consequently, it listens on port 1812, 1813 for RADIUS and on port 2083 for RadSec.
-
-<figure><img src="../../../.gitbook/assets/image (20) (2).png" alt=""><figcaption></figcaption></figure>
-
-### Properties
-
-#### RadSec DNS
-
-The DNS entry through which the RadSec service can be reached.&#x20;
-
-#### Server IP Addresses
-
-Public IP address(s) on which the RadSec and RADIUS service is available.&#x20;
-
-A second IP address is shown if we have configured a secondary RADIUSaaS instance for you.
-
-#### Ports
-
-This section displays the (standard) ports for the RadSec, RADIUS Authentication, and RADIUS Accounting services.
-
-#### Shared Secret
-
-The shard secret encrypts the RADIUS communication between your network gear and RADIUSaaS.
-
-In case you want to use the RADIUS protocol on this IP address, the relevant shared secret can be configured in the **default shared secret text box** right above the **Optional Settings** section.
+RADIUSaaS provides public IP addresses that allow your network appliances and services to communicate with our service from anywhere via the internet. Thereby, we offer two types of IP addresses that support different protocols and listen on different ports.
 
 ## RadSec IP Address (TCP)
 

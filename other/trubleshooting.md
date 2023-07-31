@@ -33,7 +33,7 @@ Make sure that you have referenced the RADIUS server certificate in your WiFi pr
 
 #### Unknown CA
 
-if you see something like this in your [Logs](../portal/insights/log.md#logs):
+If your [Logs](../portal/insights/log.md#logs) contain error messages similar to the ones shown below
 
 ```
 Mon Jul 12 12:38:09 2021 : ERROR: (14872) eap_tls:   ERROR: SSL says error 20 : unable to get local issuer certificate
@@ -42,7 +42,7 @@ Mon Jul 12 12:38:09 2021 : Error: tls: TLS_accept: Error in error
 Mon Jul 12 12:38:09 2021 : Auth: (14872) Login incorrect (eap_tls: SSL says error 20 : unable to get local issuer certificate): [host/8dc38402-20fb-41db-a8f3-4e4e95637173/<via Auth-Type = eap>] (from client contoso port 1 cli 18-9K-EA-0H-7F-C5)
 ```
 
-It can be one of this options:&#x20;
+it can have the following root causes:&#x20;
 
 * Client throws error --> `TLS Alert read:fatal:unknown CA`
   * Your Client doesn't know the **Server certificate** and rejects the connection. Check that you've added your **Server certificate** as described [here](../azure/microsoft-intune/trusted-root.md#adding-a-trusted-root-profile-for-your-clients).
@@ -52,7 +52,7 @@ It can be one of this options:&#x20;
 
 #### Fatal decrypt | Access denied
 
-If you can see something like this in your [Logs](../portal/insights/log.md#logs):
+If your [Logs](../portal/insights/log.md#logs) contain error messages similar to the ones shown below
 
 ```
 Wed Apr  7 08:14:39 2021 : Auth: (312) Login incorrect (eap_tls: TLS Alert write:fatal:decrypt error): [host/00128t09-cbna-469c-9768-2783d28eikl9/<via Auth-Type = eap>] (from client contoso port 1 cli 84-FD-D1-8C-0E-33)
@@ -62,7 +62,7 @@ Wed Apr  7 08:14:41 2021 : Error: tls: TLS_accept: Error in error
 
 ... then it is probably a bug of the TPM software on your Windows machines. More information on that can be found in the [SCEPman documentation](https://docs.scepman.com/certificate-deployment/microsoft-intune/windows-10#key-storage-provider-ksp-enroll-to-trusted-platform-module-tpm-ksp-otherwise-fail).
 
-If you can see something like this in your [Logs](../portal/insights/log.md#logs):
+If you see something like this in your [Logs](../portal/insights/log.md#logs)
 
 ```
 Wed Dec 14 07:24:24 2022 : ERROR: (95878) eap_tls: ERROR: (TLS) Alert read:fatal:access denied
@@ -70,7 +70,7 @@ Wed Dec 14 07:24:24 2022 : Auth: (95878) Login incorrect (eap_tls: (TLS) Alert r
 Wed Dec 14 07:11:06 2022 : ERROR: (95717) eap_tls: ERROR: (TLS) Alert read:fatal:access denied
 ```
 
-... there can be two reasons. The one is that your WiFi profile is referencing the wrong root certificate. Please make sure that your profile is setup correctly. If it is and you still facing this issue, try to set your KSP to [**Software KSP**](https://docs.scepman.com/certificate-deployment/microsoft-intune/windows-10#key-storage-provider-ksp-enroll-to-trusted-platform-module-tpm-ksp-otherwise-fail).&#x20;
+... there can be two reasons. One is that your WiFi profile is referencing the wrong root certificate for server validation. Please make sure that your profile is setup correctly. If it is and you are still facing this issue, try to set your KSP to [**Software KSP**](https://docs.scepman.com/certificate-deployment/microsoft-intune/windows-10#key-storage-provider-ksp-enroll-to-trusted-platform-module-tpm-ksp-otherwise-fail).&#x20;
 
 {% hint style="warning" %}
 The setting Key Storage Provider (KSP) determines the storage location of the private key for the end-user certificates. Storage in the TPM is more secure than software storage, because the TPM provides an additional layer of security to prevent key theft. However, there is **a bug in some older TPM firmware versions** that invalidates some signatures created with a TPM-backed private key. In such cases, the certificate cannot be used for EAP authentication as it is common for Wi-Fi and VPN connections. Affected TPM firmware versions include:
@@ -82,6 +82,20 @@ The setting Key Storage Provider (KSP) determines the storage location of the pr
 
 If you use TPM with this firmware, either update your firmware to a newer version or select "Software KSP" as key storage provider.
 {% endhint %}
+
+#### Wrong Shared RADIUS Secret
+
+If your [Logs](../portal/insights/log.md#logs) contain error messages similar to the ones shown below
+
+```
+Thu Jul 27 14:28:23 2023: message authenticator, wrong value
+Thu Jul 27 14:28:23 2023: buf2radmsg: message authentication failed
+Thu Jul 27 14:28:23 2023: radsrv: ignoring request from default (8.222.246.231), validation failed.
+```
+
+then one of your access points or switches that is trying to connect to your RADIUSaaS instance via a [RADIUS Proxy](../portal/settings/settings-proxy.md) is transmitting a mismatching [Shared Secret](../portal/settings/settings-server/ports-and-ip-addresses.md#shared-secrets).
+
+To identify the affected access point or switch, first determine the RADIUS proxy by expanding the error message and searching for the `proxyip` property. Now that you know the proxy, use your inventory and knowledge of specific locations or groups of devices that cannot connect to your network to identify the misconfigured network device. Finally, update the shared secret to match the value configured in your RADIUSaaS instance for that proxy.
 
 ## Admin Portal Issues
 

@@ -1,7 +1,8 @@
 ---
 description: >-
   This chapter shall provide a brief overview of the data that RADIUSaaS is
-  processing and how this data is protected against unauthorized access.
+  processing and storing and how this data is protected against unauthorized
+  access.
 ---
 
 # Security & Privacy
