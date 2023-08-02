@@ -53,7 +53,7 @@ To set an SSID Filter, either select **Names** or **Groups**.&#x20;
 
 ![](<../../../.gitbook/assets/image (89).png>)
 
-### Access Point filter
+### Access Point Filter
 
 {% hint style="info" %}
 This MAC address filter allows you to permit specific **access points** to communicate with RADIUSaaS. **This is not a MAC address filter for endpoints!**
@@ -66,7 +66,7 @@ To set a **MAC-Address-based** access point filter, either select **Addresses** 
 
 ![](<../../../.gitbook/assets/image (81).png>)
 
-### VLAN assignment
+### VLAN Assignment
 
 The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The following options are available:
 

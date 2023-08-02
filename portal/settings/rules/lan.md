@@ -57,7 +57,7 @@ To set a **MAC-Address-based** switch filter, either select **Addresses** or **G
 
 ![](<../../../.gitbook/assets/image (69).png>)
 
-### VLAN assignment
+### VLAN Assignment
 
 The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The following options are available:
 
