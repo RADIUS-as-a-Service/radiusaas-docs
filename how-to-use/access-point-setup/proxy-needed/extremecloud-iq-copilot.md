@@ -1,7 +1,7 @@
 ---
 description: >-
-  Unfortunately only `ExtremeCloud IQ SiteManager` is able to speak RadSec(as
-  far we know). This site handles CoPilot
+  Unfortunately only `ExtremeCloud IQ SiteManager` is able to speak RadSec (as
+  far we know). This site handles CoPilot.
 ---
 
 # ExtremeCloud IQ CoPilot
