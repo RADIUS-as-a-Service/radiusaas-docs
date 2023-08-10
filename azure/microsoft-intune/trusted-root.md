@@ -1,10 +1,10 @@
 # Trusted Root
 
-### Part 1: Download the RADIUS Server Certificate
-
 {% hint style="info" %}
-Only relevant if you are bringing your own RADIUS server certificate or are using the Custom CA. This is not required, if you have brought your own server certificate (e.g. from SCEPman) and if that certificate has been signed by the SCEP-issuing CA.
+This is only required if you are using a RADIUS server certificate that was issued by a CA that your clients do not already trust. For example, this is not needed if you are bringing your own server certificate issued by SCEPman.
 {% endhint %}
+
+### Part 1: Download the RADIUS Server Certificate
 
 When [downloading](../../portal/settings/settings-server/certificates.md#download) the Server certificate, use only the green-marked certificate. This will download the root CA certificate of the issuing CA.
 

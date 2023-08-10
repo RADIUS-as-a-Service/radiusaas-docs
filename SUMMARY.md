@@ -63,10 +63,10 @@
   * [Wired Profile](azure/microsoft-intune/wired-profile/README.md)
     * [Windows](azure/microsoft-intune/wired-profile/windows.md)
     * [macOS](azure/microsoft-intune/wired-profile/mac.md)
-* [Jamf](azure/jamf/README.md)
-  * [Trusted Root](azure/jamf/trusted-root.md)
-  * [WiFi Profile](azure/jamf/wifi-profile.md)
-  * [Wired Profile](azure/jamf/wired-profile.md)
+* [Jamf Pro](azure/jamf-pro/README.md)
+  * [Trusted Root](azure/jamf-pro/trusted-root.md)
+  * [WiFi Profile](azure/jamf-pro/wifi-profile.md)
+  * [Wired Profile](azure/jamf-pro/wired-profile.md)
 
 ## Other
 

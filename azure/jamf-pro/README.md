@@ -1,8 +1,10 @@
-# Jamf
+# Jamf Pro
 
 ## General
 
+{% hint style="success" %}
 We strongly recommend to configure all 802.1X-relevant payloads in a **single** Configuration Profile in Jamf - and one Configuration Profile per assignment type (Computers, Devices, Users).&#x20;
+{% endhint %}
 
 To fully configure 802.1X, this typically means you require the following payloads:
 

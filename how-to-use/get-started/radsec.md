@@ -62,6 +62,12 @@ Currently, we have not prepared sample guides for switch appliances yet. However
 This is a **mandatory** step.
 {% endhint %}
 
+{% hint style="success" %}
+**For Jamf Pro**
+
+We strongly recommend to configure all 802.1X-relevant payloads in a **single** Configuration Profile in Jamf - and one Configuration Profile per assignment type (Computers, Devices, Users).&#x20;
+{% endhint %}
+
 #### Server Certificate
 
 To enable trust between the client and RADIUSaaS, configure a trusted certificate profile in your preferred MDM solution:
@@ -72,10 +78,10 @@ To enable trust between the client and RADIUSaaS, configure a trusted certificat
 [trusted-root.md](../../azure/microsoft-intune/trusted-root.md)
 {% endcontent-ref %}
 
-#### Jamf
+#### Jamf Pro
 
-{% content-ref url="../../azure/jamf/trusted-root.md" %}
-[trusted-root.md](../../azure/jamf/trusted-root.md)
+{% content-ref url="../../azure/jamf-pro/trusted-root.md" %}
+[trusted-root.md](../../azure/jamf-pro/trusted-root.md)
 {% endcontent-ref %}
 
 #### WiFi Profile
@@ -88,10 +94,10 @@ To configure a WiFi profile in your preferred MDM solution, follow one of these 
 [wifi-profile](../../azure/microsoft-intune/wifi-profile/)
 {% endcontent-ref %}
 
-**Jamf**
+**Jamf Pro**
 
-{% content-ref url="../../azure/jamf/wifi-profile.md" %}
-[wifi-profile.md](../../azure/jamf/wifi-profile.md)
+{% content-ref url="../../azure/jamf-pro/wifi-profile.md" %}
+[wifi-profile.md](../../azure/jamf-pro/wifi-profile.md)
 {% endcontent-ref %}
 
 #### Wired (LAN) Profile
@@ -104,10 +110,10 @@ To configure a wired (LAN) profile for your stationary devices in your preferred
 [wired-profile](../../azure/microsoft-intune/wired-profile/)
 {% endcontent-ref %}
 
-**Jamf**
+**Jamf Pro**
 
-{% content-ref url="../../azure/jamf/wired-profile.md" %}
-[wired-profile.md](../../azure/jamf/wired-profile.md)
+{% content-ref url="../../azure/jamf-pro/wired-profile.md" %}
+[wired-profile.md](../../azure/jamf-pro/wired-profile.md)
 {% endcontent-ref %}
 
 ### Step 6: Rules
