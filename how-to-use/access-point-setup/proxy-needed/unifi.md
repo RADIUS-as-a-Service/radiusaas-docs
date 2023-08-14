@@ -1,5 +1,7 @@
 # UniFi
 
+## UniFi Configuration
+
 ### RADIUS Profile
 
 Please go through the following steps and configurations to create a RADIUS profile:

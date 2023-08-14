@@ -1,5 +1,7 @@
 # Permissions
 
+## Overview
+
 The permissions menu allows you to configure the permissions for the access to the RADIUSaaS admin portal.
 
 {% hint style="success" %}
@@ -25,6 +27,8 @@ Example:
 ```
 *@contoso.com
 ```
+
+## Roles
 
 ### Administrators
 

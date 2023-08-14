@@ -44,10 +44,10 @@ Mon Jul 12 12:38:09 2021 : Auth: (14872) Login incorrect (eap_tls: SSL says erro
 
 it can have the following root causes:&#x20;
 
-* Client throws error --> `TLS Alert read:fatal:unknown CA`
+* Client throws error `TLS Alert read:fatal:unknown CA`
   * Your Client doesn't know the **Server certificate** and rejects the connection. Check that you've added your **Server certificate** as described [here](../azure/microsoft-intune/trusted-root.md#adding-a-trusted-root-profile-for-your-clients).
   * You've changed/added a new **Server certificate** and your XML profile on the client is using the old one. In that case, please double-check that you've either updated your WiFi/Wired profile or re-generated your [XML](../portal/settings/settings-trusted-roots/xml.md#wifi) after adding the certificates and pushed that to your clients.&#x20;
-* `Server throws error --> TLS Alert write:fatal:unknown CA`
+* Server throws error `TLS Alert write:fatal:unknown CA`
   * Your RADIUS server doesn't know the issuer of the certificate which was used for authentication. Add your CA as described [here](../portal/settings/settings-trusted-roots/trusted-roots.md#add).
 
 #### Fatal decrypt | Access denied

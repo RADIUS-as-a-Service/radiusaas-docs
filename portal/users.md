@@ -6,7 +6,7 @@ description: >-
 
 # Users
 
-### Protocols
+## Protocols
 
 Devices that use **Username** and **Password** for network authentication have to speak one of the following Protocols:&#x20;
 
@@ -14,13 +14,13 @@ Devices that use **Username** and **Password** for network authentication have t
 * EAP-TTLS-MSCHAPv2
 * PEAP-MSCHAPv2
 
-### Add a new User
+## Add a new User
 
 Click **Add** and provide **User Name** and **Password** and choose your **Validity**. After entering all details, click  **Create**.
 
 ![](../.gitbook/assets/create-user.gif)
 
-### CSV Import
+## CSV Import
 
 To import your users from a CSV file
 
@@ -38,20 +38,18 @@ The required columns are **Username, Password** and **Owner**
 {% endhint %}
 
 {% hint style="warning" %}
-RADIUSaaS does not consider the **Username** a unique property. This means two or more **identical** **User** accounts may exist. Hence, if an error occurs while uploading the CSV file and users have already been created during the partial upload, please delete those users before uploading the CSV again to prevent duplicates.
+RADIUSaaS does not consider the **Username** a unique property. This means two or more **identical User** accounts may exist. Hence, if an error occurs while uploading the CSV file and users have already been created during the partial upload, please delete those users before uploading the CSV again to prevent duplicates.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/bulk-add user.gif" alt=""><figcaption></figcaption></figure>
 
-### Delete
+## Delete
 
 To **Delete** users, select all users which should be deleted in the list, click **Delete** and confirm your choice.
 
 ![](<../.gitbook/assets/image (86) (1).png>)
 
-&#x20;
-
-### Update
+## Update
 
 To change a user's password, disable/re-enable a user or select a new validity period, simply click on the **eye** symbol next to the user entry, change all needed entries and save them.
 

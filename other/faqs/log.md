@@ -6,7 +6,7 @@ description: >-
 
 # Log
 
-### No EAP session matching state
+## No EAP session matching state
 
 <figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
 
@@ -23,15 +23,13 @@ The error message indicates that one of the actors (client, server) has sent or 
 
 If the devices are able to connect eventually without noticeable delays, such errors can be ignored. If this is not the case, try increasing your EAP timeouts.
 
-
-
-### Proxy Session Resumption
+## Proxy Session Resumption
 
 <figure><img src="../../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Your proxy will create a TCP session with your RadSec instance. This session has to be reinitiated every 30 seconds. As long as there is no error within those messages, these log entries are expected.
 
-### Error in error
+## Error in error
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 

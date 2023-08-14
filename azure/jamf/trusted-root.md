@@ -15,13 +15,13 @@ When [downloading](../../portal/settings/settings-server/certificates.md#downloa
 1. Log in to your Jamf Pro instance.
 2. Choose your correct deployment scope (Computers, Devices or Users). In this example, we have chosen a macOS device (Computers).
 3. Navigate to an existing Configuration Profile or create a new one and give the profile a meaningful name, e.g. "Corp-WiFi-802.1X".
-4. Add a "**Certificate**" payload
+4. Add a **Certificate** payload
 5. Provide a meaningful **Certificate Name**, e.g. "RADIUSaaS Server Root CA"
-6. Under "**Select Certificate Option**" select "**Upload**"
+6. Under **Select Certificate Option** select **Upload**
 7. Upload the \*.cer file containing the certificate you have downloaded in Part 1. A password is not required, since it is only the public key part that is contained in the file and that needs to be uploaded.
-8. Select "**Allow all apps access**"
-9. Unselect "**Allow export from keychain**"
-10. Click "**Save**"
-11. Under "**Scope**" assign the profile to the relevant audience
+8. Select **Allow all apps access**
+9. Unselect **Allow export from keychain**
+10. Click **Save**
+11. Under **Scope** assign the profile to the relevant audience
 
 <figure><img src="../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>

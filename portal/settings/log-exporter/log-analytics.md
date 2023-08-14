@@ -21,7 +21,7 @@ Follow these steps to add a **Log Analytics** export target:
 
 {% hint style="warning" %}
 Some data which you might send to your Log Analytics workspace will include new line characters. \
-To get a valid JSON for every entry, the template engine has a global "tojson" parser which will apply for all variables you access.&#x20;
+To get a valid JSON for every entry, the template engine has a global **tojson** **parser** which will apply for all variables you access.&#x20;
 
 Therefore, **do not quote any jinja variable**.
 {% endhint %}

@@ -1,6 +1,6 @@
 # General Structure
 
-## Rule collection
+## Rule Collection
 
 {% hint style="info" %}
 We recommend to provide descriptive names for your rules, as this will allow them to be clearly identifiable in the Log area.

@@ -6,7 +6,7 @@ description: >-
 
 # 🆕 Log Exporter
 
-### General
+## General
 
 Logs will be **fetched every 60 seconds** and sent to your configured **Export Target(s)**. Currently, the Log Exporter can connect to the following target systems:
 
@@ -19,7 +19,7 @@ The Log Exporter allows you to configure a specific **Message Filter** for each 
 * Send every entry where a user was not able to login to a **Log Analytics Workspace**
 * Send every failed TCP connection to a **Microsoft Teams Channel**
 
-### Message Filter
+## Message Filter
 
 The **Message Filter** that can be configured for each target helps you to only receive those logs, that are really relevant for your monitoring and alerting system.
 
@@ -45,7 +45,7 @@ If you are familiar with reading the RADIUSaaS' [raw log data](../../insights/lo
 
 <figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-### Message
+## Message
 
 No matter which target type(s) you have selected, you will have to edit the data template describing how the export message should be structured using **Jinja2** as template engine:\
 [https://jinja.palletsprojects.com/en/3.1.x/templates/](https://jinja.palletsprojects.com/en/3.1.x/templates/)

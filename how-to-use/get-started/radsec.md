@@ -49,7 +49,6 @@ For some popular vendors, we have prepared representative step-by-step guides [h
 2. Add the CA certificate from which your APs obtain their RadSec connection certificate to your **RadSec allowed Connection** list as described [here](../../portal/settings/settings-server/certificates.md#add-a-new-certificate).
 3. Create a new RADIUS profile.
 4. Set the IP address and the port of your server in your RADIUS profile. Therefore, use the [public RadSec IP address](../../portal/settings/settings-server/ports-and-ip-addresses.md#server-ip-address) and the standard RadSec port (2083).
-   1. If you get asked to enter a shared secret, set it to "radsec".
 5. Assign the created profile to your SSID(s).
 
 #### Wired (LAN) Switches
@@ -80,8 +79,8 @@ To enable trust between the client and RADIUSaaS, configure a trusted certificat
 
 #### Jamf Pro
 
-{% content-ref url="../../azure/jamf-pro/trusted-root.md" %}
-[trusted-root.md](../../azure/jamf-pro/trusted-root.md)
+{% content-ref url="../../azure/jamf/trusted-root.md" %}
+[trusted-root.md](../../azure/jamf/trusted-root.md)
 {% endcontent-ref %}
 
 #### WiFi Profile
@@ -96,8 +95,8 @@ To configure a WiFi profile in your preferred MDM solution, follow one of these 
 
 **Jamf Pro**
 
-{% content-ref url="../../azure/jamf-pro/wifi-profile.md" %}
-[wifi-profile.md](../../azure/jamf-pro/wifi-profile.md)
+{% content-ref url="../../azure/jamf/wifi-profile.md" %}
+[wifi-profile.md](../../azure/jamf/wifi-profile.md)
 {% endcontent-ref %}
 
 #### Wired (LAN) Profile
@@ -112,8 +111,8 @@ To configure a wired (LAN) profile for your stationary devices in your preferred
 
 **Jamf Pro**
 
-{% content-ref url="../../azure/jamf-pro/wired-profile.md" %}
-[wired-profile.md](../../azure/jamf-pro/wired-profile.md)
+{% content-ref url="../../azure/jamf/wired-profile.md" %}
+[wired-profile.md](../../azure/jamf/wired-profile.md)
 {% endcontent-ref %}
 
 ### Step 6: Rules

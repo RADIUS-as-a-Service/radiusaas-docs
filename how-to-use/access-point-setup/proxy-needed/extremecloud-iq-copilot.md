@@ -1,18 +1,14 @@
 ---
 description: >-
-  Unfortunately only `ExtremeCloud IQ SiteManager` is able to speak RadSec (as
-  far we know). This site handles CoPilot.
+  Unfortunately only `ExtremeCloud IQ SiteManager` is able to speak RadSec(as
+  far we know). This site handles CoPilot
 ---
 
 # ExtremeCloud IQ CoPilot
 
-### Proxy
+## ExtremeCloud IQ CoPilot Configuration
 
-1. Create a proxy as described [here](../../../portal/settings/settings-proxy.md#add)
-
-### ExtremeCloud IQ CoPilot configuration
-
-1.  Go to **Configure -> Common Objects -> Authentication -> External Radius Servers** and click **Add**&#x20;
+1.  Go to **Configure > Common Objects > Authentication > External Radius Servers** and click **Add**&#x20;
 
     <figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 2.  &#x20;Enter the IP Object and give everything a descriptive name
@@ -26,7 +22,7 @@ description: >-
 
 <figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
-4.  Go to **Configure -> Network Policies -> Add Network Policy**\
+4.  Go to **Configure > Network Policies > Add Network Policy**\
 
 
     <figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>

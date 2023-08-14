@@ -12,6 +12,7 @@
   * [RadSec](how-to-use/access-point-setup/radsec-available/README.md)
     * [Aruba](how-to-use/access-point-setup/radsec-available/aruba.md)
     * [Juniper Mist](how-to-use/access-point-setup/radsec-available/juniper-mist.md)
+    * [Meraki](how-to-use/access-point-setup/radsec-available/meraki.md)
     * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)
   * [RADIUS](how-to-use/access-point-setup/proxy-needed/README.md)
     * [ExtremeCloud IQ CoPilot](how-to-use/access-point-setup/proxy-needed/extremecloud-iq-copilot.md)
@@ -63,10 +64,10 @@
   * [Wired Profile](azure/microsoft-intune/wired-profile/README.md)
     * [Windows](azure/microsoft-intune/wired-profile/windows.md)
     * [macOS](azure/microsoft-intune/wired-profile/mac.md)
-* [Jamf Pro](azure/jamf-pro/README.md)
-  * [Trusted Root](azure/jamf-pro/trusted-root.md)
-  * [WiFi Profile](azure/jamf-pro/wifi-profile.md)
-  * [Wired Profile](azure/jamf-pro/wired-profile.md)
+* [Jamf Pro](azure/jamf/README.md)
+  * [Trusted Root](azure/jamf/trusted-root.md)
+  * [WiFi Profile](azure/jamf/wifi-profile.md)
+  * [Wired Profile](azure/jamf/wired-profile.md)
 
 ## Other
 

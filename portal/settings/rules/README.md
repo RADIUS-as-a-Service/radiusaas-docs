@@ -13,17 +13,17 @@ All rules you have configured will be applied **after** successful credential au
 
 ### Default Rule
 
-To avoid disruption of any existing instance or in case you do not want to use the Rule Engine at all, any authentication is allowed if no rule is defined by default. This is realized through our default rule "**Any authentication allowed**".
+To avoid disruption of any existing instance or in case you do not want to use the Rule Engine at all, any authentication is allowed if no rule is defined by default. This is realized through our default rule **Any authentication allowed**.
 
 {% hint style="warning" %}
-The default rule "**Any authentication allowed**" still requires the presence of valid authentication credentials for a successful network authentication.
+The default rule **Any authentication allowed** still requires the presence of valid authentication credentials for a successful network authentication.
 {% endhint %}
 
 ### Order of Rule Execution
 
 If you have multiple rules configured, they will be applied in the order you see in your web portal - from top to bottom.&#x20;
 
-The only exception is the "**Any authentication allowed**" rule, that will be handled as last step in case it is configured. This is especially helpful during a ramp-in scenario, where you might not be certain that your rules cover all use-cases or locations. All authentication request rejected by the prior rules will then still be accepted by the default rule. In the dashboard you are then able to observe the devices/users failing for all other rules and correct/extend the rules accordingly.&#x20;
+The only exception is the **Any authentication allowed** rule, that will be handled as last step in case it is configured. This is especially helpful during a ramp-in scenario, where you might not be certain that your rules cover all use-cases or locations. All authentication request rejected by the prior rules will then still be accepted by the default rule. In the dashboard you are then able to observe the devices/users failing for all other rules and correct/extend the rules accordingly.&#x20;
 
 In case you end up having a large number of rules, we recommend - for the sake of maintaining high performance - to order the rules in a way that the most likely rules are hit first.
 

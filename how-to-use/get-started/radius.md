@@ -8,7 +8,7 @@
 This is a **mandatory** step.
 {% endhint %}
 
-A RADIUS proxy is required if your instance does not provide a [Universal IP Address](../../portal/settings/settings-server/ports-and-ip-addresses.md#universal-ip-address-tcp-+-udp) and if you want to configure a secondary/redundant RADIUS server on your network appliance/service - something we highly recommend.
+A RADIUS proxy is required if your networking appliance does not support the [RadSec](../../details.md#what-is-radsec) protocol.
 
 {% content-ref url="../../portal/settings/settings-proxy.md" %}
 [settings-proxy.md](../../portal/settings/settings-proxy.md)
@@ -82,8 +82,8 @@ To enable trust between the client and RADIUSaaS, configure a trusted certificat
 
 #### Jamf Pro
 
-{% content-ref url="../../azure/jamf-pro/trusted-root.md" %}
-[trusted-root.md](../../azure/jamf-pro/trusted-root.md)
+{% content-ref url="../../azure/jamf/trusted-root.md" %}
+[trusted-root.md](../../azure/jamf/trusted-root.md)
 {% endcontent-ref %}
 
 #### WiFi Profile
@@ -98,8 +98,8 @@ To configure a WiFi profile in your preferred MDM solution, follow one of these 
 
 **Jamf Pro**
 
-{% content-ref url="../../azure/jamf-pro/wifi-profile.md" %}
-[wifi-profile.md](../../azure/jamf-pro/wifi-profile.md)
+{% content-ref url="../../azure/jamf/wifi-profile.md" %}
+[wifi-profile.md](../../azure/jamf/wifi-profile.md)
 {% endcontent-ref %}
 
 #### Wired (LAN) Profile
@@ -114,8 +114,8 @@ To configure a wired (LAN) profile for your stationary devices in your preferred
 
 **Jamf Pro**
 
-{% content-ref url="../../azure/jamf-pro/wired-profile.md" %}
-[wired-profile.md](../../azure/jamf-pro/wired-profile.md)
+{% content-ref url="../../azure/jamf/wired-profile.md" %}
+[wired-profile.md](../../azure/jamf/wired-profile.md)
 {% endcontent-ref %}
 
 ### Step 6: Rules

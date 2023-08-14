@@ -1,9 +1,3 @@
----
-description: >-
-  This screenshots have been made in corporation with one of our customers.
-  Please excuse incompleteness in regard to navigating in the Aruba portal.
----
-
 # Aruba
 
 ## Prepare Certificates
@@ -13,6 +7,10 @@ description: >-
 3. **Add** the root certificate of the CA that has issued the client certificate on your Access Point to your RADIUS instance as described [here](../../../portal/settings/settings-server/certificates.md#radsec-connection-certificates).
 
 ## Aruba configuration
+
+{% hint style="info" %}
+Below settings are the necessary settings to establish a functional RadSec connection with our service. Configure any other settings at your discretion.
+{% endhint %}
 
 For general information on how to import certificates on your Aruba platform, please refer to their documentation:
 
@@ -24,7 +22,7 @@ For general information on how to import certificates on your Aruba platform, pl
 2.  **Import** your Access Point **client certificate** (created in step 2 of [Prepare Certificates](aruba.md#prepare-certificates)) with the type **Server certificate**
 
     <figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
-3.  Under **Access Points** --> **Security** select your imported client certificate from step 2 for **RadSec** and the RADIUS CA certificate for **RadSec Certificate Authority**
+3.  Under **Access Points >** **Security** select your imported client certificate from step 2 for **RadSec** and the RADIUS CA certificate for **RadSec Certificate Authority**
 
     <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
