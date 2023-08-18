@@ -68,7 +68,7 @@ The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The f
 #### By Certificate Extension
 
 {% hint style="info" %}
-Currently it is not supported to add custom certificate extensions to SCEP profiles in most MDM systems, including Microsoft Intune and JAMF.
+Currently it is not supported to add custom certificate extensions to SCEP profiles in many MDM systems, including Microsoft Intune and JAMF.
 
 We therefore recommend to use the [Certificate Subject Name](lan.md#by-certificate-subject-name) of the certificate instead to add a VLAN assignment.
 {% endhint %}
