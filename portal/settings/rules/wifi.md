@@ -70,25 +70,30 @@ To set a **MAC-Address-based** access point filter, either select **Addresses** 
 
 The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The following options are available:
 
-*   **Static**
+#### Static
 
-    * Statically specify the VLAN ID which should be assigned based on the related rule
+* Statically specify the VLAN ID which should be assigned based on the related rule
 
+#### By Certificate Extension
 
-*   **By Certificate Extension**
+{% hint style="info" %}
+Currently it is not supported to add custom certificate extensions to SCEP profiles in most MDM systems, including Microsoft Intune and JAMF.
 
-    * Select one of your created **Certificate Extensions**
-    * The filter is set to match the **Value** to your specified extension (OID).&#x20;
-    * Wildcards will be translated to .\* Regex
+We therefore recommend to use the [Certificate Subject Name](wifi.md#by-certificate-subject) of the certificate instead to add a VLAN assignment.
+{% endhint %}
 
+* Select one of your created Certificate Extensions
+* The filter is set to match the Value to your specified extension (OID)
+* Wildcards will be translated to .\* Regex
 
-* **By Certificate Subject Name**
-  * You can also assign VLAN IDs based on attributes in the **Subject Name** of your certificate
-  * Therefor, specify in which attribute the VLAN ID is stored
-  * Then, configure which type the VLAN ID is prefixed with
-  * The VLAN ID is not required to have a prefix. However, it can be required to use a prefix in case your Subject Name carries the same attribute more than once (e.g. several CN's are quite common).
+#### By Certificate Subject Name
 
-As an example, the following rule will assign the VLAN ID 15 based on the Subject Name attribute **OU** prefixed with **vlan-**.
+* You can also assign VLAN IDs based on attributes in the Subject Name of your certificate
+* Therefor, specify in which attribute the VLAN ID is stored
+* Then, configure which type the VLAN ID is prefixed with
+* The VLAN ID is not required to have a prefix. However, it can be required to use a prefix in case your Subject Name carries the same attribute more than once (e.g. several CN's are quite common).
+
+As an example, the following rule will assign the VLAN ID 15 based on the `Subject Name` attribute `OU` prefixed with `vlan-` :
 
 ![](<../../../.gitbook/assets/image (79).png>)
 
