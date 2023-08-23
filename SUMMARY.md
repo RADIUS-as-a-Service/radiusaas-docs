@@ -77,6 +77,7 @@
   * [Log](other/faqs/log.md)
   * [MAC-based authentication](other/faqs/mac-based-authentication.md)
   * [Security & Privacy](other/faqs/security-and-privacy.md)
+* [Add Link to MyApps](other/add-link-to-myapps.md)
 
 ***
 

@@ -24,7 +24,7 @@ For general information on how to import certificates on your Aruba platform, pl
     <figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 3.  Under **Access Points >** **Security** select your imported client certificate from step 2 for **RadSec** and the RADIUS CA certificate for **RadSec Certificate Authority**
 
-    <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 4.  For the **RADIUS** Server configuration, enable **RadSec** and choose either the [**IP address**](../../../portal/settings/settings-server/ports-and-ip-addresses.md) or the [**DNS** **name**](../../../portal/settings/settings-server/ports-and-ip-addresses.md) of your RadSec service endpoint.

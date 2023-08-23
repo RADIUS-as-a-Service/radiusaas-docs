@@ -15,7 +15,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 1. Navigate to your Mist configuration plane
 2.  To configure the relevant certificates, navigate to **Organization** **>** **Settings**
 
-    <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 3.  **Add** the root certificate of the CA that has issued your RADIUS server certificate under **RadSec Certificate**
 
     <figure><img src="../../../.gitbook/assets/image (2) (3) (2).png" alt=""><figcaption></figcaption></figure>
@@ -30,7 +30,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 6. **Create** a new WLAN if you have not already created one for which you want to leverage RADIUS authentication against our service.
 7.  Select **Enterprise (802.1X)** as **Security Type**
 
-    <figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 8.  Under **RadSec**, select **Enabled** and set the **Server Name** to the **SAN** attribute of your RADIUS Server certificate
 
     <figure><img src="../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
@@ -38,7 +38,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 
 
 
-    <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### A complete Run-Through
 

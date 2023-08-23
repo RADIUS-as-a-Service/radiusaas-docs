@@ -20,7 +20,7 @@ description: >-
     <figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 3. Set the **Shared secret** which is displayed on your RaaS website and save the changes
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 4.  Go to **Configure > Network Policies > Add Network Policy**\
 

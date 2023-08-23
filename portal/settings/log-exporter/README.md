@@ -41,7 +41,7 @@ If you are familiar with reading the RADIUSaaS' [raw log data](../../insights/lo
 | Authorization System | `detail` | <p>Requests = <code>debug</code><br>Success = <code>info</code><br>Failed = <code>warning</code><br>Error = <code>error</code></p>    |
 | Proxy Authentication | `proxy`  | <p>Connections = <code>debug</code><br>Success = <code>info</code><br>Failed = <code>warning</code><br>Error = <code>error</code></p> |
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 

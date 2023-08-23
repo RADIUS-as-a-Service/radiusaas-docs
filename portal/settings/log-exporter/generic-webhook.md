@@ -20,5 +20,5 @@ Follow these steps to add a **Generic Webhook** export target:
 * Add relevant **HTTP headers**, e.g. for authentication purposes
 * Configure the message **Body** to be sent to your webhook
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
