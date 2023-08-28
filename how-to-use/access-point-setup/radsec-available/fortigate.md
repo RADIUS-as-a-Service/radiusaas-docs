@@ -1,7 +1,7 @@
 # FortiGate
 
 {% hint style="info" %}
-To use the RadSec feature on your FortiGate APs, firmware version **7.4.0** or later is required.
+To use the RadSec feature on your FortiGate APs, firmware FortiOS **7.4.0** or later is required.
 {% endhint %}
 
 ## Prepare Certificates
