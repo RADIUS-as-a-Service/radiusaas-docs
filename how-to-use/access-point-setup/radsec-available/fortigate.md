@@ -33,7 +33,7 @@ The imported RootCA will be listed under "Remote CA Certificate"
 <figure><img src="../../../.gitbook/assets/2023-08-28 10_59_21-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
 * Change the RADIUS config in your FortiGate to use it as client certificate
-* If enabled, disable the server-identity-check on your FortiGate RADIUS configuration
+* If it is enabled, please disable the 'server-identity-check' in your FortiGate RADIUS configuration.
 
 ## Links
 
