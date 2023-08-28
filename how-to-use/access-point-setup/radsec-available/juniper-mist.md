@@ -3,7 +3,7 @@
 ## Prepare Certificates
 
 1. **Download** the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../portal/settings/settings-server/certificates.md#download).
-2. **Create** a client certificate for your Access Points. If you are using **SCEPman Certificate Master**, the process is described here: [https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12)
+2. **Create** a client certificate for your Access Points. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12)
 3. **Add** the root certificate of the CA that has issued the client certificate on your Access Point to your RADIUS instance as described [here](../../../portal/settings/settings-server/certificates.md#radsec-connection-certificates).
 
 ## Mist Configuration
