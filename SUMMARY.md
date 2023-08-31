@@ -11,7 +11,7 @@
 * [Access Point Setup](how-to-use/access-point-setup/README.md)
   * [RadSec](how-to-use/access-point-setup/radsec-available/README.md)
     * [Aruba](how-to-use/access-point-setup/radsec-available/aruba.md)
-    * [FortiGate](how-to-use/access-point-setup/radsec-available/fortigate.md)
+    * [FortiNet](how-to-use/access-point-setup/radsec-available/fortinet.md)
     * [Juniper Mist](how-to-use/access-point-setup/radsec-available/juniper-mist.md)
     * [Meraki](how-to-use/access-point-setup/radsec-available/meraki.md)
     * [MikroTik](how-to-use/access-point-setup/radsec-available/mikrotik.md)

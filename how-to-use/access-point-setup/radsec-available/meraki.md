@@ -29,7 +29,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 
 
     <figure><img src="../../../.gitbook/assets/Bild-2-Edited.png" alt=""><figcaption></figcaption></figure>
-6.  Under **RADIUS**, click **Add server**. Configure the **IP address** to match the [**RadSec IP**](../../../portal/settings/settings-server/ports-and-ip-addresses.md#radsec-ip-address-tcp) address of your RADIUSaaS instance, set the **Port** to 2083 and copy the [**Shared secret**](../../../portal/settings/settings-server/ports-and-ip-addresses.md#shared-secrets) and activate the **RadSec** checkbox.\
+6.  Under **RADIUS**, click **Add server**. Configure the **IP address** to match the [**RadSec IP**](../../../portal/settings/settings-server/ports-and-ip-addresses.md#radsec-ip-address-tcp) address of your RADIUSaaS instance, set the **Port** to 2083 and  set the **Secret** value to "radsec" and activate the **RadSec** checkbox.\
 
 
     <figure><img src="../../../.gitbook/assets/Bild-3-Edited.png" alt=""><figcaption></figcaption></figure>
