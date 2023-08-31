@@ -10,7 +10,7 @@ To use the RadSec feature on your Meraki APs, firmware version **MR 30.X** or la
 The Meraki platform does not allow you to generate RadSec client certificates from a CA of your choice. Instead, you must use Meraki's built-in **Organization CA** that is unique to your Meraki Organization.
 {% endhint %}
 
-1. **Download** the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../portal/settings/settings-server/certificates.md#download).
+1. **Download** the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../portal/settings/settings-server/certificates.md#download). You will need to upload it to your Meraki console later on.
 
 ## Meraki Configuration
 
@@ -34,7 +34,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 
     <figure><img src="../../../.gitbook/assets/Bild-3-Edited.png" alt=""><figcaption></figcaption></figure>
 7. Click **Save**
-8.  To upload and generate the required certificates, navigate to **Organization > Certificates**. In the top table, click **Upload certificate** and provide the root certificate of the CA that has signed your [RADIUS server certificate](../../../portal/settings/settings-server/certificates.md#download), e.g. SCEPman. Your Meraki APs now trust your RADIUS server.\
+8.  To upload and generate the required certificates, navigate to **Organization > Certificates**. In the top table, click **Upload certificate** and provide the root certificate of the CA that has signed your [RADIUS server certificate](../../../portal/settings/settings-server/certificates.md#download), which you should have already downloaded in this [step](meraki.md#prepare-certificates). Your Meraki APs now trust your RADIUS server.\
 
 
     <figure><img src="../../../.gitbook/assets/Bild-4-Edited.png" alt=""><figcaption></figcaption></figure>
