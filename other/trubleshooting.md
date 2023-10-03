@@ -97,6 +97,15 @@ then one of your access points or switches that is trying to connect to your RAD
 
 To identify the affected access point or switch, first determine the RADIUS proxy by expanding the error message and searching for the `proxyip` property. Now that you know the proxy, use your inventory and knowledge of specific locations or groups of devices that cannot connect to your network to identify the misconfigured network device. Finally, update the shared secret to match the value configured in your RADIUSaaS instance for that proxy.
 
+## Certificate Issues
+
+### Certificate Chain could not be verified
+
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+
+When you want to use your own server certificate, your RADIUS server requires the complete certificate chain in order to let other participants (Proxy, RadSec clients, endpoints that try to connect) verify the server's identity.  \
+If you see this message, either copy & paste the CA certificate below the server certificate in the textfield or create a PCKS8 certificate bundle which includes all certificates from the lead to the root.
+
 ## Admin Portal Issues
 
 ### Login
@@ -109,13 +118,4 @@ In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the f
   * **Read** the Basic User Profile
   * **Maintain** access to data you have given it access to (allow request of refresh token)\
     ![](../.gitbook/assets/Screenshot\_2022-04-11\_at\_09\_31\_26.png)
-* In case your Azure AD user has no rights to grant the required permissions, no corresponding **Enterprise Application** will be auto-created in your Azure AD. To circumvent this, either ask your IT department to grant your user the needed permissions or alternatively, they may manually create the required Enterprise Application and assign your user to it.
-* To manually create the Enterprise Application, please follow these steps:
-  * **Create** a new Enterprise Application
-  * Give it a **name** such as "RADIUSaaS Admin Center"
-  * Enable **users sign-in**
-  * Set the **Homepage URL** to [`https://radius-as-a-service.com`](https://radius-as-a-service.com)
-  * Optionally, apply your **Conditional Access** policies
-  * Configure the following permissions (either an Admin or User consent level):\
-    <img src="../.gitbook/assets/image (78) (1) (1) (1).png" alt="" data-size="original">
-  * Under **Users and groups** assign every relevant RADIUSaaS admin that shall be able to access the platform.
+* In case your Azure AD user has no rights to grant the required permissions, no corresponding **Enterprise Application** will be auto-created in your Azure AD. To circumvent this, ask your IT department to grant your user the needed permissions.

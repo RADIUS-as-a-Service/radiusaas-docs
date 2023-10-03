@@ -74,9 +74,9 @@
 
 * [Troubleshooting](other/trubleshooting.md)
 * [FAQs](other/faqs/README.md)
-  * [Certificates](other/faqs/certificates.md)
-  * [Log](other/faqs/log.md)
-  * [MAC-based authentication](other/faqs/mac-based-authentication.md)
+  * [General](other/faqs/general.md)
+  * [Log & Common Errors](other/faqs/log-and-common-errors.md)
+  * [MAC-based authentication (MAB)](other/faqs/mac-based-authentication-mab.md)
   * [Security & Privacy](other/faqs/security-and-privacy.md)
 * [Add Link to MyApps](other/add-link-to-myapps.md)
 
