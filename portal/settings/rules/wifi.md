@@ -66,6 +66,18 @@ To set a **MAC-Address-based** access point filter, either select **Addresses** 
 
 ![](<../../../.gitbook/assets/image (81).png>)
 
+The following notations are supported for the MAC addresses:
+
+* xx-xx-xx-xx-xx-xx
+* xx:xx:xx:xx:xx:xx
+* xxxxxxxxxxxx
+
+{% hint style="info" %}
+Your access point (AP) will most probably not use the LAN MAC address, that is printed on the AP housing and showed in the AP admin portal as primary MAC address. Many vendors generate individual/random MAC addresses (BSSIDs) for every single SSID and frequency.
+
+If you can not find the used MAC addresses in your AP admin interface, you can also consult the "Rule Engine" log (in the "Insights" section) in your RADIUSaaS admin web console. You find the MAC address that your AP is sending in the field "`AP-MAC"`.
+{% endhint %}
+
 ### VLAN Assignment
 
 The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The following options are available:
