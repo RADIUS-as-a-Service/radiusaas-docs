@@ -57,7 +57,11 @@ To set a **MAC-Address-based** switch filter, either select **Addresses** or **G
 
 ![](<../../../.gitbook/assets/image (69).png>)
 
-###
+The following notations are supported for the MAC addresses:
+
+* xx-xx-xx-xx-xx-xx
+* xx:xx:xx:xx:xx:xx
+* xxxxxxxxxxxx
 
 ### VLAN Assignment
 
