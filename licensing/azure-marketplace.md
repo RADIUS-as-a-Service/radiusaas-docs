@@ -67,6 +67,12 @@ The information provided throughout this article is analogously applicable for R
 
 ![](<../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 3.png>)
 
+### **Change Plan**
+
+{% hint style="warning" %}
+This is currently **not supported**. Please [contact us](https://www.radius-as-a-service.com/help/) in case you have questions around this topic.
+{% endhint %}
+
 ### **Recurring billing**
 
 If you decide to disable **Recurring billing**, your subscription will not renew automatically. Instead, Microsoft will (irreversibly) cancel the subscription towards the end of the current subscription cycle. This means, the service will be terminated automatically on that date as well. While the subscription has not expired yet, you can opt to enable **Recurring billing** at any time.
@@ -134,13 +140,13 @@ You will only be charged by Microsoft, once you have completed the enrolment on 
 
 ### Why is my "Plan no longer available for purchase"?
 
-In case you see an orange hint in your subscription as shown in below screenshot, **there is no need to worry**!
+In case you see hint in your subscription as shown in below screenshot, **there is no need to worry**!
 
-<figure><img src="../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/azure-saas-plan-no-longer-available-for-purchase copy.png" alt=""><figcaption></figcaption></figure>
 
 The reasons for this hint is that - from time to time - we might have to deprecate plans for technical reasons.&#x20;
 
 **Important:**
 
 * As an existing customer, you may continue to use the deprecated plan indefinitely (until the subscription is cancelled).
-* In case a newer plan give you better pricing or other advantages, we will inform you about this.
+* In case a newer plan gives you better pricing or other advantages, we will inform you about this.
