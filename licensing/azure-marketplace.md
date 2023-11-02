@@ -63,7 +63,7 @@ The information provided throughout this article is analogously applicable for R
 ### User Downgrades
 
 * Downgrading the amount of users is currently not possible without cancelling the subscription.
-* If you want to perform a downgrade, please cancel your current subscription from the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) towards the end of the current cycle by clicking "Cancel subscription" (see screenshot below) and re-subscribe with the desired user amount once the cancellation becomes effective.
+* If you want to perform a downgrade, please [cancel](azure-marketplace.md#cancellation) your current subscription and re-subscribe with the desired amount of users once the cancellation becomes effective.
 
 ![](<../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 3.png>)
 
@@ -73,7 +73,7 @@ The information provided throughout this article is analogously applicable for R
 This is currently **not supported**. Please [contact us](https://www.radius-as-a-service.com/help/) in case you have questions around this topic.
 {% endhint %}
 
-### **Recurring billing**
+### **Recurring Billing**
 
 If you decide to disable **Recurring billing**, your subscription will not renew automatically. Instead, Microsoft will (irreversibly) cancel the subscription towards the end of the current subscription cycle. This means, the service will be terminated automatically on that date as well. While the subscription has not expired yet, you can opt to enable **Recurring billing** at any time.
 
