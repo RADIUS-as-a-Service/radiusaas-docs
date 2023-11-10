@@ -123,7 +123,7 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 
 ### 9. What authorization schemes are used to gain access to RADIUSaaS?
 
-* Administrative access is realized through OAuth 2.0 authentication with Azure AD for users that are registered on the platform.
+* Administrative access is realized through OAuth 2.0 authentication with Microsoft Entra ID (Azure AD) for users who are registered on the platform.
 
 ### 10. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 

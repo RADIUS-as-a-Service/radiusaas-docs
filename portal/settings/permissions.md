@@ -5,14 +5,14 @@
 The permissions menu allows you to configure the permissions for the access to the RADIUSaaS admin portal.
 
 {% hint style="success" %}
-RADIUSaaS leverages Azure AD as identity provider for the logon-authentication to the admin portal. It does not store or manage own administrator identities. The authentication is delegated to the corresponding Azure AD tenant of the provided UPN.
+RADIUSaaS leverages Microsoft Entra ID (Azure AD) as an identity provider for the logon-authentication to the admin portal. It does not store or manage its own administrator identities. The authentication is delegated to the corresponding Microsoft Entra ID (Azure AD) tenant of the provided UPN.
 
-Therefore administrators enjoy the comfort of working with their own Azure AD accounts and do not have to setup additional accounts.
+Therefore administrators enjoy the comfort of working with their own Microsoft Entra ID (Azure AD) accounts and do not have to setup additional accounts.
 {% endhint %}
 
 ![](<../../.gitbook/assets/image (71) (1).png>)
 
-Please enter **Azure AD UPNs** in the provided fields and **separate them with comma and space**.&#x20;
+Please enter Microsoft Entra ID (Azure AD) **UPNs** in the provided fields and **separate them with comma and space**.&#x20;
 
 Example:
 
@@ -32,9 +32,9 @@ Example:
 
 ### Administrators
 
-Azure AD UPNs entered in this field have the permission to access the RADIUSaaS admin portal. Permissions include:
+Microsoft Entra ID (Azure AD) UPNs entered in this field have permission to access the RADIUSaaS admin portal. Permissions include:
 
-* See dashboard and logging
+* See the dashboard and logging
 * See and change users
 * See and change settings including permissions
 

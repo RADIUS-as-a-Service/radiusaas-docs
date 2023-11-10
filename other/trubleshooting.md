@@ -112,10 +112,10 @@ If you see this message, either copy & paste the CA certificate below the server
 
 In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the following requirements have to be met:
 
-* The UPN/email address you provided as technical admin has to be authenticatable against **some** Azure AD (it does not have to be an identity from the tenant whose users will leverage RADIUSaaS for network authentication).
+* The UPN/email address you provided as technical admin has to be authenticatable against **some** Microsoft Entra ID (Azure AD) (it does not have to be an identity from the tenant whose users will leverage RADIUSaaS for network authentication).
 * The UPN/email address you provided as technical admin must have been registered on your RADIUSaaS instance as described [here](../portal/settings/permissions.md). In case it is the initial admin, please [contact us](https://www.radius-as-a-service.com/help/) if you believe we registered the wrong user.
-* The Azure AD user object behind the UPN/email address has to be entitled to grant the RADIUSaaS Enterprise Application the following permissions (see screenshot below):
+* The Microsoft Entra ID (Azure AD) user object behind the UPN/email address has to be entitled to grant the RADIUSaaS Enterprise Application the following permissions (see screenshot below):
   * **Read** the Basic User Profile
   * **Maintain** access to data you have given it access to (allow request of refresh token)\
     ![](../.gitbook/assets/Screenshot\_2022-04-11\_at\_09\_31\_26.png)
-* In case your Azure AD user has no rights to grant the required permissions, no corresponding **Enterprise Application** will be auto-created in your Azure AD. To circumvent this, ask your IT department to grant your user the needed permissions.
+* In case your Microsoft Entra ID (Azure AD) user has no rights to grant the required permissions, no corresponding **Enterprise Application** will be auto-created in your Microsoft Entra ID (Azure AD). To circumvent this, ask your IT department to grant your user the needed permissions.
