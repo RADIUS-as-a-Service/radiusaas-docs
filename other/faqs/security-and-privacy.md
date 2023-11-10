@@ -115,7 +115,7 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
    * RadSec server ports (2083): TLS-secured (version 1.2)
    * RADIUS proxy server ports (1812, 1813): Protected via the RADIUS Shared Secret
 3. RADIUSaaS Admin Portal
-   * Secured via OAuth 2.0 authentication with Azure AD.
+   * Secured via OAuth 2.0 authentication with Microsoft Entra ID (Azure AD).
 4. Kubernetes Cluster Management API
    * TLS-secured (version 1.2)
 
