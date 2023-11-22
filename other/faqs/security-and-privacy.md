@@ -6,7 +6,7 @@ description: >-
 
 # Security & Privacy
 
-## Data Processing and Permissions
+## A. Data Processing and Permissions
 
 ### 1. From what data center is RADIUSaaS operating?
 
@@ -119,25 +119,25 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 4. Kubernetes Cluster Management API
    * TLS-secured (version 1.2)
 
-## Identity
+## B. Identity
 
-### 9. What authorization schemes are used to gain access to RADIUSaaS?
+### 1. What authorization schemes are used to gain access to RADIUSaaS?
 
 * Administrative access is realized through OAuth 2.0 authentication with Microsoft Entra ID (Azure AD) for users who are registered on the platform.
 
-### 10. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
+### 2. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 
 * Yes. The RADIUSaaS Admin portal provides features to assign roles to every user (available roles: administrator, viewer, guest)
 * In order to properly operate and maintain the service, there are super-admin accounts for a limited circle of glueckkanja-gab AG employees, that have full access to all client instances of the RADIUSaaS service.
 
-### 11. Can access credentials be recovered? If yes, how?
+### 3. Can access credentials be recovered? If yes, how?
 
 * Login credentials: Depends on the configured AAD policies in the customer tenant.
 * Username + password credentials as well as all certificates for network access can be recovered from Azure KeyVault with a retention policy of 90 days after they have been deleted.
 
-## Data Protection
+## C. Data Protection
 
-### 12. How is _data at-rest_ protected against unauthorized access?
+### 1. How is _data at-rest_ protected against unauthorized access?
 
 #### **Configuration Data and Secrets**
 
@@ -154,18 +154,28 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 * Access to those spaces is given via username + password credentials that are in turn stored as _Kubernetes Secrets_.
 * The Elasticsearch Database itself is not encrypted.
 
-### 13. How is _data in transit_ protected against unauthorized access?
+### 2. How is _data in transit_ protected against unauthorized access?
 
 * The authentication flows of the device trying to access the network are wrapped into a TLS-tunnel (>= TLS 1.2)
 * The association between NAS and the RADIUS server is obfuscated via the RADIUS Shared Secret (MD5 hash algorithm)
 
-## Security by Design
+### 3. How are customer tenants separated from each other?
 
-### 14. Does RADIUSaaS employ a defense in depth strategy?
+#### Backend
+
+RADIUSaaS backend services run on multiple Kubernetes clusters that are distributed worldwide. Every customer's RADIUSaaS instance has their own K8s namespace, logging space and dedicated public IP. There is an Elasticsearch instance with dedicated customer accounts for logging and reading per cluster.
+
+#### RADIUS proxies
+
+Every RADIUSaaS proxy runs on its own VM with dedicated public IP.
+
+## D. Security by Design
+
+### 1. Does RADIUSaaS employ a defense in depth strategy?
 
 RADIUSaaS relies on well-established protocols to handle network authentication flows (RADIUS, RadSec, EAP-TLS, EAP-TTLS-X). Due to the strong focus on certificate-based authentication, capturing the traffic is meaningless as long as the eavesdropper does not have access to a trusted certificate.
 
-### 15. Is the UDP-based RADIUS protocol secure?
+### 2. Is the UDP-based RADIUS protocol secure?
 
 We are recommending to use the modern [RadSec](../../details.md#what-is-radsec) protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
 
@@ -185,7 +195,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * additionally there are no secrets transported, if certificate-based authentication is used.
 {% endhint %}
 
-### 16. What technologies, stacks, platforms were used to design RADIUSaaS?
+### 3. What technologies, stacks, platforms were used to design RADIUSaaS?
 
 * `Kubernetes`
 * `EFK Stack (Elasticsearch, Filebeats, Kibana)`
@@ -194,9 +204,9 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * `TerraForm`
 * `Git CI`
 
-## GDPR and Data-residency <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
+## E. GDPR and Data-residency <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
 
-### 17. Is data leaving Europe?
+### 1. Is data leaving Europe?
 
 * Core Services: Depends on configuration
   * RADIUSaaS's core services can be hosted in the data centers described in [Question 1](security-and-privacy.md#1.-from-what-data-center-is-radiusaas-operating).
@@ -204,7 +214,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * RadSec Proxy: Depends on configuration
   * If you require a RadSec proxy due to limitations of the network gear in regards to native RadSec support, you may select a proxy from various regions, Europe amongst others. In that case, your data stays within the borders of the European Union.
 
-### 18. What 3rd-Party cloud-providers does RADIUSaaS rely on and why?
+### 2. What 3rd-Party cloud-providers does RADIUSaaS rely on and why?
 
 * Microsoft Corporation (Azure)
   * Provision of cloud services
@@ -214,13 +224,13 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
   * Provision of VMs and services for RADIUS to RadSec protocol conversion
   * GDPR Statement: [https://www.digitalocean.com/legal/gdpr/](https://www.digitalocean.com/legal/gdpr/)&#x20;
 
-## Miscellaneous <a href="#user-content-miscellaneous" id="user-content-miscellaneous"></a>
+## F. Miscellaneous <a href="#user-content-miscellaneous" id="user-content-miscellaneous"></a>
 
-### 19. Is RADIUSaaS part of a bug-bounty program?
+### 1. Is RADIUSaaS part of a bug-bounty program?
 
 No
 
-### 20. What QA measures are in place?
+### 2. What QA measures are in place?
 
 * There are dedicated RADIUSaaS labs for development purposes
 * The deployment and installation of the service is realized through TerraForm, ensuring consistency and idempotence of each instance deployment
@@ -233,18 +243,18 @@ No
   * Stress tests
   * Experience-based testing
 
-### 21. Is there a patching process in place?
+### 3. Is there a patching process in place?
 
 Yes. Patches, hot-fixes, bugfixes and feature updates are introduced using our CI/CD process that leverages different testing pipelines to ensure that only code that satisfies our QA hurdles gets released. Newly released code is automatically made available to all our customers. Using Infrastructure as Code (Terraform) enables us to deliver consistent, reproducible and high-quality updates to our customers.
 
 The Kubernetes-based architecture of our service ensures that code updates are seamless for our customers and do not lead to any service outages.&#x20;
 
-### 22. What are the SLAs for patches?
+### 4. What are the SLAs for patches?
 
 * Patches for CVEs / security vulnerabilities: Once the vulnerability becomes public knowledge or as soon as we identify a vulnerability within our own code, a hot-fix will be provided no longer than 24 hours after we have become aware of the vulnerability.&#x20;
 * Other patches: No SLA.
 
-### 23. Does RADIUSaaS perform backups?
+### 5. Does RADIUSaaS perform backups?
 
 #### Secrets and configuration data
 
@@ -258,6 +268,6 @@ Stateless. No back-up required.
 
 Currently not backed-up.
 
-### 24. Are there backup restore tests?
+### 6. Are there backup restore tests?
 
 Yes. The restoration from back-ups is tested with every update/release of the service. There are approximately 4 - 8 releases per year.
