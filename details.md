@@ -48,15 +48,7 @@ RADIUSaaS can be used globally.
 * United Kingdom
 * United States of America
 
-**RADIUS proxies** can be deployed into datacenters in the following regions and countries:
-
-* Australia
-* Canada
-* Europe
-* India
-* Singapore
-* United Kingdom
-* United States of America
+**RADIUS proxies** can be deployed into datacenters on [all continents](portal/settings/settings-proxy.md#regions).&#x20;
 
 ## Getting Started
 

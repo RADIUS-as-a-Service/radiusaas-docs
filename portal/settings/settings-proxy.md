@@ -40,12 +40,14 @@ In case your RADIUSaaS instance comes with a [Universal IP Address](settings-ser
 
 You can deploy the proxy servers in the following regions:
 
-* Canada
-* Europe
-* India
-* Singapore
-* UK
-* USA
+| Continent     | Region                                            |
+| ------------- | ------------------------------------------------- |
+| Africa        | Johannesburg                                      |
+| Asia          | <p>Bangalore<br>Singapore<br>TelAviv<br>Tokio</p> |
+| Australia     | Sydney                                            |
+| Europe        | <p>Frankfurt<br>London<br>Madrid<br>Stockholm</p> |
+| North America | <p>Dallas<br>New York<br>Seattle<br>Toronto</p>   |
+| South America | Santiago                                          |
 
 ### Load balancing
 
