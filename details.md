@@ -10,32 +10,30 @@ RADIUS is an efficient protocol for authentication purposes that uses the UDP tr
 
 ## Authentication Certificates
 
-The easiest way to push device or user certificates to your clients is [SCEPman](https://www.scepman.com/), as it is super-easy to deploy and integrates seamlessly with Intune.\
+The easiest way to push device or user certificates to your clients is [SCEPman](https://www.scepman.com/), as it is super-easy to deploy and integrates seamlessly with Intune and other MDM systems.\
 \
-You can also use your own on-premise PKI.&#x20;
+You can also use the [Microsoft Cloud PKI](configuration/get-started/scenario-based-guides/microsoft-cloud-pki.md), your own on-premise PKI or other compatible CAs.
 
 RADIUSaaS supports multiple CAs in parallel.
 
-#### OCSP
+#### Online Certificate Verification
 
-To proof revocation of certificates, our RADIUSaaS leverages OCSP.&#x20;
-
-A Certificate Revocation List (CRL) is currently not supported.&#x20;
+To check if a certificate is considered valid by your Certificate Authority (CA) **at authentication time**, RADIUSaaS leverages the Online Certificate Status Protocol (OCSP) or Certificate Revocation Lists (CRLs).
 
 ## Our Service
 
 #### Admin Portal
 
-Each customer has access to their own personal instance through their own RADIUSaaS Admin Portal, which can be used for tasks such as [creating users](portal/users.md#add), changing [allowed certificates](portal/settings/settings-trusted-roots/trusted-roots.md), [adding proxies](portal/settings/settings-proxy.md), creating [rules](portal/settings/rules/) or performing troubleshooting using RADIUSaaS Insights.&#x20;
+Each customer has access to their own personal instance through their own RADIUSaaS Admin Portal, which can be used for tasks such as [creating users](admin-portal/users.md#add), changing [allowed certificates](admin-portal/settings/trusted-roots.md), [adding proxies](admin-portal/settings/settings-proxy.md), creating [rules](admin-portal/settings/rules/) or performing troubleshooting using RADIUSaaS Insights.&#x20;
 
 #### RADIUS to RadSec Proxy
 
-The service's internal RADIUS server only allows [RadSec](details.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, RADIUSaaS features a [proxy](portal/settings/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use the service with traditional UDP.
+The service's internal RADIUS server only allows [RadSec](details.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, RADIUSaaS features a [proxy](admin-portal/settings/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use the service with traditional UDP.
 
-#### Guests and IOT Devices&#x20;
+#### Guests, BYOD and IOT Devices&#x20;
 
-Some of your devices may not be able to receive certificates. Reasons could be that they are not managed by any policy provider/MDM system or they are simply technically not able to work with certificates. \
-In those cases or guests scenarios, you can [add users](portal/users.md#add) to your instance and restrict the access to a specific time frame, if needed. This allows you to authenticate printers, TVs or other devices with a single instance of the service.
+Some of your devices may not be able to receive certificates. Reasons could be that they are not managed by any policy provider/MDM system, or they are simply technically not able to work with certificates. \
+In those cases, BYOD or guests scenarios, you can [add users](admin-portal/users.md#add) to your instance and restrict the access to a specific time frame, if needed. This allows you to authenticate printers, TVs or other devices with a single instance of the service while using the same SSID.
 
 #### Regions
 
@@ -48,18 +46,12 @@ RADIUSaaS can be used globally.
 * United Kingdom
 * United States of America
 
-**RADIUS proxies** can be deployed into datacenters on [all continents](portal/settings/settings-proxy.md#regions).&#x20;
+**RADIUS proxies** can be deployed into datacenters on [all continents](admin-portal/settings/settings-proxy.md#regions).&#x20;
 
 ## Getting Started
 
 Please follow the steps on the following page to get your clients ready authenticating with RADIUS-as-a-Service!
 
-{% content-ref url="how-to-use/get-started/" %}
-[get-started](how-to-use/get-started/)
+{% content-ref url="configuration/get-started/" %}
+[get-started](configuration/get-started/)
 {% endcontent-ref %}
-
-
-
-
-
-&#x20;

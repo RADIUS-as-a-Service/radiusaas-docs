@@ -13,7 +13,7 @@
 * The related items should appear on your Microsoft Azure invoice (Pay-As-You-Go or Enterprise Agreement) the month after we have reported your fees to Microsoft.
 * In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja-gab".
 
-![](<../.gitbook/assets/image (73) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (314).png>)
 
 {% hint style="info" %}
 For a more detailed cost breakdown of your base and additional user fees, please refer to the invoice in your Azure portal.
@@ -94,19 +94,28 @@ In case you would like to test RADIUSaaS, please [get in contact with us](https:
 
 ### How to purchase RADIUSaaS (RADIUSaaS & SCEPman Bundle)?
 
+{% hint style="info" %}
+Deploying a RADIUSaaS (RADIUSaaS & SCEPman Bundle) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the newly obtained license as part of this subscription to your existing deployments.
+
+For **new customers**, we will provision a new instance of RADIUSaaS once below steps are completed. Please allow up to 1 business day for us to complete the provisioning.
+{% endhint %}
+
 To get started with your RADIUSaaS or RADIUSaaS & SCEPman Bundle subscription, follow below steps:
 
-* Locate [RADIUSaaS](https://portal.azure.com/#view/Microsoft\_Azure\_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-transactable-prod) or the [RADIUSaaS & SCEPman Bundle](https://portal.azure.com/#view/Microsoft\_Azure\_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-bundle-prod) on the **Marketplace** in your **Azure Portal**&#x20;
+* Locate [RADIUSaaS](https://portal.azure.com/#view/Microsoft\_Azure\_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-transactable-prod) or the [RADIUSaaS & SCEPman Bundle](https://portal.azure.com/#view/Microsoft\_Azure\_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-bundle-prod) on the **Marketplace** in your **Azure Portal**. In case we have extended a **Private Offer** to you or your MSP/distribution has extended a **Multiparty Offer (MPO)** to you, navigate to **Marketplace** in your **Azure Portal** and then to **Private Offer Management** to locate the Private Offer.
+  * More details on Private Offers and MPOs can be found in Microsoft's documentation.
+    * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
+    * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
 * Select the **Plan** based on your preferred renewal interval and click **Subscribe**
 
-![](<../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (333).png>)
 
 * Create or select the **Resource group** you would like to deploy the subscription to
 * Assign a descriptive **Name** to later identify your subscription
 * We recommend to keep **Recurring billing** **On** so that you do not have to worry about an automatic termination of your subscription
 * Click **Review + subscribe** and then **Subscribe** to deploy the **SaaS** resource to your **Resource group**
 
-![](<../.gitbook/assets/image (77) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (217).png>)
 
 {% hint style="info" %}
 The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
@@ -114,7 +123,7 @@ The random order of **Base Fees** und **Additional Users** under the **Price** i
 
 * Once the deployment is complete, please navigate to our platform to complete the checkout. Therefore click **Configure account now.**
 
-![](<../.gitbook/assets/image (80) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (221).png>)
 
 * After authenticating on our platform using your Microsoft credentials, you will be prompted for additional information, such as the desired total **User** amount and a **Technical contact**.
 

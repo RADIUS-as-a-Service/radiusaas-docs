@@ -6,7 +6,7 @@ description: >-
 
 # Security & Privacy
 
-## A. Data Processing and Permissions
+## Data Processing and Permissions
 
 ### 1. From what data center is RADIUSaaS operating?
 
@@ -76,9 +76,9 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 
 ### 4. Is there an archiving mechanism for logs?
 
-There is no built-in log archiving mechanism. However, the [Log Exporter](../../portal/settings/log-exporter/) feature can be used to ingest RADIUS logs into your own logging and archiving services.
+There is no built-in log archiving mechanism. However, the [Log Exporter](../../admin-portal/settings/log-exporter/) feature can be used to ingest RADIUS logs into your own logging and archiving services.
 
-### 5. Which tenant permissions does the admin have to consent to?
+### 5. Which tenant permissions do users accessing the RADIUSaaS web portal have to consent to?
 
 1.  `Basic User Profile`:
 
@@ -87,7 +87,9 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 
     With this permission RADIUSaaS receives the right to request a refresh token so that the user can stay logged-on.
 
-### 6. What data is made available by granting the consent(s) from 4.?
+Please see [here](../../admin-portal/settings/permissions.md#permissions-consent) for details.
+
+### 6. What data is made available by granting the consent(s) from 5.?
 
 1.  `Basic User Profile`:
 
@@ -99,27 +101,39 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 ### 7. Which externally accessible endpoints does RADIUSaaS expose?
 
 1. RADIUS Server Backend API
-   * Provides configuration information to the RadSec proxy
+   * Provides configuration information to the RadSec proxy.
 2. RADIUS and RadSec Server Ports
    * To facilitate network authentication from anywhere on the internet, these authentication interfaces have to be publicly exposed.
 3. RADIUSaaS Admin Portal
-   * A web portal which facilitates the administration of the service
+   * A web portal which facilitates the administration of the service.
 4. Kubernetes Cluster Management API
-   * Required to operate the service
+   * Required to operate the service.
 
-### 8. How are the endpoints from Question 6 protected?
+### 8. How are the endpoints from Question 7 protected?
 
 1. RADIUS Server Backend API
-   * Secured via a static JWT token
+   * Secured via JWT access tokens that can be managed (issued, deleted, revoked) by the customer.
 2. RADIUS Proxy and RadSec Server Ports
-   * RadSec server ports (2083): TLS-secured (version 1.2)
-   * RADIUS proxy server ports (1812, 1813): Protected via the RADIUS Shared Secret
+   * RadSec server ports: TLS-secured (>= version 1.2).
+   * RADIUS proxy server ports: Protected via the RADIUS Shared Secret.
 3. RADIUSaaS Admin Portal
    * Secured via OAuth 2.0 authentication with Microsoft Entra ID (Azure AD).
 4. Kubernetes Cluster Management API
-   * TLS-secured (version 1.2)
+   * TLS-secured (>= version 1.2).
 
-## B. Identity
+### 9. What ports and protocols are used by the endpoints from Question 7?
+
+* RADIUS Server Backend API
+  * HTTPS (TCP / 443)
+* RADIUS Proxy and RadSec Server Ports
+  * RadSec server ports: RadSec (TCP / 2083)
+  * RADIUS proxy server ports: RADIUS (UDP / 1812, 1813)
+* RADIUSaaS Admin Portal
+  * HTTPS (TCP / 443)
+* Kubernetes Cluster Management API
+  * HTTPS (TCP / 443)
+
+## Identity
 
 ### 1. What authorization schemes are used to gain access to RADIUSaaS?
 
@@ -127,15 +141,15 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 
 ### 2. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 
-* Yes. The RADIUSaaS Admin portal provides features to assign roles to every user (available roles: administrator, viewer, guest)
+* Yes. The RADIUSaaS Admin portal provides features to assign roles to every user (available roles: administrator, viewer, guest).
 * In order to properly operate and maintain the service, there are super-admin accounts for a limited circle of glueckkanja-gab AG employees, that have full access to all client instances of the RADIUSaaS service.
 
 ### 3. Can access credentials be recovered? If yes, how?
 
-* Login credentials: Depends on the configured AAD policies in the customer tenant.
+* Login credentials: Depends on the configured Microsoft Entra ID (Azure AD) policies in the customer tenant.
 * Username + password credentials as well as all certificates for network access can be recovered from Azure KeyVault with a retention policy of 90 days after they have been deleted.
 
-## C. Data Protection
+## Data Protection
 
 ### 1. How is _data at-rest_ protected against unauthorized access?
 
@@ -156,8 +170,8 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 
 ### 2. How is _data in transit_ protected against unauthorized access?
 
-* The authentication flows of the device trying to access the network are wrapped into a TLS-tunnel (>= TLS 1.2)
-* The association between NAS and the RADIUS server is obfuscated via the RADIUS Shared Secret (MD5 hash algorithm)
+* The authentication flows of the device trying to access the network are wrapped into a TLS-tunnel (>= TLS 1.2).
+* The association between NAS and the RADIUS server is obfuscated via the RADIUS Shared Secret (MD5 hash algorithm).
 
 ### 3. How are customer tenants separated from each other?
 
@@ -169,7 +183,7 @@ RADIUSaaS backend services run on multiple Kubernetes clusters that are distribu
 
 Every RADIUSaaS proxy runs on its own VM with dedicated public IP.
 
-## D. Security by Design
+## Security by Design
 
 ### 1. Does RADIUSaaS employ a defense in depth strategy?
 
@@ -204,7 +218,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * `TerraForm`
 * `Git CI`
 
-## E. GDPR and Data-residency <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
+## GDPR and Data-residency <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
 
 ### 1. Is data leaving Europe?
 
@@ -216,15 +230,14 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 
 ### 2. What 3rd-Party cloud-providers does RADIUSaaS rely on and why?
 
-* Microsoft Corporation (Azure)
-  * Provision of cloud services
-  * GDPR Information: [https://azure.microsoft.com/en-in/blog/protecting-privacy-in-microsoft-azure-gdpr-azure-policy-updates/](https://azure.microsoft.com/en-in/blog/protecting-privacy-in-microsoft-azure-gdpr-azure-policy-updates/)&#x20;
-* Digital Ocean, Inc.
-  * Provision of cloud services
-  * Provision of VMs and services for RADIUS to RadSec protocol conversion
-  * GDPR Statement: [https://www.digitalocean.com/legal/gdpr/](https://www.digitalocean.com/legal/gdpr/)&#x20;
+| Company                                        | Services                                                         | Contact                                                                                   | Purpose                                                         |
+| ---------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Microsoft Corporation                          | Cloud Services (Azure)                                           | <p>Building 3, Carmanhall Road Sandyford,<br>Industrial Estate 18, Dublin,<br>Ireland</p> | Kubernetes Service, networking, storage                         |
+| Digital Ocean, Inc.                            | Cloud Services                                                   | <p>Y101 6th Ave,<br>New York City,<br>NY 10013,<br>United States</p>                      | Kubernetes Service, networking, storage, VMs for RADIUS proxies |
+| Vultr (trademark of The Constant Company, LLC) | Cloud Services                                                   | <p>319 Clematis Street - Suite 900<br>West Palm Beach, FL 33401,<br>United States</p>     | VMs for RADIUS proxies                                          |
+| GitLab, Inc.                                   | git code repository, integration, testing and release automation | <p>268 Bush Street #350, </p><p>San Francisco, </p><p>CA 94104-3503, United States </p>   | Code repository, CI/CD pipeline.                                |
 
-## F. Miscellaneous <a href="#user-content-miscellaneous" id="user-content-miscellaneous"></a>
+## Miscellaneous <a href="#user-content-miscellaneous" id="user-content-miscellaneous"></a>
 
 ### 1. Is RADIUSaaS part of a bug-bounty program?
 
