@@ -28,8 +28,8 @@ To ensure smooth operation, consider the following number of proxies based on th
 
 |       User       | Proxy Count |
 | :--------------: | :---------: |
-|     50 - 2500    |      2      |
-|   2501 - 10,000  |      3      |
+|    50 - 2,500    |      2      |
+|  2,501 - 10,000  |      3      |
 |  10,001 - 25,000 |      4      |
 |  25,001 - 50,000 |      6      |
 | 50,001 - 100,000 |      10     |
@@ -65,15 +65,15 @@ The IP address, ports and shared secret of the RADIUS Proxies will be displayed 
 
 To Add a new proxy, simply click **Add**, choose your **Region** and click **Create.**&#x20;
 
-<figure><img src="../../.gitbook/assets/AddingProxy.gif" alt=""><figcaption><p>Showing how to create a proxy</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AddingProxy.gif" alt=""><figcaption><p>Showing how to create a proxy</p></figcaption></figure>
 
 \
 After the installation has finished, it can take up to 15 minutes until your proxy has established a connection to your RADIUS server.
 
-<figure><img src="../../.gitbook/assets/image (431).png" alt=""><figcaption><p>Showing proxy servers</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (431).png" alt=""><figcaption><p>Showing proxy servers</p></figcaption></figure>
 
 ## Delete
 
 To **Delete** a proxy, simply click **Delete** of corresponding table row and confirm your choice.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Showing deletion of a proxy server</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Showing deletion of a proxy server</p></figcaption></figure>
