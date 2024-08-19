@@ -47,13 +47,13 @@ Please consider, that the common name is case-sensitive.
 
 <figure><img src="../../../../.gitbook/assets/2024-05-13_15h23_43.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 2/2</p></figcaption></figure>
 
-### Fast Romaing
+### Fast Roaming
 
 {% hint style="info" %}
 These are **optional** settings.
 {% endhint %}
 
-For a (usually) better experience when romaing between access points, we recommend to enable the following **Fast roaming settings** in the WiFi profile:
+For a (usually) better experience when roaming between access points, we recommend to enable the following **Fast roaming settings** in the WiFi profile:
 
 | **Enable pairwise master key (PMK) caching** | Yes | Defines whether Pairwise Master Key (PMK) caching is to be used by this profile to connect to a WLAN. |
 | -------------------------------------------- | --- | ----------------------------------------------------------------------------------------------------- |
