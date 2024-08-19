@@ -27,7 +27,7 @@ description: >-
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/image (373).png" alt=""><figcaption><p>Showing SAN to be used as Certificate server name</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (373).png" alt=""><figcaption><p>Showing SAN to be used as Certificate server name</p></figcaption></figure>
 
 </div>
 
@@ -43,10 +43,29 @@ Please consider, that the common name is case-sensitive.
 
 
 
-<figure><img src="../../../.gitbook/assets/2024-05-13_15h20_31.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 1/2</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2024-05-13_15h20_31.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 1/2</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/2024-05-13_15h23_43.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 2/2</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2024-05-13_15h23_43.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 2/2</p></figcaption></figure>
 
-## Common configuration issues
+### Fast Romaing
+
+{% hint style="info" %}
+These are **optional** settings.
+{% endhint %}
+
+For a (usually) better experience when romaing between access points, we recommend to enable the following **Fast roaming settings** in the WiFi profile:
+
+| **Enable pairwise master key (PMK) caching** | Yes | Defines whether Pairwise Master Key (PMK) caching is to be used by this profile to connect to a WLAN. |
+| -------------------------------------------- | --- | ----------------------------------------------------------------------------------------------------- |
+| **Maximum time a PMK is stored in cach**     | 720 | Defines the length of time, in minutes, that a Pairwise Master Key (PMK) cache will be kept.          |
+| **Maximum number of PMK's stored in cache**  | 128 | Defines the number of entries in the Pairwise Master Key (PMK) cache on the client.                   |
+| **Enable pre-authentication**                | Yes | Defines whether pre-authentication will be used by the client                                         |
+| **Maximum pre-authentication attempts**      | 3   | Defines the number of pre-authentication attempts to try on neighboring access points (AP)            |
+
+For further details on Pairwise Master Key caching, please refer to its specification in [IEEE 802.11i](https://standards.ieee.org/getieee802/download/802.11i-2004.pdf).
+
+**Important**: The reliability and effectiveness of this feature may also depend on the specific implementation by the WAP vendor. In same cases, customers with PMK caching enabled, have reported frequent access-point toggling although the device's location was static.
+
+## Common Configuration Issues
 
 See [Troubleshooting](../../../other/trubleshooting.md#intune-configuration-issues).
