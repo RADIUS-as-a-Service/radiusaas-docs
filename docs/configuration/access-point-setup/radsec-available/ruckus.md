@@ -59,5 +59,5 @@ For general information on how to import certificates to the Ruckus SmartZone, p
 10. Next, under **Primary Server**, for the **IP Address/FQDN** choose either the IP address or the DNS name of your [RadSec service endpoint](../../../admin-portal/settings/settings-server.md#properties). For the **Port** select **2083**. \
 
 
-    <figure><img src="../../../.gitbook/assets/Screenshot_2024-08-21_at_13_29_21.jpg" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Screenshot_2024-08-21_at_13_29_21 (1).jpg" alt=""><figcaption></figcaption></figure>
 11. Click **OK**.
