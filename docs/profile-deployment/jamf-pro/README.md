@@ -18,7 +18,7 @@ To fully configure 802.1X, this typically means you require the following payloa
   * Root CA certificate of the RADIUS server certificate issuing CA (can be the same as the SCEP issuing CA)
 * SCEP payload (client authentication certificate)
 
-<figure><img src="../../.gitbook/assets/image (306).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (306).png" alt=""><figcaption></figcaption></figure>
 
 ## Profiles
 

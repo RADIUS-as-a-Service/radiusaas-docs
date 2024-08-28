@@ -6,13 +6,13 @@
 
 #### Wrong XML&#x20;
 
-![](<../.gitbook/assets/image (232).png>)
+![](<../../.gitbook/assets/image (232).png>)
 
 Check that your client has a certificate to authenticate and that you are using the correct [WiFi configuration profile](../profile-deployment/microsoft-intune/wifi-profile/) or [XML](../admin-portal/settings/trusted-roots.md#xml).
 
 #### Trusted Root issues&#x20;
 
-![](<../.gitbook/assets/image (185).png>)
+![](<../../.gitbook/assets/image (185).png>)
 
 Check that you've done the following:&#x20;
 
@@ -23,11 +23,11 @@ Also check your [Logs](../admin-portal/insights/log.md#logs). There is a detaile
 
 If your Clients need to verify on connecting the first time, and you're seeing this dialog:
 
-![](<../.gitbook/assets/image (226).png>)
+![](<../../.gitbook/assets/image (226).png>)
 
 Make sure that you have referenced the RADIUS server certificate in your WiFi profile and provided the server certificate's SAN attribute (FQDN) and common name (CN):
 
-<figure><img src="../.gitbook/assets/image (379).png" alt=""><figcaption><p>Showing server certificate's SAN attribute (FQDN) and common name (CN)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (379).png" alt=""><figcaption><p>Showing server certificate's SAN attribute (FQDN) and common name (CN)</p></figcaption></figure>
 
 ### Server View
 
@@ -105,7 +105,7 @@ To identify the affected access point or switch, first determine the RADIUS prox
 
 ### Certificate Chain could not be verified
 
-<figure><img src="../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
 
 When you want to use your own server certificate, your RADIUS server requires the complete certificate chain in order to let other participants (Proxy, RadSec clients, endpoints that try to connect) verify the server's identity.  \
 If you see this message, either copy & paste the CA certificate below the server certificate in the textfield or create a PCKS8 certificate bundle which includes all certificates from the lead to the root.
@@ -121,7 +121,7 @@ In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the f
 * The Microsoft Entra ID (Azure AD) user object behind the UPN/email address has to be entitled to grant the RADIUSaaS Enterprise Application the following permissions (see screenshot below):
   * **Read** the Basic User Profile
   * **Maintain** access to data you have given it access to (allow request of refresh token)\
-    ![](<../.gitbook/assets/Screenshot\_2022-04-11\_at\_09\_31\_26 (1).png>)
+    ![](<../../.gitbook/assets/Screenshot\_2022-04-11\_at\_09\_31\_26 (1).png>)
 * In case your Microsoft Entra ID (Azure AD) user has no rights to grant the required permissions, no corresponding **Enterprise Application** will be auto-created in your Microsoft Entra ID (Azure AD). To circumvent this, ask your IT department to grant your user the needed permissions.
 
 ## Intune configuration issues
@@ -138,7 +138,7 @@ You can assign the SCEP Root certificate profile to both "All users" and "All de
 
 Android seems to require an UPN in Subject alternative name in newer versions (even for device certificates). Please add this in your SCEP profile (e.g. \{{DeviceId\}}@contoso.com):
 
-<figure><img src="../.gitbook/assets/image (462).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (462).png" alt=""><figcaption></figcaption></figure>
 
 ### Wi-Fi profile
 

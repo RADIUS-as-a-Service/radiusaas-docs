@@ -16,7 +16,7 @@ To set up certificate-based Wi-Fi authentication, we need to create a number of 
 | SCEP certificate    | Enroll the client authentication certificate                                 |
 | Wi-Fi               | Deploy the wireless netword adapter settings                                 |
 
-<figure><img src="../../../.gitbook/assets/image (345).png" alt=""><figcaption><p>Relevant Intune Profiles</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (345).png" alt=""><figcaption><p>Relevant Intune Profiles</p></figcaption></figure>
 
 ### Step 1: Create a Root CA in Intune admin center <a href="#step-1-create-root-ca-in-admin-center" id="step-1-create-root-ca-in-admin-center"></a>
 
@@ -34,7 +34,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 Please take note of the CRL distribution point as you will need this later in [Step 6](microsoft-cloud-pki.md#step-6.-configuring-your-radiusaas-instance).
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (346).png" alt=""><figcaption><p>Root and Issuing CAs</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (346).png" alt=""><figcaption><p>Root and Issuing CAs</p></figcaption></figure>
 
 ### Step 3: Create a SCEP device certificate profile in Intune admin center <a href="#step-1-create-root-ca-in-admin-center" id="step-1-create-root-ca-in-admin-center"></a>
 
@@ -50,7 +50,7 @@ Next, go to **Home** > **Devices** > **Windows** > **Configuration profiles > Cr
 
 Next, configure the template according to the screenshot below making sure you attached the **Contoso Root Certificate** created earlier in step 1 and the **SCEP URI** you took a copy of above.
 
-<figure><img src="../../../.gitbook/assets/image (347).png" alt=""><figcaption><p>SCEP Device Certificate Configuration</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (347).png" alt=""><figcaption><p>SCEP Device Certificate Configuration</p></figcaption></figure>
 
 ### Step 4: Establish Trust between RADIUSaaS and the Microsoft Cloud PKI <a href="#step-1-create-root-ca-in-admin-center" id="step-1-create-root-ca-in-admin-center"></a>
 
@@ -60,11 +60,11 @@ Configure RADIUSaaS to trust client authentication certificates issued by the Mi
 2. [Upload](../../../admin-portal/settings/trusted-roots.md#add) the Contoso Cloud PKI **Root CA** selecting **Client Authentication** in the upload process.
 3. As verification method select **CRL** along with **DER** encoding.
 4. Use the copied CRL distribution point URL of the Root CA in the **CRL Distribution Points** URL input field.\
-   ![](<../../../.gitbook/assets/image (348).png>)
+   ![](<../../../../.gitbook/assets/image (348).png>)
 5. Upload the Contoso Cloud PKI **Issuing CA** selecting **Client Authentication** in the upload process.
 6. Again, select **CRL** as verification method along with **DER** encoding.
 7. Use the copied CRL distribution point URL of the Issuing CA in the **CRL Distribution Points** URL input field.\
-   ![](<../../../.gitbook/assets/image (349).png>)
+   ![](<../../../../.gitbook/assets/image (349).png>)
 
 ### Step 5: Configure the RADIUS Server Certificate
 
@@ -76,7 +76,7 @@ To configure out WiFi access points, follow [these steps](../generic-guide.md#st
 
 After successful completion of Steps 4 - 6, the **Trusted Certificates** page of your RADIUSaaS instance will look similar to the one below. Please note that in our example we have used a RadSec-enabled [MikroTik](../../access-point-setup/radsec-available/mikrotik.md) access point.
 
-<figure><img src="../../../.gitbook/assets/image (350).png" alt=""><figcaption><p>Trusted Certificates Overview required for the Microsoft Cloud PKI.</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (350).png" alt=""><figcaption><p>Trusted Certificates Overview required for the Microsoft Cloud PKI.</p></figcaption></figure>
 
 ### Step 7: Configure Intune Profiles
 

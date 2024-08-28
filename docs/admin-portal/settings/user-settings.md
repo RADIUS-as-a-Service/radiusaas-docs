@@ -6,7 +6,7 @@ With the User Settings page, you are able to configure how your website will han
 
 Because there are two ways to create users, some settings only affect the **My Users** portal.
 
-<figure><img src="../../.gitbook/assets/image (416).png" alt=""><figcaption><p>Showing user settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (416).png" alt=""><figcaption><p>Showing user settings</p></figcaption></figure>
 
 ### System
 

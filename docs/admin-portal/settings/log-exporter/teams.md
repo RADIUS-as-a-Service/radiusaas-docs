@@ -11,30 +11,30 @@ Follow those steps to push RADIUSaaS logs to a **Microsoft Teams Channel**:
 1. Navigate to **Microsoft Teams**
 2. Click on the **Channel** > **More options** > **Manage team**
 
-<figure><img src="../../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
 
 3. Go to **Apps**
 4. Click **+ Get more apps**
 
-<figure><img src="../../../.gitbook/assets/image (448).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (448).png" alt=""><figcaption></figcaption></figure>
 
 5. Search for "**Incoming Webhook**"
 6. Click **Add** then **Add to a team**
 
-<figure><img src="../../../.gitbook/assets/image (450).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (450).png" alt=""><figcaption></figcaption></figure>
 
 7. Select your team
 8. Click **Set up a connector**
 
-<figure><img src="../../../.gitbook/assets/image (452).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (452).png" alt=""><figcaption></figcaption></figure>
 
 9. Provide a **Name** for the connector
 10. Upload a logo
 11. Click **Create** to generate the **Webhook Connector URL**
 
-<figure><img src="../../../.gitbook/assets/image (454).png" alt="" width="554"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (454).png" alt="" width="554"><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (456).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (456).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Make sure you copy the Url.&#x20;
@@ -49,4 +49,4 @@ Now it is time to configure the export target in the Log Exporter.&#x20;
 * Paste the **Webhook Connector URL** in the field **Teams channel Webhook URL**
 * Configure the **Message** to be sent to your Microsoft Teams Channel
 
-<figure><img src="../../../.gitbook/assets/image (457).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (457).png" alt=""><figcaption></figcaption></figure>

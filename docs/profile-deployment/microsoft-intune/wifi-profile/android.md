@@ -22,7 +22,7 @@ The following list and screenshot show you all necessary configurations:
 
     of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates) . Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Showing certificate details</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>Showing certificate details</p></figcaption></figure>
 
 11\. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 
@@ -36,7 +36,7 @@ All other settings can be configured according to your own needs and preferences
 Some Android kiosk devices require a value for **Identity privacy (outer identity)**. Please consider this when you are having issues authenticating against the WiFi network with such devices.
 {% endhint %}
 
-![](<../../../.gitbook/assets/2024-06-03\_21h31\_46 (1).png>)
+![](<../../../../.gitbook/assets/2024-06-03\_21h31\_46 (1).png>)
 
 ## Common configuration issues
 

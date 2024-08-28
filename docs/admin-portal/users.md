@@ -30,7 +30,7 @@ Devices that use username and password for network authentication have to speak 
 
 To **Add** a new User, click **Add** and provide **User Name** and **Password** and choose your **Validity**. After entering all details, click **Create**.
 
-<figure><img src="../.gitbook/assets/2024-05-13_12h41_13.gif" alt=""><figcaption><p>Showing adding a new user</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-05-13_12h41_13.gif" alt=""><figcaption><p>Showing adding a new user</p></figcaption></figure>
 
 ## CSV Import
 
@@ -38,7 +38,7 @@ To import your users from a CSV file
 
 * Click on **Import(CSV)**
 
-<figure><img src="../.gitbook/assets/image (363).png" alt=""><figcaption><p>Showing user import button</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption><p>Showing user import button</p></figcaption></figure>
 
 * A pop-up appears, from where you're able to upload your CSV file.&#x20;
 * Once uploaded, the pop-up displays an interactive table mirroring the content of the CSV file
@@ -57,14 +57,14 @@ RADIUSaaS does not consider the **Username** a unique property. This means two o
 
 ## Delete
 
-<figure><img src="../.gitbook/assets/2024-05-13_12h58_45.gif" alt=""><figcaption><p>Showing importing users from CSV file</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-05-13_12h58_45.gif" alt=""><figcaption><p>Showing importing users from CSV file</p></figcaption></figure>
 
 To **Delete** users, select all users which should be deleted in the list, click **Delete and** confirm your choice.
 
-<figure><img src="../.gitbook/assets/2024-05-13_13h44_20.gif" alt=""><figcaption><p>Showing deletion of user</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-05-13_13h44_20.gif" alt=""><figcaption><p>Showing deletion of user</p></figcaption></figure>
 
 ## Update
 
 To change a user's password, disable/re-enable a user or select a new validity period, simply click on the **eye** symbol next to the user entry, change all needed entries and save them.
 
-<figure><img src="../.gitbook/assets/image (365).png" alt=""><figcaption><p>Showing update of a user</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (365).png" alt=""><figcaption><p>Showing update of a user</p></figcaption></figure>

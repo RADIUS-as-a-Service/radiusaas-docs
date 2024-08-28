@@ -27,7 +27,7 @@ The only exception is the **Any authentication allowed** rule, that will be hand
 
 In case you end up having a large number of rules, we recommend - for the sake of maintaining high performance - to order the rules in a way that the most likely rules are hit first.
 
-<figure><img src="../../../.gitbook/assets/image (435).png" alt=""><figcaption><p>Showing Rules</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (435).png" alt=""><figcaption><p>Showing Rules</p></figcaption></figure>
 
 ## Rule Options - Overview
 

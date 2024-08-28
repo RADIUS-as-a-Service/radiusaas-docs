@@ -6,6 +6,6 @@ Those accounts are typically used for BYOD or guest access scenarios, enabling a
 
 UPNs that have only been assigned the Users role have access to the **My Invited Users** only and thus have below RADIUSaaS Admin Portal experience:&#x20;
 
-<figure><img src="../.gitbook/assets/Yoda.gif" alt=""><figcaption><p>Showing how to add new credentials</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Yoda.gif" alt=""><figcaption><p>Showing how to add new credentials</p></figcaption></figure>
 
 .

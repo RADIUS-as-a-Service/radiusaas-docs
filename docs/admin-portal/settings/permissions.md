@@ -18,7 +18,7 @@ RADIUSaaS does not store or manage its own administrator identities. The authent
 Therefore, administrators enjoy the comfort of working with their own Microsoft Entra ID (Azure AD) accounts and do not have to setup additional accounts. All applicable  Conditional Access (CA) policies are enforced.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Changes to the role assignments and invalidating user tokens only become effective after clicking on **Save**.
@@ -59,13 +59,13 @@ During authentication to the RADIUSaaS Admin Portal, each permitted Microsoft En
 
 In a security event, RADIUSaaS Administrators can **invalidate all previously issued access tokens** by setting the minimum issuance date to now.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (426).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (426).png" alt=""><figcaption></figcaption></figure>
 
 ## Access Tokens
 
 Access tokens are required to authenticate calls to the [RADIUSaaS REST API](../../other/rest-api.md).
 
-<figure><img src="../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
 
 ### Add
 
@@ -76,17 +76,17 @@ Follow these steps to create a new access token:
 3. Set the permission level by selecting a [**Role**](permissions.md#roles)
 4. Select the lifetime of the access token
 5. Click on **Create**\
-   ![](<../../.gitbook/assets/image (429).png>)\
+   ![](<../../../.gitbook/assets/image (429).png>)\
 
 6. Copy the access token to the clipboard and store it at a secure location.\
-   ![](../../.gitbook/assets/Screenshot\_2024-05-23\_at\_18\_46\_08.jpg)
+   ![](../../../.gitbook/assets/Screenshot\_2024-05-23\_at\_18\_46\_08.jpg)
 7. Click on **Close**
 
 ### **Delete**
 
 To delete an access token, locate it in the table and click on the bin icon:
 
-<figure><img src="../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
 
 ## Permissions Consent
 
@@ -103,23 +103,23 @@ There are two alternative ways to provide consent:
 
 If no consent has been given on behalf of the organization before by an admin, a user will see a permission request dialogue:
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 Users can review or revoke this consent in Microsoft [My Apps](https://myapps.microsoft.com).
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 Administrators can review & revoke user consents in the Azure Portal (**Microsoft Entra ID** > **Enterprise Applications** > **RADIUS as a Service**):
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
 ### Admin Consent
 
 Rather than requiring consent from each user, administrators can grant consent for all users on behalf of the organization, when logging in the RADIUSaaS web portal for the first time:
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 Alternatively, administrators can grant the consent on behalf of the organization in the Azure portal (**Microsoft Entra ID** > **Enterprise Applications** > **RADIUS as a Service**). In Azure Portal, administrators can also review or revoke the consent:
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 

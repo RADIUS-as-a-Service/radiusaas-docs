@@ -8,6 +8,11 @@ To use the RadSec feature on your FortiGate for WiFi (with FortiAPs), firmware F
 
 1. Download the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../admin-portal/settings/settings-server.md#download).
 2. Create a RadSec client certificate for your WAPs (centrally managed via FortiGate). If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12). FortiGate accepts the **PKCS#12** format for RadSec client certificates.
+
+{% hint style="warning" %}
+Ensure to monitor the expiry of your RadSec client certificate and renew it in due time to prevent service interruptions.
+{% endhint %}
+
 3. Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** for the trusted certificate type.
 
 ## FortiGate Configuration
@@ -22,18 +27,18 @@ To configure RadSec on your FortiGate UI please follow the steps:
 
 * Create a new **RADIUS Server** and add your [RadSec server IP address](../../../admin-portal/settings/settings-server.md#radsec-tcp) under **IP/Name**. For the **Secret**, use "radsec".
 
-<figure><img src="../../../.gitbook/assets/2023-08-28 10_56_04-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2023-08-28 10_56_04-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
 * Import the [root CA of your RADIUS server certificate](../../../admin-portal/settings/settings-server.md#download) to the FortiGate **Certificates** under **System > Certificates > Import > CA Certificate**. The imported root CA will be listed under **Remote CA Certificate**.
 
-<figure><img src="../../../.gitbook/assets/2023-08-28 10_57_07-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2023-08-28 10_57_07-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
 * Import the RadSec client certificate to your FortiGate under\
   **System > Certificates > Import > Certificate**.
 
-<figure><img src="../../../.gitbook/assets/2023-08-28 10_58_54-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2023-08-28 10_58_54-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/2023-08-29 09_36_11-FortiGate.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/2023-08-29 09_36_11-FortiGate.png" alt=""><figcaption></figcaption></figure>
 
 * Modify the RADIUS server configuration in your FortiGate to use it as RadSec client certificate.
 * If enabled, please disable the **server-identity-check** in your FortiGate RADIUS server configuration.

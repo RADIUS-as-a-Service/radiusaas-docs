@@ -26,7 +26,7 @@ When the MAC database is not maintained by the Switch / AP itself but by an exte
 4. If Access-Accept is received from the RADIUS server, the Switch / AP will allow the client to join the network and receive DHCP configuration.&#x20;
 5. The client can now connect to the Internet or denied access and placed on a restricted VLAN depending on the security policy.&#x20;
 
-<img src="../../.gitbook/assets/file.excalidraw (6).svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw (6).svg" alt="" class="gitbook-drawing">
 
 ### In practice
 
@@ -47,5 +47,5 @@ MBA requires configuration in two places:&#x20;
 1. On the **authenticator**. These are your switches and/or AP. Because configuring your devices is vendor specific, please consult your documentation in this regard.
 2.  On **RADIUSaaS**. This is your authentication server. To support MBA, you will need to [add](../../admin-portal/users.md#add) users to your RADIUSaaS instance. These users will need to be formatted as username = password = MAC address. If you have multiple users, you could speed this process up by [importing them via CSV](../../admin-portal/users.md#csv-import) file. The delimiter for the MAC address can usually be defined on your authenticator, however, we recommend to use the colon notation.&#x20;
 
-    <figure><img src="../../.gitbook/assets/image (465).png" alt=""><figcaption><p>Showing username and password as MAC address</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (465).png" alt=""><figcaption><p>Showing username and password as MAC address</p></figcaption></figure>
 

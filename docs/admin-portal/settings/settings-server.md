@@ -14,7 +14,7 @@ RADIUSaaS provides public IP addresses that allow your network appliances and se
 
 ### RadSec / TCP
 
-<figure><img src="../../.gitbook/assets/image (386).png" alt=""><figcaption><p>Showing RadSec IP and port</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (386).png" alt=""><figcaption><p>Showing RadSec IP and port</p></figcaption></figure>
 
 #### Properties
 
@@ -40,7 +40,7 @@ This section displays the (standard) port for the RadSec.
 
 This section is available when you have configured at least on [RADIUS Proxy](settings-proxy.md). For each proxy, a separate public IP address is available. The public IP addresses in this section support the RADIUS protocol only and thus listen on ports 1812/1813.
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Showing RADIUS proxy IP and ports</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Showing RADIUS proxy IP and ports</p></figcaption></figure>
 
 #### Properties
 
@@ -56,7 +56,7 @@ Geo-location of the RADIUS proxy/proxies as well as the respective public IP add
 
 The shared secret for the respective RADIUS proxy. By default, all RADIUS proxies are initialized with the same shared secret.
 
-<figure><img src="../../.gitbook/assets/2024-05-24_18h45_54.gif" alt=""><figcaption><p>Showing changing of shared secrets per proxy</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2024-05-24_18h45_54.gif" alt=""><figcaption><p>Showing changing of shared secrets per proxy</p></figcaption></figure>
 
 **Ports**
 
@@ -98,7 +98,7 @@ TLS 1.3 allows explicitly requesting the RadSec client certificate before comple
 This setting is automatically enabled when the maximum TLS version is set to 1.3.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (461).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (461).png" alt=""><figcaption></figcaption></figure>
 
 ## Server Certificates
 
@@ -114,7 +114,7 @@ To create your Customer-CA, follow these simple steps:&#x20;
 4. Click on **Save**
 5. After the creation, you will see a new certificate available under Server Certificates
 
-<figure><img src="../../.gitbook/assets/image (391).png" alt=""><figcaption><p>Showing how to add a new server certificate</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (391).png" alt=""><figcaption><p>Showing how to add a new server certificate</p></figcaption></figure>
 
 ### Bring your own Certificate
 
@@ -136,7 +136,7 @@ You may leverage SCEPman Certificate Master to generate a server certificate for
 <mark style="color:red;">**Important:**</mark> <mark style="color:red;"></mark><mark style="color:red;">Take temporary note of the password since it cannot be recovered from Certificate Master.</mark>
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 To add your server certificate created in above steps, navigate to **RADIUSaaS instance** > **Settings** > **Server Settings**, then
 
@@ -145,7 +145,7 @@ To add your server certificate created in above steps, navigate to **RADIUSaaS i
 10. Enter the password of your **Private Key**&#x20;
 11. Click **Save**
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Please note: By default, SCEPman Certificate Master issues certificates that are valid for 730 days. If you'd like to change this, please refer to SCEPman's [documentation](https://docs.scepman.com/advanced-configuration/application-settings/certificates#appconfig-validityperioddays).
@@ -159,11 +159,11 @@ As certificates expire from time to time or your preference on which certificate
 
 To download your **Server Certificate,** click **Download** in the corresponding row.
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Showing the download button</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Showing the download button</p></figcaption></figure>
 
 It will open a dialog and show the complete certificate path. The **root certificate** will always be marked in green.
 
-<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Showing the root certificate in green</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Showing the root certificate in green</p></figcaption></figure>
 
 ### Delete
 
@@ -173,7 +173,7 @@ To delete a certificate, expand the corresponding row, click **Delete** and conf
 
 Certificates will expire from time to time. Five months before your certificate is going to be expired, you dashboard will give you a hint that your certificate is about to expire.
 
-![](<../../.gitbook/assets/image (111).png>)
+![](<../../../.gitbook/assets/image (111).png>)
 
 If you're seeing this triangle, follow this guide how you can change your server certificate:&#x20;
 

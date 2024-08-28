@@ -4,13 +4,13 @@ The rule engine log-interface was made to get easy access to what decisions were
 
 ## Filter the Graph for a certain Time
 
-![](../../.gitbook/assets/rule-engine-timeFilter.gif)
+![](../../../.gitbook/assets/rule-engine-timeFilter.gif)
 
 ## Filter by Rules
 
-![](../../.gitbook/assets/rule-engine-ruleFilter.gif)
+![](../../../.gitbook/assets/rule-engine-ruleFilter.gif)
 
 ## Filter for everything you can see in the Table
 
-![](../../.gitbook/assets/rule-engine-anyFilter.gif)
+![](../../../.gitbook/assets/rule-engine-anyFilter.gif)
 

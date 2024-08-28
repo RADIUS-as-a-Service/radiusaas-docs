@@ -195,7 +195,7 @@ We are recommending to use the modern [RadSec](../../details.md#what-is-radsec) 
 
 The following diagram shows the RADIUS authentication flow:
 
-![](../../.gitbook/assets/radius-authentication-sequence.png)
+![](../../../.gitbook/assets/radius-authentication-sequence.png)
 
 In the first part of the authentication sequence, the communication is secured by an MD5-based hashing algorithm (partially encrypted with the shared secret). **No secrets** are transported in this phase.
 

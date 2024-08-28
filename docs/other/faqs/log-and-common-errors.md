@@ -12,7 +12,7 @@ description: >-
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (310).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (310).png" alt=""><figcaption></figcaption></figure>
 
 Corresponding error messages:
 
@@ -33,7 +33,7 @@ If the devices are able to connect eventually without noticeable delays, such er
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (311).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (311).png" alt=""><figcaption></figcaption></figure>
 
 Your proxies will create a TCP session with your RadSec server(s). These sessions have to be reinitiated every 30 seconds. As long as there is no error within those messages, these log entries are expected.
 
@@ -43,7 +43,7 @@ Your proxies will create a TCP session with your RadSec server(s). These session
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
 
 Since your RadSec server(s) are globally available, anyone on the Internet can try to connect to them, e.g. using a TCP handshake. If no valid (mututal) TLS connection can be established (which only works if the connecting entity presents a trusted RadSec client certificate), this error message is generated and expcted.&#x20;
 

@@ -26,7 +26,7 @@ Besides our [Generic Guide](generic-guide.md), we have prepared [Scenario-based 
 * RADIUSaaS with SCEPman
 * RADIUSaaS with Microsoft Cloud PKI
 
-<img src="../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 
 ## Generic Guide
 

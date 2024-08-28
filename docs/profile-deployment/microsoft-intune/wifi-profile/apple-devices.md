@@ -27,14 +27,14 @@ description: >-
     of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.** \
 
 
-    <figure><img src="../../../.gitbook/assets/2024-05-23_15h40_00.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/2024-05-23_15h40_00.png" alt=""><figcaption></figcaption></figure>
 13. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 14. Under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
 15. Finally, under **Certificates** select the SCEP profile you would like to use for authentication.
 
 All other settings can be configured according to your own needs and preferences.
 
-<figure><img src="../../../.gitbook/assets/image (458).png" alt=""><figcaption><p>Showing iOS/iPad Wi-Fi Profile</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (458).png" alt=""><figcaption><p>Showing iOS/iPad Wi-Fi Profile</p></figcaption></figure>
 
 ## Common configuration issues
 

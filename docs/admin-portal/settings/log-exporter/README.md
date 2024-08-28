@@ -23,7 +23,7 @@ The Log Exporter allows you to configure a specific **Message Filter** for each 
 
 The **Message Filter** that can be configured for each target helps you to only receive those logs, that are really relevant for your monitoring and alerting system.
 
-<figure><img src="../../../.gitbook/assets/image (192).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (192).png" alt=""><figcaption></figcaption></figure>
 
 The filter can be configured to only consider logs from certain sources/sub-system from the RADIUSaaS platform:
 
@@ -41,9 +41,9 @@ If you are familiar with reading the RADIUSaaS' [raw log data](../../insights/lo
 | Authorization System | `detail` | <p>Requests = <code>debug</code><br>Success = <code>info</code><br>Failed = <code>warning</code><br>Error = <code>error</code></p>    |
 | Proxy Authentication | `proxy`  | <p>Connections = <code>debug</code><br>Success = <code>info</code><br>Failed = <code>warning</code><br>Error = <code>error</code></p> |
 
-<figure><img src="../../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
 ## Message
 
@@ -52,6 +52,6 @@ No matter which target type(s) you have selected, you will have to edit the data
 
 The Log Exporter has access to every field in a log message that is hierarchically located under the`_source` property. It is made available through the `data` object in the **Message** editor.
 
-<figure><img src="../../../.gitbook/assets/image (139).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (139).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>

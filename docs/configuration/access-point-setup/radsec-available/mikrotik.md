@@ -16,6 +16,10 @@ To establish a valid RadSec connection, your MikroTik Access Points must trust t
 
 4. If you have not already generated RadSec client certificate for your router, generate one as per the below example. For more information about creating certificates, click [here](https://wiki.mikrotik.com/wiki/Manual:Create\_Certificates). &#x20;
 
+{% hint style="warning" %}
+Ensure to monitor the expiry of your RadSec client certificate and renew it in due time to prevent service interruptions.
+{% endhint %}
+
 Example:&#x20;
 
 ```
@@ -32,7 +36,7 @@ set myCa trusted=yes
 set "RADIUS Customer CA - Contoso.cer" trusted=yes
 ```
 
-<figure><img src="../../../.gitbook/assets/image (344).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (344).png" alt=""><figcaption></figcaption></figure>
 
 5. Export the root CA certificate (`myCa`) that has issued your RadSec client certificate above:
 
@@ -50,7 +54,7 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 * **Accounting Port:** 2083
 * **Certificate:** mikrotik-client (generated in step 4)&#x20;
 
-![](<../../../.gitbook/assets/image (224).png>)
+![](<../../../../.gitbook/assets/image (224).png>)
 
 8. Go to **Wireless** add a new **Security Profile** and enter the following information:&#x20;
 
@@ -60,8 +64,8 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 * **TLS Mode:** verify certificate
 * **TLS Certificate:** the imported RADIUS Server certificate
 
-![](<../../../.gitbook/assets/image (158).png>)
+![](<../../../../.gitbook/assets/image (158).png>)
 
 9. Switch to your **WiFi Interfaces** and apply your **Security Profile** to the interface.
 
-![](<../../../.gitbook/assets/image (266).png>)
+![](<../../../../.gitbook/assets/image (266).png>)

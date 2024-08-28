@@ -27,14 +27,14 @@ First you have to create an Enterprise app. To do this via the Azure portal, fol
 3. Select **Enterprise applications**
 4. Click **+ New Application**
 
-<figure><img src="../../.gitbook/assets/2024-05-13_16h39_30.png" alt=""><figcaption><p>Showing creation of a new application</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2024-05-13_16h39_30.png" alt=""><figcaption><p>Showing creation of a new application</p></figcaption></figure>
 
 5. Click **+ Create your own application**
 6. Give a name for the app (e.g. RADIUSaaS Portal)
 7. Choose **Integrate any other application you don’t find in the gallery** and&#x20;
 8. Click **Create**
 
-<figure><img src="../../.gitbook/assets/image (384).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (384).png" alt=""><figcaption></figcaption></figure>
 
 After that the app is set up, we now need to add users to it and configure the logo and link
 
@@ -42,15 +42,15 @@ After that the app is set up, we now need to add users to it and configure the l
 
 1.  Under **Manage** go to **User and groups** - Add all users/groups who should be able to view/use your new URL tile and save
 
-    <figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p>Click "User and groups"</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption><p>Click "User and groups"</p></figcaption></figure>
 2.  Click **Properties** - Upload an image logo of your choice and save
 
-    <figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption><p>Click "Properties"</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption><p>Click "Properties"</p></figcaption></figure>
 3.  Click **Single Sign-on** - Select **Linked** mode - Then enter the URL you want and save.
 
-    <figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Click Single Sign-on - Select "Linked" mode</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Click Single Sign-on - Select "Linked" mode</p></figcaption></figure>
 
-    <figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption><p>enter the URL you want</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption><p>enter the URL you want</p></figcaption></figure>
 
 **Access My Apps**
 
@@ -139,7 +139,7 @@ To identify the PIP of the authenticating site for a particular authentication, 
 *   The PIP can be extracted from the **message > Packet-Src-IP-Address** property of the log entry.\
 
 
-    <figure><img src="../../.gitbook/assets/image (374).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (374).png" alt=""><figcaption></figcaption></figure>
 
 **RADIUS Connection**
 
@@ -150,4 +150,4 @@ To identify the PIP of the authenticating site for a particular authentication, 
 *   The PIP can be extracted from the **message** property of the log entry:\
 
 
-    <figure><img src="../../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
