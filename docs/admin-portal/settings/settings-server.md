@@ -165,6 +165,12 @@ It will open a dialog and show the complete certificate path. The **root certifi
 
 <figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Showing the root certificate in green</p></figcaption></figure>
 
+The format of this downloaded root certificate is PEM. In case you need a different format, you can convert it using [OpenSSL](https://openssl.org/). This is an example for a conversion to PKCS#12:
+
+```sh
+openssl.exe pkcs12 -export -in cert.pem -out cert.pfx
+```
+
 ### Delete
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;
