@@ -165,10 +165,10 @@ It will open a dialog and show the complete certificate path. The **root certifi
 
 <figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Showing the root certificate in green</p></figcaption></figure>
 
-The format of this downloaded root certificate is PEM. In case you need a different format, you can convert it using [OpenSSL](https://openssl.org/). This is an example for a conversion to PKCS#12:
+The downloaded root certificate is encoded in base64 (PEM). In case your device (e.g. WiFi controller) needs a binary coding (DER), you can convert it using [OpenSSL](https://openssl.org/):
 
 ```sh
-openssl.exe pkcs12 -export -in cert.pem -out cert.pfx
+openssl x509 -inform pem -in <DOWNLOADED_FILE> -outform der -out <CONVERTED_FILE>
 ```
 
 ### Delete
