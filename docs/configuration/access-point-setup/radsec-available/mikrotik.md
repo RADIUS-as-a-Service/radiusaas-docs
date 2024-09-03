@@ -54,7 +54,7 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 * **Accounting Port:** 2083
 * **Certificate:** mikrotik-client (generated in step 4)&#x20;
 
-![](<../../../../.gitbook/assets/image (224).png>)
+![](../../../.gitbook/assets/2024-09-03\_14h43\_36.png)
 
 8. Go to **Wireless** add a new **Security Profile** and enter the following information:&#x20;
 
