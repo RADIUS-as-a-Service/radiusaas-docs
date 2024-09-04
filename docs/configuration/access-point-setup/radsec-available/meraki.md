@@ -38,7 +38,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 
     <figure><img src="../../../../.gitbook/assets/Bild-3-Edited.png" alt=""><figcaption></figcaption></figure>
 7. Click **Save**.
-8.  Configure **EAP parameters and timeouts** according to [this ](https://docs.radiusaas.com/other/faqs/general)reference guide by going to **Wireless** > **Radius** > **Advanced RADIUS settings.** Once configured, it should look similar to the screenshot below.&#x20;
+8.  Configure **EAP parameters and timeouts** according to [this](../../../other/faqs/general.md#timers-and-timeouts) reference guide by going to **Wireless** > **Radius** > **Advanced RADIUS settings.** Once configured, it should look similar to the screenshot below.&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (388).png" alt=""><figcaption><p>Showing <strong>EAP parameters and timeouts</strong></p></figcaption></figure>
 9.  To upload and generate the required certificates, navigate to **Organization > Certificates**. In the top table, click **Upload certificate** and provide the root certificate of the CA that has signed your [RADIUS server certificate](../../../admin-portal/settings/settings-server.md#server-certificates), which you should have already downloaded in this [step](meraki.md#prepare-certificates). Your Meraki APs now trust your RADIUS server.\
