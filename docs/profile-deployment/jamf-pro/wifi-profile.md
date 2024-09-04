@@ -28,7 +28,13 @@ To configure a WiFi profile in Jamf, please follow these instructions:
     * **Subject Alernative Name (SAN)**
     * and **Common Name (CN)**&#x20;
 
-    of your _active_ RADIUS [**Server Certificate.**](../../admin-portal/settings/settings-server.md#server-certificates) Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**
+    of your _active_ RADIUS [**Server Certificate.**](../../admin-portal/settings/settings-server.md#server-certificates) Those properties can be found by expanding the active server certificate and copying the relevant values.&#x20;
+
+{% hint style="warning" %}
+Note that the Common Name is case-sensitive.&#x20;
+
+Please make sure there are no spaces or hidden characters at the beginning or end of the Trusted Server Certificate Names input field in the JAMF interface.
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
