@@ -19,7 +19,7 @@ Due to the [above](trusted-roots.md#trusted-radsec-connection-certificates), you
 ![Showing how to add trusted certificates](../../../.gitbook/assets/2024-05-14\_11h50\_26.gif)
 
 {% hint style="warning" %}
-If you have a tiered PKI infrastructure (e.g. a **Microsoft legacy PKI**), remember to **upload** the **entire chain of trust**, i.e. the root CA certificate and all relevant issuing CA certificates (RADIUSaaS supports the upload of a combined file or separate files for each CA).
+If you have a tiered PKI infrastructure (e.g. a **Microsoft legacy PKI**), please consider [this](trusted-roots.md#tiered-pki-hierarchy).
 {% endhint %}
 
 To add a new trusted certificate, follow these steps:
@@ -33,7 +33,8 @@ To add a new trusted certificate, follow these steps:
    * [**RadSec**](trusted-roots.md#trusted-radsec-connection-certificates)
    * **Both** (helpful if the same CA is issuing your client authentication certificates as well as your RadSec client certificates)
 4. Upload the certificate file by drag & drop (alternatively you can click in the blue area and select your file)
-5. Select the certificate verification option:
+5. Select the certificate verification option:\
+   <mark style="color:red;">If your CA neither supports OCSP nor CRL, select</mark> <mark style="color:red;"></mark><mark style="color:red;">**OCSP Autodetect**</mark> <mark style="color:red;"></mark><mark style="color:red;">as verification option.</mark>
    * **OCSP Autodetect**: RADIUSaaS will try to infer the OCSP responder URL from the client certificate's Authority Information Access (AIA) extension that is used for the network authentication. In case no OCSP responder URL is found or the OCSP responder is unavailable, RADIUSaaS will consider the [**Soft fail** ](trusted-roots.md#ocsp-soft-fail)configuration. Use this if your CA is **SCEPman**.
    * **OCSP**: Manually specify which OCSP responder URL will be used for any certificate that was issued by the trusted CA. If the OCSP responder is unavailable, RADIUSaaS will consider the [**Soft fail** ](trusted-roots.md#ocsp-soft-fail)configuration.
    * **CRL**: If selected, RADIUSaaS will use a CRL instead of OCSP to verify certificate issued by the CA. Specify the CRL encoding (**DER** or **PEM**) and the **CRL distribution points**.
