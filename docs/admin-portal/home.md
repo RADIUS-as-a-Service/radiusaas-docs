@@ -50,7 +50,7 @@ Click on the UI-mode button to toggle between dark and normal mode.
 
 ### Help
 
-Click on the lifebuoy button to lodge a support request with us, with imported information getting prepopulated in the support form.
+Click on the life saver button to lodge a support request, with important information prepopulated in the support form.
 
 <figure><img src="../../.gitbook/assets/image (422).png" alt=""><figcaption></figcaption></figure>
 
