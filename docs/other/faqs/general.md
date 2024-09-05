@@ -151,3 +151,7 @@ To identify the PIP of the authenticating site for a particular authentication, 
 
 
     <figure><img src="../../../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
+
+## Does RADIUSaaS support WPA3 Enterprise?
+
+Yes, RADIUSaaS supports WPA3 Enterprise. It also supports WPA3 Enterprise 192-bit mode.
