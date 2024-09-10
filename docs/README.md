@@ -16,7 +16,7 @@ Multiple customers with sites in the US are currently reporting RADIUS authentic
 **Root Cause Analysis**
 
 * This is not an issue caused by RADIUSaaS.
-* AT\&T (ATT) seems to be suffering from issues related to the transport / processing of UDP packets.
+* Based on customer feedback, AT\&T (ATT) seems to be suffering from issues related to the transport / processing of UDP packets.
 
 **Affected Scope**
 
