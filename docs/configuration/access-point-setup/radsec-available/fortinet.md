@@ -6,6 +6,8 @@ To use the RadSec feature on your FortiGate for WiFi (with FortiAPs), firmware F
 
 ## Prepare Certificates
 
+To establish a valid RadSec connection, your Access Points must trust the RADIUS Server Certificate and your RADIUS server must trust your RadSec client certificate.
+
 1. Download the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../admin-portal/settings/settings-server.md#download).
 2. Create a RadSec client certificate for your WAPs (centrally managed via FortiGate). If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12). FortiGate accepts the **PKCS#12** format for RadSec client certificates.
 
@@ -13,7 +15,8 @@ To use the RadSec feature on your FortiGate for WiFi (with FortiAPs), firmware F
 Ensure to monitor the expiry of your RadSec client certificate and renew it in due time to prevent service interruptions.
 {% endhint %}
 
-3. Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** for the trusted certificate type.
+3. Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.\
+   In case the RadSec client certificate has been issued by SCEPman and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**.&#x20;
 
 ## FortiGate Configuration
 
@@ -111,7 +114,7 @@ config wireless-controller vap
 end
 ```
 
-## Links
+### References
 
 Link to FortiGate's documentation for the RadSec configuration:\
 [https://docs.fortinet.com/document/fortigate/7.6.0/administration-guide/729374/configuring-a-radsec-client](https://docs.fortinet.com/document/fortigate/7.6.0/administration-guide/729374/configuring-a-radsec-client)

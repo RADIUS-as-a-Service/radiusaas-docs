@@ -20,7 +20,7 @@ Multiple customers with sites in the US are currently reporting RADIUS authentic
 
 **Affected Scope**
 
-* **US-based** sites using **AT\&T as ISP**, that use
+* **US-based** sites using **AT\&T or Cogent Communications as ISPs**, that use
 * **RADIUS / UDP** for AAA (RadSec / TCP connections are not affected).
 
 **Remediation**

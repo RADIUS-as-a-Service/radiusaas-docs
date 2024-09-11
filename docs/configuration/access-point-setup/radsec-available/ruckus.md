@@ -6,14 +6,24 @@ The following guide was created using Ruckus **Virtual SmartZone Essentials** ve
 
 ## Prepare Certificates
 
+To establish a valid RadSec connection, your Access Points must trust the RADIUS Server Certificate and your RADIUS server must trust your RadSec client certificate.
+
 1. Download the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../admin-portal/settings/settings-server.md#download).
 2. Create a RadSec client certificate for your Ruckus SmartZone. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).&#x20;
+3. **Split the generated certificate** into the private key (named "priv.key" in this example) and the certificate (named "clientcert.cer"). In case the RadSec client certificate was downloaded in the **PKCS#12/.pfx** format, this can be easily done, e.g. using OpenSSL:\
+   \
+   Private Key:\
+   `openssl pkcs12 -in <your-radsec-client-cert>.pfx -nocerts -nodes -out priv.key`\
+   \
+   Certificate without Private Key:\
+   `openssl pkcs12 -in <your-radsec-client-cert>.pfx -clcerts -nokeys -out clientcert.cer`&#x20;
 
 {% hint style="warning" %}
 Ensure to monitor the expiry of your RadSec client certificate and renew it in due time to prevent service interruptions.
 {% endhint %}
 
-3. Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** for the trusted certificate type.
+3. Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**. \
+   In case the RadSec client certificate has been issued by SCEPman and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**.&#x20;
 
 ## Ruckus SmartZone (SZ) Configuration
 
@@ -31,22 +41,15 @@ For general information on how to import certificates to the Ruckus SmartZone, p
 
     <figure><img src="../../../.gitbook/assets/Screenshot_2024-08-21_at_12_54_18.jpg" alt="" width="375"><figcaption></figcaption></figure>
 3. Next, click **Validate** and **OK**.
-4. Prepare your RadSec client certificate for import to the Ruckus SZ by decomposing the certificate obtained from step 2 [here](ruckus.md#prepare-certificates) into its private key and public portion. In case the RadSec client certificate was downloaded in the **PKCS#12/.pfx** format, this can be achieved using the following OpenSSL commands:\
-   \
-   Private Key:\
-   `openssl pkcs12 -in <your-radsec-client-cert>.pfx -nocerts -nodes -out private.key`\
-   \
-   Certificate without Private Key:\
-   `openssl pkcs12 -in <your-radsec-client-cert>.pfx -clcerts -nokeys -out certificate.cer`&#x20;
-5. Import your RadSec client certificate (obtained from step 2 [here](ruckus.md#prepare-certificates)) by navigating to **Administration >** **System > Certificates > SZ as Client Certificate**.
-6.  Click **Import** and provide a **Name** and optional **Description** for your RadSec client certificate. Then upload the public portion of your RadSec client certificate by clicking **Browse** next to **Client Certificate**. Finally, upload the private key by clicking **Browse** next to **Private Key**.\
+4. Import your RadSec client certificate (obtained from step 3 [here](ruckus.md#prepare-certificates)) by navigating to **Administration >** **System > Certificates > SZ as Client Certificate**.
+5.  Click **Import** and provide a **Name** and optional **Description** for your RadSec client certificate. Then upload the public portion of your RadSec client certificate by clicking **Browse** next to **Client Certificate**. Finally, upload the private key by clicking **Browse** next to **Private Key**.\
 
 
     <figure><img src="../../../.gitbook/assets/Screenshot_2024-08-21_at_13_10_30 (1).jpg" alt=""><figcaption></figcaption></figure>
-7. For the RADIUS server configuration, navigate to **Security > Authentication > Proxy (SZ Authenticator)**.
-8. Click **Create** and provide a **Name**, optional **Friendly Name** and **Description** for the RADIUS profile.
-9. Select **RADIUS** as **Service Protocol**.
-10. Under **RADIUS Service Options**, configure the following settings:
+6. For the RADIUS server configuration, navigate to **Security > Authentication > Proxy (SZ Authenticator)**.
+7. Click **Create** and provide a **Name**, optional **Friendly Name** and **Description** for the RADIUS profile.
+8. Select **RADIUS** as **Service Protocol**.
+9. Under **RADIUS Service Options**, configure the following settings:
 
 | **Encryption**                            | Enable                                                                                                                                                                                                             |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

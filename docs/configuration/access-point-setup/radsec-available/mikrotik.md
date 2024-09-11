@@ -4,6 +4,8 @@
 Please note that the below configuration was tested with RouterOS 6.47.4 and 6.49.11
 {% endhint %}
 
+## Prepare Certificates
+
 To establish a valid RadSec connection, your MikroTik Access Points must trust the RADIUS Server Certificate and your RADIUS server must trust your RadSec client certificate. To establish the server trust , follow these steps:&#x20;
 
 1. Download the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../admin-portal/settings/settings-server.md#download).
@@ -14,7 +16,7 @@ To establish a valid RadSec connection, your MikroTik Access Points must trust t
 /certificate import file-name="RADIUS Customer CA - Contoso.cer"
 ```
 
-4. If you have not already generated RadSec client certificate for your router, generate one as per the below example. For more information about creating certificates, click [here](https://wiki.mikrotik.com/wiki/Manual:Create\_Certificates). &#x20;
+4. If you have not already generated RadSec client certificate for your router, generate one as per the below example. For more information about creating certificates, click [here](https://wiki.mikrotik.com/wiki/Manual:Create\_Certificates). If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).&#x20;
 
 {% hint style="warning" %}
 Ensure to monitor the expiry of your RadSec client certificate and renew it in due time to prevent service interruptions.
@@ -44,8 +46,11 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 /certificate export-certificate myCa
 ```
 
-6. Download it from the **Files** menu and then upload the file to your RADIUS instance as a trusted[ RadSec connection certificate](../../../admin-portal/settings/settings-server.md#add).
-7. Switch back to your WebFig, add a new RADIUS profile and enter the following information:
+6. Download it from the **Files** menu and then upload the file to your RADIUSaaS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**
+
+## MikroTik Configuration
+
+1. Switch back to your WebFig, add a new RADIUS profile and enter the following information:
 
 * Use the IP address from your [Server Settings ](../../../admin-portal/settings/settings-server.md)page.
 * **Protocol:** radsec
@@ -56,7 +61,7 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 
 ![](../../../.gitbook/assets/2024-09-03\_14h43\_36.png)
 
-8. Go to **Wireless** add a new **Security Profile** and enter the following information:&#x20;
+2. Go to **Wireless** add a new **Security Profile** and enter the following information:&#x20;
 
 * **Name:** on your behalf
 * **Mode:** dynamic keys
@@ -66,6 +71,6 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 
 ![](<../../../../.gitbook/assets/image (158).png>)
 
-9. Switch to your **WiFi Interfaces** and apply your **Security Profile** to the interface.
+3. Switch to your **WiFi Interfaces** and apply your **Security Profile** to the interface.
 
 ![](<../../../../.gitbook/assets/image (266).png>)
