@@ -3,7 +3,7 @@
 ## Prepare Certificates
 
 1. Download the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../admin-portal/settings/settings-server.md#download).
-2. Create a RadSec client certificate for your WAPs (centrally managed via Aruba Central). If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).&#x20;
+2. Create a RadSec client certificate for your Access Points. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).&#x20;
 
 {% hint style="warning" %}
 Ensure to monitor the expiry of your RadSec client certificate and renew it in due time to prevent service interruptions.

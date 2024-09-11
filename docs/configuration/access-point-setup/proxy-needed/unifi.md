@@ -1,5 +1,9 @@
 # UniFi
 
+{% hint style="warning" %}
+Starting with **UniFi Network 8.4** RadSec is supported. We recommend to follow the [RadSec guide for UniFi](../radsec-available/unifi.md) instead.
+{% endhint %}
+
 ## UniFi Configuration
 
 ### RADIUS Profile

@@ -17,6 +17,7 @@
     * [Meraki](configuration/access-point-setup/radsec-available/meraki.md)
     * [MikroTik](configuration/access-point-setup/radsec-available/mikrotik.md)
     * [Ruckus](configuration/access-point-setup/radsec-available/ruckus.md)
+    * [UniFi](configuration/access-point-setup/radsec-available/unifi.md)
   * [RADIUS](configuration/access-point-setup/proxy-needed/README.md)
     * [ExtremeCloud IQ CoPilot](configuration/access-point-setup/proxy-needed/extremecloud-iq-copilot.md)
     * [Meraki](configuration/access-point-setup/proxy-needed/meraki.md)
