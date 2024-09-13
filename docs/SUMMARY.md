@@ -68,9 +68,9 @@
   * [Server Trust](profile-deployment/jamf-pro/server-trust.md)
   * [WiFi Profile](profile-deployment/jamf-pro/wifi-profile.md)
   * [Wired Profile](profile-deployment/jamf-pro/wired-profile.md)
-* [Google Workplace](profile-deployment/google-workplace/README.md)
-  * [Server Trust](profile-deployment/google-workplace/server-trust.md)
-  * [WiFi Profile](profile-deployment/google-workplace/wifi-profile.md)
+* [Google Workspace](profile-deployment/google-workspace/README.md)
+  * [Server Trust](profile-deployment/google-workspace/server-trust.md)
+  * [WiFi Profile](profile-deployment/google-workspace/wifi-profile.md)
 
 ## Other
 
