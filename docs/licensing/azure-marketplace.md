@@ -10,10 +10,12 @@
 
 * During the first subscription interval, your subscription fees are not immediately due after completing the subscription enrolment. Instead we will start billing once your cancellation grace period has expired.&#x20;
 * Upon every renewal date, you will be billed immediately.
+* You will always be billed for the entire subscription cycle in advance.
 * The related items should appear on your Microsoft Azure invoice (Pay-As-You-Go or Enterprise Agreement) the month after we have reported your fees to Microsoft.
-* In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja-gab".
+*   In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja".\
 
-![](<../../.gitbook/assets/image (314).png>)
+
+    <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 For a more detailed cost breakdown of your base and additional user fees, please refer to the invoice in your Azure portal.
@@ -34,7 +36,7 @@ The annual plan is discounted by 10% in comparison to the monthly plan (calculat
 
 ### User Segments
 
-The following user segments are available for both, monthly and annual plans.&#x20;
+The following user segments are available for both, monthly and annual plans:&#x20;
 
 <table data-header-hidden><thead><tr><th width="240.02162801098973">Plan</th><th width="244.07580174927114">Included Users</th><th></th></tr></thead><tbody><tr><td><strong>User Segment</strong></td><td><strong>Included Users in Base Fee</strong></td><td><strong>Maximum Total Users</strong></td></tr><tr><td>RADIUSaaS (M/Y) 50</td><td>50</td><td>249</td></tr><tr><td>RADIUSaaS (M/Y) 250</td><td>250</td><td>999</td></tr><tr><td>RADIUSaaS (M/Y) 1000</td><td>1,000</td><td>4,999</td></tr><tr><td>RADIUSaaS (M/Y) 5000</td><td>5,000</td><td>9,999</td></tr><tr><td>RADIUSaaS (M/Y) 10000</td><td>10,000</td><td>unlimited</td></tr></tbody></table>
 
@@ -65,8 +67,6 @@ The information provided throughout this article is analogously applicable for R
 * Downgrading the amount of users is currently not possible without cancelling the subscription.
 * If you want to perform a downgrade, please [cancel](azure-marketplace.md#cancellation) your current subscription and re-subscribe with the desired amount of users once the cancellation becomes effective.
 
-![](<../../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 3.png>)
-
 ### **Change Plan**
 
 {% hint style="warning" %}
@@ -95,7 +95,7 @@ In case you would like to test RADIUSaaS, please [get in contact with us](https:
 ### How to purchase RADIUSaaS (RADIUSaaS & SCEPman Bundle)?
 
 {% hint style="info" %}
-Deploying a RADIUSaaS (RADIUSaaS & SCEPman Bundle) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the newly obtained license as part of this subscription to your existing deployments.
+Deploying a RADIUSaaS (RADIUSaaS & SCEPman Bundle) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
 
 For **new customers**, we will provision a new instance of RADIUSaaS once below steps are completed. Please allow up to 1 business day for us to complete the provisioning.
 {% endhint %}
@@ -106,14 +106,14 @@ To get started with your RADIUSaaS or RADIUSaaS & SCEPman Bundle subscription, f
   * More details on Private Offers and MPOs can be found in Microsoft's documentation.
     * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
     * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
-* Select the **Plan** based on your preferred renewal interval and click **Subscribe**
+* Select the **Plan** based on your preferred renewal interval and click **Subscribe**.
 
 ![](<../../.gitbook/assets/image (333).png>)
 
-* Create or select the **Resource group** you would like to deploy the subscription to
-* Assign a descriptive **Name** to later identify your subscription
-* We recommend to keep **Recurring billing** **On** so that you do not have to worry about an automatic termination of your subscription
-* Click **Review + subscribe** and then **Subscribe** to deploy the **SaaS** resource to your **Resource group**
+* Create or select the **Resource group** you would like to deploy the subscription to.
+* Assign a descriptive **Name** to later identify your subscription.
+* We recommend to keep **Recurring billing** **On** so that you do not have to worry about an automatic termination of your subscription.
+* Click **Review + subscribe** and then **Subscribe** to deploy the **SaaS** resource to your **Resource group**.
 
 ![](<../../.gitbook/assets/image (217).png>)
 
@@ -121,7 +121,7 @@ To get started with your RADIUSaaS or RADIUSaaS & SCEPman Bundle subscription, f
 The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
 {% endhint %}
 
-* Once the deployment is complete, please navigate to our platform to complete the checkout. Therefore click **Configure account now.**
+* Once the deployment is complete, please navigate to our platform to complete the checkout. Therefore click **Configure account now**.
 
 ![](<../../.gitbook/assets/image (221).png>)
 
@@ -137,14 +137,14 @@ If the plan contains chargeable add-ons, you can select them under **Extras**. F
 
 ![](../../.gitbook/assets/Screenshot\_2022-02-18\_at\_12\_23\_47.png)
 
-* Based on the amount of users provided, we will charge the relevant base fee for your user segment as well as additional users, in case you require more than the included amount in your base fee. **The platform automatically selects the best price / tier.**
+* Based on the amount of users provided, we will charge the relevant base fee for your user segment as well as additional users, in case you require more than the included amount in your base fee. **The platform automatically selects the best price / tier**.
 * The platform will show you the licensing fees you have to expect under **Cost Projection**.
 * If you are happy with it, please click **Review & Submit** for a final review and a fee summary.
 * Complete the checkout by confirming your choice and clicking **Submit**.
 * This triggers us to deploy your RADIUSaaS instance (and issue a SCEPman Enterprise Edition license key if the RADIUSaaS and SCEPman Bundle is purchased). We will inform you via email with all relevant information on the next steps once the instance (and license key) is available for you. This won't take any longer than one business day.
 
 {% hint style="info" %}
-You will only be charged by Microsoft, once you have completed the enrolment on our landing page and received our welcome email.
+You will only be charged by Microsoft, once you have completed the enrolment on our platform and received our welcome email.
 {% endhint %}
 
 ### Why is my "Plan no longer available for purchase"?
