@@ -1,10 +1,14 @@
 ---
 description: >-
-  This page describes the configuration steps necessary to implement
-  certificate-based Wi-Fi authentication using Cloud PKI and Intune.
+  This document describes the configuration steps necessary to implement
+  certificate-based Wi-Fi authentication using Microsoft Cloud PKI with Intune.
 ---
 
 # Microsoft Cloud PKI
+
+{% hint style="info" %}
+It is assumed that CloudPKI hosts both the Root and Issuing CA. For scenarios involving BYOCAs please refer to Microsoft's online resources or the web.
+{% endhint %}
 
 To set up certificate-based Wi-Fi authentication, we need to create a number of profiles and deploy them via Intune. These profiles are:
 
@@ -14,7 +18,7 @@ To set up certificate-based Wi-Fi authentication, we need to create a number of 
 | Trusted certificate | Deploy the Issuing CA certificate                                            |
 | Trusted certificate | Deploy the Root CA certificate that has issued the RADIUS Server Certificate |
 | SCEP certificate    | Enroll the client authentication certificate                                 |
-| Wi-Fi               | Deploy the wireless netword adapter settings                                 |
+| Wi-Fi               | Deploy the wireless network adapter settings                                 |
 
 <figure><img src="../../../../.gitbook/assets/image (345).png" alt=""><figcaption><p>Relevant Intune Profiles</p></figcaption></figure>
 
@@ -54,7 +58,7 @@ Next, configure the template according to the screenshot below making sure you a
 
 ### Step 4: Establish Trust between RADIUSaaS and the Microsoft Cloud PKI <a href="#step-1-create-root-ca-in-admin-center" id="step-1-create-root-ca-in-admin-center"></a>
 
-Configure RADIUSaaS to trust client authentication certificates issued by the Microsoft Cloud PKI. Since the cloud PKI requires a tiered CA structure, you must upload both, Root CA and Issuing CA (i.e the complete chain of trust). To achieve this, please follow below steps:
+Configure RADIUSaaS to trust client authentication certificates issued by the Microsoft Cloud PKI. Since the cloud PKI requires a tiered CA structure, you must upload both, Root CA and Issuing CA (i.e. the complete chain of trust). To achieve this, please follow below steps:
 
 1. Navigate to [Trusted Certificates](../../../admin-portal/settings/trusted-roots.md).
 2. [Upload](../../../admin-portal/settings/trusted-roots.md#add) the Contoso Cloud PKI **Root CA** selecting **Client Authentication** in the upload process.
