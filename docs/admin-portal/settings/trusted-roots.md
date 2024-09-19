@@ -35,7 +35,7 @@ To add a new trusted certificate, follow these steps:
 4. Upload the certificate file by drag & drop (alternatively you can click in the blue area and select your file)
 5. Select the certificate verification option:\
    <mark style="color:red;">If your CA neither supports OCSP nor CRL, select</mark> <mark style="color:red;"></mark><mark style="color:red;">**OCSP Autodetect**</mark> <mark style="color:red;"></mark><mark style="color:red;">as verification option.</mark>
-   * **OCSP Autodetect**: RADIUSaaS will try to infer the OCSP responder URL from the client certificate's Authority Information Access (AIA) extension that is used for the network authentication. In case no OCSP responder URL is found or the OCSP responder is unavailable, RADIUSaaS will consider the [**Soft fail** ](trusted-roots.md#ocsp-soft-fail)configuration. Use this if your CA is **SCEPman**.
+   * **OCSP Autodetect**: RADIUSaaS will try to infer the OCSP responder URL from the client certificate's Authority Information Access (AIA) extension that is used for the network authentication. In case no OCSP responder URL is found or the OCSP responder is unavailable, RADIUSaaS will consider the [**Soft fail** ](trusted-roots.md#ocsp-soft-fail)configuration.
    * **OCSP**: Manually specify which OCSP responder URL will be used for any certificate that was issued by the trusted CA. If the OCSP responder is unavailable, RADIUSaaS will consider the [**Soft fail** ](trusted-roots.md#ocsp-soft-fail)configuration.
    * **CRL**: If selected, RADIUSaaS will use a CRL instead of OCSP to verify certificate issued by the CA. Specify the CRL encoding (**DER** or **PEM**) and the **CRL distribution points**.
 6. Click **Save**

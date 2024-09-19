@@ -130,12 +130,12 @@ To identify the PIP of the authenticating site for a particular authentication, 
 
 **RadSec Connection**
 
-* Navigate to **Insights > Logs**
-* Configure the relvant timerange / search window
-* Set the **Logtype** filter  to **details**
-* Identify the relevant authentication (by correlating the timestamp and username)
-* Identify an ACCESS\_REQUEST message (**message > Packet-Type** = **Acess-Request**) that belongs to the authentication under investigation
-* Expand the respective log entry
+* Navigate to **Insights > Logs**.
+* Configure the relvant timerange / search window.
+* Set the **Logtype** filter  to **details**.
+* Identify the relevant authentication (by correlating the timestamp and username).
+* Identify an `Access-Request` message (**message > Packet-Type** = **Acess-Request**) that belongs to the authentication under investigation.
+* Expand the respective log entry.
 *   The PIP can be extracted from the **message > Packet-Src-IP-Address** property of the log entry.\
 
 
@@ -143,10 +143,10 @@ To identify the PIP of the authenticating site for a particular authentication, 
 
 **RADIUS Connection**
 
-* Navigate to **Insights > Logs**
-* Configure the relvant timerange / search window
-* Set the **Logtype** filter  to **proxy**
-* Identify the relevant authentication (by correlating the timestamp and username)
+* Navigate to **Insights > Logs**.
+* Configure the relvant timerange / search window.
+* Set the **Logtype** filter  to **proxy**.
+* Identify the relevant authentication (by correlating the timestamp and username).
 *   The PIP can be extracted from the **message** property of the log entry:\
 
 
