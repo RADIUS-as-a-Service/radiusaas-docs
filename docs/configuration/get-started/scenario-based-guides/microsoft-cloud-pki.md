@@ -76,7 +76,7 @@ To establish server trust between your endpoint devices and RADIUSaaS, follow [t
 
 ### Step 6: Configure your Networking Equipment
 
-To configure out WiFi access points, follow [these steps](../generic-guide.md#step-4-network-equipment-configuration).
+To configure your Wi-Fi access points, follow [these steps](../generic-guide.md#step-4-network-equipment-configuration).
 
 After successful completion of Steps 4 - 6, the **Trusted Certificates** page of your RADIUSaaS instance will look similar to the one below. Please note that in our example we have used a RadSec-enabled [MikroTik](../../access-point-setup/radsec-available/mikrotik.md) access point.
 
