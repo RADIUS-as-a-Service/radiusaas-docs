@@ -8,27 +8,29 @@ RADIUS over TLS (RADSEC) has been added to **UniFi Network 8.4** and newer versi
 
 To establish a valid RadSec connection, your Access Points must trust the RADIUS Server Certificate and your RADIUS server must trust your RadSec client certificate.
 
-1. Download the **root certificate** of the CA that has **issued your RADIUS server certificate** as described [here](../../../admin-portal/settings/settings-server.md#download).\
-   In this example SCEPman is used as Root CA and has issued the RADIUS server certificate. So, we download the Root from SCEPman portal:\
-   \
-   ![](<../../../.gitbook/assets/image (1).png>)\
-   Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:\
-   \
-   ![](<../../../.gitbook/assets/image (5).png>)\
+1.  Download the **root certificate** of the CA that has **issued your RADIUS server certificate** as described [here](../../../admin-portal/settings/settings-server.md#download).\
+    In this example SCEPman is used as Root CA and has issued the RADIUS server certificate. So, we download the Root from SCEPman portal:\
+    \
+    ![](<../../../.gitbook/assets/image (1).png>)\
+    Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:\
 
-2. Create a **RadSec client certificate** for your **Access Points**. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).\
-   In this example we generate a certificate in the format "PEM". Please note down the password, as we need this later.\
-   \
-   ![](<../../../.gitbook/assets/image (2).png>)\
 
-3. **Split the generated certificate** into the private key (named "priv.key" in this example) and the certificate (named "clientcert.cer"). This can be easily done via a text editor:\
-   \
-   ![](<../../../.gitbook/assets/image (4).png>)\
+    <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+2.  Create a **RadSec client certificate** for your **Access Points**. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).\
+    In this example we generate a certificate in the format "PEM". Please note down the password, as we need this later.\
 
-4. Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.\
-   In case the RadSec client certificate has been issued by SCEPman (this example) and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**:\
-   \
-   ![](<../../../.gitbook/assets/image (3).png>)
+
+    <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+3.  **Split the generated certificate** into the private key (named "priv.key" in this example) and the certificate (named "clientcert.cer"). This can be easily done via a text editor:\
+
+
+    <figure><img src="../../../.gitbook/assets/Screenshot 2024-09-24 101150.png" alt=""><figcaption></figcaption></figure>
+4.  Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.\
+    In case the RadSec client certificate has been issued by SCEPman (this example) and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**:\
+    \
+
+
+    <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ## UniFi Configuration
 
