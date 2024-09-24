@@ -50,7 +50,19 @@ it can have the following root causes:&#x20;
 * Server throws error `TLS Alert write:fatal:unknown CA`
   * Your RADIUS server doesn't know the issuer of the certificate which was used for authentication. Add your CA as described [here](../admin-portal/settings/trusted-roots.md#add).
 
-#### Fatal decrypt | Access denied
+#### Certificate unknown
+
+If you use macOS (and possibly other Apple platforms) and if your [Logs](../admin-portal/insights/log.md#logs) contain error messages similar to the one shown below
+
+```
+eap_tls: (TLS) TLS - Alert read:fatal:certificate unknown
+```
+
+it can have the following root causes:
+
+* There is a space character somewhere in the **Certificate server name** in your [WiFi](../profile-deployment/microsoft-intune/wifi-profile/apple-devices.md) or [Wired](../profile-deployment/microsoft-intune/wired-profile/mac.md) configuration profile.
+
+#### Decrypt error | Access denied
 
 If your [Logs](../admin-portal/insights/log.md#logs) contain error messages similar to the ones shown below
 
