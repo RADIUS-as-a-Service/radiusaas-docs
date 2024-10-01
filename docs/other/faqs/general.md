@@ -136,7 +136,7 @@ To identify the public IP of the authenticating site for a particular authentica
 * Identify the relevant authentication (by correlating the timestamp and username).
 * Identify an `Access-Request` message (**message > Packet-Type** = **Acess-Request**) that belongs to the authentication under investigation.
 * Expand the respective log entry.
-*   The PIP can be extracted from the **message > Packet-Src-IP-Address** property of the log entry.\
+*   The public IP can be extracted from the **message > Packet-Src-IP-Address** property of the log entry.\
 
 
     <figure><img src="../../../.gitbook/assets/image (374).png" alt=""><figcaption></figcaption></figure>
