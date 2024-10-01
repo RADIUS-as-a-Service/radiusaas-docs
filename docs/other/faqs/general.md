@@ -124,9 +124,9 @@ Not every access point or switch (authenticator) provides you with the same amou
 
 ## Logs
 
-#### How can I identify the public IP address (PIP) of the site from which an authentication originates?
+#### How can I identify the public IP address of the site from which an authentication originates?
 
-To identify the PIP of the authenticating site for a particular authentication, the approach depends on whether you are using a RADIUS connection (via the RADIUS proxies) or a direct RadSec connection:
+To identify the public IP of the authenticating site for a particular authentication, the approach depends on whether you are using a RADIUS connection (via the RADIUS proxies) or a direct RadSec connection:
 
 **RadSec Connection**
 
