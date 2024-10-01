@@ -147,7 +147,7 @@ To identify the public IP of the authenticating site for a particular authentica
 * Configure the relvant timerange / search window.
 * Set the **Logtype** filter  to **proxy**.
 * Identify the relevant authentication (by correlating the timestamp and username).
-*   The PIP can be extracted from the **message** property of the log entry:\
+*   The public IP can be extracted from the **message** property of the log entry:\
 
 
     <figure><img src="../../../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
