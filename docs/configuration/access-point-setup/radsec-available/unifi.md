@@ -11,7 +11,7 @@ To establish a valid RadSec connection, your Access Points must trust the RADIUS
 1.  Download the **root certificate** of the CA that has **issued your RADIUS server certificate** as described [here](../../../admin-portal/settings/settings-server.md#download).\
     In this example SCEPman is used as Root CA and has issued the RADIUS server certificate. So, we download the Root from SCEPman portal:\
     \
-    ![](<../../../.gitbook/assets/image (1).png>)\
+    ![](<../../../.gitbook/assets/image (1) (1).png>)\
     Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:\
 
 
