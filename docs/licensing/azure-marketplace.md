@@ -1,5 +1,13 @@
 # Azure Marketplace
 
+## Prerequisites
+
+In order to purchase solutions from independent software vendors (ISV) such as RADIUSaaS or the RADIUSaaS & SCEPman Bundle, you must fulfil the following requirements:
+
+1. You have an active Azure subscription.
+2. The account you want to purchase our solution with must have the **Owner** or **Contributor** role assigned on the Azure subscription you are going to pay with.
+3. The billing account linked to your Azure subscription is properly set up. Depending on your billing account type (Microsoft Customer Agreement or Enterprise Agreement), you might need to enable marketplace purchases in the Azure portal first.
+
 ## Pricing Model
 
 * RADIUSaaS is offered as a **monthly or** **annual subscription plan** with different [User Segments](azure-marketplace.md#user-segments). The correct **user segment** is automatically selected by our platform based on the amount of desired users.
