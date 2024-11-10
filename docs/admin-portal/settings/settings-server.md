@@ -132,8 +132,8 @@ You may leverage SCEPman Certificate Master to generate a server certificate for
 6. Select **Include Certificate Chain** and download the certificate.&#x20;
 7. **Submit** the request to download the new server certificate.
 
-{% hint style="info" %}
-<mark style="color:red;">**Important:**</mark> <mark style="color:red;"></mark><mark style="color:red;">Take temporary note of the password since it cannot be recovered from Certificate Master.</mark>
+{% hint style="warning" %}
+**Important**: Take temporary note of the password since it cannot be recovered from Certificate Master.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
@@ -152,6 +152,10 @@ Please note: By default, SCEPman Certificate Master issues certificates that are
 {% endhint %}
 
 ### Certificate Activation
+
+{% hint style="warning" %}
+Ensure to monitor the expiry of your server certificate and renew it in due time to prevent service interruptions.
+{% endhint %}
 
 As certificates expire from time to time or your preference on which certificates you would like to use change, it is important that you can control the certificate that your server is using. The **Active** column shows you the certificate your server is currently using. To change the certificate your server is using, expand the row of the certificate you would like to choose and click **Activate**.&#x20;
 
