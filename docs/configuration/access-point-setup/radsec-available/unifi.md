@@ -4,6 +4,10 @@
 RADIUS over TLS (RADSEC) has been added to **UniFi Network 8.4** and newer versions. Please have your controller and network devices **up-to-date** before following this guide.
 {% endhint %}
 
+{% hint style="warning" %}
+Customers have reported **delays** between activating the RadSec feature on the Meraki Dashboard and for it to become functional.
+{% endhint %}
+
 ## Prepare Certificates
 
 To establish a valid RadSec connection, your Access Points must trust the RADIUS Server Certificate and your RADIUS server must trust your RadSec client certificate.
