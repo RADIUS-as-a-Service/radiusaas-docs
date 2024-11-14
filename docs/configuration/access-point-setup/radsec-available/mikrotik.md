@@ -33,7 +33,7 @@ openssl pkey -in yourfile.pem -out private.key
 
 <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-### Option 2: Using other CAs
+### Option 2: Using other PKIs
 
 {% hint style="info" %}
 Use this section if you want to create a root CA on your Mikrotik AP and generate a **RadSec Client Certificate** from this root. Please note that all of these steps can be completed either in GUI or terminal.
