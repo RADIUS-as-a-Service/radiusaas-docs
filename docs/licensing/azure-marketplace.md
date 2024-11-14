@@ -8,7 +8,7 @@ In order to purchase solutions from independent software vendors (ISV) such as R
 2. The account you want to purchase our solution with must have the **Owner** or **Contributor** role assigned on the Azure subscription you are going to pay with.
 3. The billing account linked to your Azure subscription is properly set up. Depending on your billing account type (Microsoft Customer Agreement or Enterprise Agreement), you might need to enable marketplace purchases in the Azure portal first.
 
-## Pricing Model
+## Pricing model
 
 * RADIUSaaS is offered as a **monthly or** **annual subscription plan** with different [User Segments](azure-marketplace.md#user-segments). The correct **user segment** is automatically selected by our platform based on the amount of desired users.
 * All subscription plans consist of a **base fee** which includes a certain amount of users per subscription cycle - depending on the **user segment**. For example, the **base fee** for the user segment _RADIUSaaS (M) 50_ includes 50 users per month.
@@ -29,7 +29,7 @@ In order to purchase solutions from independent software vendors (ISV) such as R
 For a more detailed cost breakdown of your base and additional user fees, please refer to the invoice in your Azure portal.
 {% endhint %}
 
-## Plan Overview
+## Plan overview
 
 Subscriptions for RADIUSaaS are available based on a **monthly** or **annual** renewal interval.
 
@@ -42,7 +42,7 @@ The annual plan is discounted by 10% in comparison to the monthly plan (calculat
 | RADIUSaaS (M) | Monthly              |
 | RADIUSaaS (Y) | Annually             |
 
-### User Segments
+### User segments
 
 The following user segments are available for both, monthly and annual plans:&#x20;
 
@@ -60,7 +60,7 @@ The information provided throughout this article is analogously applicable for R
 
 ## Subscription Management
 
-### User Upgrades
+### User upgrades
 
 * If you would like to upgrade your user count, you can do that any time during the current subscription cycle by navigating to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) and by clicking "Open SaaS Account on publisher's site" (see screenshot below). This will re-direct you to our platform where the amount of users can be upgraded.
 
@@ -70,18 +70,18 @@ The information provided throughout this article is analogously applicable for R
 * For the current cycle, we will bill the additional users for remaining days only.
 * After confirming your choice and once we have updated the license in our backend, you will receive a confirmation email from us.
 
-### User Downgrades
+### User downgrades
 
 * Downgrading the amount of users is currently not possible without cancelling the subscription.
 * If you want to perform a downgrade, please [cancel](azure-marketplace.md#cancellation) your current subscription and re-subscribe with the desired amount of users once the cancellation becomes effective.
 
-### **Change Plan**
+### **Change plan**
 
 {% hint style="warning" %}
 This is currently **not supported**. Please [contact us](https://www.radius-as-a-service.com/help/) in case you have questions around this topic.
 {% endhint %}
 
-### **Recurring Billing**
+### **Recurring billing**
 
 If you decide to disable **Recurring billing**, your subscription will not renew automatically. Instead, Microsoft will (irreversibly) cancel the subscription towards the end of the current subscription cycle. This means, the service will be terminated automatically on that date as well. While the subscription has not expired yet, you can opt to enable **Recurring billing** at any time.
 

@@ -2,7 +2,7 @@
 
 ## Connection Issues
 
-### Client View
+### Client view
 
 #### Wrong XML&#x20;
 
@@ -10,7 +10,7 @@
 
 Check that your client has a certificate to authenticate and that you are using the correct [WiFi configuration profile](../profile-deployment/microsoft-intune/wifi-profile/) or [XML](../admin-portal/settings/trusted-roots.md#xml).
 
-#### Trusted Root issues&#x20;
+#### Trusted root issues&#x20;
 
 ![](<../../.gitbook/assets/image (185).png>)
 
@@ -29,7 +29,7 @@ Make sure that you have referenced the RADIUS server certificate in your WiFi pr
 
 <figure><img src="../../.gitbook/assets/image (379).png" alt=""><figcaption><p>Showing server certificate's SAN attribute (FQDN) and common name (CN)</p></figcaption></figure>
 
-### Server View
+### Server view
 
 #### Unknown CA
 
@@ -113,16 +113,16 @@ then one of your access points or switches that is trying to connect to your RAD
 
 To identify the affected access point or switch, first determine the RADIUS proxy by expanding the error message and searching for the `proxyip` property. Now that you know the proxy, use your inventory and knowledge of specific locations or groups of devices that cannot connect to your network to identify the misconfigured network device. Finally, update the shared secret to match the value configured in your RADIUSaaS instance for that proxy.
 
-## Certificate Issues
+## Certificate issues
 
-### Certificate Chain could not be verified
+### Certificate chain could not be verified
 
 <figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
 
 When you want to use your own server certificate, your RADIUS server requires the complete certificate chain in order to let other participants (Proxy, RadSec clients, endpoints that try to connect) verify the server's identity.  \
 If you see this message, either copy & paste the CA certificate below the server certificate in the textfield or create a PCKS8 certificate bundle which includes all certificates from the lead to the root.
 
-## Admin Portal Issues
+## Admin Portal issues
 
 ### Login
 

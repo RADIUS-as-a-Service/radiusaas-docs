@@ -39,7 +39,7 @@ It is not possible to trigger API calls directly through the API Reference.
 
 ## Scenarios
 
-### Manage Username/Password Accounts for BYOD or Guest Access
+### Manage username/password accounts for BYOD or guest access
 
 The REST API can be used to automate the management of username/password accounts for BYOD or guest access scenarios.&#x20;
 
@@ -47,7 +47,7 @@ This may include the automatic provisioning of (WiFi) credentials during on-boar
 
 An example on how to use the REST API to provision a username/password account can be found in your API Reference under the **User** endpoints.
 
-## Curl Examples
+## Curl examples
 
 In general, there are two different content types for the REST API, either form data or JSON. You can find out which media type is required in the API documentation.&#x20;
 

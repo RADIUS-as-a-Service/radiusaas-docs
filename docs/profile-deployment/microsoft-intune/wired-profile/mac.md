@@ -1,6 +1,6 @@
 # macOS
 
-## Configuration Steps <a href="#before-creating-the-wi-fi-profile-create-a-trusted-root-certificate-profile-as-described-here-change" id="before-creating-the-wi-fi-profile-create-a-trusted-root-certificate-profile-as-described-here-change"></a>
+## Configuration steps <a href="#before-creating-the-wi-fi-profile-create-a-trusted-root-certificate-profile-as-described-here-change" id="before-creating-the-wi-fi-profile-create-a-trusted-root-certificate-profile-as-described-here-change"></a>
 
 1. Log in to [Microsoft Intune](https://intune.microsoft.com/)
 2. Navigate to **Devices** and subsequently **Configuration profiles**

@@ -56,7 +56,7 @@ After that the app is set up, we now need to add users to it and configure the l
 
 Your users should now be able to access the newly created link tile via [My Apps](https://myapps.microsoft.com/).
 
-## RADIUS Return Attributes
+## RADIUS return aAttributes
 
 #### Which VLAN-related attributes does RADIUSaaS return by default?
 
@@ -94,7 +94,7 @@ In case you require other VLAN attributes than returned by default, please [cont
 
 `"Tunnel-Private-Group-Id"`
 
-## Secondary Instance and Failover
+## Secondary instance and failover
 
 #### How does a secondary instance behave in terms of failover?
 

@@ -6,9 +6,9 @@ description: >-
 
 # Examples
 
-## Example 1: General Authentication Information
+## Example 1: General authentication information
 
-### Scope and Assumptions
+### Scope and assumptions
 
 The scope of the query provided below is as follows:
 
@@ -20,7 +20,7 @@ The scope of the query provided below is as follows:
 
 [Log Analytics](log-analytics.md) or [General Webhook](generic-webhook.md)
 
-### Message Filter Configuration
+### Message Filter configuration
 
 #### Rule Engine
 
@@ -70,9 +70,9 @@ The scope of the query provided below is as follows:
 ```
 {% endcode %}
 
-## Example 2: Detailed Authentication Information&#x20;
+## Example 2: Detailed authentication information&#x20;
 
-### Scope and Assumptions
+### Scope and assumptions
 
 The scope of the query provided below is as follows:
 
@@ -114,7 +114,7 @@ The scope of the query provided below is as follows:
 | Failed      | <mark style="color:red;">False</mark> |
 | Error       | <mark style="color:red;">False</mark> |
 
-### Data Configuration
+### Data configuration
 
 <pre class="language-json" data-line-numbers><code class="lang-json">{
     "Decision": {{ data.get('Engine-Decision') }},
@@ -138,9 +138,9 @@ The scope of the query provided below is as follows:
 }
 </code></pre>
 
-## Example 3: General Error Notifications
+## Example 3: General error notifications
 
-### Scope and Assumptions
+### Scope and assumptions
 
 The scope of the query provided below is as follows:
 
@@ -178,7 +178,7 @@ The scope of the query provided below is as follows:
 | Failed      | <mark style="color:red;">False</mark>  |
 | Error       | <mark style="color:green;">True</mark> |
 
-### Data Configuration
+### Data configuration
 
 {% code lineNumbers="true" %}
 ```

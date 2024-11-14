@@ -4,9 +4,9 @@
 The Sophos appliance does not allow to assign different RADIUS servers to different SSIDs. So be aware of that if you are migrating from a onPremises RADIUS server to RADIUS-as-a-Service. May talk with our support team to plan your migration.&#x20;
 {% endhint %}
 
-## Sophos Configuration
+## Sophos configuration
 
-### RADIUS Profile
+### RADIUS profile
 
 Please go through the following steps and configurations to create a RADIUS profile:
 
@@ -18,7 +18,7 @@ Please go through the following steps and configurations to create a RADIUS prof
 
 ![](../../../../.gitbook/assets/sophos\_2.png)
 
-### SSID Configuration&#x20;
+### SSID configuration&#x20;
 
 Perform the following steps and configurations for SSID:
 

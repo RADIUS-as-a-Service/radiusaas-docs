@@ -36,7 +36,7 @@ When an old printer that does not support 802.1X tries to request network access
 
 With the above definitions in mind, the current implementation of RADIUSaaS can support **MAC-based Authentication** **(MBA)** as long as your network equipment can communicate via one of [these ](https://docs.radiusaas.com/admin-portal/users#protocols)protocols.&#x20;
 
-### Security Considerations
+### Security considerations
 
 In general, MAB provides little to no security and should not be used because MAC addresses can be spoofed easily. Because of this, MAB is not supported by RADIUSaaS. Other protocols such as PAP or CHAP are also not supported as they are considered weak.
 

@@ -8,15 +8,15 @@ To use the RadSec feature on your Meraki APs, firmware version **MR 30.X** or la
 Customers have reported **delays of approx. 1 hr** between activating the RadSec feature on the Meraki Dashboard and for it to become functional.
 {% endhint %}
 
-## Prepare Certificates
+## Prepare certificates
 
 {% hint style="warning" %}
 The Meraki platform does not allow you to generate RadSec client certificates from a CA of your choice. Instead, you must use Meraki's built-in **Organization CA** that is unique to your Meraki Organization.
 {% endhint %}
 
-Download the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../admin-portal/settings/settings-server.md#download). You will need to upload it to your Meraki console later on.
+Download the root certificate of the CA that has issued your active **RADIUS Server Certificate** as described [here](../../../admin-portal/settings/settings-server.md#download). You will need to upload it to your Meraki console later on.
 
-## Meraki Configuration
+## Meraki configuration
 
 {% hint style="info" %}
 Below settings are the necessary settings to establish a functional RadSec connection with our service. Configure any other settings at your discretion.
@@ -41,7 +41,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 8.  Configure **EAP parameters and timeouts** according to [this](../../../other/faqs/general.md#timers-and-timeouts) reference guide by going to **Wireless** > **Radius** > **Advanced RADIUS settings.** Once configured, it should look similar to the screenshot below.&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (388).png" alt=""><figcaption><p>Showing <strong>EAP parameters and timeouts</strong></p></figcaption></figure>
-9.  To upload and generate the required certificates, navigate to **Organization > Certificates**. In the top table, click **Upload certificate** and provide the root certificate of the CA that has signed your [RADIUS server certificate](../../../admin-portal/settings/settings-server.md#server-certificates), which you should have already downloaded in this [step](meraki.md#prepare-certificates). Your Meraki APs now trust your RADIUS server.\
+9.  To upload and generate the required certificates, navigate to **Organization > Certificates**. In the top table, click **Upload certificate** and provide the root certificate of the CA that has signed your [**RADIUS Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates), which you should have already downloaded in this [step](meraki.md#prepare-certificates). Your Meraki APs now trust your RADIUS server.\
 
 
     <figure><img src="../../../../.gitbook/assets/Bild-4-Edited.png" alt=""><figcaption></figcaption></figure>

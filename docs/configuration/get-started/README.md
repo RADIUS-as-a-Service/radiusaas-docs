@@ -38,3 +38,7 @@ Besides our [Generic Guide](generic-guide.md), we have prepared [Scenario-based 
 {% content-ref url="scenario-based-guides/microsoft-cloud-pki.md" %}
 [microsoft-cloud-pki.md](scenario-based-guides/microsoft-cloud-pki.md)
 {% endcontent-ref %}
+
+{% content-ref url="scenario-based-guides/scepman-pki.md" %}
+[scepman-pki.md](scenario-based-guides/scepman-pki.md)
+{% endcontent-ref %}

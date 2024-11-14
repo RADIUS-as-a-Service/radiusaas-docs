@@ -6,7 +6,7 @@ description: >-
 
 # iOS/iPadOS & macOS
 
-## Configuration Steps
+## Configuration steps
 
 1. Log in to [Microsoft Intune](https://intune.microsoft.com/)
 2. Navigate to **Devices** and subsequently **Configuration profiles**

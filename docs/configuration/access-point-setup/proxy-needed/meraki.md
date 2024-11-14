@@ -4,7 +4,7 @@
 Starting with firmware version **MR 30.X**, Meraki APs support RadSec. Hence, we recommend to update your firmware version and follow the [RadSec guide for Meraki](../radsec-available/meraki.md) instead.
 {% endhint %}
 
-## Meraki Configuration&#x20;
+## Meraki configuration&#x20;
 
 1. In your Meraki **Dashboard** go to **Wireless > SSIDs**
 2. Enable a new SSID and give it the name you want

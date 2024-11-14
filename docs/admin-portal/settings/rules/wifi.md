@@ -14,7 +14,7 @@ Under the **Authentication** hive, your first choice is whether you want to allo
 
 <figure><img src="../../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Showing authentication</p></figcaption></figure>
 
-### **Certificate-based Authentication**
+### **Certificate-based authentication**
 
 For certificate-based authentication you have the following choices to further constrain incoming authentication requests.
 
@@ -32,7 +32,7 @@ In case you have entered your Tenant IDs as described [here](../trusted-roots.md
 
 <figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Showing filtering by Intune ID</p></figcaption></figure>
 
-### Username/Password-based Authentication
+### Username/Password-based authentication
 
 After enabling **Username/Password-based** authentication, you can apply additional filtering by configuring a Regex on the **Username**. Default is all Usernames
 
@@ -42,7 +42,7 @@ After enabling **Username/Password-based** authentication, you can apply additio
 
 Under the **Configuration** hive you are able to configure additional filter criteria based on the origin of authentication requests as well as assign VLAN IDs.
 
-### SSID Filter
+### SSID filter
 
 To set an SSID filter, either select **Names** or **Groups**.&#x20;
 
@@ -51,7 +51,7 @@ To set an SSID filter, either select **Names** or **Groups**.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Showing filter by SSID name or group</p></figcaption></figure>
 
-### Access Point Filter
+### Access Point filter
 
 {% hint style="info" %}
 This MAC address filter allows you to permit specific **access points** to communicate with RADIUSaaS. **This is not a MAC address filter for endpoints!**
@@ -76,7 +76,7 @@ Your access point (AP) will most probably not use the LAN MAC address, that is p
 If you can not find the used MAC addresses in your AP admin interface, you can also consult the "Rule Engine" log (in the "Insights" section) in your RADIUSaaS admin web console. You find the MAC address that your AP is sending in the field "`AP-MAC"`.
 {% endhint %}
 
-### VLAN Assignment
+### VLAN assignment
 
 The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The following options are available:
 
@@ -111,7 +111,7 @@ As an example, the following rule will assign the VLAN ID 15 based on the `Subje
 
 ![](<../../../../.gitbook/assets/image (317).png>)
 
-### Additional RADIUS Attributes
+### Additional RADIUS attributes
 
 {% hint style="info" %}
 In case you require return attributes that are not available by default, please [contact our support](https://www.radius-as-a-service.com/help/).

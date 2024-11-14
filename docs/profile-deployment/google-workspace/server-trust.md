@@ -10,7 +10,7 @@ When [downloading](../../admin-portal/settings/settings-server.md#download) the 
 
 <figure><img src="https://docs.radiusaas.com/~gitbook/image?url=https%3A%2F%2F1222554226-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FSWU1DQ4UGkqER7uGNUOm%252Fuploads%252F6PAKr5RsefmaAKR44h8i%252Fimage.png%3Falt%3Dmedia%26token%3Da7738e9d-f974-4162-a99a-e7c2b68b4b40&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=c7ddd6d1&#x26;sv=1" alt=""><figcaption></figcaption></figure>
 
-## Part 2: Adding a Trusted Certificate Profile for your Endpoint Devices
+## Part 2: Adding a Trusted certificate profile for your endpoint devices
 
 {% hint style="warning" %}
 Ensure, you have reviewed [Part 1](server-trust.md#part-1-download-the-radius-server-certificate).
@@ -18,4 +18,4 @@ Ensure, you have reviewed [Part 1](server-trust.md#part-1-download-the-radius-se
 
 In your Google **Admin console** (admin.google.com)  navigate to **Menu** > **Devices** > **Network** > **Certificates** > **ADD CERTIFICATE**
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>

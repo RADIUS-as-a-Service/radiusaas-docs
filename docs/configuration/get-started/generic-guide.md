@@ -1,8 +1,8 @@
 # Generic Guide
 
-## Configuration Steps
+## Configuration steps
 
-### Step 1: PKI Setup
+### Step 1: PKI setup
 
 {% hint style="warning" %}
 This is a **mandatory** step.&#x20;
@@ -18,7 +18,7 @@ If you are using any of the below PKIs, please follow the relevant guides instea
 [microsoft-cloud-pki.md](scenario-based-guides/microsoft-cloud-pki.md)
 {% endcontent-ref %}
 
-### Step 2: Trusted CA(s) Setup
+### Step 2: Trusted CA(s) setup
 
 {% hint style="warning" %}
 This is a **mandatory** step.
@@ -30,19 +30,19 @@ Tell your RADIUSaaS instance which client authentication certificates will be al
 [trusted-roots.md](../../admin-portal/settings/trusted-roots.md)
 {% endcontent-ref %}
 
-### Step 3: RADIUS Server Certificate Configuration
+### Step 3: RADIUS Server Certificate configuration
 
 {% hint style="warning" %}
 This is a **mandatory** step.
 {% endhint %}
 
-Since endpoint devices will establish a TLS connection to RADIUSaaS during network authentication, RADIUSaaS must present a server certificate to the client (the **RADIUS Server Certificate**). This certificate can be generated directly from the **RADIUSaaS Admin Portal** or imported if you already own a suitable certificate (**BYO**).
+Since endpoint devices will establish a TLS connection to RADIUSaaS during network authentication, RADIUSaaS must present a server certificate to the client (the **RADIUS Server Certificate**). This certificate can be generated directly from the **RADIUSaaS Admin Portal** or imported if you already own a suitable certificate (**BYO**). The same server certificate is also used to secure the RadSec connection to your authenticator devices (WiFi access points, switches, VPN gateways), if applicable.
 
 In case you are happy to use the **built-in** [**Customer CA**](../../admin-portal/settings/settings-server.md#customer-ca), whose sole purpose it is to issue the **RADIUS Server Certificate**, no further action is required as part of this step.
 
 In case you'd prefer to bring your own TLS server certificate, issued by your preferred CA, please follow [these steps](../../admin-portal/settings/settings-server.md#bring-your-own-certificate).
 
-### Step 4: Network Equipment Configuration
+### Step 4: Network equipment configuration
 
 {% hint style="warning" %}
 This is a **mandatory** step.
@@ -92,7 +92,7 @@ For some popular vendors, we have prepared representative step-by-step guides [h
 
 Currently, we have not prepared sample guides for switch appliances yet. However, the configuration steps are similar to the ones for WiFi Access Points. In case you face difficulties, please [reach out to us](https://www.radius-as-a-service.com/help/).
 
-### Step 5: Configure your MDM Deployment Profiles
+### Step 5: Configure your MDM profiles
 
 {% hint style="warning" %}
 This is a **mandatory** step.

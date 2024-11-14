@@ -4,7 +4,7 @@ You can access basically every log that the platform generates. Naturally, this 
 
 <figure><img src="../../../.gitbook/assets/2024-05-13_12h16_21.gif" alt=""><figcaption></figcaption></figure>
 
-## Log Types
+## Log types
 
 Log types **not** mentioned in below table are less relevant for common trouble shooting scenarios.
 

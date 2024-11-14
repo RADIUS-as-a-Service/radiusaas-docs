@@ -36,7 +36,7 @@ On the first layer of the tree, the network types are presented (WiFi, Wired, VP
 
 <figure><img src="../../.gitbook/assets/Transform.gif" alt=""><figcaption><p>Interactive RADIUSaaS Configuration State</p></figcaption></figure>
 
-## Other Controls
+## Other controls
 
 The RADIUSaaS homepage gives you easy access to frequently used controls and information.
 

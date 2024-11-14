@@ -9,6 +9,7 @@
   * [Generic Guide](configuration/get-started/generic-guide.md)
   * [Scenario-based Guides](configuration/get-started/scenario-based-guides/README.md)
     * [Microsoft Cloud PKI](configuration/get-started/scenario-based-guides/microsoft-cloud-pki.md)
+    * [SCEPman PKI](configuration/get-started/scenario-based-guides/scepman-pki.md)
 * [Access Point Setup](configuration/access-point-setup/README.md)
   * [RadSec](configuration/access-point-setup/radsec-available/README.md)
     * [Aruba](configuration/access-point-setup/radsec-available/aruba.md)

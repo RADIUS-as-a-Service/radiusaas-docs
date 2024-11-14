@@ -19,7 +19,7 @@ If you are using the **legacy** **self-signed** server certificate we used to pr
 
 ## Part 1
 
-### Certificate Creation
+### Certificate creation
 
 The below screenshot demonstrates the two options for creating / uploading a new server certificate.
 
@@ -34,7 +34,7 @@ Download the certificate after creating it as you will need it for the Intune pr
 
 
 
-### Intune Profiles
+### Intune profiles
 
 1. Deploy the new **server certificate/trusted root** to your clients as described [here](../profile-deployment/jamf-pro/server-trust.md) by creating a **new** profile.
 2. Update your **existing** WiFi or wired profile(s)
@@ -44,7 +44,7 @@ Download the certificate after creating it as you will need it for the Intune pr
 
 ![Example: Updated Windows 10 WiFi profile with two trusted RADIUS server certificates and different domains.](../../.gitbook/assets/2024-05-23\_16h39\_32.png)
 
-### Jamf Profiles
+### Jamf profiles
 
 1. Deploy the new **server certificate/trusted root** to your clients as described [here](../profile-deployment/microsoft-intune/trusted-root.md#adding-a-trusted-root-profile-for-your-clients) by creating a **new** profile.
 2. Update your **existing** WiFi or wired profile(s) by adding a second common name under **Trusted Server Certificate Names**

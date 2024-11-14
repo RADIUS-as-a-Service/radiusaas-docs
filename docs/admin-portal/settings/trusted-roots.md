@@ -10,7 +10,7 @@ Trusted CAs for client authentication establish the trust between the CAs that i
 
 RadSec itself works with mutual certificate authentication (mTLS). This means, on the one hand your authenticators must [trust RADIUSaaS](settings-server.md#server-certificates) and on the other hand RADIUSaaS must know which authenticators to trust so that a valid RadSec connection can be established. The trusted RadSec connection certificates ensure RADIUSaaS only trusts those authenticators that you specify.
 
-## **Pre-installed trusted RadSec Certificate**
+## **Pre-installed trusted RadSec certificate**
 
 Due to the [above](trusted-roots.md#trusted-radsec-connection-certificates), you will always see at least one RadSec trusted certificate that establishes the trust with your [RADIUS proxies](https://docs-preview.radiusaas.com/admin-portal/settings/settings-proxy) (effectively acting as RadSec clients). To ensure that your proxies are able to start up properly and are able to establish a connection to your instance, you cannot delete it.
 
@@ -28,7 +28,7 @@ To add a new trusted certificate, follow these steps:
 2. Select if you want to import to trusted certificate&#x20;
    * from SCEPman (by providing the URL to your SCEPman instance), or
    * from any other CA (by uploading a PEM or DER-encoded certificate file)
-3. Select the [type](trusted-roots.md#types-of-trusted-certificates) of trusted certificate:
+3. Select the [type](trusted-roots.md#types-of-trusted-certificates) of trusted certificate under **Use for**:
    * [**Client authentication**](trusted-roots.md#trusted-cas-for-client-authentication)
    * [**RadSec**](trusted-roots.md#trusted-radsec-connection-certificates)
    * **Both** (helpful if the same CA is issuing your client authentication certificates as well as your RadSec client certificates)
@@ -62,7 +62,7 @@ By default, we **recommend enabling OCSP Soft fail** to increase the availabilit
 
 <figure><img src="../../../.gitbook/assets/image (390).png" alt=""><figcaption><p>Showing OCSP Hard-Fail</p></figcaption></figure>
 
-## Tiered PKI Hierarchy
+## Tiered PKI hierarchy
 
 In a tiered CA environment with multiple issuing CAs configured, certificates issued from the root CA or any issuing CA will get access regardless of whether the certificate was issued from the root or issuing CA. This means that trusting the root will automatically trust certificates issued by any of the issuing CAs. \
 \
@@ -75,7 +75,7 @@ When uploading root and issuing CAs of a tiered PKI, please consider the followi
 * The **root CA must be uploaded first**, before uploading any issuing CAs derived from this root CA.
 * Root and issuing CAs must be uploaded in separate files. Uploading certificate chains from a single file may result in unexpected behaviour.
 
-## Optional Settings
+## Optional settings
 
 ### Intune ID
 

@@ -16,7 +16,7 @@ Under the **Authentication** hive, your first choice is whether you want to allo
 
 
 
-### **Certificate-based Authentication**
+### **Certificate-based authentication**
 
 For certificate-based authentication you have the following choices to further constrain incoming authentication requests.
 
@@ -34,7 +34,7 @@ In case you have entered your Tenant IDs as described [here](../trusted-roots.md
 
 <figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Showing Intune ID filtering</p></figcaption></figure>
 
-### Username/Password-based Authentication
+### Username/Password-based authentication
 
 After enabling **Username/Password-based** authentication, you can apply additional filtering by configuring a Regex on the **Username**. Default is all Usernames.
 
@@ -44,7 +44,7 @@ After enabling **Username/Password-based** authentication, you can apply additio
 
 Under the **Configuration** hive you are able to configure additional filter criteria based on the origin of authentication requests as well as return additional RADIUS attributes, e.g. Filter-Id.
 
-### NAS Identifier Filter
+### NAS Identifier filter
 
 {% hint style="info" %}
 In case you are unsure what identifier your NAS uses, you can check the logs (Logtype = detail). RADIUSaaS looks for a property called _NAS-Identifier_ to match against the trusted NAS Identifiers.&#x20;
@@ -57,7 +57,7 @@ To set a NAS Identifier filter, either select **Identifiers** or **Groups**.&#x2
 
 <figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Showing NAS Identifier</p></figcaption></figure>
 
-### NAS IP Address Filter
+### NAS IP Address filter
 
 To set a NAS IP address filter, either select **IPs** or **Groups**.&#x20;
 
@@ -66,7 +66,7 @@ To set a NAS IP address filter, either select **IPs** or **Groups**.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/image (3).png" alt="" width="401"><figcaption><p>Showing NAS IP Address Filter</p></figcaption></figure>
 
-### RADIUS Attribute Return
+### RADIUS attribute return
 
 {% hint style="info" %}
 In case you require return attributes that are not available by default, please [contact our support](https://www.radius-as-a-service.com/help/).

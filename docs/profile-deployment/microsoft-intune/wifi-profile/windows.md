@@ -6,7 +6,7 @@ description: >-
 
 # Windows
 
-## Configuration Steps
+## Configuration steps
 
 1. Log in to [Microsoft Intune](https://intune.microsoft.com/)
 2. Navigate to **Devices** and subsequently **Configuration profiles**
@@ -47,7 +47,7 @@ Please consider, that the common name is case-sensitive.
 
 <figure><img src="../../../../.gitbook/assets/2024-05-13_15h23_43.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 2/2</p></figcaption></figure>
 
-### Fast Roaming
+### Fast roaming
 
 {% hint style="info" %}
 These are **optional** settings.
@@ -66,6 +66,6 @@ For further details on Pairwise Master Key caching, please refer to its specific
 
 **Important**: The reliability and effectiveness of this feature may also depend on the specific implementation by the WAP vendor. In same cases, customers with PMK caching enabled, have reported frequent access-point toggling although the device's location was static.
 
-## Common Configuration Issues
+## Common configuration issues
 
 See [Troubleshooting](../../../other/trubleshooting.md#intune-configuration-issues).

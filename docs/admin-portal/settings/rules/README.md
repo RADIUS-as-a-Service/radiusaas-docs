@@ -11,7 +11,7 @@ description: >-
 
 All rules you have configured will be applied **after** successful credential authentication, which means the rules only become effective after valid authentication credentials have been provided. This implies, in order to pass the first authentication wall, valid **Trusted Roots** (certificate-based authentication) or **Users** (Username+Password-based authentication) have to be added to your instance.&#x20;
 
-### Default Rule
+### Default rule
 
 To avoid disruption of any existing instance or in case you do not want to use the Rule Engine at all, any authentication is allowed if no rule is defined by default. This is realized through our default rule **Any authentication allowed**.
 
@@ -19,7 +19,7 @@ To avoid disruption of any existing instance or in case you do not want to use t
 The default rule **Any authentication allowed** still requires the presence of valid authentication credentials for a successful network authentication.
 {% endhint %}
 
-### Order of Rule Execution
+### Order of rule execution
 
 If you have multiple rules configured, they will be applied in the order you see in your web portal - from top to bottom.&#x20;
 
@@ -29,7 +29,7 @@ In case you end up having a large number of rules, we recommend - for the sake o
 
 <figure><img src="../../../../.gitbook/assets/image (435).png" alt=""><figcaption><p>Showing Rules</p></figcaption></figure>
 
-## Rule Options - Overview
+## Rule options
 
 ### Authentication
 

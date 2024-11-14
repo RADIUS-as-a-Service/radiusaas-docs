@@ -4,21 +4,21 @@
 To use the RadSec feature on your FortiGate for WiFi (with FortiAPs), firmware FortiOS **7.6.0** or later is required on the FortiGate.
 {% endhint %}
 
-## Prepare Certificates
+## Prepare certificates
 
-To establish a valid RadSec connection, your Access Points must trust the RADIUS Server Certificate and your RADIUS server must trust your RadSec client certificate.
+To establish a valid RadSec connection, your Access Points must trust the **RADIUS Server Certificate** and your RADIUS server must trust your **RadSec Client Certificate**. To achieve this,
 
-1. Download the root certificate of the CA that has issued your RADIUS server certificate as described [here](../../../admin-portal/settings/settings-server.md#download).
-2. Create a RadSec client certificate for your WAPs (centrally managed via FortiGate). If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12). FortiGate accepts the **PKCS#12** format for RadSec client certificates.
+1. Download the root certificate of the CA that has issued your active **RADIUS Server Certificate** as described [here](../../../admin-portal/settings/settings-server.md#download).
+2. Create a **RadSec Client Certificate** for your WAPs (centrally managed via FortiGate). If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12). FortiGate accepts the **PKCS#12** format for RadSec client certificates.
 
 {% hint style="warning" %}
-Ensure to monitor the expiry of your RadSec client certificate and renew it in due time to prevent service interruptions.
+Ensure to monitor the expiry of your **RadSec Client Certificate** and renew it in due time to prevent service interruptions.
 {% endhint %}
 
-3. Add the root certificate of the CA that has issued the RadSec client certificate to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.\
-   In case the RadSec client certificate has been issued by SCEPman and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**.&#x20;
+3. Add the root certificate of the CA that has issued the **RadSec Client Certificate** to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.\
+   In case the **RadSec Client Certificate** has been issued by SCEPman and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**.&#x20;
 
-## FortiGate Configuration
+## FortiGate configuration
 
 {% hint style="info" %}
 Below settings are the necessary settings to establish a functional RadSec connection with our service. Configure any other settings at your discretion.
@@ -32,11 +32,11 @@ To configure RadSec on your FortiGate UI please follow the steps:
 
 <figure><img src="../../../../.gitbook/assets/2023-08-28 10_56_04-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
-* Import the [root CA of your RADIUS server certificate](../../../admin-portal/settings/settings-server.md#download) to the FortiGate **Certificates** under **System > Certificates > Import > CA Certificate**. The imported root CA will be listed under **Remote CA Certificate**.
+* Import the [root CA of your RADIUS Server Certificate](../../../admin-portal/settings/settings-server.md#download) to the FortiGate **Certificates** under **System > Certificates > Import > CA Certificate**. The imported root CA will be listed under **Remote CA Certificate**.
 
 <figure><img src="../../../../.gitbook/assets/2023-08-28 10_57_07-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
-* Import the RadSec client certificate to your FortiGate under\
+* Import the **RadSec Client Certificate** to your FortiGate under\
   **System > Certificates > Import > Certificate**.
 
 <figure><img src="../../../../.gitbook/assets/2023-08-28 10_58_54-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
@@ -46,11 +46,11 @@ To configure RadSec on your FortiGate UI please follow the steps:
 * Modify the RADIUS server configuration in your FortiGate to use it as RadSec client certificate.
 * If enabled, please disable the **server-identity-check** in your FortiGate RADIUS server configuration.
 
-### Via Command Line
+### Via command line
 
 To configure RadSec on your FortiGate using the command line, please use these below sets of instructions:
 
-#### RADIUS Server Configuration
+#### RADIUS server configuration
 
 ```python
 config user radius
@@ -77,14 +77,14 @@ config user radius
 
 end
 
-# Name the root CA of your RADIUS server certificate
+# Name the root CA of your RADIUS Server Certificate
 set ca-cert "CA_Cert"
 
 # Name the RadSec client certificate
 set client-cert "certificate-fortigate"
 ```
 
-#### WiFi SSID Configuration
+#### WiFi SSID configuration
 
 ```python
 config wireless-controller vap

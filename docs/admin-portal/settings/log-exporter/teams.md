@@ -4,7 +4,7 @@
 
 To ingest RADIUSaaS logs into a **Microsoft Teams Channel**, only Microsoft Teams itself as well as privileges to add **connectors** to the relevant **channel** are required.
 
-## Configuration Steps
+## Configuration steps
 
 Follow those steps to push RADIUSaaS logs to a **Microsoft Teams Channel**:
 

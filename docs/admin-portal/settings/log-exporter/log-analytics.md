@@ -8,7 +8,7 @@ To ingest RADIUSaaS logs into an **Azure Log Analytics Workspace**, please make 
 * Shared Key
 * Event Name
 
-## Configuration Steps
+## Configuration steps
 
 Follow these steps to add a **Log Analytics** export target:
 

@@ -151,7 +151,7 @@ To add your server certificate created in above steps, navigate to **RADIUSaaS i
 Please note: By default, SCEPman Certificate Master issues certificates that are valid for 730 days. If you'd like to change this, please refer to SCEPman's [documentation](https://docs.scepman.com/advanced-configuration/application-settings/certificates#appconfig-validityperioddays).
 {% endhint %}
 
-### Certificate Activation
+### Certificate activation
 
 {% hint style="warning" %}
 Ensure to monitor the expiry of your server certificate and renew it in due time to prevent service interruptions.
@@ -179,7 +179,7 @@ openssl x509 -inform pem -in <DOWNLOADED_FILE> -outform der -out <CONVERTED_FILE
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;
 
-### Certificate Expiration&#x20;
+### Certificate expiration&#x20;
 
 Certificates will expire from time to time. Five months before your certificate is going to be expired, you dashboard will give you a hint that your certificate is about to expire.
 

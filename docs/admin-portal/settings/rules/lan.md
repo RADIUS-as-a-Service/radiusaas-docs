@@ -14,7 +14,7 @@ Under the **Authentication** hive, your first choice is whether you want to allo
 
 <figure><img src="../../../../.gitbook/assets/image (437).png" alt=""><figcaption><p>Showing LAN authentication</p></figcaption></figure>
 
-### **Certificate-based Authentication**
+### **Certificate-based authentication**
 
 For certificate-based authentication you have the following choices to further constrain incoming authentication requests.
 
@@ -32,7 +32,7 @@ In case you have entered your Tenant IDs as described [here](../trusted-roots.md
 
 <figure><img src="../../../../.gitbook/assets/image (439).png" alt=""><figcaption><p>Showing Intune ID filtering</p></figcaption></figure>
 
-### Username/Password-based Authentication
+### Username/Password-based authentication
 
 After enabling **Username/Password-based** authentication, you can apply additional filtering by configuring a Regex on the **Username**. Default is all Usernames.
 
@@ -42,7 +42,7 @@ After enabling **Username/Password-based** authentication, you can apply additio
 
 Under the **Configuration** hive you are able to configure additional filter criteria based on the origin of authentication requests as well as assign VLAN IDs.
 
-### Switch Filter
+### Switch filter
 
 {% hint style="info" %}
 This MAC address filter allows you to permit specific **switches** to communicate with RADIUSaaS. **This is not a MAC address filter for endpoints!**
@@ -61,7 +61,7 @@ The following notations are supported for the MAC addresses:
 * xx:xx:xx:xx:xx:xx
 * xxxxxxxxxxxx
 
-### VLAN Assignment
+### VLAN assignment
 
 The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The following options are available:
 
@@ -85,7 +85,7 @@ We therefore recommend to use the [Certificate Subject Name](lan.md#by-certifica
 
 You can also assign VLAN IDs based on properties in the Subject Name of your certificate. For example, if you wanted to assign VLAN 15 in your Rules and you are using Intune to define and deploy your SCEP profile, you will need to configure the **Subject name format** in your SCEP profile such as `CN={{DeviceId}},`**`OU=vlan-15`**
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Showing VLAN ID configuration in SCEP Device Certificate</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Showing VLAN ID configuration in SCEP Device Certificate</p></figcaption></figure>
 
 Once the profile is deployed, go back to **RADIUSaaS** > **Rules** and specify in which property the VLAN ID is stored and configure the string the VLAN ID is prefixed with. e.g. `vlan-`
 
@@ -99,7 +99,7 @@ As an example, the following rule will assign the VLAN ID 15 based on the `Subje
 
 ![](<../../../../.gitbook/assets/image (317).png>)
 
-### Additional RADIUS Attributes
+### Additional RADIUS attributes
 
 {% hint style="info" %}
 In case you require return attributes that are not available by default, please [contact our support](https://www.radius-as-a-service.com/help/).

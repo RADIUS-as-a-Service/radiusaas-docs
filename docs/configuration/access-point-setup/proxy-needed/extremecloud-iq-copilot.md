@@ -6,7 +6,7 @@ description: >-
 
 # ExtremeCloud IQ CoPilot
 
-## ExtremeCloud IQ CoPilot Configuration
+## ExtremeCloud IQ CoPilot configuration
 
 1.  Go to **Configure > Common Objects > Authentication > External Radius Servers** and click **Add**&#x20;
 

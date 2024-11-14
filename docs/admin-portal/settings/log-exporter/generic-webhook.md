@@ -6,7 +6,7 @@ To ingest RADIUSaaS logs into a generic **webhook** that accepts **JSON-structur
 
 The RADIUSaaS Log Exporter allows authentication via a **static API key** (URL-, header-, or body-encoded).
 
-## Configuration Steps
+## Configuration steps
 
 Follow these steps to add a **Generic Webhook** export target:
 

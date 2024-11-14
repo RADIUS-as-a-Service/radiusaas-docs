@@ -88,7 +88,7 @@ To delete an access token, locate it in the table and click on the bin icon:
 
 <figure><img src="../../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
 
-## Permissions Consent
+## Permissions consent
 
 Microsoft Entra ID (Azure AD) accounts that log on to the RADIUSaaS Admin Portal for the first time must grant RADIUSaaS a limited set of [permissions in their Azure tenant](../../other/faqs/security-and-privacy.md#id-5.-which-tenant-permissions-do-users-accessing-the-radiusaas-web-portal-have-to-consent-to).
 
@@ -99,7 +99,7 @@ There are two alternative ways to provide consent:
 * **Admin Consent**\
   An administrator can consent on behalf of the organization for all users.
 
-### User Consent
+### User consent
 
 If no consent has been given on behalf of the organization before by an admin, a user will see a permission request dialogue:
 
@@ -113,7 +113,7 @@ Administrators can review & revoke user consents in the Azure Portal (**Microsof
 
 <figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
-### Admin Consent
+### Admin consent
 
 Rather than requiring consent from each user, administrators can grant consent for all users on behalf of the organization, when logging in the RADIUSaaS web portal for the first time:
 
