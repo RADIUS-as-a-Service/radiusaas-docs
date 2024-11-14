@@ -55,7 +55,7 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 /certificate export-certificate myCa
 ```
 
-6. Download it from the **Files** menu and then upload the file to your RADIUSaaS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for.** Once completed, continue configuring your MikroTik AP&#x20;
+6. Download it from the **Files** menu and then upload the file to your RADIUSaaS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for.** Once completed, continue configuring your MikroTik AP as per [below ](mikrotik.md#mikrotik-configuration)and use **Option 1** for certificates.
 
 ## Option 2.
 
@@ -63,7 +63,7 @@ set "RADIUS Customer CA - Contoso.cer" trusted=yes
 Use this section only if you are following along the [SCEPman PKI](https://app.gitbook.com/o/-LhPlvZ6dc8XcqY7tdZw/s/SWU1DQ4UGkqER7uGNUOm/\~/changes/142/configuration/get-started/scenario-based-guides/scepman-pki) guide.
 {% endhint %}
 
-By now, both, your **RadSec client certificate** and **trusted root** (together with the **private key**) have been imported to MikroTik according to the SCEPman PKI guide. Please continue configuring MikroTik as per [below](mikrotik.md#mikrotik-configuration) and use Option 2 for certificates.
+By now, both, your **RadSec client certificate** and **trusted root** (together with the **private key**) have been imported to MikroTik according to the SCEPman PKI guide. Please continue configuring MikroTik AP as per [below](mikrotik.md#mikrotik-configuration) and use **Option 2** for certificates.
 
 ## MikroTik Configuration
 
