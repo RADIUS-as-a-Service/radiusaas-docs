@@ -1,8 +1,10 @@
 # RadSec
 
+<figure><img src="../../../.gitbook/assets/2024-11-14_11h36_18.png" alt=""><figcaption></figcaption></figure>
+
 ## Requirements
 
-Before your access points are able to establish a valid **RadSec connection** (which can be considered an mTLS connection), there are requirements that must be met, regardless of which manufacturer your access points originates from.
+Before your access points are able to establish a valid **RadSec connection** (which can be considered an mTLS connection), there are requirements that must be met, regardless of the manufacturer of the access point.
 
 * Access Points require a valid **client certificate** (typically referred to as "RadSec Client Certificate" or "RadSec Certificate"). This client certificate must have the **EKU Client Authentication** (1.3.6.1.5.5.7.3.2) and **not Server Authentication**.
 * Access Points must **trust the CA** that has issued your **RADIUS Server Certificate**.
