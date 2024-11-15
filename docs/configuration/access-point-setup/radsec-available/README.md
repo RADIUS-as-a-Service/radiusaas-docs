@@ -9,5 +9,6 @@ Before your access points are able to establish a valid **RadSec connection** (w
 * RADIUSaaS must **trust the CA** that issued the **RadSec client certificate** on your access points.
 
 {% hint style="info" %}
-Some access points (counterintuitively) still require a shared secret when RadSec is configured. The [RadSec RFC](https://datatracker.ietf.org/doc/html/rfc6614) defines this shared secret as a literal string "radsec".
+The RadSec protocol requires a shared secret to compute the MD5 integrity checks.\
+The [RadSec RFC](https://datatracker.ietf.org/doc/html/rfc6614) defines this shared secret as the literal string "radsec".
 {% endhint %}
