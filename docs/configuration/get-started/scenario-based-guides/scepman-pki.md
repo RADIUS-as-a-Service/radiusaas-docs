@@ -23,7 +23,7 @@ For RADIUSaaS to trust client authentication certificates issued by SCEPman PKI,
 
 In this example, we will use a RADIUS Server Certificate issued by SCEPman. Therefore, follow below steps:
 
-1. Generate and upload your SCEPman-issued RADIUS Server Certificate as described [here](../../../admin-portal/settings/settings-server.md#scepman-issued-server-certificate).
+1. Generate and upload your SCEPman-issued RADIUS **Server Certificate** as described [here](../../../admin-portal/settings/settings-server.md#scepman-issued-server-certificate).
 2. Activate the SCEPman-issued RADIUS Server Certificate as described [here](../../../admin-portal/settings/settings-server.md#certificate-activation).
 
 Once completed, your **Server Certificate** settings should look like this:
@@ -34,7 +34,7 @@ Once completed, your **Server Certificate** settings should look like this:
 
 To configure your networking equipment (Wi-Fi access points, switches, or VPN gateways), follow [these steps](../generic-guide.md#step-4-network-equipment-configuration).
 
-After successful completion of Steps 2 - 4, the **Trusted Certificates** page of your RADIUSaaS instance will look similar to the one below. Please note that in our example we have used a RadSec-enabled [MikroTik](../../access-point-setup/radsec-available/mikrotik.md) access point that leverages a SCEPman-issued RadSec Client Certificate.
+After successful completion of Steps 2 - 4, the **Trusted Certificates** page of your RADIUSaaS instance will look similar to the one below. Please note that in our example we have used a RadSec-enabled [MikroTik](../../access-point-setup/radsec-available/mikrotik.md) access point that leverages a SCEPman-issued RadSec **Client Certificate**.
 
 <figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
@@ -42,11 +42,7 @@ After successful completion of Steps 2 - 4, the **Trusted Certificates** page of
 
 To set up certificate-based Wi-Fi authentication, you will need to create and deploy a number of policies via Intune. These policies are as follow:
 
-| Profile Type        | Purpose                                                                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Trusted certificate | <p>Deploy the Root CA certificate that has issued the RADIUS Server Certificate. <br><br>In this scenario, the relevant CA corresponds to the SCEPman Root CA. </p> |
-| SCEP certificate    | Deploy the client authentication certificate.                                                                                                                       |
-| Wi-Fi               | Deploy the wireless network adapter settings.                                                                                                                       |
+<table><thead><tr><th width="371">Profile Type</th><th>Purpose</th></tr></thead><tbody><tr><td>Trusted certificate</td><td>Deploy the Root CA certificate that has issued the RADIUS Server Certificate. <br><br>In this scenario, the relevant CA corresponds to the SCEPman Root CA. </td></tr><tr><td>SCEP certificate</td><td>Deploy the client authentication certificate.</td></tr><tr><td>Wi-Fi</td><td>Deploy the wireless network adapter settings.</td></tr></tbody></table>
 
 <figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Relevant Intune Policies</p></figcaption></figure>
 
