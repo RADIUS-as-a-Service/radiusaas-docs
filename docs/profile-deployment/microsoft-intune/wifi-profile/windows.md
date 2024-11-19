@@ -45,7 +45,7 @@ Please consider, that the common name is case-sensitive.
 
 <figure><img src="../../../../.gitbook/assets/2024-05-13_15h20_31.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 1/2</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/2024-05-13_15h23_43.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 2/2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Fast roaming
 
@@ -53,7 +53,7 @@ Please consider, that the common name is case-sensitive.
 These are **optional** settings.
 {% endhint %}
 
-For a (usually) better experience when roaming between access points, we recommend to enable the following **Fast roaming settings** in the WiFi profile:
+For a (usually) better experience when roaming between access points, we recommend enabling the following **Fast roaming settings** in the WiFi profile:
 
 | **Enable pairwise master key (PMK) caching** | Yes | Defines whether Pairwise Master Key (PMK) caching is to be used by this profile to connect to a WLAN. |
 | -------------------------------------------- | --- | ----------------------------------------------------------------------------------------------------- |
@@ -64,7 +64,7 @@ For a (usually) better experience when roaming between access points, we recomme
 
 For further details on Pairwise Master Key caching, please refer to its specification in [IEEE 802.11i](https://standards.ieee.org/getieee802/download/802.11i-2004.pdf).
 
-**Important**: The reliability and effectiveness of this feature may also depend on the specific implementation by the WAP vendor. In same cases, customers with PMK caching enabled, have reported frequent access-point toggling although the device's location was static.
+**Important**: The reliability and effectiveness of this feature may also depend on the specific implementation by the WAP vendor. In the same cases, customers with PMK caching enabled, have reported frequent access-point toggling although the device's location was static.
 
 ## Common configuration issues
 

@@ -5,7 +5,7 @@ To use the RadSec feature on your Meraki APs, firmware version **MR 30.X** or la
 {% endhint %}
 
 {% hint style="warning" %}
-Customers have reported **delays of approx. 1 hr** between activating the RadSec feature on the Meraki Dashboard and for it to become functional.
+Customers have reported **delays** between activating the RadSec feature on the Meraki Dashboard and becoming functional.
 {% endhint %}
 
 ## Prepare certificates

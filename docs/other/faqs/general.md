@@ -4,9 +4,9 @@
 
 #### How often is a device typically authenticating against RADIUSaaS?
 
-This is difficult to answer as it depends on the behavior of your users, clients and networking gear (APs, NACs, switches). Additionally, it is **important** to note that RADIUSaaS will neither
+This is difficult to answer as it depends on the behavior of your users, clients, and networking gear (APs, NACs, switches). Additionally, it is **important** to note that RADIUSaaS will neither
 
-* trigger an authentication, nor
+* trigger an authentication nor
 * send a termination request via its accounting port to the client, potentially triggering a re-authentication.
 
 If you feel your devices are authenticating very frequently (multiple times an hour) without the user constantly restarting the client, then this could be for the following reasons:
@@ -20,7 +20,7 @@ If you feel your devices are authenticating very frequently (multiple times an h
 
 **Create the App**
 
-First you have to create an Enterprise app. To do this via the Azure portal, follow these steps:
+First, you have to create an Enterprise app. To do this via the Azure portal, follow these steps:
 
 1. Login to your [Azure](https://portal.azure.com/) account
 2. Go to **Microsoft Entra ID**
@@ -102,7 +102,7 @@ A secondary instance means that you have at least a secondary RadSec server that
 
 **RadSec Connection**
 
-Since the RadSec servers are independent from each other, they will not handle any kind of failover. You should add both IP addresses/DNS entries to your Network controller which decides to which server the authentication requests are forwarded.&#x20;
+Since the RadSec servers are independent of each other, they will not handle any kind of failover. You should add both IP addresses/DNS entries to your Network controller which decides to which server the authentication requests are forwarded.&#x20;
 
 **RADIUS Connection**
 
@@ -120,7 +120,7 @@ Not every access point or switch (authenticator) provides you with the same amou
 
 **EAP Parameters**
 
-<table data-header-hidden><thead><tr><th width="261"></th><th></th></tr></thead><tbody><tr><td>EAP timeout</td><td>15 s</td></tr><tr><td>EAP max retries</td><td>5</td></tr><tr><td>EAP identity timeout</td><td>10 s</td></tr><tr><td>EAP identity retries</td><td>5</td></tr><tr><td>EAPOL key timeout</td><td>1000 ms</td></tr><tr><td>EAPOL key retries</td><td>4</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="261"></th><th></th></tr></thead><tbody><tr><td>EAP timeout</td><td>15 s</td></tr><tr><td>EAP max retries</td><td>5</td></tr><tr><td>EAP identity timeout</td><td>10 s</td></tr><tr><td>EAP identity retries</td><td>5</td></tr><tr><td>EAPOL key timeout</td><td>2000 ms</td></tr><tr><td>EAPOL key retries</td><td>4</td></tr></tbody></table>
 
 ## Logs
 
@@ -131,8 +131,8 @@ To identify the public IP of the authenticating site for a particular authentica
 **RadSec Connection**
 
 * Navigate to **Insights > Logs**.
-* Configure the relvant timerange / search window.
-* Set the **Logtype** filter  to **details**.
+* Configure the relevant timerange / search window.
+* Set the **Logtype** filter to **details**.
 * Identify the relevant authentication (by correlating the timestamp and username).
 * Identify an `Access-Request` message (**message > Packet-Type** = **Acess-Request**) that belongs to the authentication under investigation.
 * Expand the respective log entry.
@@ -144,8 +144,8 @@ To identify the public IP of the authenticating site for a particular authentica
 **RADIUS Connection**
 
 * Navigate to **Insights > Logs**.
-* Configure the relvant timerange / search window.
-* Set the **Logtype** filter  to **proxy**.
+* Configure the relevant timerange / search window.
+* Set the **Logtype** filter to the **proxy**.
 * Identify the relevant authentication (by correlating the timestamp and username).
 *   The public IP can be extracted from the **message** property of the log entry:\
 
