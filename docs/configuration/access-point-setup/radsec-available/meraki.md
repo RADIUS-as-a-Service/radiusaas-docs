@@ -47,6 +47,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
     <figure><img src="../../../../.gitbook/assets/Bild-4-Edited.png" alt=""><figcaption></figcaption></figure>
 10. Under **RadSec AP Certificates**, first create an **Organization CA** by clicking **Generate CA**. This CA is unique to your Meraki Organization.
 11. Subsequently, trust that **Organization CA**. The Meraki platform will now automatically generate RadSec client certificates for all your APs signed by this CA. The lifetime of the certificate is very long (> 50 years), i.e. you do not have to worry about renewing them.\
+    **Note:** you may need to convert the certificate as Meraki accepts PEM format. You can use [OpenSSL](https://docs.openssl.org/3.0/man1/openssl-x509/) to convert the format.\
 
 
     <figure><img src="../../../../.gitbook/assets/Bild-5-Edited.png" alt=""><figcaption></figcaption></figure>
@@ -55,4 +56,4 @@ Below settings are the necessary settings to establish a functional RadSec conne
 
 ### References
 
-Link to Meraki's documentation for the RadSec configuration: [https://documentation.meraki.com/MR/Encryption\_and\_Authentication/MR\_RADSec](https://documentation.meraki.com/MR/Encryption\_and\_Authentication/MR\_RADSec)
+Link to Meraki's documentation for the RadSec configuration: [https://documentation.meraki.com/MR/Encryption\_and\_Authentication/MR\_RADSec](https://documentation.meraki.com/MR/Encryption_and_Authentication/MR_RADSec)
