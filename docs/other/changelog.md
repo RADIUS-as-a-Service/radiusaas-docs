@@ -2,6 +2,19 @@
 
 ## Versions
 
+### December 2024 Release
+
+* Custom logo experience for invited users in web UI
+* Technical contacts can be configured per RADIUSaaS tenant. This is a preparation for a notification feature in a future release of RADIUSaaS.
+* Support for FreshestCRL (DeltaCRL) in Trusted Certificates
+* Support for brackets in CRL URL
+* Updated default templates for LogExporter
+* Fixed: On rare occasions, the RADIUSaaS instances may be affected by a performance bottleneck for authentications.
+
+
+
+
+
 ### June 2024 Release
 
 * Updated UI (reactive design, improved [Rule Engine](../admin-portal/settings/rules/) structure, separation of [RADIUS server certificates](../admin-portal/settings/settings-server.md#server-certificates) from [Trusted Certificates](../admin-portal/settings/trusted-roots.md) for client authentication and RadSec)
