@@ -50,7 +50,7 @@ This MAC address filter allows you to permit specific **switches** to communicat
 
 To set a **MAC-Address-based** switch filter, either select **Addresses** or **Groups**.&#x20;
 
-* If you select **Addresses**, you can specify multiple switch MAC addresses**.**&#x20;
+* If you select **Addresses**, you can specify multiple switch MAC addresse&#x73;**.**&#x20;
 * If you select **Groups,** you can reference one or more of your pre-defined **MAC Address Groups**.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/image (442).png" alt=""><figcaption><p>Showing MAC address filtering</p></figcaption></figure>

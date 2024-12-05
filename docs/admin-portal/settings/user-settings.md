@@ -6,16 +6,18 @@ With the User Settings page, you are able to configure how your website will han
 
 Because there are two ways to create users, some settings only affect the **My Users** portal.
 
-<figure><img src="../../../.gitbook/assets/image (416).png" alt=""><figcaption><p>Showing user settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-12-05_14h54_42.png" alt=""><figcaption><p>Showing user settings</p></figcaption></figure>
 
 ### System
 
-Every setting will affect any user created on the platform
+Upload your business' logo to show users upon sign in.&#x20;
+
+These settings affect all users on the platform.
 
 ### My Users Portal
 
-Every setting will only affect the **My Users** portal
+These settings only affect the **My Users** portal.
 
 ### Passwords
 
-Settings will set, how the password generator behaves
+These settings are used to configure password complexity.

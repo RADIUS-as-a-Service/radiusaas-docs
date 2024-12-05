@@ -15,7 +15,7 @@ RADIUSaaS leverages Microsoft Entra ID (Azure AD) as identity provider for the a
 
 RADIUSaaS does not store or manage its own administrator identities. The authentication is delegated to the corresponding Microsoft Entra ID (Azure AD) tenant of the provided UPN (SSO).
 
-Therefore, administrators enjoy the comfort of working with their own Microsoft Entra ID (Azure AD) accounts and do not have to setup additional accounts. All applicable  Conditional Access (CA) policies are enforced.
+Therefore, administrators enjoy the comfort of working with their own Microsoft Entra ID (Azure AD) accounts and do not have to setup additional accounts. All applicable Conditional Access (CA) policies are enforced.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
@@ -53,19 +53,31 @@ Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin P
 
 Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin Portal but can **only access the** [**Users portal**](../../byod-and-guest-access/my-invited-users.md), where they are able to create [Users](../users.md) for BYOD or guest access.
 
-## Invalidate user tokens
+### Invalidate user tokens
 
 During authentication to the RADIUSaaS Admin Portal, each permitted Microsoft Entra ID (Azure AD) account obtains an access (bearer) token that is cached in the browser's cookie store. The lifetime of the token is 30 days. Furthermore, RADIUSaaS has permission to refresh these access tokens.
 
 In a security event, RADIUSaaS Administrators can **invalidate all previously issued access tokens** by setting the minimum issuance date to now.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (426).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (426).png" alt="" width="563"><figcaption></figcaption></figure>
+
+## Technical Contacts
+
+{% hint style="info" %}
+Please note that this feature is in preparation for a notification feature in a future release of RADIUSaaS.
+{% endhint %}
+
+Add up to 5 technical contacts to receive e-mail notifications related to your instance. You can select the event level for each contact.
+
+<table><thead><tr><th width="137">Event level</th><th>Example events</th></tr></thead><tbody><tr><td>Info</td><td>Scheduled updates to your instance.</td></tr><tr><td>Warning</td><td>A certificate is about to expire, or an ISP is experiencing issues that could impact your instance.</td></tr><tr><td>Critical</td><td>Interruption to your instance. </td></tr></tbody></table>
+
+<figure><img src="../../.gitbook/assets/2024-12-05_15h08_09.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Access Tokens
 
 Access tokens are required to authenticate calls to the [RADIUSaaS REST API](../../other/rest-api.md).
 
-<figure><img src="../../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (427).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Add
 
@@ -79,14 +91,14 @@ Follow these steps to create a new access token:
    ![](<../../../.gitbook/assets/image (429).png>)\
 
 6. Copy the access token to the clipboard and store it at a secure location.\
-   ![](../../../.gitbook/assets/Screenshot\_2024-05-23\_at\_18\_46\_08.jpg)
+   ![](../../../.gitbook/assets/Screenshot_2024-05-23_at_18_46_08.jpg)
 7. Click on **Close**
 
 ### **Delete**
 
 To delete an access token, locate it in the table and click on the bin icon:
 
-<figure><img src="../../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (430).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Permissions consent
 

@@ -133,7 +133,7 @@ In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the f
 * The Microsoft Entra ID (Azure AD) user object behind the UPN/email address has to be entitled to grant the RADIUSaaS Enterprise Application the following permissions (see screenshot below):
   * **Read** the Basic User Profile
   * **Maintain** access to data you have given it access to (allow request of refresh token)\
-    ![](<../../.gitbook/assets/Screenshot\_2022-04-11\_at\_09\_31\_26 (1).png>)
+    ![](<../../.gitbook/assets/Screenshot_2022-04-11_at_09_31_26 (1).png>)
 * In case your Microsoft Entra ID (Azure AD) user has no rights to grant the required permissions, no corresponding **Enterprise Application** will be auto-created in your Microsoft Entra ID (Azure AD). To circumvent this, ask your IT department to grant your user the needed permissions.
 
 ## Intune configuration issues
@@ -161,7 +161,7 @@ Common error codes: 0xc7d24fc5 or -942518331
 Key points are:
 
 * select the **Root CA certificate** for **server validation** (important: do not upload the server certificate of the RADIUSaaS)\
-  **- and -**
+  &#xNAN;**- and -**
 * define a **radius server name**
   * Note: There seems to be a character limit for this field. To solve possible issues, you might just use the domain part without subdomain like "radius-as-a-service.com" (instead of "contoso.radius-as-a-service.com").
   * [Android developers](https://developer.android.com/guide/topics/connectivity/wifi-enterprise) states: "\[...] must configure **both a Root CA certificate**, and either a **domain suffix match** or an alternate subject match". So, the MDM can use "setAltSubjectMatch" or "setDomainSuffixMatch" after adding a root certificate to the Wi-Fi configuration. Intune seems to use "setDomainSuffixMatch" as just "radius-as-a-service.com" is sufficient.

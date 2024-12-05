@@ -59,7 +59,7 @@ This MAC address filter allows you to permit specific **access points** to commu
 
 To set a **MAC-Address-based** access point filter, either select **Addresses** or **Groups**.&#x20;
 
-* If you select **Addresses**, you can specify multiple Access Point MAC addresses**.**&#x20;
+* If you select **Addresses**, you can specify multiple Access Point MAC addresse&#x73;**.**&#x20;
 * If you select **Groups,** you can reference one or more of your pre-defined **MAC Address Groups**.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/image (27).png" alt="" width="402"><figcaption><p>Showing Access Point selection by MAC addresses or group</p></figcaption></figure>
