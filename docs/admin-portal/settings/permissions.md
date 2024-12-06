@@ -71,13 +71,13 @@ Add up to 5 technical contacts to receive e-mail notifications related to your i
 
 <table><thead><tr><th width="137">Event level</th><th>Example events</th></tr></thead><tbody><tr><td>Info</td><td>Scheduled updates to your instance.</td></tr><tr><td>Warning</td><td>A certificate is about to expire, or an ISP is experiencing issues that could impact your instance.</td></tr><tr><td>Critical</td><td>Interruption to your instance. </td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/2024-12-05_15h08_09.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-12-06_11h41_45.png" alt=""><figcaption></figcaption></figure>
 
 ## Access Tokens
 
 Access tokens are required to authenticate calls to the [RADIUSaaS REST API](../../other/rest-api.md).
 
-<figure><img src="../../../.gitbook/assets/image (427).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
 
 ### Add
 
@@ -98,7 +98,7 @@ Follow these steps to create a new access token:
 
 To delete an access token, locate it in the table and click on the bin icon:
 
-<figure><img src="../../../.gitbook/assets/image (430).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
 
 ## Permissions consent
 
