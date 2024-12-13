@@ -30,7 +30,7 @@ Our engineers are happy to support you in these languages:
 
 * Monday-Friday
 * 08:00-18:00 CET / CEST
-* Except from public holidays for Hesse / Germany
+* Except from public holidays for Hesse / Germany, Christmas Eve and New Year's Eve
 
 ### Support response time
 
@@ -62,3 +62,4 @@ In the event of a service outage, affected customers are entitled to apply for t
 * service availability < 99.0% => 25%
 
 Service outages must be reported by customers to our support within 24 hours at the latest.
+
