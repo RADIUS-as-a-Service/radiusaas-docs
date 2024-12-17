@@ -6,11 +6,21 @@
 
 #### Wrong XML&#x20;
 
+{% hint style="warning" %}
+Can't connect because you need a certificate to sign in. Contact your IT support person.
+{% endhint %}
+
 ![](<../../.gitbook/assets/image (232).png>)
 
 Check that your client has a certificate to authenticate and that you are using the correct [WiFi configuration profile](../profile-deployment/microsoft-intune/wifi-profile/) or [XML](../admin-portal/settings/trusted-roots.md#xml).
 
 #### Trusted root issues&#x20;
+
+{% hint style="warning" %}
+Can't connect to this network.
+{% endhint %}
+
+
 
 ![](<../../.gitbook/assets/image (185).png>)
 
@@ -18,10 +28,20 @@ Check that you've done the following:&#x20;
 
 * Told your RADIUS Server which certificates are allowed to connect as described [here](../admin-portal/settings/trusted-roots.md#add)
 * Imported the active RADIUS Server certificate as trusted root on your client as described [here](../profile-deployment/microsoft-intune/trusted-root.md#to-add-a-trusted-root-profile-for-your-clients)
+* Check your [Logs](../admin-portal/insights/log.md#logs). There is a detailed description of the error. Maybe it's [this](trubleshooting.md#fatal-decrypt-error) issue.
 
-Also check your [Logs](../admin-portal/insights/log.md#logs). There is a detailed description of the error. Maybe it's [this](trubleshooting.md#fatal-decrypt-error) issue.
+#### Continue connecting?
 
-If your Clients need to verify on connecting the first time, and you're seeing this dialog:
+{% hint style="warning" %}
+Continue connecting? \
+If you expect to find Corporate WiFi in this location, go ahead and connect. Otherwise, it may be a different network with the same name.&#x20;
+
+Show certificate details.
+{% endhint %}
+
+
+
+If your clients need to verify on connecting the first time, and you're seeing this dialog:
 
 ![](<../../.gitbook/assets/image (226).png>)
 
