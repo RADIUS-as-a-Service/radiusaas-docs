@@ -1,5 +1,11 @@
 # Changelog
 
+{% hint style="success" %}
+If you're looking to **stay updated with the latest changes and news** in the RADIUSaaS changelog, you can subscribe to our update-service. Subscribers will receive **email notifications** whenever there are new updates in the changelog.
+
+[**Please click here to subscribe**](https://feedback.radiusaas.com/)**.**
+{% endhint %}
+
 ## Versions
 
 ### December 2024 Release
@@ -10,10 +16,6 @@
 * Support for parentheses in CRL URL
 * Updated default templates for LogExporter
 * Fixed: On rare occasions, the RADIUSaaS instances may be affected by a performance bottleneck for authentications.
-
-
-
-
 
 ### June 2024 Release
 
