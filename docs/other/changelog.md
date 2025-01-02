@@ -1,9 +1,9 @@
 # Changelog
 
 {% hint style="success" %}
-If you're looking to **stay updated with the latest changes and news** in the RADIUSaaS changelog, you can subscribe to our update-service. Subscribers will receive **email notifications** whenever there are new updates in the changelog.
+If you'd like to **stay up to date on the latest changes and news in the RADIUSaaS changelog**, you can subscribe to our email update service. Subscribers will receive **email notifications** when there are new updates to the changelog.
 
-[**Please click here to subscribe**](https://feedback.radiusaas.com/)**.**
+[**Please click here to sign up for email notifications.**](https://feedback.radiusaas.com)
 {% endhint %}
 
 ## Versions
