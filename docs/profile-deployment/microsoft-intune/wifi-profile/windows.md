@@ -20,16 +20,12 @@ description: >-
 10. Then for **EAP type** choose **EAP - TLS**
 11. Next, as **Certificate server names** add the&#x20;
 
-    * **Subject Alernative Name (SAN)**
+    * **Subject Alternative Name (SAN)**
     * and **Common Name (CN)**&#x20;
 
     of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates). Those properties can be found by expanding the active server certificate and copying the relevant values.&#x20;
 
-<div align="center">
-
-<figure><img src="../../../../.gitbook/assets/image (373).png" alt=""><figcaption><p>Showing SAN to be used as Certificate server name</p></figcaption></figure>
-
-</div>
+<div align="center"><figure><img src="../../../../.gitbook/assets/image (373).png" alt=""><figcaption><p>Showing SAN to be used as Certificate server name</p></figcaption></figure></div>
 
 {% hint style="warning" %}
 Please consider, that the common name is case-sensitive.

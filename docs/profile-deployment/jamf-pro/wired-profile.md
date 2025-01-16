@@ -14,7 +14,7 @@ To configure a Wired network profile in Jamf, please follow these instructions: 
 7. As **Identity Certificate** select the client authentication certificate you have configured in your SCEP payload of this Configuration Profile before. In case you are using SCEPman as CA, please select the SCEP Proxy you have previously set up during the [configuration](https://docs.scepman.com/certificate-deployment/jamf/general) of SCEPman.
 8. Under **Trusted Certificates** all certificates you have configured as **Certificate** payloads, will appear here. Check them all.
 9. Next, under **Trusted Server Certificate Names** add the&#x20;
-   * **Subject Alernative Name (SAN)**
+   * **Subject Alternative Name (SAN)**
    * and **Common Name (CN)** \
      \
      of your _active_ RADIUS [**Server Certificate**](../../admin-portal/settings/settings-server.md#server-certificates). Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**

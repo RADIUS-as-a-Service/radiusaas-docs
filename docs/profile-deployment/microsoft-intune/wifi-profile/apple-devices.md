@@ -21,7 +21,7 @@ description: >-
 11. Then for **EAP type** choose **EAP - TLS**
 12. Next, as **Certificate server names** add the&#x20;
 
-    * **Subject Alernative Name (SAN)**
+    * **Subject Alternative Name (SAN)**
     * and **Common Name (CN)**&#x20;
 
     of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.** \

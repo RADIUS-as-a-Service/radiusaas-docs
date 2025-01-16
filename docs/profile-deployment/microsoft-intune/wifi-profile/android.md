@@ -13,7 +13,7 @@
 9. As **EAP type** choose **EAP - TLS**
 10. Next, as **Radius server name** add the&#x20;
 
-    * **Subject Alernative Name (SAN)**
+    * **Subject Alternative Name (SAN)**
     * and **Common Name (CN)**&#x20;
 
     of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates) . Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**
@@ -32,7 +32,7 @@ All other settings can be configured according to your own needs and preferences
 Some Android kiosk devices require a value for **Identity privacy (outer identity)**. Please consider this when you are having issues authenticating against the WiFi network with such devices.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/2024-06-03\_21h31\_46 (1).png>)
+![](<../../../../.gitbook/assets/2024-06-03_21h31_46 (1).png>)
 
 ## Common configuration issues
 
