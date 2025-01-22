@@ -5,7 +5,7 @@ RADIUS over TLS (RADSEC) has been added to **UniFi Network 8.4** and newer versi
 {% endhint %}
 
 {% hint style="warning" %}
-Customers have reported **delays** between activating the RadSec feature on the Meraki Dashboard and becoming functional.
+Customers have reported **delays** between activating the RadSec feature on the Unify Dashboard and becoming functional.
 {% endhint %}
 
 ## Prepare certificates
