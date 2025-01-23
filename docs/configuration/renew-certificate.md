@@ -4,12 +4,12 @@ description: This page describes the renewal process of the RADIUSaaS server cer
 
 # Server Certificate Renewal
 
-A server certificate terminates and secures both, EAP-TLS inner tunnel and the RadSec TLS outer tunnel on RADIUSaaS. When your certificate is about to expire, you will need to take steps to renew it before the expiry otherwise authentication will fail.&#x20;
+A server certificate is essential for securing both the EAP-TLS inner tunnel and the RadSec TLS outer tunnel on RADIUSaaS. To prevent authentication failures, ensure to renew your certificate before it expires.
 
 ### **Your server certificate can be one of the following two types:**
 
 1. [Customer-CA](https://docs.radiusaas.com/admin-portal/settings/settings-server#customer-ca). This comes with your RADIUSaaS and offers long expiry of 20 years. Currently there is no way to create a new Customer-CA alongside the existing one. This means that the existing expiring Customer-CA will need to be deleted before a new one can be created. Creating a new Customer-CA will also generate a new root certificate that will need to be re-deployed to your clients. Please follow [this ](renew-certificate.md#deploying-the-new-server-certificate)article to deploy your new Customer-CA and reference it via your MDM's WiFi policy.&#x20;
-2. Bring Your Own (BYO) certificate using your own PKI, e.g. [SCEPman-issued Server Certificate](https://docs.radiusaas.com/admin-portal/settings/settings-server#scepman-issued-server-certificate). SCEPman issued server certificates have an expiry of two years, and you should set yourself a reminder so to avoid any downtime. For a BYO certificate, this article assumes that the **CA's root certificate** and the **FQDN (Subject and SAN**) will remain the same as what was used in the expiring certificate. Because of this you do not need to redeploy the certificate.&#x20;
+2. Bring Your Own (BYO) certificate using your own PKI, e.g. [SCEPman-issued Server Certificate](https://docs.radiusaas.com/admin-portal/settings/settings-server#scepman-issued-server-certificate). SCEPman server certificates expire every two years, so be sure to set a reminder to prevent downtime. When using a BYO certificate, it's assumed that the **CA's root certificate** and the **FQDN (Subject and SAN)** will remain unchanged from the expiring certificate. Therefore, redeployment of the certificate is unnecessary.
 
 ## Creating a new certificate
 
