@@ -1,75 +1,44 @@
 ---
-description: >-
-  This page describes the renewal process of the RADIUSaaS server certificate
-  without interrupting the connection to the clients.
+description: This page describes the renewal process of the RADIUSaaS server certificate.
 ---
 
 # Server Certificate Renewal
 
-**Before continuing, you need to answer the following questions:**
+A server certificate terminates and secures both, EAP-TLS inner tunnel and the RadSec TLS outer tunnel on RADIUSaaS. When your certificate is about to expire, you will need to take steps to renew it before the expiry otherwise authentication will fail.&#x20;
 
-* Do you want to bring your own certificate (e.g. from SCEPman) or use a certificate created by your RADIUSaaS instance?
-* Are you deploying user or device client authentication certificates?
+### **Your server certificates can be one of the following two types:**
 
-{% hint style="warning" %}
-We recommend starting the renewal process of the RADIUS server certificate **8 - 10 weeks** before it expires for the following reason.
+1. [Customer-CA](https://docs.radiusaas.com/admin-portal/settings/settings-server#customer-ca). This comes with your RADIUSaaS and offers long expiry of 20 years. Currently there is no way to create a new Customer-CA alongside the existing one. This means that the existing expiring Customer-CA will need to be deleted before a new one can be created. Creating a new Customer-CA will also generate a new root certificate that will need to be re-deployed to your clients. Please follow [this ](renew-certificate.md#deploying-the-new-server-certificate)article to deploy your new Customer-CA and reference it via your MDM's WiFi policy.&#x20;
+2. Bring Your Own (BYO) certificate using your own PKI, e.g. [SCEPman-issued Server Certificate](https://docs.radiusaas.com/admin-portal/settings/settings-server#scepman-issued-server-certificate). SCEPman issued server certificates have an expiry of two years, and you should set yourself a reminder so to avoid any downtime. For a BYO certificate, this article assumes that the **CA's root certificate** and the **FQDN (Subject and SAN**) will remain the same as what was used in the expiring certificate. Because of this you do not need to redeploy the certificate.&#x20;
 
-If you are using the **legacy** **self-signed** server certificate we used to provide, RADIUSaaS will **auto-renew** the server certificate 30 days **prior** to its expiry (**Valid until** date). If you miss this deadline, you can no longer control the activation of a new RADIUS server certificate.
-{% endhint %}
+## Creating a new certificate
 
-## Part 1
+### Built-in Customer-CA
 
-### Certificate creation
+This type of certificate is valid for 20 years and cannot be renewed before its expiry. It can, however, be deleted and a new one created by following [this ](https://docs.radiusaas.com/admin-portal/settings/settings-server#customer-ca)guide.
 
-The below screenshot demonstrates the two options for creating / uploading a new server certificate.
+### BYO certificate
 
-* If you would like to use the free certificates that can be created from the RADIUSaaS Admin Portal, please create your own CA as described [here](../admin-portal/settings/settings-server.md#bring-your-own-certificate).
-* If you would like to use your own certificate instead, select **PEM or PKCS#12 encoded Certificate** in the **Add** certificate dialog, select the certificate name and upload the public and private key. If you selected PKCS#12, this contains both public and private key.
+If you want to use your own certificate e.g.: a SCEPman-issued server certificate, then follow [this ](https://docs.radiusaas.com/admin-portal/settings/settings-server#bring-your-own-certificate)link to create a server certificate before the expiry in SCEPman or your preferred PKI. &#x20;
 
-{% hint style="info" %}
-Download the certificate after creating it as you will need it for the Intune profiles later on.
-{% endhint %}
+## Deploying the new server certificate
 
-<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Showing the two options for Server Certificate </p></figcaption></figure>
+#### Intune profiles <a href="#intune-profiles" id="intune-profiles"></a>
 
+If you are renewing the Customer-CA or a BYO CA with a different root and FQDN from the previous one then please follow the bellow steps to re-deploy this certificate to your clients, otherwise if you are using a BYO certificate with no change to the CA's root certificate and the FQDN (Subject and SAN), you can skip this step!
 
-
-### Intune profiles
-
-1. Deploy the new **server certificate/trusted root** to your clients as described [here](../profile-deployment/jamf-pro/server-trust.md) by creating a **new** profile.
+1. Deploy the new **server certificate/trusted root** to your clients as described [here](https://docs.radiusaas.com/profile-deployment/jamf-pro/server-trust) by creating a **new** profile.
 2. Update your **existing** WiFi or wired profile(s)
-   * If you have used the Intune Wizard for the creation of your network profile(s), edit all relevant profiles by **adding a second trusted server certificate**. Do not forget to add a second server name under **Certificate server names** in case the new certificate has a different domain.
-   * If you have used a custom profile for the creation of your network profile(s), re-download the XML generated by RADIUSaaS from [here](../admin-portal/settings/trusted-roots.md#xml), and replace it in your existing profile. Both server certificate thumbprints are automatically included in the XML.&#x20;
+   * If you have used the Intune wizard for the creation of your network profiles, edit all relevant profiles by **adding a second trusted server certificate**. Do not forget to add a second server name under **Certificate server names** in case the new certificate has a different domain.
+   * If you have used a custom profile for the creation of your network profiles, re-download the XML generated by RADIUSaaS from [here](https://docs.radiusaas.com/admin-portal/settings/trusted-roots#xml), and replace it in your existing profile. Both server certificate thumbprints are automatically included in the XML.
 3. Wait **until all your clients** have received the updated profile(s).
 
-![Example: Updated Windows 10 WiFi profile with two trusted RADIUS server certificates and different domains.](../../.gitbook/assets/2024-05-23\_16h39\_32.png)
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption><p>Example: Updated Windows 10 WiFi profile with two trusted RADIUS server certificates and different domains.</p></figcaption></figure>
 
-### Jamf profiles
+## WiFi & LAN infrastructure <a href="#wifi-and-lan-infrastructure" id="wifi-and-lan-infrastructure"></a>
 
-1. Deploy the new **server certificate/trusted root** to your clients as described [here](../profile-deployment/microsoft-intune/trusted-root.md#adding-a-trusted-root-profile-for-your-clients) by creating a **new** profile.
-2. Update your **existing** WiFi or wired profile(s) by adding a second common name under **Trusted Server Certificate Names**
-3. Wait **until all your clients** have received the updated profile(s).
+If you're using [RadSec](https://docs.radiusaas.com/details#what-is-radsec), upload the new **server certificate** to your access points or network switch device.
 
-![](../../.gitbook/assets/2024-05-23\_16h44\_21.png)
+## Activating the new server certificate
 
-### WiFi & LAN infrastructure
-
-{% hint style="info" %}
-This step is only necessary if you're using [RadSec](../details.md#what-is-radsec).
-{% endhint %}
-
-Upload the new **Server certificate** to your Access Points or network switch device.&#x20;
-
-## Part 2
-
-{% hint style="warning" %}
-We recommend a **minimum waiting period of 4 weeks** between completing Part 1 and starting with Part 2.
-{% endhint %}
-
-After the updated profiles have successfully been deployed to all your clients (depending on the size of the deployment this may take weeks since some employees might be on holidays), you can take the last step and perform the certificate switch-over in your RADIUSaaS Admin Portal.
-
-{% hint style="danger" %}
-**Only** proceed with the next step if you are certain that all your clients received the new/updated profiles. Otherwise, they will not be able to connect to your network afterwards.
-{% endhint %}
-
-* Activate the new server certificate as described [here](../admin-portal/settings/settings-server.md#certificate-activation).
+Finally, when you are ready to switch over to the new certificate, active it as described [here](../admin-portal/settings/settings-server.md#certificate-activation).

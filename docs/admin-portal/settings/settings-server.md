@@ -116,17 +116,17 @@ To create your Customer-CA, follow these simple steps:&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (391).png" alt=""><figcaption><p>Showing how to add a new server certificate</p></figcaption></figure>
 
-### Bring your own Certificate
+### Bring your own certificate
 
 In case you do not want to use the **Customer CA**, you can upload up to two of your own certificates.
 
-#### SCEPman-issued Server Certificate
+#### SCEPman-issued server certificate
 
-You may leverage SCEPman Certificate Master to generate a server certificate for you. Please follow those steps:
+Please follow these steps to leverage SCEPman Certificate Master to generate a new server certificate:
 
 1. Navigate to your SCEPman Certificate Master web portal.
-2. Select Request Certificateon the left
-3. Select Server Certificate on the top
+2. Select Request Certificate on the left
+3. Select New Server Certificate on the top
 4. Enter all Fully Qualified Domain Names (FQDNs) that the certificate shall be valid for separated by commas, semicolons, or line breaks. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend adapting the SAN of the default server certificate, e.g. `radsec-<your RADIUSaaS instance name>.radius-as-a-service.com`.
 5. Set the **Download file format** to **PEM**&#x20;
 6. Select **Include Certificate Chain** and download the certificate.&#x20;
@@ -138,9 +138,11 @@ You may leverage SCEPman Certificate Master to generate a server certificate for
 
 <figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
-To add your server certificate created in above steps, navigate to **RADIUSaaS instance** > **Settings** > **Server Settings**, then
+### Upload the new server certificate to **RADIUSaaS**
 
-8. Choose **PEM or PKCS#12 encoded Certificate**
+To add your server certificate created in above steps, navigate to **RADIUSaaS instance** > **Settings** > **Server Settings** > **Add** then
+
+8. Choose **PEM or PKCS#12 encoded Certificate** (If you selected PKCS#12 in step 5, this contains both public and private key)
 9. Drag & drop your certificate file or click to browse for it
 10. Enter the password of your **Private Key**&#x20;
 11. Click **Save**

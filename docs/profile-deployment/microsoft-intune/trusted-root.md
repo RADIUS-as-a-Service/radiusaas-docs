@@ -10,7 +10,7 @@ When [downloading](../../admin-portal/settings/settings-server.md#download) the 
 
 <figure><img src="../../../.gitbook/assets/image (367).png" alt=""><figcaption></figcaption></figure>
 
-### Part 2: Adding a Trusted certificate profile for your dndpoint devices&#x20;
+### Part 2: Adding a Trusted certificate profile for your endpoint devices&#x20;
 
 {% hint style="warning" %}
 Ensure, you have reviewed [Part 1](trusted-root.md#edit-your-downloaded-certificate).
