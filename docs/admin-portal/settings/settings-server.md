@@ -10,57 +10,41 @@ description: >-
 
 ### Overview
 
-RADIUSaaS provides public IP addresses that allow your network appliances and services to communicate with our service from anywhere via the internet. Thereby, we offer two types of IP addresses that support different protocols and listen on different ports.
+RADIUSaaS operates a RadSec service to provide secure cloud-based authentication for its users. In addition, for those customers who unable to utilise RadSec in their network environment due to legacy hardware and software, RADIUSaaS also provides up to two RADIUS proxies.&#x20;
 
-### RadSec / TCP
+Both RadSec and RADIUS service offer public IP address that enable your network appliances and services to communicate with our service from anywhere via the internet. These services operate on their unique registered ports. &#x20;
+
+## RadSec / TCP
 
 <figure><img src="../../../.gitbook/assets/image (386).png" alt=""><figcaption><p>Showing RadSec IP and port</p></figcaption></figure>
 
-#### Properties
-
-**RadSec DNS**
+#### **RadSec DNS**
 
 The DNS entry through which the RadSec service can be reached.&#x20;
 
-**Server IP Addresses**
+#### **Server IP Addresses**
 
-{% hint style="warning" %}
-These IP addresses only speak [RadSec](../../details.md#what-is-radsec) over TCP port 2083.
+This is the public IP address of the RadSec service.
+
+#### **RadSec Ports**
+
+This is the registered port for RadSec: 2083
+
+### Failover & Redundancy
+
+In cases where customers require higher levels of redundancy, a second RadSec service is configured for your instance providing an additional IP address. Please note that there is an additional cost for this service.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Showing two public IP addresses, one for each of the RadSec services.</p></figcaption></figure>
+
+{% hint style="info" %}
+It is important to note that RADIUSaaS **does NOT provide failover** between the two RadSec endpoints and this failover is typically implemented on your network equipment as show in below example using Meraki.&#x20;
+
+It is recommended to configure your failover scenario using IP addresses rather than DNS for better visibility and less reliance on an additional service (DNS).&#x20;
 {% endhint %}
 
-Public IP address(s) on which the RadSec service is available.&#x20;
+In this configuration, the two RadSec IP addresses are listed in order of preference. When Meraki is unable to reach one of the IP addresses, it will typically try two more times and moves on to the next one. For more information regarding the failover capability of your Meraki (or other) system, please consult your own resources.
 
-A second IP address is shown if we have configured a secondary RADIUSaaS instance for you.
-
-**RadSec Ports**
-
-This section displays the (standard) port for the RadSec.
-
-### RADIUS / UDP
-
-This section is available when you have configured at least on [RADIUS Proxy](settings-proxy.md). For each proxy, a separate public IP address is available. The public IP addresses in this section support the RADIUS protocol only and thus listen on ports 1812/1813.
-
-<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Showing RADIUS proxy IP and ports</p></figcaption></figure>
-
-#### Properties
-
-**Server IP Addresses and Location**
-
-{% hint style="warning" %}
-These IP addresses only speak [RADIUS](../../details.md#what-is-radius) over UDP ports 1812/1813!
-{% endhint %}
-
-Geo-location of the RADIUS proxy/proxies as well as the respective public IP address(es).
-
-**Shared Secrets**
-
-The shared secret for the respective RADIUS proxy. By default, all RADIUS proxies are initialized with the same shared secret.
-
-<figure><img src="../../../.gitbook/assets/2024-05-24_18h45_54.gif" alt=""><figcaption><p>Showing changing of shared secrets per proxy</p></figcaption></figure>
-
-**Ports**
-
-This section displays the standard ports for the RADIUS authentication (1812) and RADIUS accounting (1813) services.
+<figure><img src="../../.gitbook/assets/2025-01-24_15h14_06.png" alt=""><figcaption><p>Showing multiple RadSec servers in order of priority (Meraki).</p></figcaption></figure>
 
 ## RadSec Settings
 
@@ -72,9 +56,9 @@ The following settings control certain aspects of the RadSec connection to your 
 
 This setting controls the maximum TLS version for your RadSec interface. The minimum version is fixed at 1.2, the default maximum is set to 1.3.
 
-TLS 1.3 offers several advantages over 1.2, including the post-handshake authentication mechanism, which allows requesting additional credentials before completing the handshake. This is important for the [#verification-check-for-radsec-certificates](settings-server.md#verification-check-for-radsec-certificates "mention") setting.
+TLS 1.3 offers several advantages over 1.2, including the post-handshake authentication mechanism, which allows requesting additional credentials before completing the handshake. This is important for the verification checks for RadSec certificates setting discussed next.
 
-### Verification check for RadSec certificates
+### Verification checks for RadSec certificates
 
 {% hint style="info" %}
 This setting determines whether a revocation check should be performed for all RadSec connections. The method for verifying the revocation check differs slightly from that used for client authentication certificates.
@@ -84,10 +68,10 @@ For proper RadSec operation, your network devices, such as Access Points, Switch
 
 #### **TLS 1.2**
 
-In TLS 1.2, there is no method to request the RadSec client certificate during the handshake, so the handshake may complete before RADIUSaaS has fully authorized it, and your network device may perceive the channel being open and forwards requests even if this is not the case on our side. Your network device's RadSec client certificate is not transmitted until a client device authenticates, and we cannot check the revocation status of the certificate until then, which can lead to authentication timeouts or rejections because the client has to restart the authentication completely.
+In TLS 1.2, there is no method to request the RadSec client certificate during the handshake, so the handshake may complete before RADIUSaaS has fully authorised it, and your network device may perceive the channel being open and forwards requests even if this is not the case on our side. Your network device's RadSec client certificate is not transmitted until a client device authenticates, and we cannot check the revocation status of the certificate until then, which can lead to authentication timeouts or rejections because the client has to restart the authentication completely.
 
 {% hint style="info" %}
-To mitigate the above behaviour, this setting is deactivated when the maximum TLS version is set to 1.2.
+To mitigate the above behaviour, the verification checks is deactivated when the maximum TLS version is set to 1.2. Please note you can manually reactive it later.&#x20;
 {% endhint %}
 
 #### **TLS 1.3**
@@ -99,6 +83,40 @@ This setting is automatically enabled when the maximum TLS version is set to 1.3
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (461).png" alt=""><figcaption></figcaption></figure>
+
+## RADIUS / UDP
+
+This section is available when you have configured at least on [RADIUS Proxy](settings-proxy.md). For each proxy, a separate public IP address is available. The public IP addresses in this section support the RADIUS protocol only and thus listen on ports 1812/1813.
+
+<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Showing RADIUS proxy IP and ports</p></figcaption></figure>
+
+### **Server IP Addresses and Location**
+
+{% hint style="warning" %}
+These IP addresses only listen on [RADIUS](../../details.md#what-is-radius) over UDP ports 1812/1813.
+{% endhint %}
+
+Geo-location of the RADIUS proxy/proxies as well as the respective public IP address(es).
+
+### **Shared Secrets**
+
+The shared secret for the respective RADIUS proxy. By default, all RADIUS proxies are initialized with the same shared secret.
+
+<figure><img src="../../../.gitbook/assets/2024-05-24_18h45_54.gif" alt=""><figcaption><p>Showing changing of shared secrets per proxy</p></figcaption></figure>
+
+### **Ports**
+
+This section displays the standard ports for the RADIUS authentication (1812) and RADIUS accounting (1813) services.
+
+### **Failover & Redundancy**
+
+#### Proxy Redundancy
+
+Note that a single RADIUSaaS Proxy does not provide redundancy. To ensure redundancy, set up multiple RADIUSaaS Proxies as described [here](settings-proxy.md#load-balancing).
+
+#### RadSec Service Redundancy for Proxies
+
+When using RADIUSaaS with multiple RadSec instances, Proxies are automatically configured to connect to all available RadSec instances. A RADIUSaaS Proxy will prioritize connecting to the nearest regional RadSec Service. If that service is unavailable, it will switch to another available RadSec Service.&#x20;
 
 ## Server Certificates
 
@@ -183,7 +201,7 @@ To delete a certificate, expand the corresponding row, click **Delete** and conf
 
 ### Certificate expiration&#x20;
 
-Certificates will expire from time to time. Five months before your certificate is going to be expired, you dashboard will give you a hint that your certificate is about to expire.
+Certificates will expire from time to time. Five months before your certificate is going to be expired, your dashboard will give you a hint that your certificate is about to expire.
 
 ![](<../../../.gitbook/assets/image (111).png>)
 

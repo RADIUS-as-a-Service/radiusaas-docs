@@ -26,7 +26,7 @@ description: >-
     of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates). Those properties can be found by expanding the active server certificate and copying the relevant values. \
     If the SAN and the CN values are identical, you need to add the server name only once.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Please consider, that the common name is case-sensitive.
@@ -42,7 +42,7 @@ Please consider, that the common name is case-sensitive.
 
 <figure><img src="../../../../.gitbook/assets/2024-05-13_15h20_31.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 1/2</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Fast roaming
 
