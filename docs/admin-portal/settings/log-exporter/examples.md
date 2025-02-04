@@ -12,9 +12,9 @@ description: >-
 
 The scope of the query provided below is as follows:
 
-* The admin is interested in understanding which users and/or devices are authenticating (successful or unsuccessful) and to built frequency statistics based on that
-* No VLAN tagging is used
-* Only certificate-based authentication is used (no username-password-based authentication)
+* the admin is interested in understanding which users/devices are authenticating (accepted or rejected) and to built frequency statistics based on that
+* no VLAN tagging is used
+* only certificate-based authentication is used (no username-password-based authentication)
 
 ### Target
 
@@ -53,16 +53,16 @@ The scope of the query provided below is as follows:
 {% code lineNumbers="true" %}
 ```json
 {
-    "Decision": {{ data.get('Packet-Type') }},
+    "Decision": {{ data.get("Packet-Type") }},
     "Level": {{ data.level }},
-    "IP": {{ data.get('Packet-Dst-Address') }},
-    "Username": {{ data.get('User-Name') }},
+    "IP": {{ data.get("Packet-Dst-Address") }},
+    "Username": {{ data.get("User-Name") }},
     {% raw %}
-{% if data.get('TLS-OCSP-Cert-Valid') != None %}
-        "OCSPStatus": {{ data.get('TLS-OCSP-Cert-Valid') }},
+{% if data.get("TLS-OCSP-Cert-Valid") != None %}
+        "OCSPStatus": {{ data.get("TLS-OCSP-Cert-Valid") }},
     {% endif %}
     {% if data.level == "warning" %}
-      "FailReason": {{ data.get('Module-Failure-Message') }},
+      "FailReason": {{ data.get("Module-Failure-Message") }},
     {% endif %}
 {% endraw %}
     "Datetime" : {{ data.Datetime }}
@@ -76,11 +76,11 @@ The scope of the query provided below is as follows:
 
 The scope of the query provided below is as follows:
 
-* The admin is interested in understanding which users and/or devices are authenticating (successful or unsuccessful)
-* The OCSP response of the CA if certificates are used
-* The used Access Point (via MAC address)
-* The RADIUS [Rule](../rules/) that was triggered / VLAN that was tagged
-* Both, certificate-based authentication and username-password-based authentication are considered
+* the admin is interested in understanding which users/devices are authenticating via certificate or username & password (accepted or rejected)
+* username and certificate details with OCSP response
+* SSID and used Access Point (MAC address)
+* RADIUSaaS [Rule](../rules/) that was triggered, if applicable: assigned VLAN
+* correlation ID for further investigation
 
 ### Target
 
@@ -116,27 +116,41 @@ The scope of the query provided below is as follows:
 
 ### Data configuration
 
-<pre class="language-json" data-line-numbers><code class="lang-json">{
-    "Decision": {{ data.get('Engine-Decision') }},
+{% code lineNumbers="true" %}
+```json
+{
+    "Decision": {{ data.get("Engine-Decision") }},
     "Datetime" : {{ data.Datetime }},
-<strong>    "Level": {{ data.level }},
-</strong>    "Authtype": {{ data.get('Auth-Source-Type') }},
-    "Client-MAC": {{ data.get('Client-MAC') }},
-    "Username": {{ data.get('User-Name') }},
-    "Applied-Rule": {{ data.get('Applied-Rule') }},
-    "VLAN": {{ data.get('Assigned-VLAN', 'No VLAN assigned') }},
-    {% if data.get('Auth-Source-Type') == "WiFi" %}
-        "SSID": {{ data.get('SSID') }},
-        "AP-MAC": {{ data.get('AP-MAC') }},
+    "Level": {{ data.level }},
+    "Authtype": {{ data.get("Authtype") }},
+    "Client-MAC": {{ data.get("Client-MAC") }},
+    "Username": {{ data.get("User-Name") }},
+    "Applied-Rule": {{ data.get("Applied-Rule") }},
+    "VLAN": {{ data.get("Assigned-VLAN", "No VLAN assigned") }},
+    "Auth-Source-Type": {{ data.get("Auth-Source-Type") }},
+    {% raw %}
+{% if data.get("Auth-Source-Type") == "WiFi" %}
+        "SSID": {{ data.get("SSID") }},
+        "AP-MAC": {{ data.get("AP-MAC") }},
     {% endif %}
-    {% if data.get('Authtype') == "Certificate" %}
-        "OCSPStatus": {{ data.get('OCSP-Response', "Not performed") }},
+    {% if data.get("Authtype") == "Certificate" %}
+        "Certificate-CommonName": {{ data.get("Certificate-Details", {}).get("TLS-Cert-Common-Name") }},
+        "Certificate-Serial": {{ data.get("Certificate-Details", {}).get("TLS-Client-Cert-Serial") }},
     {% endif %}
-    {% if data.level == "WARNING" %}
-        "FailReason": {{ data.get('Reject-Description') }}
+    {% if data.get("Verify-Result") != None %}
+        "Verify-Result": {{ data.get("Verify-Result") }},
+        "Verify-Status": {{ data.get("Verify-Status") }},
+        "Verify-Type": {{ data.get("Verify-Type") }},
+        "Verify-Description": {{ data.get("Verify-Description") }},
     {% endif %}
+    {% if data.get("Reject-Description") != None %}
+        "Reject-Description": {{ data.get("Reject-Description") }},
+    {% endif %}
+{% endraw %}
+    "GKG-Correlation-Id": {{ data.get("GKG-Correlation-Id") }}
 }
-</code></pre>
+```
+{% endcode %}
 
 ## Example 3: General error notifications
 
@@ -144,7 +158,7 @@ The scope of the query provided below is as follows:
 
 The scope of the query provided below is as follows:
 
-* The admin is interested in receiving pro-active notifications about errors on the RADIUSaaS platform for the operations team.
+* the admin is interested in receiving pro-active notifications about errors on the RADIUSaaS platform for the operations team.
 
 ### Target
 
@@ -179,6 +193,8 @@ The scope of the query provided below is as follows:
 | Error       | <mark style="color:green;">True</mark> |
 
 ### Data configuration
+
+#### Teams
 
 {% code lineNumbers="true" %}
 ```
