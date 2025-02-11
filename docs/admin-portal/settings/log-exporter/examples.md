@@ -162,7 +162,7 @@ The scope of the query provided below is as follows:
 
 ### Target
 
-[Teams](teams.md)
+[Teams](teams.md), or [Log Analytics](log-analytics.md) or [General Webhook](generic-webhook.md)
 
 ### Message Filter Configuration
 
@@ -203,5 +203,18 @@ Message: {{ data.get('message') }}
 
 Raw data:
 {{ data }}
+```
+{% endcode %}
+
+#### Log Analytics or General Webhook
+
+{% code lineNumbers="true" %}
+```
+{
+    "Message": {{ data.get("message") }},
+    "Datetime" : {{ data.get("Datetime") }},
+    "Level": {{ data.get("level") }},
+    "Type": {{ data.get("type", "not applicable") }}
+}
 ```
 {% endcode %}
