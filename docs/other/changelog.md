@@ -8,6 +8,25 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 ## Versions
 
+### February 2025 Release
+
+#### Schedule
+
+* Roll-out start: 2025-02-27
+* Roll-out end: 2025-03-06
+
+#### Fixes
+
+* RADIUS Server: Incoming traffic is not processed in some rare scenarios
+* RADIUS Proxy: Version update / increased stability
+
+#### New Features
+
+* Optimized handling of invalid OCSP responses
+* Support for [Authorized Responders](https://docs.scepman.com/advanced-configuration/application-settings/ocsp#appconfig-ocsp-useauthorizedresponder) in OCSP
+* Display CRL download issues
+* WPA2/WPA3 selector for XML generator
+
 ### December 2024 Release
 
 * Custom logo experience for invited users in web UI
