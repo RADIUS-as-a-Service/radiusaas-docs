@@ -22,6 +22,7 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 #### New Features
 
+* Status endpoint that enables the usage of external monitoring systems (certificates, proxies and RadSec servers)
 * Optimized handling of invalid OCSP responses
 * Support for [Authorized Responders](https://docs.scepman.com/advanced-configuration/application-settings/ocsp#appconfig-ocsp-useauthorizedresponder) in OCSP
 * Display CRL download issues
