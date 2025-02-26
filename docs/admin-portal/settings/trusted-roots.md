@@ -16,7 +16,7 @@ Due to the [above](trusted-roots.md#trusted-radsec-connection-certificates), you
 
 ## Add&#x20;
 
-![Showing how to add trusted certificates](../../../.gitbook/assets/2024-05-14\_11h50\_26.gif)
+![Showing how to add trusted certificates](../../../.gitbook/assets/2024-05-14_11h50_26.gif)
 
 {% hint style="warning" %}
 If you have a tiered PKI infrastructure (e.g. a **Microsoft legacy PKI**), please consider [this](trusted-roots.md#tiered-pki-hierarchy).
@@ -52,10 +52,12 @@ This setting determines how RADIUSaaS behaves, when the OCSP responder of your t
 
 {% hint style="danger" %}
 If you **disable** this setting, authentication requests will be **rejected** when your CA's OCSP responder cannot be reached.
+
+Please check [ocsp-soft-fail-consequences.md](../../other/faqs/ocsp-soft-fail-consequences.md "mention") to make sure you understand the implications of this setting.
 {% endhint %}
 
 {% hint style="info" %}
-Note that this setting is only available when **OCSP Autodetect** or **OCSP** is selected for a certificate verification.&#x20;
+Note that this setting is only available when **OCSP Autodetect** or **OCSP** is selected for certificate verification.&#x20;
 {% endhint %}
 
 By default, we **recommend enabling OCSP Soft fail** to increase the availability of the service by allowing authentication requests to be accepted even if the OCSP responder cannot be reached. With this **soft fail** mechanism, and in case OCSP is not reachable, RADIUSaaS will only check if the incoming certificate was signed by one of the [trusted CAs](trusted-roots.md) and processes any optional [Rules](rules/).
