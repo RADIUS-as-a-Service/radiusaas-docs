@@ -12,11 +12,11 @@ Please note: All of those examples describe the behaviour of an authentication w
 
 #### Soft-fail = Enabled
 
-If a problem occurs when querying the OCSP responder such as a timeout, incorrect data, or a signature by the wrong CA, the application treats the certificate revocation status as '**good**'.
+If a problem occurs when querying the OCSP responder such as a timeout or incorrect data the application treats the certificate revocation status as '**good**'.
 
 #### Soft-fail = Disabled
 
-If a problem occurs when querying the OCSP responder such as a timeout, incorrect data, or a signature by the wrong CA, the application treats the certificate revocation status as '**revoked**'.&#x20;
+If a problem occurs when querying the OCSP responder such as a timeout or incorrect data the application treats the certificate revocation status as '**revoked**'.&#x20;
 
 If you use **OCSP-Autodetect** and the client certificate does not include an OCSP responder URL, the application treats the certificate revocation status as '**revoked**'.&#x20;
 
