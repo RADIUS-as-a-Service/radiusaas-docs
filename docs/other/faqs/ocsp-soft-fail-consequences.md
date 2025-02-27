@@ -6,17 +6,17 @@ description: >-
 
 # OCSP Soft-fail Consequences
 
-Before we dive into the pros and cons let's start by quickly recapping what the setting means.:
+Before we dive into the pros and cons let's start by quickly recapping what the setting means:
 
 Please note: All of those examples describe the behaviour of an authentication where the supplicant has a valid certificate (not expired, issued by a trusted CA).
 
 #### Soft-fail = Enabled
 
-If a problem occurs when querying the OCSP responder such as a timeout or incorrect data the application treats the certificate revocation status as '**good**'.
+If a problem occurs when querying the OCSP responder such as a timeout or incorrect data, the application treats the certificate revocation status as '**good**'.
 
 #### Soft-fail = Disabled
 
-If a problem occurs when querying the OCSP responder such as a timeout or incorrect data the application treats the certificate revocation status as '**revoked**'.&#x20;
+If a problem occurs when querying the OCSP responder such as a timeout or incorrect data, the application treats the certificate revocation status as '**revoked**'.&#x20;
 
 If you use **OCSP-Autodetect** and the client certificate does not include an OCSP responder URL, the application treats the certificate revocation status as '**revoked**'.&#x20;
 
