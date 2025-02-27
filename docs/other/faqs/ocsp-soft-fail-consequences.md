@@ -30,7 +30,7 @@ If you use **OCSP-Autodetect** and the client certificate does not include an OC
    * Users are less likely to experience sudden authentication failures due to transient network issues or temporary OCSP responder outages.
    * Improves user experience and reduces support calls related to “can’t connect” issues caused solely by OCSP connectivity or service problems.
 2. **Better Tolerance of OCSP Service Outages**
-   * If the OCSP hosting provider experiences downtime or certificate-related issues (e.g., the OCSP service certificate expired unexpectedly), authentications will still succeed.
+   * If the OCSP hosting provider experiences downtime or certificate-related issues, authentications will still succeed.
 3. **Minimal Impact on Business Continuity**
    * Especially important in environments where downtime has a high cost (e.g., critical infrastructure, emergency services, or 24/7 businesses).
 
