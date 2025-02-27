@@ -32,12 +32,12 @@ This is the registered port for RadSec: 2083
 
 ### Failover & Redundancy
 
-In cases where customers require higher levels of redundancy, a second RadSec service is configured for your instance providing an additional IP address. Please note that there is an additional cost for this service.
+In cases where customers require higher levels of redundancy, multiple RadSec endpoints can be configured for your instance providing an additional IP addresses. Please note that there is an additional cost for this service.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Showing two public IP addresses, one for each of the RadSec services.</p></figcaption></figure>
 
 {% hint style="info" %}
-It is important to note that RADIUSaaS **does NOT provide failover** between the two RadSec endpoints and this failover is typically implemented on your network equipment as show in below example using Meraki.&#x20;
+It is important to note that RADIUSaaS **does NOT provide failover** between RadSec endpoints. Instead, this failover is typically implemented on your network equipment as shown in below example using Meraki.&#x20;
 
 It is recommended to configure your failover scenario using IP addresses rather than DNS for better visibility and less reliance on an additional service (DNS).&#x20;
 {% endhint %}
@@ -88,7 +88,7 @@ This setting is automatically enabled when the maximum TLS version is set to 1.3
 
 This section is available when you have configured at least on [RADIUS Proxy](settings-proxy.md). For each proxy, a separate public IP address is available. The public IP addresses in this section support the RADIUS protocol only and thus listen on ports 1812/1813.
 
-<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Showing RADIUS proxy IP and ports</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 ### **Server IP Addresses and Location**
 
@@ -132,7 +132,7 @@ To create your Customer-CA, follow these simple steps:&#x20;
 4. Click on **Save**
 5. After the creation, you will see a new certificate available under Server Certificates
 
-<figure><img src="../../../.gitbook/assets/image (391).png" alt=""><figcaption><p>Showing how to add a new server certificate</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 ### Bring your own certificate
 
@@ -181,15 +181,18 @@ As certificates expire from time to time or your preference on which certificate
 
 ### Download
 
-To download your **Server Certificate,** click **Download** in the corresponding row.
+To download your **Server Certificate,** you have two options:&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Showing the download button</p></figcaption></figure>
+1. Click **Download CA Certificate** on the top. This will directly download the **trusted root CA** of the currently **active** server certificate. &#x20;
+2. &#x20;Click the **download** icon in the corresponding row.
 
-It will open a dialog and show the complete certificate path. The **root certificate** will always be marked in green.
+<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+
+**Option 2** will open a dialog showing the complete certificate path. The **root certificate** will always be marked in green.
 
 <figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Showing the root certificate in green</p></figcaption></figure>
 
-The downloaded root certificate is encoded in base64 (PEM). In case your device (e.g. WiFi controller) needs a binary coding (DER), you can convert it using [OpenSSL](https://openssl.org/):
+For both options, the downloaded root certificate is encoded in base64 (PEM). In case your device (e.g. WiFi controller) needs a binary coding (DER), you can convert it using [OpenSSL](https://openssl.org/):
 
 ```sh
 openssl x509 -inform pem -in <DOWNLOADED_FILE> -outform der -out <CONVERTED_FILE>
@@ -199,13 +202,17 @@ openssl x509 -inform pem -in <DOWNLOADED_FILE> -outform der -out <CONVERTED_FILE
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;
 
-### Certificate expiration&#x20;
+### Certificate Expiration
 
-Certificates will expire from time to time. Five months before your certificate is going to be expired, your dashboard will give you a hint that your certificate is about to expire.
+{% hint style="danger" %}
+Do not let the RADIUS Server Certificate expire. It will break the authentication.
+{% endhint %}
 
-![](<../../../.gitbook/assets/image (111).png>)
+Certificates expire from time to time. Five months before your certificate is going to expire, your dashboard will give you a hint by displaying a warning sign next to it.
 
-If you're seeing this triangle, follow this guide how you can change your server certificate:&#x20;
+![Screenshot showing certificate expiration](<../../../.gitbook/assets/image (111).png>)
+
+If the triangle is diplayed next to the active RADIUS Server Certificate, follow this guide to update it:&#x20;
 
 {% content-ref url="../../configuration/renew-certificate.md" %}
 [renew-certificate.md](../../configuration/renew-certificate.md)

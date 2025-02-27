@@ -40,7 +40,7 @@ Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin P
 
 ### Viewers
 
-Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin Portal and **full read permissions** on the service. These permissions include:&#x20;
+Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin Portal with **full read permissions** on the service. These permissions include:&#x20;
 
 * View [dashboards and Logs](../insights/)
 * View [Users](../users.md)
@@ -51,7 +51,7 @@ Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin P
 
 ### Users
 
-Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin Portal but can **only access the** [**Users portal**](../../byod-and-guest-access/my-invited-users.md), where they are able to create [Users](../users.md) for BYOD or guest access.
+Microsoft Entra ID (Azure AD) UPNs entered here **cannot** access the RADIUSaaS Admin Portal, however, they can access the [**My Invited Users**](../my-invited-users.md) portal, where they are able to create [Users](../users.md) for BYOD or guest access.
 
 ### Invalidate user tokens
 

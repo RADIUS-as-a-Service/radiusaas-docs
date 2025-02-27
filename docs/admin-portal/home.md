@@ -1,10 +1,10 @@
----
-description: >-
-  The service state of your RADIUSaaS instance is available under
-  https://YOURNAME.radius-as-a-service.com
----
-
 # Home
+
+## Login Screen
+
+You are presented with the login screen when you open your RADIUSaaS Admin Portal for the first time or when your access token has expired. The login screen provides an easily accessible option to download the CA certificate that has signed your [RADIUS Server Certificate](settings/settings-server.md#server-certificates). This feature is particularly useful for bring-your-own-device (BYOD) setups and administrators who need to create network profiles on their devices.
+
+<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 ## Service State
 

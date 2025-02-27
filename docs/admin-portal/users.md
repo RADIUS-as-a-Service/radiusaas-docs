@@ -15,7 +15,7 @@ RADIUSaaS **does not provide** any **integration** with Identity Providers (IDPs
 RADIUSaaS offers username/password-based authentication as an **alternative** to certificate-based authentication whenever the usage of certificates is technically hard to reach or not feasible. Such scenarios may include:
 
 * Bring your own Device (BYOD)
-* [Guest Access ](../byod-and-guest-access/my-invited-users.md)
+* [Guest Access ](broken-reference)
 * Devices lacking EAP-TLS support for 802.1X (e.g. printers, TVs, ...)
 
 ## Protocols
@@ -28,40 +28,25 @@ Devices that use username and password for network authentication have to speak 
 
 ## Add
 
-To **Add** a new User, click **Add** and provide **User Name** and **Password** and choose your **Validity**. After entering all details, click **Create**.
+To **Add** a new User, click **Add** and provide **Username** and **Password** and choose your **Validity**. After entering all details, click **Create**.
 
-<figure><img src="../../.gitbook/assets/2024-05-13_12h41_13.gif" alt=""><figcaption><p>Showing adding a new user</p></figcaption></figure>
+## Bulk User Import
 
-## CSV Import
-
-To import your users from a CSV file
-
-* Click on **Import(CSV)**
-
-<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption><p>Showing user import button</p></figcaption></figure>
-
-* A pop-up appears, from where you're able to upload your CSV file.&#x20;
-* Once uploaded, the pop-up displays an interactive table mirroring the content of the CSV file
-* In this table, you are able to manually override values at your discretion
-* Click **Create** to import the User accounts.
+To import your users from a supported file format (.xlsx, .xls or .csv file), click **Import** and follow the steps as shows below.
 
 {% hint style="info" %}
-The required columns are **Username, Password** and **Owner**
+The required columns are **Username, Password** and **Owner**.
 {% endhint %}
 
+<figure><img src="../.gitbook/assets/2025-02-21_16h11_28.gif" alt=""><figcaption></figcaption></figure>
+
 {% hint style="warning" %}
-RADIUSaaS does not consider the **Username** a unique property. This means two or more **identical User** accounts may exist. Hence, if an error occurs while uploading the CSV file and users have already been created during the partial upload, please delete those users before uploading the CSV again to prevent duplicates.
-
-
+RADIUSaaS does not consider the **Username** a unique property. This means two or more identical User accounts may exist. To ensure you have unique users, please deduplicate the list before importing.&#x20;
 {% endhint %}
 
 ## Delete
 
-<figure><img src="../../.gitbook/assets/2024-05-13_12h58_45.gif" alt=""><figcaption><p>Showing importing users from CSV file</p></figcaption></figure>
-
 To **Delete** users, select all users which should be deleted in the list, click **Delete and** confirm your choice.
-
-<figure><img src="../../.gitbook/assets/2024-05-13_13h44_20.gif" alt=""><figcaption><p>Showing deletion of user</p></figcaption></figure>
 
 ## Update
 

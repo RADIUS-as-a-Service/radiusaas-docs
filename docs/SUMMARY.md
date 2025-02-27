@@ -49,10 +49,7 @@
     * [Log Analytics](admin-portal/settings/log-exporter/log-analytics.md)
     * [Generic Webhook](admin-portal/settings/log-exporter/generic-webhook.md)
     * [Examples](admin-portal/settings/log-exporter/examples.md)
-
-## BYOD & GUEST ACCESS
-
-* [My Invited Users](byod-and-guest-access/my-invited-users.md)
+* [My Invited Users](admin-portal/my-invited-users.md)
 
 ## Profile Deployment
 

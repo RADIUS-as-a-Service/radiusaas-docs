@@ -11,7 +11,7 @@ Proxies are necessary in case your authenticators (e.g. APs, switches, ...) only
 ## Architecture
 
 {% hint style="warning" %}
-Since there are at least two RADIUS-speaking public IP addresses included in your subscription, we strongly recommend to configure those two IP addresses so they can be used as primary and secondary RADIUS server on your network gear and appliances. Thereby, the second public IP address should be located in a different geo-region than the primary address.
+Since there are at least two RADIUS-speaking public IP addresses included in your subscription, we strongly recommend configuring those two IP addresses so they can be used as primary and secondary RADIUS server on your network gear and appliances. Thereby, the second public IP address should be located in a different geo-region than the primary address.
 {% endhint %}
 
 ### Performance
@@ -47,15 +47,25 @@ You can deploy the proxy servers in the following regions:
 | North America | <p>Dallas<br>New York<br>Seattle<br>Toronto</p>   |
 | South America | Santiago                                          |
 
-### Load balancing
+### Load Balancing
 
-If you have a setup with more than 1,000 users, we highly recommend to ensure, that your network equipment will send equal amounts of authentications to each proxy.
+If you have a setup with more than 1,000 users, we highly recommend ensuring, that your network equipment will send equal amounts of authentications to each proxy.
 
 For network equipment, where you can define the priority of the RADIUS servers, you can ensure load-balancing by defining different priority orders for your different network equipment instances.
 
 **Example:** You have 5 WiFi controllers and 3 RADIUS Proxies. You may then configure the following priority orders in your WiFi controllers:
 
-<table><thead><tr><th width="196.5">Wifi Controller #</th><th>RADIUS Priority Order</th></tr></thead><tbody><tr><td>1 and 4</td><td>1, 2, 3</td></tr><tr><td>2 and 5</td><td>2, 3, 1</td></tr><tr><td>3</td><td>3, 1, 2</td></tr></tbody></table>
+<table><thead><tr><th width="196.5">WiFi Controller #</th><th>RADIUS Priority Order</th></tr></thead><tbody><tr><td>1 and 4</td><td>1, 2, 3</td></tr><tr><td>2 and 5</td><td>2, 3, 1</td></tr><tr><td>3</td><td>3, 1, 2</td></tr></tbody></table>
+
+### Failover
+
+When [multiple RadSec endpoints](settings-server.md#failover-and-redundancy) are configured, RADIUSaaS provides an automatic failover mechanism for your RADIUS proxies.&#x20;
+
+In the unlikely event that one or more RadSec endpoints fail, the available proxies will detect the failed state and redirect requests to the (geographically) closest active RadSec endpoint.&#x20;
+
+{% hint style="info" %}
+Please note that this failover does not apply if the RadSec protocol is being used by the Authenticators rather than RADIUS. In that case, failover is provided by the Authenticator as described [here](https://docs.radiusaas.com/admin-portal/settings/settings-server#failover-and-redundancy). &#x20;
+{% endhint %}
 
 ### Properties
 
@@ -76,4 +86,4 @@ After the installation has finished, it can take up to 15 minutes until your pro
 
 To **Delete** a proxy, simply click **Delete** of corresponding table row and confirm your choice.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Showing deletion of a proxy server</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (397).png" alt="" width="417"><figcaption><p>Showing deletion of a proxy server</p></figcaption></figure>
