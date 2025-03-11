@@ -15,7 +15,7 @@ RADIUSaaS **does not provide** any **integration** with Identity Providers (IDPs
 RADIUSaaS offers username/password-based authentication as an **alternative** to certificate-based authentication whenever the usage of certificates is technically hard to reach or not feasible. Such scenarios may include:
 
 * Bring your own Device (BYOD)
-* [Guest Access ](broken-reference)
+* [Guest Access ](my-invited-users.md)
 * Devices lacking EAP-TLS support for 802.1X (e.g. printers, TVs, ...)
 
 ## Protocols
