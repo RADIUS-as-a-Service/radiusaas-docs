@@ -1,5 +1,7 @@
 # Meraki
 
+
+
 {% hint style="info" %}
 To use the RadSec feature on your Meraki APs, firmware version **MR 30.X** or later is required.
 {% endhint %}
@@ -37,22 +39,27 @@ Below settings are the necessary settings to establish a functional RadSec conne
 
 
     <figure><img src="../../../../.gitbook/assets/Bild-3-Edited.png" alt=""><figcaption></figcaption></figure>
-7. Click **Save**.
-8.  Configure **EAP parameters and timeouts** according to [this](../../../other/faqs/general.md#timers-and-timeouts) reference guide by going to **Wireless** > **Radius** > **Advanced RADIUS settings.** Once configured, it should look similar to the screenshot below.&#x20;
+7.  To test that the configuration works, you can add a user in your [Portal ](../../../admin-portal/users.md#add-a-new-user)and use the Meraki test function.
+
+
+
+    <figure><img src="../../../.gitbook/assets/image.png" alt="" width="320"><figcaption></figcaption></figure>
+8. Click **Save**.
+9.  Configure **EAP parameters and timeouts** according to [this](../../../other/faqs/general.md#timers-and-timeouts) reference guide by going to **Wireless** > **Radius** > **Advanced RADIUS settings.** Once configured, it should look similar to the screenshot below.&#x20;
 
     <figure><img src="../../../../.gitbook/assets/image (388).png" alt=""><figcaption><p>Showing <strong>EAP parameters and timeouts</strong></p></figcaption></figure>
-9.  To upload and generate the required certificates, navigate to **Organization > Certificates**. In the top table, click **Upload certificate** and provide the root certificate of the CA that has signed your [**RADIUS Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates), which you should have already downloaded in this [step](meraki.md#prepare-certificates). Your Meraki APs now trust your RADIUS server.\
+10. To upload and generate the required certificates, navigate to **Organization > Certificates**. In the top table, click **Upload certificate** and provide the root certificate of the CA that has signed your [**RADIUS Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates), which you should have already downloaded in this [step](meraki.md#prepare-certificates). Your Meraki APs now trust your RADIUS server.\
 
 
     <figure><img src="../../../../.gitbook/assets/Bild-4-Edited.png" alt=""><figcaption></figcaption></figure>
-10. Under **RadSec AP Certificates**, first create an **Organization CA** by clicking **Generate CA**. This CA is unique to your Meraki Organization.\
+11. Under **RadSec AP Certificates**, first create an **Organization CA** by clicking **Generate CA**. This CA is unique to your Meraki Organization.\
     The Meraki platform will now automatically generate RadSec client certificates for all your APs signed by this CA. The lifetime of the certificate is very long (> 50 years), i.e. you do not have to worry about renewing them.\
     **Note:** you may need to convert the certificate as Meraki accepts PEM format. You can use [OpenSSL](https://docs.openssl.org/3.0/man1/openssl-x509/) to convert the format.\
 
 
     <figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
-11. Download the root CA certificate of your **Organization CA** of your Meraki system by clicking **Download CA**. Now, upload the downloaded CA certificate to your [Trusted Certificates in your RADIUSaaS web console](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.
-12. Finally, disable the [revocation check for the RadSec client certificates](../../../admin-portal/settings/settings-server.md#verification-check-for-radsec-certificates) on your RADIUSaaS instance (this does not adversely affect security as the Meraki Organization CA does not allow to revoke RadSec client certificates). Therefore, navigating to your RADIUSaaS instance and then **Settings > Server Settings** and disable the checkbox **Verification check for RadSec certificates**.
+12. Download the root CA certificate of your **Organization CA** of your Meraki system by clicking **Download CA**. Now, upload the downloaded CA certificate to your [Trusted Certificates in your RADIUSaaS web console](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.
+13. Finally, disable the [revocation check for the RadSec client certificates](../../../admin-portal/settings/settings-server.md#verification-check-for-radsec-certificates) on your RADIUSaaS instance (this does not adversely affect security as the Meraki Organization CA does not allow to revoke RadSec client certificates). Therefore, navigating to your RADIUSaaS instance and then **Settings > Server Settings** and disable the checkbox **Verification check for RadSec certificates**.
 
 ### References
 

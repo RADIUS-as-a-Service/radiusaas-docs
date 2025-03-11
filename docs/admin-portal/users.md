@@ -30,6 +30,10 @@ Devices that use username and password for network authentication have to speak 
 
 To **Add** a new User, click **Add** and provide **Username** and **Password** and choose your **Validity**. After entering all details, click **Create**.
 
+{% hint style="info" %}
+A username can be just a simple name such as "jack" or as complex as your UPN, however, be sure not to use your actual Entra ID UPN **and** the password associated with it for RADIUS authentication. While you may use the UPN or email address, please choose a different password.&#x20;
+{% endhint %}
+
 ## Bulk User Import
 
 To import your users from a supported file format (.xlsx, .xls or .csv file), click **Import** and follow the steps as shows below.
