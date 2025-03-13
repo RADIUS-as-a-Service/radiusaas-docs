@@ -10,7 +10,7 @@ description: >-
 
 ### Overview
 
-RADIUSaaS operates a RadSec service to provide secure cloud-based authentication for its users. In addition, for those customers who unable to utilise RadSec in their network environment due to legacy hardware and software, RADIUSaaS also provides up to two RADIUS proxies.&#x20;
+RADIUSaaS operates a RadSec service to provide secure cloud-based authentication for its users. In addition, for those customers who are unable to utilise RadSec in their network environment, e.g. due to hardware and software limitations, RADIUSaaS provides RADIUS Proxies, that handle the protocol conversion from RADIUS to RadSec.&#x20;
 
 Both RadSec and RADIUS service offer public IP address that enable your network appliances and services to communicate with our service from anywhere via the internet. These services operate on their unique registered ports. &#x20;
 
@@ -96,11 +96,11 @@ This section is available when you have configured at least on [RADIUS Proxy](se
 These IP addresses only listen on [RADIUS](../../details.md#what-is-radius) over UDP ports 1812/1813.
 {% endhint %}
 
-Geo-location of the RADIUS proxy/proxies as well as the respective public IP address(es).
+Geo-location of the RADIUS Proxy/Proxies as well as the respective public IP address(es).
 
 ### **Shared Secrets**
 
-The shared secret for the respective RADIUS proxy. By default, all RADIUS proxies are initialized with the same shared secret.
+The shared secret for the respective RADIUS Proxy. By default, all RADIUS Proxies are initialized with the same shared secret.
 
 <figure><img src="../../../.gitbook/assets/2024-05-24_18h45_54.gif" alt=""><figcaption><p>Showing changing of shared secrets per proxy</p></figcaption></figure>
 

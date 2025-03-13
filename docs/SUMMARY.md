@@ -80,7 +80,8 @@
   * [Blast-RADIUS Vulnerability](other/faqs/blast-radius-vulnerability.md)
   * [OCSP Soft-fail Consequences](other/faqs/ocsp-soft-fail-consequences.md)
   * [Security & Privacy](other/faqs/security-and-privacy.md)
-* [REST API](other/rest-api.md)
+* [REST API](other/rest-api/README.md)
+  * [External Monitoring](other/rest-api/external-monitoring.md)
 * [Changelog](other/changelog.md)
 
 ***

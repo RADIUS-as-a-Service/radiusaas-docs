@@ -66,6 +66,6 @@ A direct link the RADIUSaaS REST API Swagger documentation.
 
 <figure><img src="../../.gitbook/assets/image (424).png" alt=""><figcaption></figcaption></figure>
 
-{% content-ref url="../other/rest-api.md" %}
-[rest-api.md](../other/rest-api.md)
+{% content-ref url="../other/rest-api/" %}
+[rest-api](../other/rest-api/)
 {% endcontent-ref %}

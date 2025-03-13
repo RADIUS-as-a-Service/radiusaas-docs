@@ -14,7 +14,7 @@ Before executing any API call that leads to a configuration change, ensure you f
 
 ## Authentication
 
-To authenticate a call to the REST API, populate an HTTP `Authorization` header with each request. This header must contain a valid [access token](../admin-portal/settings/permissions.md#access-tokens):
+To authenticate a call to the REST API, populate an HTTP `Authorization` header with each request. This header must contain a valid [access token](../../admin-portal/settings/permissions.md#access-tokens):
 
 ```
 Authorization: Bearer
@@ -35,11 +35,11 @@ The API documentation contains a complete Swagger-based API reference for each A
 It is not possible to trigger API calls directly through the API Reference.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (425).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (425).png" alt=""><figcaption></figcaption></figure>
 
 ## Scenarios
 
-### Manage username/password accounts for BYOD or guest access
+### Manage Username/Password Accounts for BYOD or Guest Access
 
 The REST API can be used to automate the management of username/password accounts for BYOD or guest access scenarios.&#x20;
 
@@ -47,7 +47,15 @@ This may include the automatic provisioning of (WiFi) credentials during on-boar
 
 An example on how to use the REST API to provision a username/password account can be found in your API Reference under the **User** endpoints.
 
-## Curl examples
+### Implement External Monitoring
+
+To monitor the service availability and uptime of your RADIUSaaS instance with an external system, or to monitor expiry of your RADIUS Server Certificate, please refer to the following guide:
+
+{% content-ref url="external-monitoring.md" %}
+[external-monitoring.md](external-monitoring.md)
+{% endcontent-ref %}
+
+## cURL Examples
 
 In general, there are two different content types for the REST API, either form data or JSON. You can find out which media type is required in the API documentation.&#x20;
 

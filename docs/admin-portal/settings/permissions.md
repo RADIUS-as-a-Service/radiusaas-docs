@@ -36,7 +36,7 @@ Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin P
 * View, add, delete [Proxies](settings-proxy.md)
 * View and change others settings including permissions
 * Manage [RADIUSaaS REST API Access Token](permissions.md#access-tokens)
-* Access to all [API endpoints](../../other/rest-api.md) and CRUD operations
+* Access to all [API endpoints](../../other/rest-api/) and CRUD operations
 
 ### Viewers
 
@@ -47,7 +47,7 @@ Microsoft Entra ID (Azure AD) UPNs entered here can access the RADIUSaaS Admin P
 * View, add, change, delete [RADIUS server certificates](settings-server.md#server-certificates) and [trusted certificates](trusted-roots.md) for client authentication and RadSec
 * View [Proxies](settings-proxy.md)
 * View others settings (permission cannot be viewed)
-* Access to all [API endpoints](../../other/rest-api.md) - **limited to read operations**
+* Access to all [API endpoints](../../other/rest-api/) - **limited to read operations**
 
 ### Users
 
@@ -75,7 +75,7 @@ Add up to 5 technical contacts to receive e-mail notifications related to your i
 
 ## Access Tokens
 
-Access tokens are required to authenticate calls to the [RADIUSaaS REST API](../../other/rest-api.md).
+Access tokens are required to authenticate calls to the [RADIUSaaS REST API](../../other/rest-api/).
 
 <figure><img src="../../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
 
