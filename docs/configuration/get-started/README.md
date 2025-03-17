@@ -24,6 +24,7 @@ Below diagram details the generic setup procedure as explained in our guides bel
 Besides our [Generic Guide](generic-guide.md), we have prepared [Scenario-based Guides](scenario-based-guides/) describing how RADIUSaaS can be configured for certificate-based WiFi authentication together with popular Cloud PKI solutions:
 
 * RADIUSaaS with Microsoft Cloud PKI
+* RADIUSaaS with SCEPman
 
 <img src="../../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 
