@@ -184,4 +184,4 @@ You may encounter problems when purchasing through Azure Marketplace. Here is a 
 
 ### Does RADIUSaaS (RADIUSaaS & SCEPman Bundle) count towards my Microsoft Azure Consumption Commitment (MACC)?
 
-Yes.
+Currently (March 2025), this is the case. Since Microsoft may change their policy on what counts towards MACC in the future, please always [confirm](https://learn.microsoft.com/en-us/marketplace/azure-consumption-commitment-benefit#find-and-purchase-azure-benefit-eligible-offers-in-azure-marketplace) eligibility first.
