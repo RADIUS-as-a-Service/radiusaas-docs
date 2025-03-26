@@ -65,4 +65,4 @@ For further details on Pairwise Master Key caching, please refer to its specific
 
 ## Common configuration issues
 
-See [Troubleshooting](../../../other/trubleshooting.md#intune-configuration-issues).
+See [Troubleshooting](../../../other/troubleshooting.md#intune-configuration-issues).

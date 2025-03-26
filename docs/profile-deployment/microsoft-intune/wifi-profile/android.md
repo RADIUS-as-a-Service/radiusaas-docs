@@ -36,4 +36,4 @@ Some Android kiosk devices require a value for **Identity privacy (outer identit
 
 ## Common configuration issues
 
-See [Troubleshooting](../../../other/trubleshooting.md#intune-configuration-issues).
+See [Troubleshooting](../../../other/troubleshooting.md#intune-configuration-issues).

@@ -72,7 +72,7 @@
 
 ## Other
 
-* [Troubleshooting](other/trubleshooting.md)
+* [Troubleshooting](other/troubleshooting.md)
 * [FAQs](other/faqs/README.md)
   * [General](other/faqs/general.md)
   * [Log & Common Errors](other/faqs/log-and-common-errors.md)

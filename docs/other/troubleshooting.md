@@ -28,7 +28,7 @@ Check that you've done the following:&#x20;
 
 * Told your RADIUS Server which certificates are allowed to connect as described [here](../admin-portal/settings/trusted-roots.md#add)
 * Imported the active RADIUS Server certificate as trusted root on your client as described [here](../profile-deployment/microsoft-intune/trusted-root.md#to-add-a-trusted-root-profile-for-your-clients)
-* Check your [Logs](../admin-portal/insights/log.md#logs). There is a detailed description of the error. Maybe it's [this](trubleshooting.md#fatal-decrypt-error) issue.
+* Check your [Logs](../admin-portal/insights/log.md#logs). There is a detailed description of the error. Maybe it's [this](troubleshooting.md#fatal-decrypt-error) issue.
 
 #### Continue connecting?
 
