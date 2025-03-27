@@ -56,7 +56,7 @@ After that the app is set up, we now need to add users to it and configure the l
 
 Your users should now be able to access the newly created link tile via [My Apps](https://myapps.microsoft.com/).
 
-## RADIUS return Attributes
+## RADIUS Return Attributes
 
 #### Which VLAN-related attributes does RADIUSaaS return by default?
 
@@ -102,7 +102,7 @@ along with the other commonly used vendor-specific VLAN attributes:
 
 `"HP-Egress-VLANID"`
 
-## Secondary instance and failover
+## Secondary Instance and Failover
 
 #### How does a secondary instance behave in terms of failover?
 
