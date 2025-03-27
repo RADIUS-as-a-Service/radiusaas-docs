@@ -56,13 +56,23 @@ After that the app is set up, we now need to add users to it and configure the l
 
 Your users should now be able to access the newly created link tile via [My Apps](https://myapps.microsoft.com/).
 
-## RADIUS return aAttributes
+## RADIUS return Attributes
 
 #### Which VLAN-related attributes does RADIUSaaS return by default?
 
 {% hint style="info" %}
 In case you require other VLAN attributes than returned by default, please [contact our support](https://www.radius-as-a-service.com/help/).
 {% endhint %}
+
+If VLAN tagging is enabled by configuring and enabling a relevant [Rule](../../admin-portal/settings/rules/#vlan-assignment), RADIUSaaS returns the following generic VLAN attributes
+
+`"Tunnel-Type": "VLAN"`&#x20;
+
+`"Tunnel-Medium-Type": "802"`
+
+`"Tunnel-Private-Group-ID"`
+
+along with the other commonly used vendor-specific VLAN attributes:
 
 `"WiMAX-VLAN-ID"`
 
@@ -91,8 +101,6 @@ In case you require other VLAN attributes than returned by default, please [cont
 `"Egress-VLANID"`
 
 `"HP-Egress-VLANID"`
-
-`"Tunnel-Private-Group-Id"`
 
 ## Secondary instance and failover
 
