@@ -256,18 +256,26 @@ No
   * Stress tests
   * Experience-based testing
 
-### 3. Is there a patching process in place?
+### 3. Do you regularly perform penetration tests?
 
-Yes. Patches, hot-fixes, bugfixes and feature updates are introduced using our CI/CD process that leverages different testing pipelines to ensure that only code that satisfies our QA hurdles gets released. Newly released code is automatically made available to all our customers. Using Infrastructure as Code (Terraform) enables us to deliver consistent, reproducible and high-quality updates to our customers.
+No.
+
+As part of our Secure Development Practices, we employ tools (e.g. static code analysis) that scan the code base for CVEs and other common exploits (including dependencies such as 3rd party libraries) that could impact the security of the endpoints RADIUSaaS exposes. Before any release, any relevant findings are assessed and remediated, to ensure RADIUSaaS remains free from any known vulnerabilities. We neither perform penetration tests ourselves, nor do we use 3rd party "Penetration Test-as-a-Service" tools. For the former, we see an inherent conflict of interest. For the latter, since typical penetration test services often simply check the exposed endpoints against CVEs and other known exploits, we do not see any added value to the checks we already perform using static code analysis. If you wish to perform your own penetration tests, please [reach out to us](https://support.radiusaas.com/support/tickets/new?ticket_form=technical_support_request_%28radiusaas%29) and tell us about your requirements.
+
+### 4. Is there a patching process in place?
+
+Yes.&#x20;
+
+Patches, hot-fixes, bugfixes and feature updates are introduced using our CI/CD process that leverages different testing pipelines to ensure that only code that satisfies our QA hurdles gets released. Newly released code is automatically made available to all our customers. Using Infrastructure as Code (Terraform) enables us to deliver consistent, reproducible and high-quality updates to our customers.
 
 The Kubernetes-based architecture of our service ensures that code updates are seamless for our customers and do not lead to any service outages.&#x20;
 
-### 4. What are the SLAs for patches?
+### 5. What are the SLAs for patches?
 
 * Patches for CVEs / security vulnerabilities: Once the vulnerability becomes public knowledge or as soon as we identify a vulnerability within our own code, a hot-fix will be provided no longer than 24 hours after we have become aware of the vulnerability.&#x20;
 * Other patches: No SLA.
 
-### 5. Does RADIUSaaS perform backups?
+### 6. Does RADIUSaaS perform backups?
 
 #### Secrets and configuration data
 
@@ -281,6 +289,9 @@ Stateless. No back-up required.
 
 Currently not backed-up.
 
-### 6. Are there backup restore tests?
+### 7. Are there backup restore tests?
 
-Yes. The restoration from back-ups is tested with every update/release of the service. There are approximately 4 - 8 releases per year.
+Yes.&#x20;
+
+The restoration from back-ups is tested with every update/release of the service. There are approximately 4 - 8 releases per year.
+

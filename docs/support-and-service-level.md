@@ -15,7 +15,7 @@ Our support services cover technical assistance for administrators:
 
 ### Access
 
-You can access our support here: [https://www.radius-as-a-service.com/help/](https://www.radius-as-a-service.com/help/)
+You can access our support in the tab "Help" on our main product web-site ([https://www.radius-as-a-service.com/](https://www.radius-as-a-service.com/)).
 
 Using the support website will generate a ticket in our ticket system, which will be the basis for the support process. Communication will happen in written form via e-mail or web-interface of our ticket-system. Depending on the support case, our support-engineers may decide to offer Microsoft Teams meetings to work on issues together with customers.
 
