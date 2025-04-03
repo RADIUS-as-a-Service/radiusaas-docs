@@ -38,14 +38,7 @@ To ensure smooth operation, consider the following number of proxies based on th
 
 You can deploy the proxy servers in the following regions:
 
-| Continent     | Region                                            |
-| ------------- | ------------------------------------------------- |
-| Africa        | Johannesburg                                      |
-| Asia          | <p>Bangalore<br>Singapore<br>TelAviv<br>Tokio</p> |
-| Australia     | Sydney                                            |
-| Europe        | <p>Frankfurt<br>London<br>Madrid<br>Stockholm</p> |
-| North America | <p>Dallas<br>New York<br>Seattle<br>Toronto</p>   |
-| South America | Santiago                                          |
+{% include "../../.gitbook/includes/radius-proxy-regions.md" %}
 
 ### Load Balancing
 

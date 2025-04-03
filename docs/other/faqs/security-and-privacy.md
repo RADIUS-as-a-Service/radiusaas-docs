@@ -19,13 +19,7 @@ RADIUSaaS' core service can currently be deployed in the following regions:
 
 In case RADIUS proxies are required, they can be deployed in the following countries/regions:
 
-* Australia
-* Canada
-* Europe
-* India
-* Singapore
-* United Kingdom
-* United States of America
+{% include "../../.gitbook/includes/radius-proxy-regions.md" %}
 
 ### 2. Which data is processed by RADIUSaaS?
 
