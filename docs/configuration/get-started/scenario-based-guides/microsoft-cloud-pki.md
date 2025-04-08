@@ -17,7 +17,7 @@ It is assumed that the Microsoft Cloud PKI hosts both the Root and Issuing CA. F
 Before you can issue certificates to managed devices, you need to create a root CA in your tenant to act as the trust anchor. To create a root CA in Intune admin center, please follow [this ](https://learn.microsoft.com/en-gb/mem/intune/protect/microsoft-cloud-pki-configure-ca)Microsoft guide.&#x20;
 
 {% hint style="info" %}
-Please take note of the CRL distribution point as you will need this later in [Step 6](microsoft-cloud-pki.md#step-6.-configuring-your-radiusaas-instance).&#x20;
+Please take note of the CRL distribution point as you will need this later in [Step 2](microsoft-cloud-pki.md#step-1-create-root-ca-in-admin-center-2).&#x20;
 {% endhint %}
 
 ### Create an Issuing CA in Intune admin center <a href="#step-1-create-root-ca-in-admin-center" id="step-1-create-root-ca-in-admin-center"></a>
