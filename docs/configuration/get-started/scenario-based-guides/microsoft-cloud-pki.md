@@ -25,7 +25,7 @@ Please take note of the CRL distribution point as you will need this later in [S
 An issuing CA is required to issue certificates for Intune-managed devices. Cloud PKI automatically provides a SCEP service that acts as a certificate registration authority. It requests certificates from the issuing CA on behalf of Intune-managed devices using a SCEP profile. To create an issuing CA, please follow [this ](https://learn.microsoft.com/en-gb/mem/intune/protect/microsoft-cloud-pki-configure-ca#step-2-create-issuing-ca-in-admin-center)Microsoft guide.&#x20;
 
 {% hint style="info" %}
-Please take note of the CRL distribution point as you will need this later in [Step 6](microsoft-cloud-pki.md#step-6.-configuring-your-radiusaas-instance).
+Please take note of the CRL distribution point as you will need this later in [Step 2](microsoft-cloud-pki.md#step-1-create-root-ca-in-admin-center-2).
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/image (346).png" alt=""><figcaption><p>Root and Issuing CAs</p></figcaption></figure>
