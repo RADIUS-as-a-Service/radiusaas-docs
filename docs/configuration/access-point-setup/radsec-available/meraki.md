@@ -24,6 +24,10 @@ Download the root certificate of the CA that has issued your active **RADIUS Ser
 Below settings are the necessary settings to establish a functional RadSec connection with our service. Configure any other settings at your discretion.
 {% endhint %}
 
+{% hint style="danger" %}
+Ensure to **disable the OCSP revocation check of the RadSec client certificate** as described in step 13 of this guide.
+{% endhint %}
+
 1. Navigate to your **Meraki Dashboard**.
 2. Select **Wireless > Access control**.
 3.  Ensure you have switched to the **new UI version** of the Access control site.\
