@@ -26,7 +26,7 @@ When the MAC database is not maintained by the Switch / AP itself but by an exte
 4. If Access-Accept is received from the RADIUS server, the Switch / AP will allow the client to join the network and receive DHCP configuration.&#x20;
 5. The client can now connect to the Internet or denied access and placed on a restricted VLAN depending on the security policy.&#x20;
 
-<img src="../../../.gitbook/assets/file.excalidraw (6).svg" alt="" class="gitbook-drawing">
+<img src="../../.gitbook/assets/file.excalidraw (3).svg" alt="" class="gitbook-drawing">
 
 ### In practice
 
