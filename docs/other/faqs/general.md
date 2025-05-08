@@ -152,8 +152,8 @@ To identify the public IP of the authenticating site for a particular authentica
 **RADIUS Connection**
 
 * Navigate to **Insights > Logs**.
-* Configure the relevant timerange / search window.
-* Set the **Logtype** filter to the **proxy**.
+* Configure the relevant time range / search window.
+* Set the **Log-type** filter to the **proxy**.
 * Identify the relevant authentication (by correlating the timestamp and username).
 *   The public IP can be extracted from the **message** property of the log entry:\
 
@@ -162,4 +162,20 @@ To identify the public IP of the authenticating site for a particular authentica
 
 ## Does RADIUSaaS support WPA3 Enterprise?
 
-Yes, RADIUSaaS supports WPA3 Enterprise. It also supports WPA3 Enterprise 192-bit mode.
+Yes, RADIUSaaS supports WPA3 Enterprise. It also supports WPA3 Enterprise 192-bit mode with the following limitation:
+
+**Windows 11 24H2** introduced stricter certificate requirements for WPA3-Enterprise 192-bit encryption, leading to authentication failures if the entire certificate chain does not meet specific cryptographic strength standards. This update mandates RSA key lengths of at least 3072-bits or ECDSA with the P-384 curve for all certificates involved in the authentication process. Organizations using certificates with weaker parameters, such as RSA 2048-bit, may encounter issues.&#x20;
+
+While SCEPman supports 4096-bit RSA keys for Windows, this is limited to the Software Key Storage Provider (KSP), as the hardware TPM does not support this key size.&#x20;
+
+If after upgrading to Windows 11 24H2 you experience authentication issues, look for "SEC\_E\_ALGORITHM\_MISMATCH" errors in the Event Viewer (System Logs and CAPI2) as an indicator for incompatibility in the cryptographic algorithms between the client and the server.&#x20;
+
+### What can I do if I want to use WPA3-Enterprise authentication on Windows?
+
+Your current option moving forward is to address the certificate requirements for WPA3-Enterprise 192-bit on your Windows 11 24H2 clients. This includes updating the Leaf Certificate to meet the new minimum requirements.&#x20;
+
+Please note that Intune does not currently include an option in its SCEP profile to specify a key size of 3072-bits which could be stored in the Trusted Platform Module (TPM) of the receiving computer. Due to this limitation, currently the only feasible solution for Windows clients is to use 4096-bit RSA key enrolled in Software Key Storage Provider (KSP).&#x20;
+
+{% hint style="success" %}
+As Intune's WiFi profile only provides WPA2-Enterprise you will need to use an external tool to create a WPA3-Enterprise WiFi profile. For convenience, RADIUSaaS includes this tool [here](https://docs.radiusaas.com/admin-portal/settings/trusted-roots#xml).
+{% endhint %}

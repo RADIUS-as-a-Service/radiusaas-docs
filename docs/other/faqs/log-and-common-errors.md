@@ -43,7 +43,7 @@ Your proxies will create a TCP session with your RadSec server(s). These session
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Since your RadSec server(s) are globally available, anyone on the Internet can try to connect to them, e.g. using a TCP handshake. If no valid (mututal) TLS connection can be established (which only works if the connecting entity presents a trusted RadSec client certificate), this error message is generated and expcted.&#x20;
 
