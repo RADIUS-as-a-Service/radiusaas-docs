@@ -93,7 +93,7 @@ In case you are having difficulties accessing the self-management portal as desc
 ### User Upgrades
 
 {% hint style="info" %}
-User upgrades are only available if all previous amounts / invoices have been paid. In case you cannot pay a previous invoice before performing the upgrade, please [contact us](mailto:sales@scepman.com).
+User upgrades are only available if all previous amounts / invoices have been paid. In case you cannot pay a previous invoice before performing the upgrade, please [contact us](mailto:sales@radiusaas.com).
 {% endhint %}
 
 #### Mid-term Upgrade
@@ -215,10 +215,11 @@ Quotes are valid for 14 days.
 
 To request a quote for RADIUSaaS,&#x20;
 
-1. either visit the [RADIUSaaS Website](https://www.radius-as-a-service.com/) and then navigate to **Pricing**, scroll to **Payment options**, locate **cleverbridge** and click **Get a quote**.
-   * Select the correct user segment, user quantity and fill our your company information.
-   * Click **Next**, review your data and click **Request price quote**.
-2. or [request a quote link](mailto:sales@radiusaas.com) from us and perform the same steps.
+* Get in [contact with us](mailto:sales@radiusaas.com) and request a quote link.
+* Once we have sent the quote link to you,
+  * Click it.
+  * Select the correct user segment, user quantity and fill our your company information.
+  * Click **Next**, review your data and click **Request price quote**.
 
 ### Why is the VAT not removed from my quote?
 
