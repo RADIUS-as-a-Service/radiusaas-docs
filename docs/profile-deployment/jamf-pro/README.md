@@ -16,7 +16,7 @@ To fully configure 802.1X, this typically means you require the following payloa
 
 <figure><img src="../../../.gitbook/assets/image (306).png" alt=""><figcaption></figcaption></figure>
 
-## Profiles
+## Payloads
 
 {% content-ref url="server-trust.md" %}
 [server-trust.md](server-trust.md)
