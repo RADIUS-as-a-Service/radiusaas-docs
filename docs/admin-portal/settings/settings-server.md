@@ -34,7 +34,7 @@ This is the registered port for RadSec: 2083
 
 In cases where customers require higher levels of redundancy, multiple RadSec endpoints can be configured for your instance providing an additional IP addresses. Please note that there is an additional cost for this service.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Showing two public IP addresses, one for each of the RadSec services.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Showing two public IP addresses, one for each of the RadSec services.</p></figcaption></figure>
 
 {% hint style="info" %}
 It is important to note that RADIUSaaS **does NOT provide failover** between RadSec endpoints. Instead, this failover is typically implemented on your network equipment as shown in below example using Meraki.&#x20;
@@ -144,17 +144,18 @@ Please follow these steps to leverage SCEPman Certificate Master to generate a n
 
 1. Navigate to your SCEPman Certificate Master web portal.
 2. Select Request Certificate on the left
-3. Select New Server Certificate on the top
-4. Enter all Fully Qualified Domain Names (FQDNs) that the certificate shall be valid for separated by commas, semicolons, or line breaks. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend adapting the SAN of the default server certificate, e.g. `radsec-<your RADIUSaaS instance name>.radius-as-a-service.com`.
-5. Set the **Download file format** to **PEM**&#x20;
-6. Select **Include Certificate Chain** and download the certificate.&#x20;
-7. **Submit** the request to download the new server certificate.
+3. Select **(Web) Server** on the top
+4. Select **Form**
+5. Enter all Subject Alternative Names (SANs) that the certificate shall be valid for separated by commas, semicolons, or line breaks. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend adapting the SAN of the default server certificate, e.g. `radsec-<your RADIUSaaS instance name>.radius-as-a-service.com`.
+6. Set the **Download file format** to **PEM**&#x20;
+7. Select **Include Certificate Chain** and download the certificate.&#x20;
+8. **Submit** the request to download the new server certificate.
 
 {% hint style="warning" %}
 **Important**: Take temporary note of the password since it cannot be recovered from Certificate Master.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/ServerCertificate.png" alt=""><figcaption><p>Create a new server certificate</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Create a new server certificate</p></figcaption></figure>
 
 ### Upload the new server certificate to **RADIUSaaS**
 
