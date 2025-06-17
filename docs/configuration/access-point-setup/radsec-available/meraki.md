@@ -47,7 +47,7 @@ Ensure to **disable the OCSP revocation check of the RadSec client certificate**
 
 
 
-    <figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="320"><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="320"><figcaption></figcaption></figure>
 8. Click **Save**.
 9.  Configure **EAP parameters and timeouts** according to [this](../../../other/faqs/general.md#timers-and-timeouts) reference guide by going to **Wireless** > **Radius** > **Advanced RADIUS settings.** Once configured, it should look similar to the screenshot below.&#x20;
 
