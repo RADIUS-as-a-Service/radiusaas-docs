@@ -8,6 +8,21 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 ## Versions
 
+### July 2025 Release
+
+#### Schedule
+
+* Roll-out start: 2025-07-14
+* Roll-out end: 2025-07-17
+
+#### Fixes
+
+* Coming soon
+
+#### New Features
+
+* Coming soon
+
 ### February 2025 Release
 
 #### Schedule
