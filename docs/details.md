@@ -20,6 +20,10 @@ RADIUSaaS supports multiple CAs in parallel.
 
 To check if a certificate is considered valid by your Certificate Authority (CA) **at authentication time**, RADIUSaaS leverages the Online Certificate Status Protocol (OCSP) or Certificate Revocation Lists (CRLs).
 
+{% hint style="info" %}
+To reduce the amount of requests sent to an OCSP responder some certificates states will be [temporarily cached](other/faqs/log-and-common-errors.md#certificate-status-was-revoked-previously).
+{% endhint %}
+
 ## Our Service
 
 #### Admin Portal

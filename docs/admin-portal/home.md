@@ -4,7 +4,7 @@
 
 You are presented with the login screen when you open your RADIUSaaS Admin Portal for the first time or when your access token has expired. The login screen provides an easily accessible option to download the CA certificate that has signed your [RADIUS Server Certificate](settings/settings-server.md#server-certificates). This feature is particularly useful for bring-your-own-device (BYOD) setups and administrators who need to create network profiles on their devices.
 
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 ## Service State
 
@@ -40,31 +40,37 @@ On the first layer of the tree, the network types are presented (WiFi, Wired, VP
 
 The RADIUSaaS homepage gives you easy access to frequently used controls and information.
 
-<figure><img src="../../.gitbook/assets/image (419).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 ### Dark Mode
 
 Click on the UI-mode button to toggle between dark and normal mode.
 
-<figure><img src="../../.gitbook/assets/image (421).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+### Notifications
+
+You can find notifications regarding your service in here.
+
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 ### Help
 
 Click on the life saver button to lodge a support request, with important information prepopulated in the support form.
 
-<figure><img src="../../.gitbook/assets/image (422).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 ### Service Documentation
 
 A direct link to the RADIUSaaS documentation.
 
-<figure><img src="../../.gitbook/assets/image (423).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ### API Documentation
 
 A direct link the RADIUSaaS REST API Swagger documentation.
 
-<figure><img src="../../.gitbook/assets/image (424).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 {% content-ref url="../other/rest-api/" %}
 [rest-api](../other/rest-api/)

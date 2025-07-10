@@ -6,7 +6,7 @@ description: >-
 
 # Proxy Settings
 
-Proxies are necessary in case your authenticators (e.g. APs, switches, ...) only support traditional RADIUS / UDP for AAA. The proxies faciliate the protocol conversion from RADIUS to RadSec so that your equipment can properly communicate with RADIUSaaS core server(s), that exclusively support RadSec / TCP for AAA.
+Proxies are necessary in case your authenticators (e.g. APs, switches, ...) only support traditional RADIUS / UDP for AAA. The proxies facilitate the protocol conversion from RADIUS to RadSec so that your equipment can properly communicate with RADIUSaaS core server(s), that exclusively support RadSec / TCP for AAA.
 
 ## Architecture
 
@@ -20,9 +20,7 @@ Each proxy can handle up to **1,500** **concurrent** connections flawlessly.&#x2
 
 This corresponds to a time-based performance of **10,000 authentications per minute per proxy**.
 
-### Scaling
-
-We have never never seen any issues if you choose **Europe** as proxy location, no matter where your clients are located. Nonetheless it can increase your performance to choose the Proxy at one location which is as close as possible to your offices and sites.
+### Scaling&#x20;
 
 To ensure smooth operation, consider the following number of proxies based on the number of users you have licensed (your needs may change if your offices are more globally distributed):
 

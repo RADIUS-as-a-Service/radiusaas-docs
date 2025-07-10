@@ -85,7 +85,7 @@ We therefore recommend to use the [Certificate Subject Name](lan.md#by-certifica
 
 You can also assign VLAN IDs based on properties in the Subject Name of your certificate. For example, if you wanted to assign VLAN 15 in your Rules and you are using Intune to define and deploy your SCEP profile, you will need to configure the **Subject name format** in your SCEP profile such as `CN={{DeviceId}},`**`OU=vlan-15`**
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Showing VLAN ID configuration in SCEP Device Certificate</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption><p>Showing VLAN ID configuration in SCEP Device Certificate</p></figcaption></figure>
 
 Once the profile is deployed, go back to **RADIUSaaS** > **Rules** and specify in which property the VLAN ID is stored and configure the string the VLAN ID is prefixed with. e.g. `vlan-`
 

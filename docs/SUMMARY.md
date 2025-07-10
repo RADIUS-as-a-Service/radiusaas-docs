@@ -82,7 +82,8 @@
   * [Security & Privacy](other/faqs/security-and-privacy.md)
 * [REST API](other/rest-api/README.md)
   * [External Monitoring](other/rest-api/external-monitoring.md)
-* [Changelog](other/changelog.md)
+* [Changelog](other/changelog/README.md)
+  * [Upcoming Change: RADIUS Proxy IP Address Migration](other/changelog/upcoming-change-radius-proxy-ip-address-migration.md)
 
 ***
 

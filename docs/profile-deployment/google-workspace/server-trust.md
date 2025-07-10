@@ -18,4 +18,4 @@ Ensure, you have reviewed [Part 1](server-trust.md#part-1-download-the-radius-se
 
 In your Google **Admin console** (admin.google.com)  navigate to **Menu** > **Devices** > **Network** > **Certificates** > **ADD CERTIFICATE**
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>

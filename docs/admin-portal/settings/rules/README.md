@@ -64,6 +64,15 @@ Assign VLAN IDs ...
 
 #### Additional RADIUS Return Attributes
 
+By default, you can select from the following list of return attributes that you can return as part of a matching rule:
+
+* Filter-Id
+* Fortinet-Group-Name
+* Framed-MTU
+* Tunnel-Password
+* Cisco-AVPair
+* Class
+
 {% hint style="info" %}
 RADIUS return attributes allow network administrators to define specific settings for individual users or groups.
 

@@ -15,16 +15,16 @@ To establish a valid RadSec connection, your Access Points must trust the **RADI
 1.  Download the root certificate of the CA that has issued your active **RADIUS Server Certificate** as described [here](../../../admin-portal/settings/settings-server.md#download).\
     In this example SCEPman is used as Root CA and has issued the RADIUS server certificate. So, we download the root CA certificate from SCEPman portal:\
     \
-    ![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)\
+    ![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)\
     Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:\
 
 
-    <figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 2.  Create a **RadSec Client Certificate** for your access points. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).\
     In this example we generate a certificate in the format "PEM". Please note down the password, as we need this later.\
 
 
-    <figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 3.  Split the generated certificate into the private key (named "priv.key" in this example) and the certificate (named "clientcert.cer"). This can be easily done via a text editor:\
 
 
@@ -34,7 +34,7 @@ To establish a valid RadSec connection, your Access Points must trust the **RADI
     \
 
 
-    <figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## UniFi configuration
 
@@ -46,7 +46,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 2.  Create a new profile or update an existing one:\
 
 
-    <figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 3. Fill in the required information:
    1. **RADIUS Assigned VLAN Support**: optional / if needed
    2. **RADIUS Settings**:
@@ -67,14 +67,14 @@ Below settings are the necessary settings to establish a functional RadSec conne
       9.  **Interim Update Interval**: optional / if needed\
 
 
-          <figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+          <figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 4.  Assign this profile to the desired WiFi profile:\
 
 
-    <figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 5. Give your Access Points some time to apply the new configuration:\
    \
-   ![](<../../../.gitbook/assets/image (9) (1).png>)
+   ![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 ### Reference: UniFi Help Center
 

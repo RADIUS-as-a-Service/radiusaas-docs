@@ -6,7 +6,7 @@ description: >-
 
 # Log & Common Errors
 
-## No EAP session matching state
+No EAP session matching state
 
 {% hint style="info" %}
 Severity: Low / No Impact
@@ -43,9 +43,24 @@ Your proxies will create a TCP session with your RadSec server(s). These session
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Since your RadSec server(s) are globally available, anyone on the Internet can try to connect to them, e.g. using a TCP handshake. If no valid (mututal) TLS connection can be established (which only works if the connecting entity presents a trusted RadSec client certificate), this error message is generated and expcted.&#x20;
 
 Since RADIUSaaS cannot distinguish between someone crawling/port-scanning servers on the internet and a legit authenticator that is simply misconfigured, RADIUSaaS does not suppress these log entries. This means, if your infrastructure is working fine, you may ignore these log entries.
 
+## Certificate status was revoked previously
+
+{% hint style="info" %}
+Severity: Low / No Impact
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+If a certificate is found to be revoked, this status will be cached for 2 minutes. Additional attempts to authenticate this certificate will directly be rejected without performing another OCSP request. This is done to reduce the load on the OCSP responder.
+
+
+
+The `Verify-Description` field will contain the correlation ID of the initial rejected request.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>

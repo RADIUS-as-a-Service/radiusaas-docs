@@ -23,12 +23,12 @@ To configure a WiFi profile in Google Workspaces for your Chromebooks, please fo
 | **Server Certificate Domain Suffix Match** | <p>Add the</p><ul><li><strong>Subject Alternative Name (SAN)</strong></li><li>and <strong>Common Name (CN)</strong></li></ul><p>of your <em>active</em> RADIUS <a href="../../admin-portal/settings/settings-server.md#server-certificates"><strong>Server Certificate.</strong></a> These properties can be found by expanding the active server certificate and copying the relevant values. See screenshot below.</p> |
 | **SCEP profile**                           | Reference your [SCEP certificate profile](https://docs.scepman.com/certificate-deployment/static-certificates/google-workspace/chromeos#add-a-scep-profile).                                                                                                                                                                                                                                                             |
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Showing <strong>Subject Alternative Name (SAN)</strong> and <strong>Common Name (CN)</strong> </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption><p>Showing <strong>Subject Alternative Name (SAN)</strong> and <strong>Common Name (CN)</strong> </p></figcaption></figure>
 
 4. Click **Save**.
 
-<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

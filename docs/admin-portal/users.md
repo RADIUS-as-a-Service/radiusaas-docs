@@ -44,10 +44,6 @@ The required columns are **Username, Password** and **Owner**.
 
 <figure><img src="../.gitbook/assets/2025-02-21_16h11_28.gif" alt=""><figcaption></figcaption></figure>
 
-{% hint style="warning" %}
-RADIUSaaS does not consider the **Username** a unique property. This means two or more identical User accounts may exist. To ensure you have unique users, please deduplicate the list before importing.&#x20;
-{% endhint %}
-
 ## Delete
 
 To **Delete** users, select all users which should be deleted in the list, click **Delete and** confirm your choice.

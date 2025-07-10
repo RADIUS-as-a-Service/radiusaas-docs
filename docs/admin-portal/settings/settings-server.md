@@ -34,7 +34,7 @@ This is the registered port for RadSec: 2083
 
 In cases where customers require higher levels of redundancy, multiple RadSec endpoints can be configured for your instance providing an additional IP addresses. Please note that there is an additional cost for this service.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Showing two public IP addresses, one for each of the RadSec services.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Showing two public IP addresses, one for each of the RadSec services.</p></figcaption></figure>
 
 {% hint style="info" %}
 It is important to note that RADIUSaaS **does NOT provide failover** between RadSec endpoints. Instead, this failover is typically implemented on your network equipment as shown in below example using Meraki.&#x20;
@@ -155,7 +155,7 @@ Please follow these steps to leverage SCEPman Certificate Master to generate a n
 **Important**: Take temporary note of the password since it cannot be recovered from Certificate Master.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Create a new server certificate</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Create a new server certificate</p></figcaption></figure>
 
 ### Upload the new server certificate to **RADIUSaaS**
 

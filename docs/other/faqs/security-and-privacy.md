@@ -111,7 +111,7 @@ Please see [here](../../admin-portal/settings/permissions.md#permissions-consent
    * RadSec server ports: TLS-secured (>= version 1.2).
    * RADIUS proxy server ports: Protected via the RADIUS Shared Secret.
 3. RADIUSaaS Admin Portal
-   * Secured via OAuth 2.0 authentication with Microsoft Entra ID (Azure AD).
+   * Secured via OAuth 2.0 authentication against one of our [supported IDPs](../../admin-portal/settings/permissions.md#supported-idps).
 4. Kubernetes Cluster Management API
    * TLS-secured (>= version 1.2).
 
@@ -131,7 +131,7 @@ Please see [here](../../admin-portal/settings/permissions.md#permissions-consent
 
 ### 1. What authorization schemes are used to gain access to RADIUSaaS?
 
-* Administrative access is realized through OAuth 2.0 authentication with Microsoft Entra ID (Azure AD) for users who are registered on the platform.
+* Administrative access is realized through OAuth 2.0 authentication against an [IDP](../../admin-portal/settings/permissions.md#supported-idps) for identities or accounts that are registered on the platform.
 
 ### 2. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 

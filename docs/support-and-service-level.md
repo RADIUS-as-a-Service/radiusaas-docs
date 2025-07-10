@@ -19,6 +19,8 @@ You can access our support in the tab "Help" on our main product web-site ([http
 
 Using the support website will generate a ticket in our ticket system, which will be the basis for the support process. Communication will happen in written form via e-mail or web-interface of our ticket-system. Depending on the support case, our support-engineers may decide to offer Microsoft Teams meetings to work on issues together with customers.
 
+Alternatively, raise a support ticket by clicking on the help button in [your RADIUSaaS portal](admin-portal/home.md#help).
+
 ### Language
 
 Our engineers are happy to support you in these languages:

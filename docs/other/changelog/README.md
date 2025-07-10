@@ -15,13 +15,16 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 * Roll-out start: 2025-07-14
 * Roll-out end: 2025-07-17
 
-#### Fixes
-
-* Coming soon
-
 #### New Features
 
-* Coming soon
+* More [IDP options](../../admin-portal/settings/permissions.md#supported-idps) for administrative SSO
+* [Revoked certificate cache](../faqs/log-and-common-errors.md#certificate-status-was-revoked-previously)
+* Directly [create tickets or report incidents](../../admin-portal/home.md#help) from the RADIUSaaS Admin Portal
+* Improved [notification system](../../admin-portal/home.md#notifications)
+
+#### Upcoming Service Updates
+
+* Preparation for [upcoming IP address change of RADIUS Proxies](upcoming-change-radius-proxy-ip-address-migration.md)
 
 ### February 2025 Release
 
@@ -54,9 +57,9 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 ### June 2024 Release
 
-* Updated UI (reactive design, improved [Rule Engine](../admin-portal/settings/rules/) structure, separation of [RADIUS server certificates](../admin-portal/settings/settings-server.md#server-certificates) from [Trusted Certificates](../admin-portal/settings/trusted-roots.md) for client authentication and RadSec)
+* Updated UI (reactive design, improved [Rule Engine](../../admin-portal/settings/rules/) structure, separation of [RADIUS server certificates](../../admin-portal/settings/settings-server.md#server-certificates) from [Trusted Certificates](../../admin-portal/settings/trusted-roots.md) for client authentication and RadSec)
 * Certificate verification can now be configured individually for each trusted CA (client authentication, RadSec) using OCSP, **CRL** or OCSP auto-detect (based on the certificate's AIA extension)
 * OCSP Soft-Fail / Hard-Fail is now configurable on a per trusted CA basis.
-* Introduction of [RADIUSaaS REST API documentation](rest-api/) and [API access tokens](../admin-portal/settings/permissions.md#access-tokens).
+* Introduction of [RADIUSaaS REST API documentation](../rest-api/) and [API access tokens](../../admin-portal/settings/permissions.md#access-tokens).
 * Improved logging:&#x20;
-  * Added Accounting and [RadSec connection logs](../admin-portal/insights/log.md#log-types).
+  * Added Accounting and [RadSec connection logs](../../admin-portal/insights/log.md#log-types).

@@ -31,7 +31,7 @@ openssl pkey -in yourfile.pem -out private.key
 
 6. Upload both files, the certificate and the private key via the **Files** menu. Then import the certificate first and then the private key. During the import process the **private key** will merge with the certificate indicated by a letter '**K**' as shown below.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Option 2: Using other PKIs
 
@@ -47,7 +47,7 @@ Use this section if you want to create a root CA on your Mikrotik AP and generat
 /certificate import file-name="RADIUS Customer CA - Contoso.cer"
 ```
 
-4. If you have not already generated **RadSec Client Certificate** for MikroTik AP, generate one as per the below example. For more information about creating certificates, click [here](https://wiki.mikrotik.com/wiki/Manual:Create\_Certificates).&#x20;
+4. If you have not already generated **RadSec Client Certificate** for MikroTik AP, generate one as per the below example. For more information about creating certificates, click [here](https://wiki.mikrotik.com/wiki/Manual:Create_Certificates).&#x20;
 
 {% hint style="warning" %}
 Ensure to monitor the expiry of your **RadSec Client Certificate** and renew it in due time to prevent service interruptions.
@@ -91,7 +91,7 @@ Please note that the below configuration was tested with RouterOS 6.47.4 and 6.4
 
 
 
-![Configuring RADIUS / RadSec profile](../../../.gitbook/assets/2024-09-03\_14h43\_36.png)
+![Configuring RADIUS / RadSec profile](../../../.gitbook/assets/2024-09-03_14h43_36.png)
 
 2. Go to **Wireless,** add a new **Security Profile** and enter the following information:&#x20;
 

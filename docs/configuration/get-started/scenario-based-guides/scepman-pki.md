@@ -28,7 +28,7 @@ In this example, we will use a RADIUS Server Certificate issued by SCEPman. Ther
 
 Once completed, your **Server Certificate** settings should look like this:
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 4: Configure your networking equipment
 
@@ -36,7 +36,7 @@ To configure your networking equipment (Wi-Fi access points, switches, or VPN ga
 
 After successful completion of Steps 2 - 4, the **Trusted Certificates** page of your RADIUSaaS instance will look similar to the one below. Please note that in our example we have used a RadSec-enabled [MikroTik](../../access-point-setup/radsec-available/mikrotik.md) access point that leverages a SCEPman-issued RadSec **Client Certificate**.
 
-<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 5: Configure Intune Profiles
 
@@ -44,7 +44,7 @@ To set up certificate-based Wi-Fi authentication, you will need to create and de
 
 <table><thead><tr><th width="371">Profile Type</th><th>Purpose</th></tr></thead><tbody><tr><td>Trusted certificate</td><td>Deploy the Root CA certificate that has issued the RADIUS Server Certificate. <br><br>In this scenario, the relevant CA corresponds to the SCEPman Root CA. </td></tr><tr><td>SCEP certificate</td><td>Deploy the client authentication certificate.</td></tr><tr><td>Wi-Fi</td><td>Deploy the wireless network adapter settings.</td></tr></tbody></table>
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Relevant Intune Policies</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Relevant Intune Policies</p></figcaption></figure>
 
 ### Trusted certificate profiles
 
