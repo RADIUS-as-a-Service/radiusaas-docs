@@ -56,9 +56,15 @@ You can find notifications regarding your service in here.
 
 ### Help
 
-Click on the life saver button to lodge a support request, with important information prepopulated in the support form.
+{% hint style="info" %}
+RADIUSaaS considers the UPN of the person submitting the support request the primary contact. In case your UPN is not linked to a mailbox or you would like to include other recipients in the ticket, leverage the **Additional Recipients** list.
+{% endhint %}
+
+Click on the life saver button to lodge a support request.
 
 <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 ### Service Documentation
 
