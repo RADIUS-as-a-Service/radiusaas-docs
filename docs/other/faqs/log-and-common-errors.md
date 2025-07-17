@@ -6,7 +6,7 @@ description: >-
 
 # Log & Common Errors
 
-No EAP session matching state
+## No EAP session matching state
 
 {% hint style="info" %}
 Severity: Low / No Impact
