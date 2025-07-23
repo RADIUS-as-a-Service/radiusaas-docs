@@ -31,7 +31,7 @@ openssl pkey -in yourfile.pem -out private.key
 
 6. Upload both files, the certificate and the private key via the **Files** menu. Then import the certificate first and then the private key. During the import process the **private key** will merge with the certificate indicated by a letter '**K**' as shown below.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Option 2: Using other PKIs
 

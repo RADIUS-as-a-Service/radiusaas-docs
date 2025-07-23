@@ -174,7 +174,41 @@ Google will require you to allow the application to access limited data on your 
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
+
+{% tab title="Custom OIDC Provider (Okta)" %}
+The specific information you need to provide for the custom OIDC provider depends on the identity provider you choose. The following **example** is based on **Okta**.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+In the Okta admin console, you will need to create a new app integration with the following details:
+
+| Sign-in method       | OIDC - OpenID Connect                                                                                                                                                                           |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Application Type     | Web Application                                                                                                                                                                                 |
+| Sign-in redirect URI | <p>Provided in RADIUSaaS dialogue above<br>Example: <a href="https://eu1.radius-as-a-service.com/loginserver/authResponse">https://eu1.radius-as-a-service.com/loginserver/authResponse</a></p> |
+
+Make sure to assign the integration to the intended user group and save. You can now retrieve the required information from this application to enter in RADIUSaaS:
+
+The **Display Name** can be chosen freely and will be shown during login.
+
+With Okta, the **Authentication URL** is in the following form:
+
+`https://`**`{YourOrga}`**`.okta.com/oauth2/v1/authorize`
+
+The Token URL is also constructed and looks like this:
+
+`https://`**`{YourOrga}`**`.okta.com/oauth2/v1/token`
+
+
+
+The **Client ID** and **Client Secret** can be copied and created in the application itself:
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+For the **Client Scope** `openid email` is required. This will tell Okta that we are using an OpenID authentication and need to read the logged in users email address.
+
+After saving and allowing this provider, you should be able to use it to authenticate from the login page:
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
 {% endtabs %}
-
-
-

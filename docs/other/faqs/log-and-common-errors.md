@@ -43,7 +43,7 @@ Your proxies will create a TCP session with your RadSec server(s). These session
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Since your RadSec server(s) are globally available, anyone on the Internet can try to connect to them, e.g. using a TCP handshake. If no valid (mututal) TLS connection can be established (which only works if the connecting entity presents a trusted RadSec client certificate), this error message is generated and expcted.&#x20;
 
@@ -55,7 +55,7 @@ Since RADIUSaaS cannot distinguish between someone crawling/port-scanning server
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 If a certificate is found to be revoked, this status will be cached for 2 minutes. Additional attempts to authenticate this certificate will directly be rejected without performing another OCSP request. This is done to reduce the load on the OCSP responder.
 
@@ -63,4 +63,4 @@ If a certificate is found to be revoked, this status will be cached for 2 minute
 
 The `Verify-Description` field will contain the correlation ID of the initial rejected request.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>

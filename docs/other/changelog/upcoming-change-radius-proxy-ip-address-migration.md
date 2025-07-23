@@ -38,7 +38,7 @@ You can verify whether your proxy configuration is impacted by logging into the 
 
 In the following example, the proxy with the region "Europe (London)" is affected, while the proxy with the region "North America (Dallas)" is not affected. The customer is required to change the IP address for the Europe (London) proxy in their network equipment, while 165.227.229.49 is the old IP address and  139.59.200.190 is the new address:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Need Help?
 
