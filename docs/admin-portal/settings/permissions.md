@@ -18,7 +18,7 @@ RADIUSaaS does not store or manage its own administrator identities.
 Therefore, administrators enjoy the comfort of working with their own identities and do not have to setup additional accounts.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Changes to the role assignments and invalidating user tokens only become effective after clicking on **Save**.
