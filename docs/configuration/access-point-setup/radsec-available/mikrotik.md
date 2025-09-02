@@ -97,7 +97,7 @@ Please note that the below configuration was tested with RouterOS 6.47.4 and 6.4
 
 <table><thead><tr><th width="227">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Name</td><td>Name of the RADIUS security profile</td></tr><tr><td>Mode</td><td>dynamic keys</td></tr><tr><td>EAP Methods</td><td>passthrough</td></tr><tr><td>TLS Mode</td><td>verify certificate</td></tr><tr><td>TLS Certificate</td><td><a href="mikrotik.md#option-1-using-the-scepman-pki"><strong>Option 1</strong></a>: SCEPman Root CA certificate.<br><a href="mikrotik.md#option-2-using-other-cas"><strong>Option 2</strong></a>: RADIUSaaS Customer-CA certificate.</td></tr></tbody></table>
 
-![](<../../../../.gitbook/assets/image (158).png>)
+![](../../../.gitbook/assets/2025-08-28_12h39_32.png)
 
 3. Switch to your **Wi-Fi Interfaces** and assign your **Security Profile** to the interface.
 

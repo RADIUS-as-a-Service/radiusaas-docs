@@ -50,7 +50,7 @@ After that the app is set up, we now need to add users to it and configure the l
 
     <figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Click Single Sign-on - Select "Linked" mode</p></figcaption></figure>
 
-    <figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption><p>enter the URL you want</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (56).png" alt="Enter your RADIUSaaS instance URL"><figcaption><p>Enter your RADIUSaaS instance URL</p></figcaption></figure>
 
 **Access My Apps**
 
