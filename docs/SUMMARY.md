@@ -72,7 +72,8 @@
 
 ## Other
 
-* [Troubleshooting](other/troubleshooting.md)
+* [Troubleshooting](other/troubleshooting/README.md)
+  * [Solving EAP Fragmentation: The Key to Reliable RADIUS Authentication](other/troubleshooting/solving-eap-fragmentation-the-key-to-reliable-radius-authentication.md)
 * [FAQs](other/faqs/README.md)
   * [General](other/faqs/general.md)
   * [Log & Common Errors](other/faqs/log-and-common-errors.md)
