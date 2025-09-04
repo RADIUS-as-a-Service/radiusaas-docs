@@ -136,7 +136,7 @@ Please see [here](../../admin-portal/settings/permissions.md#permissions-consent
 ### 2. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 
 * Yes. The RADIUSaaS Admin portal provides features to assign roles to every user (available roles: administrator, viewer, guest).
-* In order to properly operate and maintain the service, there are super-admin accounts for a limited circle of glueckkanja-gab AG employees, that have full access to all client instances of the RADIUSaaS service.
+* In order to properly operate and maintain the service, there are super-admin accounts for a limited circle of glueckkanja AG employees, that have full access to all client instances of the RADIUSaaS service.
 
 ### 3. Can access credentials be recovered? If yes, how?
 
