@@ -33,7 +33,7 @@ Under **Allowed Authentication Providers** any (including multiple) of the IDPs 
 * Entra ID (User Principal Name)
 * Google (Primary Email Address)
 
-Futhermore, under **Custom OICD Provider** you may configure your own OpenID Connect providers to leverage other IDPs, e.g. Okta or soverign Azure clouds (GCC, GCC High, ...).
+Furthermore, under **Custom OICD Provider** you may configure your own OpenID Connect providers to leverage other IDPs, e.g. Okta or sovereign Azure clouds (GCC, GCC High, ...).
 
 ## Roles
 
