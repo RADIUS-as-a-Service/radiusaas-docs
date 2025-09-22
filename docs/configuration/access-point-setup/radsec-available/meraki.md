@@ -25,7 +25,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 {% endhint %}
 
 {% hint style="danger" %}
-Ensure to **disable the OCSP revocation check of the RadSec client certificate** as described in step 13 of this guide.
+Ensure to **disable the OCSP revocation check of the RadSec client certificate** as described in step 7 of this guide.
 {% endhint %}
 
 {% stepper %}
