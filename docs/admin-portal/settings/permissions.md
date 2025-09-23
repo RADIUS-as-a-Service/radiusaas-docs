@@ -211,4 +211,71 @@ After saving and allowing this provider, you should be able to use it to authent
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
+
+{% tab title="Custom OIDC Provider (Entra ID GCC High)" %}
+If required in certain scenarios (e.g. GCC High tenants), you can also use a self-created Entra ID app registration to authenticate to your RADIUSaaS portal.
+
+#### Preparation
+
+Before creating the app registration, make sure to copy the redirect URL from the **Permissions** section of your RADIUSaaS portal. You can find the URL in the top of the **Custom OIDC Provider** editing dialogue:
+
+<figure><img src="../../.gitbook/assets/image (74).png" alt="Click on the Edit button to find the redirect URL"><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (75).png" alt="Copy the redirect URL from the dialogues header"><figcaption></figcaption></figure>
+
+### Create App Registration
+
+In Entra ID, navigate to **App Registrations** and create a new registration:
+
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+
+Select a descriptive **Name** for the registration and add the redirect URI that you have copied from the previous step as **Web** type.
+
+#### Add API Permissions
+
+In the created registration, navigate to **API permissions** and add `email` and `openid` from Microsoft Graph as **Delegated** permissions. Also make sure to grant admin consent for your tenant:
+
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+
+#### Add Client Secret
+
+To allow RADIUSaaS to use this registration, create a client secret in the **Certificates & Secrets** section of the registration. Copy the value of the secret for later.
+
+<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+
+#### Note Registration Details
+
+You will later need the registrations **Client ID** and some URLs specific to your tenant. You can find these in the Overview page of the registration:
+
+<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+
+#### Assign Users
+
+For anyone to be able to use this app registration for sign-ins, make sure to add them in the managed enterprise application. You can find this in Entra ID in **Enterprise Applications** having the same name as your app registration. There is also a link to this in the overview of the app registration.
+
+<figure><img src="../../.gitbook/assets/image (80).png" alt="Assign users to allow them to use the application"><figcaption></figcaption></figure>
+
+### Configure the OIDC Provider in RADIUSaaS
+
+Back in the RADIUSaaS portal, navigate to the Permissions section and edit the custom OIDC provider and fill in the required information:
+
+<figure><img src="../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
+
+| Field              | Explanation                                                                             |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| Display Name       | This name will be shown on the login page                                               |
+| Authentication URL | `OAuth 2.0 authorization endpoint (v2)` from the registrations endpoints                |
+| Token URL          | `OAuth 2.0 token endpoint (v2)` from the registrations endpoints                        |
+| Client ID          | The client ID of the app registration. Can be found on its overview page                |
+| Client Secret      | The previously created client secret                                                    |
+| Client Scope       | Defines the information requested during the authentication. Enter `openid email` here. |
+
+After saving the configuration make sure to allow the custom provider and add some users for this provider. You should now be able to use the provider to log into your RADIUSaaS portal:
+
+<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+It might be necessary for an Entra administrator to initially use this login to consent again for their tenant. This only needs to be done once.
+{% endhint %}
+{% endtab %}
 {% endtabs %}
