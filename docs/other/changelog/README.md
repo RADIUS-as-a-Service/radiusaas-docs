@@ -24,7 +24,7 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 #### Upcoming Service Updates
 
-* Preparation for [upcoming IP address change of RADIUS Proxies](upcoming-change-radius-proxy-ip-address-migration.md)
+* Preparation for [upcoming IP address change of RADIUS Proxies](upcoming-change-radius-proxy-ip-address-change.md)
 
 ### February 2025 Release
 
