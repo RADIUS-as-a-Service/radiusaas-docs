@@ -212,8 +212,8 @@ After saving and allowing this provider, you should be able to use it to authent
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="Custom OIDC Provider (Entra ID GCC High)" %}
-If required in certain scenarios (e.g. GCC High tenants), you can also use a self-created Entra ID app registration to authenticate to your RADIUSaaS portal.
+{% tab title="Custom OIDC Provider (Entra ID)" %}
+If required in certain scenarios (e.g. **GCC High** tenants), you can also use a self-created Entra ID app registration to authenticate to your RADIUSaaS portal.
 
 #### Preparation
 
