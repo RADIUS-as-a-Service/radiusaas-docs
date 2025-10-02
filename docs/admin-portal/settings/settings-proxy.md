@@ -6,12 +6,12 @@ description: >-
 
 # Proxy Settings
 
-Proxies are necessary in case your authenticators (e.g. APs, switches, ...) only support traditional RADIUS / UDP for AAA. The proxies facilitate the protocol conversion from RADIUS to RadSec so that your equipment can properly communicate with RADIUSaaS core server(s), that exclusively support RadSec / TCP for AAA.
+Proxies are required when your authenticators (e.g., access points, switches) support only traditional RADIUS over UDP for AAA. The proxies handle protocol conversion from RADIUS to RadSec, enabling your equipment to communicate securely with the RADIUSaaS core servers, which support only RadSec (RADIUS over TCP) for AAA.
 
 ## Architecture
 
 {% hint style="warning" %}
-Since there are at least two RADIUS-speaking public IP addresses included in your subscription, we strongly recommend configuring those two IP addresses so they can be used as primary and secondary RADIUS server on your network gear and appliances. Thereby, the second public IP address should be located in a different geo-region than the primary address.
+<kbd>**Your subscription includes at least two public IP addresses capable of communicating via RADIUS. We strongly recommend configuring these IP addresses as the primary and secondary RADIUS servers on your network devices and appliances. For optimal redundancy, the secondary IP should be located in a different geographic region from the primary**</kbd><kbd>.</kbd>
 {% endhint %}
 
 ### Performance
