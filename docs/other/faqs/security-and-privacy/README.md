@@ -19,7 +19,7 @@ RADIUSaaS' core service can currently be deployed in the following regions:
 
 In case RADIUS proxies are required, they can be deployed in the following countries/regions:
 
-{% include "../../.gitbook/includes/radius-proxy-regions.md" %}
+{% include "../../../.gitbook/includes/radius-proxy-regions.md" %}
 
 ### 2. Which data is processed by RADIUSaaS?
 
@@ -55,7 +55,7 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
     The RADIUSaaS platform stores UPN/email information on the users that are allowed to access the platform. **No passwords are stored or processed by RADIUSaaS.**
 2.  Logging
 
-    For troubleshooting and analysis purposes, the RADIUSaaS platform logs all relevant data it processes (see [Question 2](security-and-privacy.md#2.-which-data-is-processed-by-radiusaas) except for the RADIUS Shared Secret and the private key of the server certificate).
+    For troubleshooting and analysis purposes, the RADIUSaaS platform logs all relevant data it processes (see [Question 2](./#2.-which-data-is-processed-by-radiusaas) except for the RADIUS Shared Secret and the private key of the server certificate).
 
     The logs are stored directly on the RADIUSaaS platform within an _Elasticsearch_ database and segregated for every client via a dedicated space.\
     \
@@ -63,14 +63,14 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
 3.  Certificates
 
     RADIUSaaS requires several server certificates as well as root certificates to facilitate proper operation. All those certificates are securely **stored in an Azure KeyVault**.
-4. The optional username + password credentials mentioned in [Question 2](security-and-privacy.md#2.-which-data-is-processed-by-radiusaas) are **stored in an Azure KeyVault**.
+4. The optional username + password credentials mentioned in [Question 2](./#2.-which-data-is-processed-by-radiusaas) are **stored in an Azure KeyVault**.
 5.  Other secrets and configuration data
 
     Other secret data, e.g. the RADIUS Shared Secret as well as the service's configuration are securely **stored in an Azure KeyVault**.
 
 ### 4. Is there an archiving mechanism for logs?
 
-There is no built-in log archiving mechanism. However, the [Log Exporter](../../admin-portal/settings/log-exporter/) feature can be used to ingest RADIUS logs into your own logging and archiving services.
+There is no built-in log archiving mechanism. However, the [Log Exporter](../../../admin-portal/settings/log-exporter/) feature can be used to ingest RADIUS logs into your own logging and archiving services.
 
 ### 5. Which tenant permissions do users accessing the RADIUSaaS web portal have to consent to?
 
@@ -81,7 +81,7 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 
     With this permission RADIUSaaS receives the right to request a refresh token so that the user can stay logged-on.
 
-Please see [here](../../admin-portal/settings/permissions.md#permissions-consent) for details.
+Please see [here](../../../admin-portal/settings/permissions.md#permissions-consent) for details.
 
 ### 6. What data is made available by granting the consent(s) from 5.?
 
@@ -111,7 +111,7 @@ Please see [here](../../admin-portal/settings/permissions.md#permissions-consent
    * RadSec server ports: TLS-secured (>= version 1.2).
    * RADIUS proxy server ports: Protected via the RADIUS Shared Secret.
 3. RADIUSaaS Admin Portal
-   * Secured via OAuth 2.0 authentication against one of our [supported IDPs](../../admin-portal/settings/permissions.md#supported-idps).
+   * Secured via OAuth 2.0 authentication against one of our [supported IDPs](../../../admin-portal/settings/permissions.md#supported-idps).
 4. Kubernetes Cluster Management API
    * TLS-secured (>= version 1.2).
 
@@ -131,7 +131,7 @@ Please see [here](../../admin-portal/settings/permissions.md#permissions-consent
 
 ### 1. What authorization schemes are used to gain access to RADIUSaaS?
 
-* Administrative access is realized through OAuth 2.0 authentication against an [IDP](../../admin-portal/settings/permissions.md#supported-idps) for identities or accounts that are registered on the platform.
+* Administrative access is realized through OAuth 2.0 authentication against an [IDP](../../../admin-portal/settings/permissions.md#supported-idps) for identities or accounts that are registered on the platform.
 
 ### 2. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 
@@ -185,15 +185,17 @@ RADIUSaaS relies on well-established protocols to handle network authentication 
 
 ### 2. Is the UDP-based RADIUS protocol secure?
 
-We are recommending to use the modern [RadSec](../../details.md#what-is-radsec) protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
+We are recommending to use the modern [RadSec](../../../details.md#what-is-radsec) protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
 
 The following diagram shows the RADIUS authentication flow:
 
-![](../../../.gitbook/assets/radius-authentication-sequence.png)
+![](../../../../.gitbook/assets/radius-authentication-sequence.png)
 
 In the first part of the authentication sequence, the communication is secured by an MD5-based hashing algorithm (partially encrypted with the shared secret). **No secrets** are transported in this phase.
 
 In the second part of the authentication sequence, a TLS-based EAP (e.g. EAP-TLS) encrypts the traffic. The EAP-TLS traffic is then transported via UDP to the RADIUS proxy. This is the phase when credentials such as the certificate or the password is exchanged with RADIUSaaS. If you use certificate-based authentication, no secrets are transported in this phase as only the public key is exchanged. The private key remains on the client device at all times.
+
+A comprehensive comparison between RADIUS and RadSec in terms of transport security is provided [here](eap-tls-transport-security-radius-vs.-radsec.md).
 
 {% hint style="success" %}
 Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20;
@@ -217,7 +219,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 ### 1. Is data leaving Europe?
 
 * Core Services: Depends on configuration
-  * RADIUSaaS's core services can be hosted in the data centers described in [Question 1](security-and-privacy.md#1.-from-what-data-center-is-radiusaas-operating).
+  * RADIUSaaS's core services can be hosted in the data centers described in [Question 1](./#1.-from-what-data-center-is-radiusaas-operating).
   * If the service is hosted in a European data center, then no data leaves the European Union.
 * RadSec Proxy: Depends on configuration
   * If you require a RadSec proxy due to limitations of the network gear in regards to native RadSec support, you may select a proxy from various regions, Europe amongst others. In that case, your data stays within the borders of the European Union.
