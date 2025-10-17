@@ -195,7 +195,7 @@ In the first part of the authentication sequence, the communication is secured b
 
 In the second part of the authentication sequence, a TLS-based EAP (e.g. EAP-TLS) encrypts the traffic. The EAP-TLS traffic is then transported via UDP to the RADIUS proxy. This is the phase when credentials such as the certificate or the password is exchanged with RADIUSaaS. If you use certificate-based authentication, no secrets are transported in this phase as only the public key is exchanged. The private key remains on the client device at all times.
 
-A comprehensive comparison between RADIUS and RadSec in terms of transport security is provided [here](transport-security-in-radius-vs.-radsec.md).
+A comprehensive comparison between RADIUS and RadSec in terms of transport security is provided [here](eap-tls-transport-security-radius-vs.-radsec.md).
 
 {% hint style="success" %}
 Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20;

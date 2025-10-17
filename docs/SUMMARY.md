@@ -81,7 +81,7 @@
   * [Blast-RADIUS Vulnerability](other/faqs/blast-radius-vulnerability.md)
   * [OCSP Soft-fail Consequences](other/faqs/ocsp-soft-fail-consequences.md)
   * [Security & Privacy](other/faqs/security-and-privacy/README.md)
-    * [Transport Security in RADIUS vs. RadSec](other/faqs/security-and-privacy/transport-security-in-radius-vs.-radsec.md)
+    * [Transport Security in RADIUS vs. RadSec](other/faqs/security-and-privacy/eap-tls-transport-security-radius-vs.-radsec.md)
 * [REST API](other/rest-api/README.md)
   * [External Monitoring](other/rest-api/external-monitoring.md)
 * [Changelog](other/changelog/README.md)

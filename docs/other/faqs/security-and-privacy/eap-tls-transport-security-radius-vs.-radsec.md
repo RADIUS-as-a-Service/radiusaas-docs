@@ -2,7 +2,7 @@
 
 When deploying secure authentication using Extensible Authentication Protocol (EAP), the choice of transport protocol - RADIUS over UDP vs. RADIUS over TLS (RadSec) - plays a critical role in determining how securely metadata and protocol elements are transmitted across the network.
 
-Both RADIUS and RadSec can carry EAP messages including those used in common methods like EAP-TLS, PEAP, and EAP-TTLS. While the inner workings of the EAP method remain the same, the transport protocol impacts visibility, integrity, confidentiality of metadata, and operational behavior.
+Both RADIUS and RadSec can carry EAP messages including those used in common methods like EAP-TLS, PEAP, and EAP-TTLS. While the inner workings of the EAP method remain the same, the transport protocol impacts visibility, integrity, confidentiality of metadata, and operational behaviour.
 
 This document compares how RADIUS and RadSec affect EAP transport - focusing on encryption, shared secret usage, attribute exposure, logging implications, and deployment considerations.
 
@@ -41,8 +41,6 @@ The RADIUS shared secret is used for packet integrity and legacy encryption beha
 {% hint style="info" %}
 **Note:** The shared secret is never transmitted over the network - it is used locally for HMAC operations and AVP validation.
 {% endhint %}
-
-***
 
 ***
 
