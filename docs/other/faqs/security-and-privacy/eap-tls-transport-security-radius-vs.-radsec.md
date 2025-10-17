@@ -116,7 +116,7 @@ Transporting EAP methods over either RADIUS or RadSec offers the same strong end
 
 For further detail on protocols and specifications:
 
-* EAP (Extensible Authentication Protocol): [RFC 3748](https://datatracker.ietf.org/doc/html/rfc3748)
-* EAP-TLS: [RFC 5216](https://app.gitbook.com/u/prTa0MCUWsXJtIRi1RLj5w5HJ062)
-* RADIUS (Remote Authentication Dial-In User Service): [RFC 2865](https://app.gitbook.com/u/prTa0MCUWsXJtIRi1RLj5w5HJ062)
-* RadSec (RADIUS over TLS): [RFC 6614](https://app.gitbook.com/o/-LhPlvZ6dc8XcqY7tdZw/s/yDA5bmNydJ2FcKrKVuL4/)
+* EAP (Extensible Authentication Protocol): RFC 3748
+* EAP-TLS: RFC 5216
+* RADIUS (Remote Authentication Dial-In User Service): RFC 2865
+* RadSec (RADIUS over TLS): RFC 6614
