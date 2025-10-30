@@ -42,10 +42,11 @@ In general, MAB provides little to no security and should not be used because MA
 
 ### Configuration
 
-MBA requires configuration in two places:&#x20;
+MBA requires configuration in three places:&#x20;
 
-1. On the **authenticator**. These are your switches and/or AP. Because configuring your devices is vendor specific, please consult your documentation in this regard.
-2.  On **RADIUSaaS**. This is your authentication server. To support MBA, you will need to [add](../../admin-portal/users.md#add) users to your RADIUSaaS instance. These users will need to be formatted as username = password = MAC address. If you have multiple users, you could speed this process up by [importing them via CSV](../../admin-portal/users.md#csv-import) file. The delimiter for the MAC address can usually be defined on your authenticator, however, we recommend to use the colon notation.&#x20;
+1. **Supplicant.** These are your IP phones, printers etc. The supplicant must trust the RADIUS server certificate. To do this, you must [download ](../../admin-portal/settings/settings-server.md)the **trusted root CA** of the currently **active** server certificate and install it on the supplicant.&#x20;
+2. **Authenticator**. These are your switches and AP. Because configuring your devices is vendor specific, please consult your documentation in this regard.
+3.  **RADIUSaaS**. This is your authentication server. To support MBA, you will need to [add](../../admin-portal/users.md#add) users to your RADIUSaaS instance. These users will need to be formatted as username = password = MAC address. If you have multiple users, you could speed this process up by [importing them via CSV](../../admin-portal/users.md#csv-import) file. The delimiter for the MAC address can usually be defined on your authenticator; however, we recommend to use the colon notation.&#x20;
 
     <figure><img src="../../../.gitbook/assets/image (465).png" alt=""><figcaption><p>Showing username and password as MAC address</p></figcaption></figure>
 
