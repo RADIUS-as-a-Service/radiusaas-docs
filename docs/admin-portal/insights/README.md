@@ -14,7 +14,12 @@ In your Overview you have a short overview about the status for the logged in us
 
 ### Authentications
 
-Under Authentications you have tables to get a overview on how many times someone has been logged in and a overview about, why are authentications failing.&#x20;
+Under Authentications you have tables to get an overview on how many times someone has been logged in and an overview about why authentications are failing.&#x20;
 
 ![](<../../../.gitbook/assets/image (238).png>)
 
+### Creating Custom Visualisation
+
+The clip below shows how you can modify or replace a widget to better suit your needs. For example, the current IPs widget can only display 30 IPs, whereas your environment requires 100.
+
+<figure><img src="../../.gitbook/assets/2025-10-30_12h13_18.gif" alt=""><figcaption></figcaption></figure>
