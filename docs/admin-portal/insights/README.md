@@ -23,7 +23,7 @@ Under Authentications you have tables to get an overview on how many times someo
 The clip below shows how you can modify or replace a widget to better suit your needs. For example, the current IPs widget can only display 30 IPs, whereas your environment requires 100.
 
 {% hint style="info" %}
-Please note that the default visualization will be reset due to instance maintenance. Therefore, we recommend creating an additional visualization for your purposes.
+Please note that the default dashboards (Overview, Authentications, Rule Engine, and Logs) will be reset due to instance maintenance. Therefore, we recommend creating an additional dashboard for your purposes.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/2025-10-30_12h13_18.gif" alt=""><figcaption></figcaption></figure>
