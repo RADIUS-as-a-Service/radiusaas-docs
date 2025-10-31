@@ -12,9 +12,9 @@ Customers typically want to authenticate their devices using certificates or use
 
 ## Definitions
 
-**MAC Authentication Bypass (MAB)** is a feature that allows devices to connect to a network by verifying their MAC address instead of requiring user or other credentials. It is commonly used for devices that cannot support standard authentication methods like 802.1X, such as older printers, PS5, Xbox or IoT devices. MAB works by allowing the switch / AP to check the device's MAC address against a predefined list and grant access if there is a match. This MAC address database can be stored on either the switch / AP or on a RADIUS server. In this case, there is no actual authentication taking place.&#x20;
+**MAC Authentication Bypass (MAB)** is a feature that allows devices to connect to a network by verifying their MAC address instead of requiring user or other credentials. It is commonly used for devices that cannot support standard authentication methods like 802.1X, such as older printers, PS5, Xbox or IoT devices. MAB works by allowing the switch / AP to check the device's MAC address against a predefined list and grant access if there is a match. This MAC address database can be stored on either the switch / AP or on a RADIUS server. In this case, the authentication (RADIUS Access-Request / Accept) taking place is rather weak as it is based only on a lookup of MAC address in a RADIUS database.&#x20;
 
-**MAC-based Authentication (MBA)** is a feature in which, the MAC address of the client device is used as username & password in the authentication phase. A client that wants to have network access and  lacks 802.1X enterprise features needs to use its MAC address as credentials. The network equipment takes these credentials (Username = Password = MAC address) and forwards them on to the authentication server (RADIUS) as if it was the client. At this point a regular authentication takes place and if successful, the authenticator grants network access for the client.&#x20;
+**MAC-based Authentication (MBA)** is a feature in which, the MAC address of the client device is used as username & password in the authentication phase. A client that wants to have network access and lacks 802.1X enterprise features needs to use its MAC address as credentials. The network equipment takes these credentials (Username = Password = MAC address) and forwards them on to the authentication server (RADIUS) as if it was the client. At this point a regular authentication takes place and if successful, the authenticator grants network access for the client.&#x20;
 
 ### How does MAB work in general?
 
@@ -30,7 +30,7 @@ When the MAC database is not maintained by the Switch / AP itself but by an exte
 
 ### In practice
 
-When an old printer that does not support 802.1X tries to request network access, the switch or AP will pretend to be that printer and takes over the authentication on behalf of the printer by authenticating to RADIUSaaS using one of the supported [protocols](https://docs.radiusaas.com/admin-portal/users#protocols). As part of this process it will check if the MAC address is listed on the RADIUSaaS database in the form of a manually added [User](../../admin-portal/users.md). (username = password = MAC address), If so, then an Access-Accept message is returned and the authentication completes giving the printer network access.
+When an old printer that does not support 802.1X tries to request network access, the switch or AP will pretend to be that printer and takes over the authentication on behalf of the printer by authenticating to RADIUSaaS using one of the supported [protocols](https://docs.radiusaas.com/admin-portal/users#protocols). As part of this process it will check if the MAC address is listed on the RADIUSaaS database in the form of a manually added [User](../../admin-portal/users.md). (username = password = MAC address), If so, then an Access-Accept message is returned, and the authentication completes giving the printer network access.
 
 ## Does MBA work with RADIUSaaS?
 
@@ -38,15 +38,21 @@ With the above definitions in mind, the current implementation of RADIUSaaS can 
 
 ### Security considerations
 
-In general, MAB provides little to no security and should not be used because MAC addresses can be spoofed easily. Because of this, MAB is not supported by RADIUSaaS. Other protocols such as PAP or CHAP are also not supported as they are considered weak.
+In general, MAB provides little to no security and should not be used because MAC addresses can be spoofed easily. Because of this, **MAB is not supported by RADIUSaaS**. Other protocols such as PAP or CHAP are also not supported as they are considered weak.
 
 ### Configuration
 
-MBA requires configuration in three places:&#x20;
+MBA requires configuration in two places:&#x20;
 
-1. **Supplicant.** These are your IP phones, printers etc. The supplicant must trust the RADIUS server certificate. To do this, you must [download ](../../admin-portal/settings/settings-server.md)the **trusted root CA** of the currently **active** server certificate and install it on the supplicant.&#x20;
-2. **Authenticator**. These are your switches and AP. Because configuring your devices is vendor specific, please consult your documentation in this regard.
-3.  **RADIUSaaS**. This is your authentication server. To support MBA, you will need to [add](../../admin-portal/users.md#add) users to your RADIUSaaS instance. These users will need to be formatted as username = password = MAC address. If you have multiple users, you could speed this process up by [importing them via CSV](../../admin-portal/users.md#csv-import) file. The delimiter for the MAC address can usually be defined on your authenticator; however, we recommend to use the colon notation.&#x20;
+1. **Authenticator (Network Access Device)**. These are your switches or wireless access points that act as intermediaries between the supplicant and the RADIUS server.
+   1. The configuration steps are vendor-specific, so refer to your switch or AP documentation for details.
+   2. Typically, you must enable 802.1X and/or MAC Authentication Bypass (MAB) on the access ports.
+2.  **RADIUS Server (RADIUSaaS)**. This is your authentication server. To support MBA, you will need to [add](../../admin-portal/users.md#add) users to your RADIUSaaS instance. These users will need to be formatted as username = password = MAC address.&#x20;
+
+    1. If you have multiple users, you can import them in bulk using a [CSV](../../admin-portal/users.md#csv-import) file.&#x20;
+    2.  The MAC address format (colon, hyphen, or none) must match what your authenticator sends.
+
+        We recommend using colon notation (e.g., 00:11:22:33:44:55) for consistency.&#x20;
 
     <figure><img src="../../../.gitbook/assets/image (465).png" alt=""><figcaption><p>Showing username and password as MAC address</p></figcaption></figure>
 
