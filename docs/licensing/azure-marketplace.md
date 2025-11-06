@@ -8,7 +8,7 @@ In order to purchase solutions from independent software vendors (ISV) such as R
 2. The account you want to purchase our solution with must have the **Owner** or **Contributor** role assigned on the Azure subscription you are going to pay with.
 3. The billing account linked to your Azure subscription is properly set up. Depending on your billing account type (Microsoft Customer Agreement or Enterprise Agreement), you might need to enable marketplace purchases in the Azure portal first.
 
-## Pricing model
+## Pricing Model
 
 * RADIUSaaS is offered as a **monthly or** **annual subscription plan** with different [User Segments](azure-marketplace.md#user-segments). The correct **user segment** is automatically selected by our platform based on the amount of desired users.
 * All subscription plans consist of a **base fee** which includes a certain amount of users per subscription cycle - depending on the **user segment**. For example, the **base fee** for the user segment _RADIUSaaS (M) 50_ includes 50 users per month.
@@ -29,7 +29,7 @@ In order to purchase solutions from independent software vendors (ISV) such as R
 For a more detailed cost breakdown of your base and additional user fees, please refer to the invoice in your Azure portal.
 {% endhint %}
 
-## Plan overview
+## Plan Overview
 
 Subscriptions for RADIUSaaS are available based on a **monthly** or **annual** renewal interval.
 
@@ -42,7 +42,7 @@ The annual plan is discounted by 10% in comparison to the monthly plan (calculat
 | RADIUSaaS (M) | Monthly              |
 | RADIUSaaS (Y) | Annually             |
 
-### User segments
+### User Segments
 
 The following user segments are available for both, monthly and annual plans:&#x20;
 
@@ -60,7 +60,7 @@ The information provided throughout this article is analogously applicable for R
 
 ## Subscription Management
 
-### User upgrades
+### User Upgrades
 
 * If you would like to upgrade your user count, you can do that any time during the current subscription cycle by navigating to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) and by clicking "Open SaaS Account on publisher's site" (see screenshot below). This will re-direct you to our platform where the amount of users can be upgraded.
 
@@ -70,18 +70,22 @@ The information provided throughout this article is analogously applicable for R
 * For the current cycle, we will bill the additional users for remaining days only.
 * After confirming your choice and once we have updated the license in our backend, you will receive a confirmation email from us.
 
-### User downgrades
+### User Downgrades
 
-* Downgrading the amount of users is currently not possible without cancelling the subscription.
-* If you want to perform a downgrade, please [cancel](azure-marketplace.md#cancellation) your current subscription and re-subscribe with the desired amount of users once the cancellation becomes effective.
+* You can **pre-register a reduction** of your licensed users for the **next renewal**, by navigating to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) and by clicking "Open SaaS Account on publisher's site" (see screenshot below). This will re-direct you to our platform where the amount of users can be downgraded.
 
-### **Change plan**
+![](<../../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 2.png>)
 
-{% hint style="warning" %}
-This is currently **not supported**. Please [contact us](https://www.radius-as-a-service.com/help/) in case you have questions around this topic.
-{% endhint %}
+* The downgrade will become effective upon the next regular renewal of your subscription.
+* In case you change your mind and would like to change the user quantity or cancel the downgrade altogether, navigate back to your **RADIUSaaS subscription** and click **Cancel downgrade**.
 
-### **Recurring billing**
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+### Change Plan
+
+If available on Azure Portal, the **Change Plan** action allows you to change your current outdated plan to the most recent version of the plan with the same subscription cycle (annually or monthly).
+
+### **Recurring Billing**
 
 If you decide to disable **Recurring billing**, your subscription will not renew automatically. Instead, Microsoft will (irreversibly) cancel the subscription towards the end of the current subscription cycle. This means, the service will be terminated automatically on that date as well. While the subscription has not expired yet, you can opt to enable **Recurring billing** at any time.
 
@@ -167,6 +171,7 @@ The reasons for this hint is that - from time to time - we might have to depreca
 
 * As an existing customer, you may continue to use the deprecated plan indefinitely (until the subscription is cancelled).
 * In case a newer plan gives you better pricing or other advantages, we will inform you about this.
+* You can change to the most recent version of the plan by leveraging the [Change Plan](azure-marketplace.md#change-plan) action.
 
 ### Why is my Azure Marketplace purchase not working?
 

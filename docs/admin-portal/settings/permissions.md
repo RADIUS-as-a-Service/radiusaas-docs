@@ -178,7 +178,7 @@ Google will require you to allow the application to access limited data on your 
 {% tab title="Custom OIDC Provider (Okta)" %}
 The specific information you need to provide for the custom OIDC provider depends on the identity provider you choose. The following **example** is based on **Okta**.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 In the Okta admin console, you will need to create a new app integration with the following details:
 
@@ -203,7 +203,7 @@ The Token URL is also constructed and looks like this:
 
 The **Client ID** and **Client Secret** can be copied and created in the application itself:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 For the **Client Scope** `openid email` is required. This will tell Okta that we are using an OpenID authentication and need to read the logged in users email address.
 
