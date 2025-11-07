@@ -77,7 +77,7 @@
 * [FAQs](other/faqs/README.md)
   * [General](other/faqs/general.md)
   * [Log & Common Errors](other/faqs/log-and-common-errors.md)
-  * [MAC Authentication](other/faqs/mac-authentication.md)
+  * [MAC Authentication Bypass](other/faqs/mac-authentication.md)
   * [Blast-RADIUS Vulnerability](other/faqs/blast-radius-vulnerability.md)
   * [OCSP Soft-fail Consequences](other/faqs/ocsp-soft-fail-consequences.md)
   * [Security & Privacy](other/faqs/security-and-privacy/README.md)
