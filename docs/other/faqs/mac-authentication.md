@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-**MAC Authentication Bypass (MAB)** is a critical feature that enables devices unable to perform standard 802.1X enterprise authentication (such as legacy printers, simple sensors, or embedded systems) to connect to an otherwise secure network. MAB grants access by using a device's unique MAC address as its sole identifier against an authorised list maintained by a RADIUS server. Because this legacy approach is highly vulnerable to MAC spoofing, modern enterprise security services require a stronger implementation called **MAB-to-EAP**. This guide details the differences between the insecure legacy method **Pure MAB** and the modern, transport-secure workaround.
+**MAC Authentication Bypass (MAB)** is a feature that enables devices unable to perform standard 802.1X enterprise authentication (such as legacy printers, simple sensors, or embedded systems) to connect to an otherwise secure network. MAB grants access by using a device's unique MAC address as its sole identifier against an authorised list maintained by a RADIUS server. Because this legacy approach is highly vulnerable to MAC spoofing, modern enterprise security services require a stronger implementation called **MAB-to-EAP**. This guide details the differences between the insecure legacy method **Pure MAB** and the modern, transport-secure workaround.
 
 ## MAB Terminology and Implementations&#x20;
 
