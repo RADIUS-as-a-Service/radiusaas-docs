@@ -7,12 +7,16 @@ description: >-
 # MAC Authentication Bypass
 
 {% hint style="danger" %}
-**Note: Pure MAB Authentication Bypass is not supported by RADIUSaaS.**&#x20;
+Since **MAC addresses can be easily spoofed**, implementing a MAC authentication bypass is **strongly discouraged** unless absolutely necessary and the administrator has weighed the risk associated with implementing such a bypass against the convenience and budgetary constraints of upgrading outdated hardware.
 {% endhint %}
 
 ## Overview
 
-**MAC Authentication Bypass (MAB)** is a feature that enables devices unable to perform standard 802.1X enterprise authentication (such as legacy printers, simple sensors, or embedded systems) to connect to an otherwise secure network. MAB grants access by using a device's unique MAC address as its sole identifier against an authorised list maintained by a RADIUS server. Because this legacy approach is highly vulnerable to MAC spoofing, modern enterprise security services require a stronger implementation called **MAB-to-EAP**. This guide details the differences between the insecure legacy method **Pure MAB** and the modern, transport-secure workaround.
+**MAC Authentication Bypass (MAB)** is a feature that enables devices unable to perform standard 802.1X enterprise authentication (such as legacy printers, simple sensors, or embedded systems) to connect to an otherwise secure network. MAB grants access by using a device's unique MAC address as its sole identifier against an authorised list maintained by a RADIUS server.&#x20;
+
+The legacy implementation of MAB is **vulnerable to MAC address spoofing both on** the connection between the authenticating and the network device and on the connection between the network device and the RADIUS server. To eliminate the second attack vector, a stronger implementation of MAB, called **MAB-to-EAP**, can be used, which effectively ensures the integrity of the MAC address transmitted to the RADIUS server (the MAC address can still be spoofed on the link between the authenticating and network device).
+
+This guide details the differences between the insecure legacy method **Pure MAB** and the modern, transport-secured workaround.
 
 ## MAB Terminology and Implementations&#x20;
 
@@ -28,7 +32,7 @@ description: >-
 
 **Pure MAB** (Legacy Implementation): This method involves the Authenticator sending the client's MAC address to a RADIUS server, usually in the `Calling-Station-Id`  RADIUS attribute. The RADIUS server performs a simple lookup and returns an `Access-Accept` or `Access-Reject`. The MAC address acts as the identifier, not a true credential.
 
-**MAB-to-EAP** (Secured Implementation): Because Pure MAB lacks cryptographically secure transport and allows for spoofing of the MAC address, many modern services (like RADIUSaaS) require a stronger approach. In this method, the Authenticator uses the client's MAC address as both the username and password and then attempts to authenticate to the RADIUS server using a secure EAP protocol (e.g., EAP-TTLS-PAP, PEAP-MSCHAPv2). The client device remains oblivious that any authentication has occurred.
+**MAB-to-EAP** (Secured Implementation): Because Pure MAB lacks cryptographically secure transport, many modern services (like RADIUSaaS) require a stronger approach. In this method, the Authenticator uses the client's MAC address as both the username and password and then attempts to authenticate to the RADIUS server using a secure EAP protocol (e.g., EAP-TTLS-PAP, PEAP-MSCHAPv2). The client device remains oblivious that any authentication has occurred.
 
 ## How Pure MAB Works (External RADIUS Database)
 
@@ -47,18 +51,16 @@ When the MAC address database is maintained by an external RADIUS server (the co
 
 In general, **MAB provides little to no security** and should be used with extreme caution.&#x20;
 
-* **MAC Spoofing:** MAC addresses are easily changed (spoofed) on most modern computers and network cards. A malicious actor can observe the MAC address of an authorized device and configure their own device to use it, thereby gaining unauthorised access.
+* **MAC Spoofing:** MAC addresses are easily changed (spoofed) on most modern computers and network cards. A malicious actor can observe the MAC address of an authorised device and configure their own device to use it, thereby gaining unauthorised access.
 * **Identification, Not Authentication:** MAB is merely a form of device identification. It only confirms which device is connecting, not who owns it or if it is cryptographically secure.
 
 Because of these weaknesses, most modern cloud-based authentication services (like RADIUSaaS) do not support Pure MAB or legacy protocols like PAP or CHAP. Instead, they require the MAB-to-EAP method where the MAC address is used as credentials within a cryptographically strong EAP tunnel.&#x20;
 
 ## MAB Implementation with EAP (a RADIUSaaS Approach to MAB)
 
-When MAB is configured on an Authenticator and a legacy device that does not support 802.1X tries to request network access, the switch or AP will pretend to be that device and takes over the authentication on behalf of the client by authenticating to RADIUSaaS using one of the supported EAP [protocols](https://docs.radiusaas.com/admin-portal/users#protocols): EAP-TTLS-PAP or PEAP-MSCHAPv2. As part of this process it will check if the MAC address is listed in the RADIUSaaS database in the form of a manually added [User](../../admin-portal/users.md). (username = password = MAC address), If so, then an `Access-Accept` message is returned, and the EAP-based authentication completes giving the legacy device network access.
+When MAB is configured on an Authenticator and a legacy device that does not support 802.1X tries to request network access, the switch or AP will pretend to be that device and takes over the authentication on behalf of the client by authenticating to RADIUSaaS using one of the supported EAP [protocols](https://docs.radiusaas.com/admin-portal/users#protocols): EAP-TTLS-PAP or PEAP-MSCHAPv2. As part of this process, RADIUSaaS will check if the MAC address is listed in the RADIUSaaS database in the form of a manually added [User](../../admin-portal/users.md). (username = password = MAC address), If so, then an `Access-Accept` message is returned, and the EAP-based authentication completes giving the legacy device network access. Since the Authenticator is establishing a TLS connection to RADIUSaaS, it must trust the [Server Certificate](../../admin-portal/settings/settings-server.md#server-certificates) RADIUSaaS uses.
 
-The use of the MAC address as username/password to trigger EAP is a specific workaround implemented by Authenticator to simulate MAB while utilising stronger EAP protocols.
-
-In the above example, the Authenticator takes care of the authentication. However, when the Supplicant actually supports one of these EAP protocols, we can no longer talk about MAC Authentication Bypass, but rather Pure 802.1X/EAP authentication. In this case, the Supplicant will need to trust the RADIUS server's certificate. In contrast, in a Pure MAB process or the MAB-to-EAP process, the Supplicant is oblivious of any authentication taking place.&#x20;
+The use of the MAC address as username/password to trigger EAP is a specific workaround implemented by the Authenticator to simulate MAB while utilising stronger EAP protocols.
 
 ### Does MAB work with RADIUSaaS?
 
@@ -71,6 +73,7 @@ MAB in its original implementation using PAP or CHAP does not work with RADIUSaa
 **Authenticator:**
 
 * Enable 802.1X and MAC Authentication Bypass (MAB) on the specific access ports/SSIDs meant for non-802.1X devices.
+* Trust the [RADIUS server certificate](../../admin-portal/settings/settings-server.md#download).
 * _Note: Configuration steps are vendor-specific; refer to your device documentation._
 
 **Authentication Server:**
