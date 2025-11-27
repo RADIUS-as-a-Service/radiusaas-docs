@@ -35,7 +35,7 @@ The API documentation contains a complete Swagger-based API reference for each A
 It is not possible to trigger API calls directly through the API Reference.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (425).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (443).png" alt=""><figcaption></figcaption></figure>
 
 ## Scenarios
 

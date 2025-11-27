@@ -23,31 +23,31 @@ Below settings are the necessary settings to establish a functional RadSec conne
 1. Navigate to your Mist configuration plane.
 2.  To configure the relevant certificates, navigate to **Organization** **>** **Settings**.
 
-    <figure><img src="../../../../.gitbook/assets/image (126).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
 3.  Add the root certificate of the CA that has issued your **RADIUS Server Certificate** under **RadSec Certificate**.
 
-    <figure><img src="../../../../.gitbook/assets/image (117).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
 
 
 4.  Add your **RadSec Client Certificate** (created in step 2 under [Prepare Certificates](juniper-mist.md#prepare-certificates)) to **AP RadSec Certificate**.
 
-    <figure><img src="../../../../.gitbook/assets/image (137).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure>
 5.  Go to **Site >** **WLANs**.
 
-    <figure><img src="../../../../.gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
 6. Create a new WLAN if you have not already created one for which you want to leverage RADIUS authentication against our service.
 7.  Select **Enterprise (802.1X)** as **Security Type**.
 
-    <figure><img src="../../../../.gitbook/assets/image (112).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (130).png" alt=""><figcaption></figcaption></figure>
 8.  Under **RadSec**, select **Enabled** and set the **Server Name** to the **SAN** attribute of your **RADIUS Server Certificate**.
 
-    <figure><img src="../../../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
 9.  For **Server Addresses** use either the IP address or the DNS name of your [RadSec service endpoint](../../../admin-portal/settings/settings-server.md#properties).
 
 
 
-    <figure><img src="../../../../.gitbook/assets/image (316).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (334).png" alt=""><figcaption></figcaption></figure>
 
 ### A complete walk-through
 
-<figure><img src="../../../../.gitbook/assets/Kapture 2023-02-23 at 16.01.24.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Kapture 2023-02-23 at 16.01.24.gif" alt=""><figcaption></figcaption></figure>

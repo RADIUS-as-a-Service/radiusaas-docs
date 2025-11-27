@@ -8,7 +8,7 @@ This is only required if you are using a RADIUS server certificate that was issu
 
 When [downloading](../../admin-portal/settings/settings-server.md#download) the Server certificate, use only the green-marked certificate. This will download the root CA certificate of the issuing CA.
 
-<figure><img src="../../../.gitbook/assets/image (377).png" alt=""><figcaption><p>Showing download of root CA</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (395).png" alt=""><figcaption><p>Showing download of root CA</p></figcaption></figure>
 
 ### Part 2: Trust the Server Certificate
 
@@ -24,4 +24,4 @@ When [downloading](../../admin-portal/settings/settings-server.md#download) the 
 10. Click **Save**
 11. Under **Scope** assign the profile to the relevant audience
 
-<figure><img src="../../../.gitbook/assets/image (407).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (425).png" alt=""><figcaption></figcaption></figure>

@@ -2,7 +2,7 @@
 
 You can access basically every log that the platform generates. Naturally, this means that you may not be able to understand everything which you can read. You don't have to. If you have any questions, [drop a message](https://www.radius-as-a-service.com/drop-a-question) and we're happy to answer them.
 
-<figure><img src="../../../.gitbook/assets/2024-05-13_12h16_21.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-05-13_12h16_21.gif" alt=""><figcaption></figcaption></figure>
 
 ## Log types
 

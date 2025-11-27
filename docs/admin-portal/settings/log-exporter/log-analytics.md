@@ -28,8 +28,8 @@ Therefore, **do not quote any jinja variable**.
 
 **Correct**
 
-![](<../../../../.gitbook/assets/image (321).png>)
+![](<../../../.gitbook/assets/image (339).png>)
 
 **Wrong**
 
-![](<../../../../.gitbook/assets/image (149).png>)
+![](<../../../.gitbook/assets/image (167).png>)

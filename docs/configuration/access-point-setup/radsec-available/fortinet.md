@@ -30,18 +30,18 @@ To configure RadSec on your FortiGate UI please follow the steps:
 
 * Create a new **RADIUS Server** and add your [RadSec server IP address](../../../admin-portal/settings/settings-server.md#radsec-tcp) under **IP/Name**. For the **Secret**, use "radsec".
 
-<figure><img src="../../../../.gitbook/assets/2023-08-28 10_56_04-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2023-08-28 10_56_04-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
 * Import the [root CA of your RADIUS Server Certificate](../../../admin-portal/settings/settings-server.md#download) to the FortiGate **Certificates** under **System > Certificates > Import > CA Certificate**. The imported root CA will be listed under **Remote CA Certificate**.
 
-<figure><img src="../../../../.gitbook/assets/2023-08-28 10_57_07-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2023-08-28 10_57_07-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
 * Import the **RadSec Client Certificate** to your FortiGate under\
   **System > Certificates > Import > Certificate**.
 
-<figure><img src="../../../../.gitbook/assets/2023-08-28 10_58_54-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2023-08-28 10_58_54-Medienwiedergabe.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/2023-08-29 09_36_11-FortiGate.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2023-08-29 09_36_11-FortiGate.png" alt=""><figcaption></figcaption></figure>
 
 * Modify the RADIUS server configuration in your FortiGate to use it as RadSec client certificate.
 * If enabled, please disable the **server-identity-check** in your FortiGate RADIUS server configuration.

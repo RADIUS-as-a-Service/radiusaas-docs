@@ -6,13 +6,13 @@
 2. Give the rule a **Name** that explains for what the rule is used for. Furthermore, a descriptive name will help you to identify authentication requests processed by this rule in your logs easily later on.
 3. Do not forget to **Enable** the rule!
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Showing VPN rule</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Showing VPN rule</p></figcaption></figure>
 
 ## **Authentication**&#x20;
 
 Under the **Authentication** hive, your first choice is whether you want to allow or decline **Certificate-based** or **Username/Password-based** authentication for this rule.
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Showing VPN authntication</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Showing VPN authntication</p></figcaption></figure>
 
 
 
@@ -24,7 +24,7 @@ For certificate-based authentication you have the following choices to further c
 
 This allows you to narrow down incoming authentication requests to specific trusted root or issuing CAs. Those CAs can be a subset of all Trusted Roots you have configured on the RADIUSaaS platform.
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Showing certificate filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Showing certificate filtering</p></figcaption></figure>
 
 #### Filter for Intune IDs&#x20;
 
@@ -32,13 +32,13 @@ This is a historical setting. If your clients are authenticating with certificat
 
 In case you have entered your Tenant IDs as described [here](../trusted-roots.md#intune-id), the default behaviour of RADIUSaaS is that only machines presenting a certificate with extension OID **1.2.840.113556.5.14** and a whitelisted value for the Tenand ID will get access to the network. With the rule engine, you now have the option to further restrict the access to specific Intune IDs for a specific rule or to ignore the certificate extension. This allows you to have a multi-deployment setup, where some clients come with certificates providing the respective OID and some do not.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Showing Intune ID filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Showing Intune ID filtering</p></figcaption></figure>
 
 ### Username/Password-based authentication
 
 After enabling **Username/Password-based** authentication, you can apply additional filtering by configuring a Regex on the **Username**. Default is all Usernames.
 
-<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Showing username / password-based authentication</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Showing username / password-based authentication</p></figcaption></figure>
 
 ## Configuration
 
@@ -55,7 +55,7 @@ To set a NAS Identifier filter, either select **Identifiers** or **Groups**.&#x2
 * If you select **Identifiers**, you can specify multiple **Identifiers.**
 * If you select **Groups,** you can reference one or more of your pre-defined **NAS Identifier Groups**.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Showing NAS Identifier</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Showing NAS Identifier</p></figcaption></figure>
 
 ### NAS IP Address filter
 
@@ -64,7 +64,7 @@ To set a NAS IP address filter, either select **IPs** or **Groups**.&#x20;
 * If you select **IPs**, you can specify multiple **IPs.**
 * If you select **Groups,** you can reference one or more of your pre-defined **NAS IP Address Groups**.
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt="" width="401"><figcaption><p>Showing NAS IP Address Filter</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21).png" alt="" width="401"><figcaption><p>Showing NAS IP Address Filter</p></figcaption></figure>
 
 ### RADIUS attribute return
 

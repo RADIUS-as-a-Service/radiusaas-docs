@@ -14,10 +14,9 @@ To establish a valid RadSec connection, the MikroTik Access Points must trust th
 /certificate import file-name="scepman-root.cer"
 ```
 
-4.  Generate a **RadSec Client Certificate** using **SCEPman Certificate Master** by navigating to the [**Client Certificate**](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12) menu:\
+4.  Generate a **RadSec Client Certificate** using **SCEPman Certificate Master** by navigating to the [**Client Certificate**](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12) menu:<br>
 
-
-    <figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Ensure to monitor the expiry of your **RadSec Client Certificate** and renew it in due time to prevent service interruptions.
@@ -69,7 +68,7 @@ set myCa trusted=yes
 set "RADIUS Customer CA - Contoso.cer" trusted=yes
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (344).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (362).png" alt=""><figcaption></figcaption></figure>
 
 5. Export the root CA certificate (`myCa`) that has issued your **RadSec Client Certificate** above:
 
@@ -101,4 +100,4 @@ Please note that the below configuration was tested with RouterOS 6.47.4 and 6.4
 
 3. Switch to your **Wi-Fi Interfaces** and assign your **Security Profile** to the interface.
 
-![](<../../../../.gitbook/assets/image (266).png>)
+![](<../../../.gitbook/assets/image (284).png>)

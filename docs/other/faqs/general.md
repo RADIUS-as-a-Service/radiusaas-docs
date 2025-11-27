@@ -27,14 +27,14 @@ First, you have to create an Enterprise app. To do this via the Azure portal, fo
 3. Select **Enterprise applications**
 4. Click **+ New Application**
 
-<figure><img src="../../../.gitbook/assets/2024-05-13_16h39_30.png" alt=""><figcaption><p>Showing creation of a new application</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-05-13_16h39_30.png" alt=""><figcaption><p>Showing creation of a new application</p></figcaption></figure>
 
 5. Click **+ Create your own application**
 6. Give a name for the app (e.g. RADIUSaaS Portal)
 7. Choose **Integrate any other application you don’t find in the gallery** and&#x20;
 8. Click **Create**
 
-<figure><img src="../../../.gitbook/assets/image (384).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (402).png" alt=""><figcaption></figcaption></figure>
 
 After that the app is set up, we now need to add users to it and configure the logo and link
 
@@ -42,15 +42,15 @@ After that the app is set up, we now need to add users to it and configure the l
 
 1.  Under **Manage** go to **User and groups** - Add all users/groups who should be able to view/use your new URL tile and save
 
-    <figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption><p>Click "User and groups"</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption><p>Click "User and groups"</p></figcaption></figure>
 2.  Click **Properties** - Upload an image logo of your choice and save
 
-    <figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption><p>Click "Properties"</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Click "Properties"</p></figcaption></figure>
 3.  Click **Single Sign-on** - Select **Linked** mode - Then enter the URL you want and save.
 
-    <figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Click Single Sign-on - Select "Linked" mode</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (109).png" alt=""><figcaption><p>Click Single Sign-on - Select "Linked" mode</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt="Enter your RADIUSaaS instance URL"><figcaption><p>Enter your RADIUSaaS instance URL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (56) (1).png" alt="Enter your RADIUSaaS instance URL"><figcaption><p>Enter your RADIUSaaS instance URL</p></figcaption></figure>
 
 **Access My Apps**
 
@@ -144,10 +144,9 @@ To identify the public IP of the authenticating site for a particular authentica
 * Identify the relevant authentication (by correlating the timestamp and username).
 * Identify an `Access-Request` message (**message > Packet-Type** = **Acess-Request**) that belongs to the authentication under investigation.
 * Expand the respective log entry.
-*   The public IP can be extracted from the **message > Packet-Src-IP-Address** property of the log entry.\
+*   The public IP can be extracted from the **message > Packet-Src-IP-Address** property of the log entry.<br>
 
-
-    <figure><img src="../../../.gitbook/assets/image (374).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (392).png" alt=""><figcaption></figcaption></figure>
 
 **RADIUS Connection**
 
@@ -155,10 +154,9 @@ To identify the public IP of the authenticating site for a particular authentica
 * Configure the relevant time range / search window.
 * Set the **Log-type** filter to the **proxy**.
 * Identify the relevant authentication (by correlating the timestamp and username).
-*   The public IP can be extracted from the **message** property of the log entry:\
+*   The public IP can be extracted from the **message** property of the log entry:<br>
 
-
-    <figure><img src="../../../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (393).png" alt=""><figcaption></figcaption></figure>
 
 ## Does RADIUSaaS support WPA3 Enterprise?
 

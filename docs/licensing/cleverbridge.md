@@ -19,10 +19,9 @@ Since cleverbridge operates a local entity in the US, cleverbridge Inc., certain
 RADIUSaaS is offered as a **monthly or** **annual subscription plan** with different [User Segments](cleverbridge.md#user-segments). The correct **user segment** is either&#x20;
 
 * pre-selected in case we provide a quotation or order link to you, or
-*   must be manually selected during checkout:\
+*   must be manually selected during checkout:<br>
 
-
-    <figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (53) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Payment Options
 
@@ -63,10 +62,9 @@ The following user segments are available for both, monthly and annual plans.
 
 We offer RADIUSaaS along with our cloud-PKI solution [SCEPman](https://www.scepman.com/) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](cleverbridge.md#user-segments).
 
-The information provided throughout this article is also applicable for RADIUSaaS & SCEPman Bundle subscriptions.\
+The information provided throughout this article is also applicable for RADIUSaaS & SCEPman Bundle subscriptions.<br>
 
-
-<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Subscription Management
 
@@ -82,7 +80,7 @@ Cleverbridge allows you to manage any aspect of your subscription via their self
 
 To access the self management portal, please refer to the initial delivery / order confirmation email that was sent to you by cleverbridge at the time your order was placed. Within that email, locate the button saying **Manage Your Subscription For "\<SKU>"** and click it.
 
-<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44) (1).png" alt=""><figcaption></figcaption></figure>
 
 This will either navigate you to the self-management portal directly or you might have to re-generate the link (they might expire after a while) first.
 
@@ -116,7 +114,7 @@ To perform a mid-term upgrade,
 * Navigate to the subscription's [self-management portal](cleverbridge.md#self-management-portal).
 * Click **Manage products**.
 
-<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (45) (1).png" alt=""><figcaption></figcaption></figure>
 
 *   Select the correct [user segment](cleverbridge.md#user-segments), and provide the new **total** number of users. The website will display the&#x20;
 
@@ -125,11 +123,11 @@ To perform a mid-term upgrade,
 
     both **including VAT**.
 
-<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (46) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Click **Next**, review your **Payment method** and confirm the purchase by clicking **Buy now**.
 
-<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (47) (1).png" alt=""><figcaption></figcaption></figure>
 
 * The additional users will be added to your **existing RADIUSaaS instance** automatically.
 
@@ -148,15 +146,15 @@ To perform an early renewal upgrade,
 * Navigate to the subscription's [self-management portal](cleverbridge.md#self-management-portal).
 * Click **Renew subscription**.
 
-<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (48) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Select the correct [user segment](cleverbridge.md#user-segments), and provide the new **total** number of users. The website will display the renewal price considering the additional users.
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Click **Next**, review your **Payment method** and confirm the purchase by clicking **Buy now**.
 
-<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (50) (1).png" alt=""><figcaption></figcaption></figure>
 
 * The additional users will be added to your **existing RADIUSaaS instance** automatically.
 
@@ -174,7 +172,7 @@ By disabling Automatic Renewal you **are opting out of the perpetual forex rate*
 
 If you decide to disable **Automatic Renewal**, your subscription will not renew automatically. Instead, cleverbridge will (irreversibly) cancel the subscription towards the end of the current subscription cycle. This means, the service will be terminated automatically on that date as well. While the subscription has not expired yet, you can opt to enable **Automatic Renewal** at any time by navigating to your subscription's [self-management portal](cleverbridge.md#self-management-portal).
 
-<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (51) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Cancellation
 
@@ -188,13 +186,12 @@ Partners can leverage the same tools to manage subscriptions on behalf of their 
 
 * Sign-on to the [Partner Portal](https://www.cleverbridge.com/306/?scope=pplogin) using your partner account credentials.
 * Click **History**, select **All transactions** and locate the relevant customer.
-*   Click the icon highlighted in below screenshot, which will re-direct you to the initial confirmation / order confirmation page:\
+*   Click the icon highlighted in below screenshot, which will re-direct you to the initial confirmation / order confirmation page:<br>
 
-
-    <figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (52) (1).png" alt=""><figcaption></figcaption></figure>
 *   On that page, locate the button saying **Manage Your Subscription For "\<SKU>"** and click it.
 
-    <figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (44) (1).png" alt=""><figcaption></figcaption></figure>
 * This will either navigate you to the self-management portal directly or you might have to re-generate the link (they might expire after a while) first.
 
 {% hint style="info" %}

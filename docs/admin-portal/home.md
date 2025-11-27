@@ -14,19 +14,19 @@ The RADIUSaaS homepage presents you with an interactive service state that is **
 
 When you access the homepage of your RADIUSaaS instance, the health state of the service including its key components, i.e. RADIUS proxies and RadSec servers (the core service), is illustrated. The availability of the individual components is monitored in **real-time** and realized through **actual authentications** (PAP-based) that are periodically performed.  By hovering over individual nodes, additional information such as the public IP address and the data center location is shown.
 
-<figure><img src="../../.gitbook/assets/image (362).png" alt=""><figcaption><p>RADIUSaaS Health State - Overview</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (380).png" alt=""><figcaption><p>RADIUSaaS Health State - Overview</p></figcaption></figure>
 
 In case, a node is detected to be malfunctioning, the corresponding node along with the no longer available authentication and communication path is highlighted in red:
 
-<figure><img src="../../.gitbook/assets/ServiceState.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/ServiceState.gif" alt=""><figcaption></figcaption></figure>
 
 **Important:** As long as there is at least one green path leading to **Authentications**, the service is generally available. In case you are using RADIUS proxies, ensure that you have followed our architectural [recommendations](settings/settings-proxy.md) to decrease the likelihood that a proxy failure leads to an overall outage of the service.&#x20;
 
 The **Service State** icon in addition to a healthy (green) state can indicate one of three error conditions.&#x20;
 
-| Disabled                                                                      | Removed                                                                       | Expired / Not Yet Valid                                                       |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| <img src="../../.gitbook/assets/image (404).png" alt="" data-size="original"> | <img src="../../.gitbook/assets/image (405).png" alt="" data-size="original"> | <img src="../../.gitbook/assets/image (406).png" alt="" data-size="original"> |
+| Disabled                                                                   | Removed                                                                    | Expired / Not Yet Valid                                                    |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| <img src="../.gitbook/assets/image (422).png" alt="" data-size="original"> | <img src="../.gitbook/assets/image (423).png" alt="" data-size="original"> | <img src="../.gitbook/assets/image (424).png" alt="" data-size="original"> |
 
 ### Configuration State
 
@@ -34,7 +34,7 @@ The configuration of your RADIUSaaS instance may at times be rather complex, esp
 
 On the first layer of the tree, the network types are presented (WiFi, Wired, VPN). On subsequent layers the structure and configuration of the rules is shown, including permitted authentication types (certificate-based, username/password-based), trusted CAs, allow-listed APs/switches and SSIDs, and finally RADIUS return attributes such as VLAN- or other tags - if any. Grayed-out rules are disabled and thus will lead to rejected authentications in case none of the active/green rule-paths are fulfilled for a particular network type during authentication.&#x20;
 
-<figure><img src="../../.gitbook/assets/Transform.gif" alt=""><figcaption><p>Interactive RADIUSaaS Configuration State</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Transform.gif" alt=""><figcaption><p>Interactive RADIUSaaS Configuration State</p></figcaption></figure>
 
 ## Other controls
 
@@ -64,7 +64,7 @@ Click on the life saver button to lodge a support request.
 
 <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (54) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Service Documentation
 

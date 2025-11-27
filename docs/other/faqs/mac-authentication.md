@@ -45,7 +45,7 @@ When the MAC address database is maintained by an external RADIUS server (the co
 5. It returns an `Access-Accept` message if the MAC is found (Match) or an `Access-Reject` if it is not found (No Match).
 6. If `Access-Accept` is received, the Authenticator authorises the port and allows the client to join the network.
 
-<img src="../../.gitbook/assets/file.excalidraw (4).svg" alt="" class="gitbook-drawing">
+<img src="../../.gitbook/assets/file.excalidraw (4) (1).svg" alt="" class="gitbook-drawing">
 
 ### Security Considerations
 

@@ -6,13 +6,13 @@
 2. Give the rule a **Name** that explains for what the rule is used for. Furthermore, a descriptive name will help you to identify authentication requests processed by this rule in your logs easily later on.
 3. Do not forget to **Enable** the rule!
 
-<figure><img src="../../../../.gitbook/assets/image (18).png" alt="" width="401"><figcaption><p>Showing how to add a Wi-Fi rule</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (36).png" alt="" width="401"><figcaption><p>Showing how to add a Wi-Fi rule</p></figcaption></figure>
 
 ## **Authentication**&#x20;
 
 Under the **Authentication** hive, your first choice is whether you want to allow or decline **Certificate-based** or **Username/Password-based** authentication for this rule.
 
-<figure><img src="../../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Showing authentication</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Showing authentication</p></figcaption></figure>
 
 ### **Certificate-based authentication**
 
@@ -22,7 +22,7 @@ For certificate-based authentication you have the following choices to further c
 
 This allows you to narrow down incoming authentication requests to specific trusted root or issuing CAs. Those CAs can be a subset of all Trusted Roots you have configured on the RADIUSaaS platform.
 
-<figure><img src="../../../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Showing certificate filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption><p>Showing certificate filtering</p></figcaption></figure>
 
 #### Filter for Intune IDs&#x20;
 
@@ -30,13 +30,13 @@ This is a historical setting. If your clients are authenticating with certificat
 
 In case you have entered your Tenant IDs as described [here](../trusted-roots.md#intune-id), the default behaviour of RADIUSaaS is that only machines presenting a certificate with extension OID **1.2.840.113556.5.14** and a whitelisted value for the Tenand ID will get access to the network. With the rule engine, you now have the option to further restrict the access to specific Intune IDs for a specific rule or to ignore the certificate extension. This allows you to have a multi-deployment setup, where some clients come with certificates providing the respective OID and some do not.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Showing filtering by Intune ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Showing filtering by Intune ID</p></figcaption></figure>
 
 ### Username/Password-based authentication
 
 After enabling **Username/Password-based** authentication, you can apply additional filtering by configuring a Regex on the **Username**. Default is all Usernames
 
-<figure><img src="../../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 ## Configuration
 
@@ -49,7 +49,7 @@ To set an SSID filter, either select **Names** or **Groups**.&#x20;
 * If you select **Names**, you can specify multiple **SSIDs.**
 * If you select **Groups,** you can reference one or more of your pre-defined **SSID Groups**.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Showing filter by SSID name or group</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Showing filter by SSID name or group</p></figcaption></figure>
 
 ### Access Point filter
 
@@ -62,7 +62,7 @@ To set a **MAC-Address-based** access point filter, either select **Addresses** 
 * If you select **Addresses**, you can specify multiple Access Point MAC addresse&#x73;**.**&#x20;
 * If you select **Groups,** you can reference one or more of your pre-defined **MAC Address Groups**.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (27).png" alt="" width="402"><figcaption><p>Showing Access Point selection by MAC addresses or group</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (45).png" alt="" width="402"><figcaption><p>Showing Access Point selection by MAC addresses or group</p></figcaption></figure>
 
 The following notations are supported for the MAC addresses:
 
@@ -96,7 +96,7 @@ We therefore recommend to use the [Certificate Subject Name](wifi.md#by-certific
 * The filter is set to match the Value to your specified extension (OID)
 * Wildcards will be translated to. \* Regex
 
-<figure><img src="../../../../.gitbook/assets/image (10).png" alt="" width="402"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (28).png" alt="" width="402"><figcaption></figcaption></figure>
 
 #### By Certificate Subject Name Property
 
@@ -107,9 +107,9 @@ We therefore recommend to use the [Certificate Subject Name](wifi.md#by-certific
 
 As an example, the following rule will assign the VLAN ID 15 based on the `Subject Name` attribute `OU` prefixed with `vlan-`
 
-<figure><img src="../../../../.gitbook/assets/image (12).png" alt="" width="403"><figcaption><p>Showing VLAN filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (30).png" alt="" width="403"><figcaption><p>Showing VLAN filtering</p></figcaption></figure>
 
-![](<../../../../.gitbook/assets/image (317).png>)
+![](<../../../.gitbook/assets/image (335).png>)
 
 ### Additional RADIUS attributes
 

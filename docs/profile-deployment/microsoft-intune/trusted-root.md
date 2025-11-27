@@ -8,7 +8,7 @@ This is only required if you are using a RADIUS server certificate that was issu
 
 When [downloading](../../admin-portal/settings/settings-server.md#download) the Server certificate, use only the green-marked certificate. This will download the root CA certificate of the issuing CA.
 
-<figure><img src="../../../.gitbook/assets/image (367).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure>
 
 ### Part 2: Adding a Trusted certificate profile for your endpoint devices&#x20;
 
@@ -24,5 +24,5 @@ Ensure, you have reviewed [Part 1](trusted-root.md#edit-your-downloaded-certific
 6. Click **Create** and provide a descriptive name and optional **Description**
 7. In the second step, upload the \*.cer file containing the RADIUS server certificate/trusted root the server certificate was signed with.
 
-![](<../../../.gitbook/assets/image (291).png>)
+![](<../../.gitbook/assets/image (309).png>)
 

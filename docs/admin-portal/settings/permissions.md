@@ -18,7 +18,7 @@ RADIUSaaS does not store or manage its own administrator identities.
 Therefore, administrators enjoy the comfort of working with their own identities and do not have to setup additional accounts.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Changes to the role assignments and invalidating user tokens only become effective after clicking on **Save**.
@@ -70,7 +70,7 @@ During authentication to the RADIUSaaS Admin Portal, each permitted identity obt
 
 In a security event, RADIUSaaS Administrators can **invalidate all previously issued access tokens** by setting the minimum issuance date to now.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (426).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (444).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Technical Contacts
 
@@ -88,7 +88,7 @@ Add up to 5 technical contacts to receive e-mail notifications related to your i
 
 Access tokens are required to authenticate calls to the [RADIUSaaS REST API](../../other/rest-api/).
 
-<figure><img src="../../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (445).png" alt=""><figcaption></figcaption></figure>
 
 ### Add
 
@@ -99,17 +99,16 @@ Follow these steps to create a new access token:
 3. Set the permission level by selecting a [**Role**](permissions.md#roles)
 4. Select the lifetime of the access token
 5. Click on **Create**\
-   ![](<../../../.gitbook/assets/image (429).png>)\
-
+   ![](<../../.gitbook/assets/image (447).png>)<br>
 6. Copy the access token to the clipboard and store it at a secure location.\
-   ![](../../../.gitbook/assets/Screenshot_2024-05-23_at_18_46_08.jpg)
+   ![](../../.gitbook/assets/Screenshot_2024-05-23_at_18_46_08.jpg)
 7. Click on **Close**
 
 ### **Delete**
 
 To delete an access token, locate it in the table and click on the bin icon:
 
-<figure><img src="../../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (448).png" alt=""><figcaption></figcaption></figure>
 
 ## Permissions consent
 
@@ -132,25 +131,25 @@ There are two alternative ways to provide consent:
 
 If no consent has been given on behalf of the organization before by an admin, a user will see a permission request dialogue:
 
-<figure><img src="../../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 Users can review or revoke this consent in Microsoft [My Apps](https://myapps.microsoft.com).
 
-<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
 Administrators can review & revoke user consents in the Azure Portal (**Microsoft Entra ID** > **Enterprise Applications** > **RADIUS as a Service**):
 
-<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
 
 ### Admin consent
 
 Rather than requiring consent from each user, administrators can grant consent for all users on behalf of the organization, when logging in the RADIUSaaS web portal for the first time:
 
-<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 
 Alternatively, administrators can grant the consent on behalf of the organization in the Azure portal (**Microsoft Entra ID** > **Enterprise Applications** > **RADIUS as a Service**). In Azure Portal, administrators can also review or revoke the consent:
 
-<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Apple" %}
@@ -219,15 +218,15 @@ If required in certain scenarios (e.g. **GCC High** tenants), you can also use a
 
 Before creating the app registration, make sure to copy the redirect URL from the **Permissions** section of your RADIUSaaS portal. You can find the URL in the top of the **Custom OIDC Provider** editing dialogue:
 
-<figure><img src="../../.gitbook/assets/image (74).png" alt="Click on the Edit button to find the redirect URL"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (74) (1).png" alt="Click on the Edit button to find the redirect URL"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt="Copy the redirect URL from the dialogues header"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75) (1).png" alt="Copy the redirect URL from the dialogues header"><figcaption></figcaption></figure>
 
 ### Create App Registration
 
 In Entra ID, navigate to **App Registrations** and create a new registration:
 
-<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (78) (1).png" alt=""><figcaption></figcaption></figure>
 
 Select a descriptive **Name** for the registration and add the redirect URI that you have copied from the previous step as **Web** type.
 
@@ -235,31 +234,31 @@ Select a descriptive **Name** for the registration and add the redirect URI that
 
 In the created registration, navigate to **API permissions** and add `email` and `openid` from Microsoft Graph as **Delegated** permissions. Also make sure to grant admin consent for your tenant:
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Add Client Secret
 
 To allow RADIUSaaS to use this registration, create a client secret in the **Certificates & Secrets** section of the registration. Copy the value of the secret for later.
 
-<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (82) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Note Registration Details
 
 You will later need the registrations **Client ID** and some URLs specific to your tenant. You can find these in the Overview page of the registration:
 
-<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (84) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Assign Users
 
 For anyone to be able to use this app registration for sign-ins, make sure to add them in the managed enterprise application. You can find this in Entra ID in **Enterprise Applications** having the same name as your app registration. There is also a link to this in the overview of the app registration.
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt="Assign users to allow them to use the application"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80) (1).png" alt="Assign users to allow them to use the application"><figcaption></figcaption></figure>
 
 ### Configure the OIDC Provider in RADIUSaaS
 
 Back in the RADIUSaaS portal, navigate to the Permissions section and edit the custom OIDC provider and fill in the required information:
 
-<figure><img src="../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (83) (1).png" alt=""><figcaption></figcaption></figure>
 
 | Field              | Explanation                                                                             |
 | ------------------ | --------------------------------------------------------------------------------------- |
@@ -272,7 +271,7 @@ Back in the RADIUSaaS portal, navigate to the Permissions section and edit the c
 
 After saving the configuration make sure to allow the custom provider and add some users for this provider. You should now be able to use the provider to log into your RADIUSaaS portal:
 
-<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 It might be necessary for an Entra administrator to initially use this login to consent again for their tenant. This only needs to be done once.

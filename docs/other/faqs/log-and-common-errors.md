@@ -12,7 +12,7 @@ description: >-
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (310).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (328).png" alt=""><figcaption></figcaption></figure>
 
 Corresponding error messages:
 
@@ -33,7 +33,7 @@ If the devices are able to connect eventually without noticeable delays, such er
 Severity: Low / No Impact
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (311).png" alt=""><figcaption><p>tlsclientrd: connection to server server-tls-secondary3 lost</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (329).png" alt=""><figcaption><p>tlsclientrd: connection to server server-tls-secondary3 lost</p></figcaption></figure>
 
 Your proxies will create a TCP session with your RadSec server(s). These sessions have to be reinitiated every 30 seconds. As long as there is no error within those messages, these log entries are expected.
 

@@ -16,7 +16,7 @@ Both RadSec and RADIUS service offer public IP address that enable your network 
 
 ## RadSec / TCP
 
-<figure><img src="../../../.gitbook/assets/image (386).png" alt=""><figcaption><p>Showing RadSec IP and port</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (404).png" alt=""><figcaption><p>Showing RadSec IP and port</p></figcaption></figure>
 
 #### **RadSec DNS**
 
@@ -82,13 +82,13 @@ TLS 1.3 allows explicitly requesting the RadSec client certificate before comple
 This setting is automatically enabled when the maximum TLS version is set to 1.3.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (461).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (479).png" alt=""><figcaption></figcaption></figure>
 
 ## RADIUS / UDP
 
 This section is available when you have configured at least on [RADIUS Proxy](settings-proxy.md). For each proxy, a separate public IP address is available. The public IP addresses in this section support the RADIUS protocol only and thus listen on ports 1812/1813.
 
-<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **Server IP Addresses and Location**
 
@@ -102,7 +102,7 @@ Geo-location of the RADIUS Proxy/Proxies as well as the respective public IP add
 
 The shared secret for the respective RADIUS Proxy. By default, all RADIUS Proxies are initialized with the same shared secret.
 
-<figure><img src="../../../.gitbook/assets/2024-05-24_18h45_54.gif" alt=""><figcaption><p>Showing changing of shared secrets per proxy</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2024-05-24_18h45_54.gif" alt=""><figcaption><p>Showing changing of shared secrets per proxy</p></figcaption></figure>
 
 ### **Ports**
 
@@ -132,7 +132,7 @@ To create your Customer-CA, follow these simple steps:&#x20;
 4. Click on **Save**
 5. After the creation, you will see a new certificate available under Server Certificates
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Bring your own certificate
 
@@ -166,7 +166,7 @@ To add your server certificate created in above steps, navigate to **RADIUSaaS i
 10. Enter the password of your **Private Key**&#x20;
 11. Click **Save**
 
-<figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Please note: By default, SCEPman Certificate Master issues certificates that are valid for 730 days. If you'd like to change this, please refer to SCEPman's [documentation](https://docs.scepman.com/advanced-configuration/application-settings/certificates#appconfig-validityperioddays).
@@ -187,11 +187,11 @@ To download your **Server Certificate,** you have two options:&#x20;
 1. Click **Download CA Certificate** on the top. This will directly download the **trusted root CA** of the currently **active** server certificate. &#x20;
 2. &#x20;Click the **download** icon in the corresponding row.
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (41) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Option 2** will open a dialog showing the complete certificate path. The **root certificate** will always be marked in green.
 
-<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Showing the root certificate in green</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Showing the root certificate in green</p></figcaption></figure>
 
 For both options, the downloaded root certificate is encoded in base64 (PEM). In case your device (e.g. WiFi controller) needs a binary coding (DER), you can convert it using [OpenSSL](https://openssl.org/):
 
@@ -211,7 +211,7 @@ Do not let the RADIUS Server Certificate expire. It will break the authenticatio
 
 Certificates expire from time to time. Five months before your certificate is going to expire, your dashboard will give you a hint by displaying a warning sign next to it.
 
-![Screenshot showing certificate expiration](<../../../.gitbook/assets/image (111).png>)
+![Screenshot showing certificate expiration](<../../.gitbook/assets/image (129).png>)
 
 If the triangle is diplayed next to the active RADIUS Server Certificate, follow this guide to update it:&#x20;
 

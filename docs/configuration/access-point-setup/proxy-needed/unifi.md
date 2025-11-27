@@ -14,7 +14,7 @@ Please go through the following steps and configurations to create a RADIUS prof
 2. Click **Create a new RADIUS Profile**
 3. Fill the forms with all your information
 
-![](<../../../../.gitbook/assets/image (180).png>)
+![](<../../../.gitbook/assets/image (198).png>)
 
 ### SSID <a href="#ssid" id="ssid"></a>
 

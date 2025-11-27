@@ -1,6 +1,6 @@
 # RadSec
 
-<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Showing TLS outer tunnel and required certificates</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23) (1).png" alt=""><figcaption><p>Showing TLS outer tunnel and required certificates</p></figcaption></figure>
 
 Before your access points are able to establish a valid **RadSec connection** (which can be considered an mTLS connection), the following requirements must be met regardless of the manufacturer of the access point.
 

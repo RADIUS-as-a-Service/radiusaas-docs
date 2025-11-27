@@ -6,13 +6,13 @@
 2. Give the rule a **Name** that explains for what the rule is used for. Furthermore, a descriptive name will help you to identify authentication requests processed by this rule in your logs easily later on.
 3. Do not forget to **Enable** the rule!
 
-<figure><img src="../../../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (454).png" alt=""><figcaption></figcaption></figure>
 
 ## **Authentication**&#x20;
 
 Under the **Authentication** hive, your first choice is whether you want to allow or decline **Certificate-based** or **Username/Password-based** authentication for this rule.
 
-<figure><img src="../../../../.gitbook/assets/image (437).png" alt=""><figcaption><p>Showing LAN authentication</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (455).png" alt=""><figcaption><p>Showing LAN authentication</p></figcaption></figure>
 
 ### **Certificate-based authentication**
 
@@ -22,7 +22,7 @@ For certificate-based authentication you have the following choices to further c
 
 This allows you to narrow down incoming authentication requests to specific trusted root or issuing CAs. Those CAs can be a subset of all Trusted Roots you have configured on the RADIUSaaS platform.
 
-<figure><img src="../../../../.gitbook/assets/image (438).png" alt=""><figcaption><p>Showing Trusted Root CA filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (456).png" alt=""><figcaption><p>Showing Trusted Root CA filtering</p></figcaption></figure>
 
 #### Filter for Intune IDs&#x20;
 
@@ -30,13 +30,13 @@ This is a historical setting. If your clients are authenticating with certificat
 
 In case you have entered your Tenant IDs as described [here](../trusted-roots.md#intune-id), the default behaviour of RADIUSaaS is that only machines presenting a certificate with extension OID **1.2.840.113556.5.14** and a whitelisted value for the Tenand ID will get access to the network. With the rule engine, you now have the option to further restrict the access to specific Intune IDs for a specific rule or to ignore the certificate extension. This allows you to have a multi-deployment setup, where some clients come with certificates providing the respective OID and some do not.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (439).png" alt=""><figcaption><p>Showing Intune ID filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (457).png" alt=""><figcaption><p>Showing Intune ID filtering</p></figcaption></figure>
 
 ### Username/Password-based authentication
 
 After enabling **Username/Password-based** authentication, you can apply additional filtering by configuring a Regex on the **Username**. Default is all Usernames.
 
-<figure><img src="../../../../.gitbook/assets/image (440).png" alt=""><figcaption><p>Showing Username / Password-based authentication</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (458).png" alt=""><figcaption><p>Showing Username / Password-based authentication</p></figcaption></figure>
 
 ## Configuration
 
@@ -53,7 +53,7 @@ To set a **MAC-Address-based** switch filter, either select **Addresses** or **G
 * If you select **Addresses**, you can specify multiple switch MAC addresse&#x73;**.**&#x20;
 * If you select **Groups,** you can reference one or more of your pre-defined **MAC Address Groups**.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (442).png" alt=""><figcaption><p>Showing MAC address filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (460).png" alt=""><figcaption><p>Showing MAC address filtering</p></figcaption></figure>
 
 The following notations are supported for the MAC addresses:
 
@@ -95,9 +95,9 @@ The VLAN ID is not required to have a prefix. However, it can be useful in case 
 
 As an example, the following rule will assign the VLAN ID 15 based on the `Subject Name` attribute `OU` prefixed with `vlan-`
 
-<figure><img src="../../../../.gitbook/assets/image (443).png" alt=""><figcaption><p>Showing VLAN filtering</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (461).png" alt=""><figcaption><p>Showing VLAN filtering</p></figcaption></figure>
 
-![](<../../../../.gitbook/assets/image (317).png>)
+![](<../../../.gitbook/assets/image (335).png>)
 
 ### Additional RADIUS attributes
 

@@ -20,8 +20,7 @@ In order to purchase solutions from independent software vendors (ISV) such as R
 * Upon every renewal date, you will be billed immediately.
 * You will always be billed for the entire subscription cycle in advance.
 * The related items should appear on your Microsoft Azure invoice (Pay-As-You-Go or Enterprise Agreement) the month after we have reported your fees to Microsoft.
-*   In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja".\
-
+*   In the PDF invoice you will receive from Microsoft, all RADIUSaaS fees are lumped into an item called "SaaS". The related Publisher is "glueckkanja".<br>
 
     <figure><img src="../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -64,7 +63,7 @@ The information provided throughout this article is analogously applicable for R
 
 * If you would like to upgrade your user count, you can do that any time during the current subscription cycle by navigating to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) and by clicking "Open SaaS Account on publisher's site" (see screenshot below). This will re-direct you to our platform where the amount of users can be upgraded.
 
-![](<../../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 2.png>)
+![](<../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 2.png>)
 
 * Our platform will inform you about the new fees you to expect for a **complete** subscription cycle.
 * For the current cycle, we will bill the additional users for remaining days only.
@@ -74,12 +73,12 @@ The information provided throughout this article is analogously applicable for R
 
 * You can **pre-register a reduction** of your licensed users for the **next renewal**, by navigating to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) and by clicking "Open SaaS Account on publisher's site" (see screenshot below). This will re-direct you to our platform where the amount of users can be downgraded.
 
-![](<../../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 2.png>)
+![](<../.gitbook/assets/Screenshot 2022-02-18 at 12.32.27 2.png>)
 
 * The downgrade will become effective upon the next regular renewal of your subscription.
 * In case you change your mind and would like to change the user quantity or cancel the downgrade altogether, navigate back to your **RADIUSaaS subscription** and click **Cancel downgrade**.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Change Plan
 
@@ -93,7 +92,7 @@ If you decide to disable **Recurring billing**, your subscription will not renew
 
 * If you would like to (irreversibly) cancel your subscription, navigate to your **RADIUSaaS subscription** in the [Azure SaaS portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fresources) and click **Cancel subscription**.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2022-02-18 at 12.29.47 copy.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2022-02-18 at 12.29.47 copy.png" alt=""><figcaption></figcaption></figure>
 
 * If you cancel within the grace period, the service will be stopped immediately.
 * If you cancel after the grace period, the service will remain active until the end of the current subscription cycle.
@@ -120,14 +119,14 @@ To get started with your RADIUSaaS or RADIUSaaS & SCEPman Bundle subscription, f
     * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
 * Select the **Plan** based on your preferred renewal interval and click **Subscribe**.
 
-![](<../../.gitbook/assets/image (333).png>)
+![](<../.gitbook/assets/image (351).png>)
 
 * Create or select the **Resource group** you would like to deploy the subscription to.
 * Assign a descriptive **Name** to later identify your subscription.
 * We recommend to keep **Recurring billing** **On** so that you do not have to worry about an automatic termination of your subscription.
 * Click **Review + subscribe** and then **Subscribe** to deploy the **SaaS** resource to your **Resource group**.
 
-![](<../../.gitbook/assets/image (217).png>)
+![](<../.gitbook/assets/image (235).png>)
 
 {% hint style="info" %}
 The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
@@ -135,7 +134,7 @@ The random order of **Base Fees** und **Additional Users** under the **Price** i
 
 * Once the deployment is complete, please navigate to our platform to complete the checkout. Therefore click **Configure account now**.
 
-![](<../../.gitbook/assets/image (221).png>)
+![](<../.gitbook/assets/image (239).png>)
 
 * After authenticating on our platform using your Microsoft credentials, you will be prompted for additional information, such as the desired total **User** amount and a **Technical contact**.
 
@@ -147,7 +146,7 @@ The **Technical contact** must have a mailbox connected to it, so we are able to
 If the plan contains chargeable add-ons, you can select them under **Extras**. For example, all RADIUSaaS & SCEPman Bundle plans allow you to purchase the optional [SCEPman Setup Support](https://docs.scepman.com/support#scepman-setup-support) package.
 {% endhint %}
 
-![](../../.gitbook/assets/Screenshot_2022-02-18_at_12_23_47.png)
+![](../.gitbook/assets/Screenshot_2022-02-18_at_12_23_47.png)
 
 * Based on the amount of users provided, we will charge the relevant base fee for your user segment as well as additional users, in case you require more than the included amount in your base fee. **The platform automatically selects the best price / tier**.
 * The platform will show you the licensing fees you have to expect under **Cost Projection**.
@@ -163,7 +162,7 @@ You will only be charged by Microsoft, once you have completed the enrolment on 
 
 In case you see hint in your subscription as shown in below screenshot, **there is no need to worry**!
 
-<figure><img src="../../.gitbook/assets/azure-saas-plan-no-longer-available-for-purchase copy.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/azure-saas-plan-no-longer-available-for-purchase copy.png" alt=""><figcaption></figcaption></figure>
 
 The reasons for this hint is that - from time to time - we might have to deprecate plans for technical reasons.&#x20;
 

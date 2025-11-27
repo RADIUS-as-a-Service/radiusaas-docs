@@ -16,23 +16,19 @@ To establish a valid RadSec connection, your Access Points must trust the **RADI
     In this example SCEPman is used as Root CA and has issued the RADIUS server certificate. So, we download the root CA certificate from SCEPman portal:\
     \
     ![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)\
-    Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:\
-
+    Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:<br>
 
     <figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 2.  Create a **RadSec Client Certificate** for your access points. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).\
-    In this example we generate a certificate in the format "PEM". Please note down the password, as we need this later.\
-
+    In this example we generate a certificate in the format "PEM". Please note down the password, as we need this later.<br>
 
     <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-3.  Split the generated certificate into the private key (named "priv.key" in this example) and the certificate (named "clientcert.cer"). This can be easily done via a text editor:\
-
+3.  Split the generated certificate into the private key (named "priv.key" in this example) and the certificate (named "clientcert.cer"). This can be easily done via a text editor:<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot 2024-09-24 101150.png" alt=""><figcaption></figcaption></figure>
 4.  Add the root certificate of the CA that has issued the **RadSec Client Certificate** to your RADIUS instance as described [here](../../../admin-portal/settings/trusted-roots.md#add) and select **RadSec** under **Use for**.\
     In case the **RadSec Client Certificate** has been issued by SCEPman (this example) and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**:\
-    \
-
+    <br>
 
     <figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -43,8 +39,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 {% endhint %}
 
 1. Navigate to your Unifi Network controller and open **Settings** **> Profiles > RADIUS**.
-2.  Create a new profile or update an existing one:\
-
+2.  Create a new profile or update an existing one:<br>
 
     <figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 3. Fill in the required information:
@@ -64,12 +59,10 @@ Below settings are the necessary settings to establish a functional RadSec conne
          \- **Server IP Address/es**: Provide the IP address of your [RadSec service endpoint](../../../admin-portal/settings/settings-server.md#properties).\
          \- **Port**: 2083\
          \- **Shared Secret**: `radsec`
-      9.  **Interim Update Interval**: optional / if needed\
-
+      9.  **Interim Update Interval**: optional / if needed<br>
 
           <figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
-4.  Assign this profile to the desired WiFi profile:\
-
+4.  Assign this profile to the desired WiFi profile:<br>
 
     <figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 5. Give your Access Points some time to apply the new configuration:\

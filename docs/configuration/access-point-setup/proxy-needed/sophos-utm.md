@@ -14,9 +14,9 @@ Please go through the following steps and configurations to create a RADIUS prof
 2. Click **New Authentication Server**
 3. Fill the forms with all your information
 
-![](../../../../.gitbook/assets/sophos\_1.png)
+![](../../../.gitbook/assets/sophos_1.png)
 
-![](../../../../.gitbook/assets/sophos\_2.png)
+![](../../../.gitbook/assets/sophos_2.png)
 
 ### SSID configuration&#x20;
 
@@ -27,6 +27,6 @@ Perform the following steps and configurations for SSID:
 3. Then navigate to your **SSID** settings which can be found under **Wireless Protection > Wireless Networks**
 4. Create a SSID with the **Encryption Mode, WPA2/WPA-Enterprise**
 
-![](../../../../.gitbook/assets/sophos\_3.png)
+![](../../../.gitbook/assets/sophos_3.png)
 
-![](../../../../.gitbook/assets/sophos\_4.png)
+![](../../../.gitbook/assets/sophos_4.png)

@@ -10,13 +10,13 @@ In your Overview you have a short overview about the status for the logged in us
 
 
 
-![](../../../.gitbook/assets/test.png)
+![](../../.gitbook/assets/test.png)
 
 ### Authentications
 
 Under Authentications you have tables to get an overview on how many times someone has been logged in and an overview about why authentications are failing.&#x20;
 
-![](<../../../.gitbook/assets/image (238).png>)
+![](<../../.gitbook/assets/image (256).png>)
 
 ### Creating Custom Visualisation
 

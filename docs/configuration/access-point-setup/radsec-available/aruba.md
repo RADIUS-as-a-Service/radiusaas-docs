@@ -26,13 +26,13 @@ For general information on how to import certificates to your Aruba platform, pl
 
 1.  Import the root certificate of the CA that has issued your **RADIUS Server Certificate** with the type **CA certificate**.
 
-    <figure><img src="../../../../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (169).png" alt=""><figcaption></figcaption></figure>
 2.  Import the **RadSec Client Certificate** (created in step 2 under [Prepare Certificates](aruba.md#prepare-certificates)) with the type **Server certificate**.
 
-    <figure><img src="../../../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>
 3.  Under **Access Points >** **Security** select the imported **RadSec Client Certificate** for **RadSec** and the RADIUS root CA certificate for **RadSec Certificate Authority**.
 
-    <figure><img src="../../../../.gitbook/assets/image (133).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
 4.  For the RADIUS server configuration, enable **RadSec** and choose either the IP address or the DNS name of your [RadSec service endpoint](../../../admin-portal/settings/settings-server.md#properties).
 
-    <figure><img src="../../../../.gitbook/assets/image (131).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (149).png" alt=""><figcaption></figcaption></figure>

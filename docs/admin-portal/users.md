@@ -52,4 +52,4 @@ To **Delete** users, select all users which should be deleted in the list, click
 
 To change a user's password, disable/re-enable a user or select a new validity period, simply click on the **eye** symbol next to the user entry, change all needed entries and save them.
 
-<figure><img src="../../.gitbook/assets/image (365).png" alt=""><figcaption><p>Showing update of a user</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (383).png" alt=""><figcaption><p>Showing update of a user</p></figcaption></figure>

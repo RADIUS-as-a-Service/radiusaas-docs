@@ -42,7 +42,7 @@ To add a new trusted certificate, follow these steps:
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (392).png" alt=""><figcaption><p>Showing deletion of a trusted certificate</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (410).png" alt=""><figcaption><p>Showing deletion of a trusted certificate</p></figcaption></figure>
 
 ## OCSP Soft-fail
 
@@ -60,7 +60,7 @@ Note that this setting is only available when **OCSP Autodetect** or **OCSP** is
 
 By default, we **recommend enabling OCSP Soft fail** to increase the availability of the service by allowing authentication requests to be accepted even if the OCSP responder cannot be reached. With this **soft fail** mechanism, and in case OCSP is not reachable, RADIUSaaS will only check if the incoming certificate was signed by one of the [trusted CAs](trusted-roots.md) and processes any optional [Rules](rules/).
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Tiered PKI hierarchy
 
@@ -114,7 +114,7 @@ To get your Intune Tenant ID, follow these steps:&#x20;
 
 The Tenant ID of the following certificate is: **bb4397cb6891c64db17f766487518a6a**
 
-![Showing Certificate](<../../../.gitbook/assets/image (250).png>)
+![Showing Certificate](<../../.gitbook/assets/image (268).png>)
 
 ## XML
 
@@ -131,4 +131,4 @@ Today, most MDM platforms provide a wizard-based method to deploy networking pro
   4. and click **Download**.
 * To generate your **Wired** XML profile, click **Download**.
 
-<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30) (1).png" alt=""><figcaption></figcaption></figure>
