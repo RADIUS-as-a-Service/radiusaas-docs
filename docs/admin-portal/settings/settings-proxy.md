@@ -11,7 +11,7 @@ Proxies are required when your authenticators (e.g., access points, switches) su
 ## Architecture
 
 {% hint style="warning" %}
-<kbd>**Your subscription includes at least two public IP addresses capable of communicating via RADIUS. We strongly recommend configuring these IP addresses as the primary and secondary RADIUS servers on your network devices and appliances. For optimal redundancy, the secondary IP should be located in a different geographic region from the primary**</kbd><kbd>.</kbd>
+Your subscription includes at least two public IP addresses capable of communicating via RADIUS. We strongly recommend configuring these IP addresses as the primary and secondary RADIUS servers on your network devices and appliances. For optimal redundancy, the secondary IP should be located in a different geographic region from the primary.
 {% endhint %}
 
 ### Performance
