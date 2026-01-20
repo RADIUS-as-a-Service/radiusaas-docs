@@ -15,9 +15,8 @@
 11. Next, as **Certificate server names** add the&#x20;
 
     * **Subject Alternative Name (SAN)**
-    * and **Common Name (CN)**&#x20;
 
-    of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**&#x20;
+    of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) This can be found by expanding the active server certificate and copying the value for SAN.&#x20;
 
     <figure><img src="../../../.gitbook/assets/2024-05-13_15h04_32 (1).png" alt=""><figcaption></figcaption></figure>
 12. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
