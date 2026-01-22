@@ -32,10 +32,6 @@ Should you have a large number of MAC addresses that you wish to add, you can im
 The maximum number of MAC addresses that can be imported depends on a number of factors, including the number of rules you have configured.
 {% endhint %}
 
-{% hint style="warning" %}
-Please be informed that the CSV import functionality has been temporarily disabled. This feature will be restored in the upcoming release. We apologise for any inconvenience caused.
-{% endhint %}
-
 <figure><img src="../../../.gitbook/assets/image (33) (1).png" alt="" width="413"><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (34) (1).png" alt=""><figcaption></figcaption></figure>
