@@ -58,28 +58,34 @@ This setting controls the maximum TLS version for your RadSec interface. The min
 
 TLS 1.3 offers several advantages over 1.2, including the post-handshake authentication mechanism, which allows requesting additional credentials before completing the handshake. This is important for the verification checks for RadSec certificates setting discussed next.
 
-### Verification checks for RadSec certificates
+### Revocation Check for RadSec Certificates
 
 {% hint style="info" %}
 This setting determines whether a revocation check should be performed for all RadSec connections. The method for verifying the revocation check differs slightly from that used for client authentication certificates.
 {% endhint %}
 
-For proper RadSec operation, your network devices, such as Access Points, Switches, and VPN Servers, must initially perform a (mutual) TLS handshake to forward Access-Request messages to the RadSec Server. To check the revocation status of a RadSec client certificate during the handshake, the certificate must be sent within the TLS tunnel.
+For proper RadSec operation, network devices such as Access Points, Switches, and VPN Servers establish a TLS-protected connection to the RadSec server. RadSec deployments typically use mutual TLS (mTLS), where both peers authenticate each other using X.509 certificates during the TLS handshake. RADIUSaaS implementation enforces mTLS.&#x20;
+
+To determine the validity and revocation status of a RadSec client certificate, the certificate must be presented by the client as part of the TLS authentication process. Only after the certificate is received can revocation checks (for example, via CRL or OCSP) be performed.
 
 #### **TLS 1.2**
 
-In TLS 1.2, there is no method to request the RadSec client certificate during the handshake, so the handshake may complete before RADIUSaaS has fully authorised it, and your network device may perceive the channel being open and forwards requests even if this is not the case on our side. Your network device's RadSec client certificate is not transmitted until a client device authenticates, and we cannot check the revocation status of the certificate until then, which can lead to authentication timeouts or rejections because the client has to restart the authentication completely.
+TLS 1.2 supports mutual TLS authentication during the initial handshake using the `CertificateRequest`, `Certificate`, and `CertificateVerify` messages. When client authentication is required and correctly enforced, the RadSec client certificate is presented, validated, and checked for revocation before the TLS session is established and before any RADIUS traffic is exchanged.
+
+\
+However, TLS 1.2 also permits optional client authentication and supports renegotiation. As a result, some RadSec client implementations may complete the initial handshake without presenting a client certificate. This behavior is implementation-specific and not a limitation of the TLS 1.2 protocol.&#x20;
 
 {% hint style="info" %}
-To mitigate the above behaviour, the verification checks is deactivated when the maximum TLS version is set to 1.2. Please note you can manually reactive it later.&#x20;
+To mitigate the above behaviour, the **Revocation Check for RadSec Certificates** setting is deactivated when the maximum TLS version is set to 1.2. Please note you can manually reactive it later.&#x20;
 {% endhint %}
 
 #### **TLS 1.3**
 
-TLS 1.3 allows explicitly requesting the RadSec client certificate before completing the handshake. This ensures that if the verification status is 'revoked', the handshake will fail immediately.&#x20;
+TLS 1.3 provides a more deterministic and streamlined model for mutual TLS authentication. When client authentication is requested, the RadSec client certificate is exchanged as part of the initial handshake and validated before the TLS connection is established.\
+This allows the RadSec server to immediately verify the client certificate, including its revocation status, and to fail the handshake if the certificate is invalid or revoked. As a result, TLS 1.3 enables stricter and more predictable enforcement of mutual TLS authentication for RadSec connections.&#x20;
 
 {% hint style="info" %}
-This setting is automatically enabled when the maximum TLS version is set to 1.3.
+The **Revocation Check for RadSec Certificates** setting is automatically enabled when the maximum TLS version is set to 1.3.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (479).png" alt=""><figcaption></figcaption></figure>
