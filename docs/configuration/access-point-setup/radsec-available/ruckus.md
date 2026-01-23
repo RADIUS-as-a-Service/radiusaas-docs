@@ -18,6 +18,15 @@ To establish a valid RadSec connection, your Access Points must trust the **RADI
    Certificate without Private Key:\
    `openssl pkcs12 -in <your-radsec-client-cert>.pfx -clcerts -nokeys -out clientcert.cer`&#x20;
 
+Depending on your Ruckus firmware version, it might be necessary to remove the bag attributes section from your certificate and private key files. This section looks like the following example:
+
+```
+Attributes
+    localKeyID: 52 70 EB 96 89 23 90 F9 D5 0E 06 82 5C EC F7 63 30 44 F1 A9 
+    friendlyName: Certificate from SCEPman
+Key Attributes: <No Attributes>
+```
+
 {% hint style="warning" %}
 Ensure to monitor the expiry of your **RadSec Client Certificate** and renew it in due time to prevent service interruptions.
 {% endhint %}
