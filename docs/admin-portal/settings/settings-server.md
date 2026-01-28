@@ -219,8 +219,34 @@ Certificates expire from time to time. Five months before your certificate is go
 
 ![Screenshot showing certificate expiration](<../../.gitbook/assets/image (129).png>)
 
-If the triangle is diplayed next to the active RADIUS Server Certificate, follow this guide to update it:&#x20;
+If the triangle is displayed next to the active RADIUS Server Certificate, follow this guide to update it:&#x20;
 
 {% content-ref url="../../configuration/renew-certificate.md" %}
 [renew-certificate.md](../../configuration/renew-certificate.md)
 {% endcontent-ref %}
+
+## SCEPman Connection
+
+The SCEPman Connection setting is designed to connect your RaaS instance to your SCEPman instance directly. When you configure this connection RaaS will perform the following task:
+
+1. Create and activate a new Server Certificate
+2. It will manage this Server certificate including the renewal process.
+
+<figure><img src="../../.gitbook/assets/image (485).png" alt=""><figcaption></figcaption></figure>
+
+#### To establish this connection, follow these steps:
+
+1. Copy the API token shown.
+2. Navigate to your SCEPman App Service as per [this](https://docs.scepman.com/scepman-configuration/application-settings#convenient-configuration-in-the-app-service-configuration) guide and create a new environment variable called [AppConfig:RADIUSaaSValidation:Token](appconfig:RADIUSaaSValidation:Token) using the previously copied Token as a value.
+3. Apply your settings and Restart your App Service.&#x20;
+4. &#x20;Enter the URL of your SCEPman instance in the SCEPman URL field.
+
+<figure><img src="../../.gitbook/assets/image (487).png" alt=""><figcaption></figcaption></figure>
+
+5. Click **Setup Connection** and be sure to understand what this will deactivate your current Server Certificate in order to manage the newly created one.&#x20;
+6. Once the set up completed, you will see two new buttons replacing the previous ones.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (488).png" alt=""><figcaption></figcaption></figure>
+
+1. **Rotate Certificate**. This button will rotate and activate your server certificate between the available two slots. _Servercertificate-**upload0**_ and _Servercertificate-**upload1**_.
+2. **Delete Connection.** This button will delete your previously configured connection. Please note that this action cannot be undone. When you delete the connection, the token will also be deleted. Should you wish to set up the connection at a later time, you will need to go through the above steps.

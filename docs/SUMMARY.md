@@ -49,6 +49,7 @@
     * [Log Analytics](admin-portal/settings/log-exporter/log-analytics.md)
     * [Generic Webhook](admin-portal/settings/log-exporter/generic-webhook.md)
     * [Examples](admin-portal/settings/log-exporter/examples.md)
+  * [SCEPman](admin-portal/settings/scepman.md)
 * [My Invited Users](admin-portal/my-invited-users.md)
 
 ## Profile Deployment

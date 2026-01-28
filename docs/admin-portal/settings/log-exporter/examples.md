@@ -57,14 +57,12 @@ The scope of the query provided below is as follows:
     "Level": {{ data.level }},
     "IP": {{ data.get("Packet-Dst-Address") }},
     "Username": {{ data.get("User-Name") }},
-    {% raw %}
-{% if data.get("TLS-OCSP-Cert-Valid") != None %}
+    {% if data.get("TLS-OCSP-Cert-Valid") != None %}
         "OCSPStatus": {{ data.get("TLS-OCSP-Cert-Valid") }},
     {% endif %}
     {% if data.level == "warning" %}
       "FailReason": {{ data.get("Module-Failure-Message") }},
     {% endif %}
-{% endraw %}
     "Datetime" : {{ data.Datetime }}
 }
 ```
@@ -128,8 +126,7 @@ The scope of the query provided below is as follows:
     "Applied-Rule": {{ data.get("Applied-Rule") }},
     "VLAN": {{ data.get("Assigned-VLAN", "No VLAN assigned") }},
     "Auth-Source-Type": {{ data.get("Auth-Source-Type") }},
-    {% raw %}
-{% if data.get("Auth-Source-Type") == "WiFi" %}
+    {% if data.get("Auth-Source-Type") == "WiFi" %}
         "SSID": {{ data.get("SSID") }},
         "AP-MAC": {{ data.get("AP-MAC") }},
     {% endif %}
@@ -146,7 +143,6 @@ The scope of the query provided below is as follows:
     {% if data.get("Reject-Description") != None %}
         "Reject-Description": {{ data.get("Reject-Description") }},
     {% endif %}
-{% endraw %}
     "GKG-Correlation-Id": {{ data.get("GKG-Correlation-Id") }}
 }
 ```
