@@ -237,7 +237,7 @@ The SCEPman Connection setting is designed to connect your RaaS instance to your
 #### To establish this connection, follow these steps:
 
 1. Copy the API token shown.
-2. Navigate to your SCEPman App Service as per [this](https://docs.scepman.com/scepman-configuration/application-settings#convenient-configuration-in-the-app-service-configuration) guide and create a new environment variable called [AppConfig:RADIUSaaSValidation:Token](appconfig:RADIUSaaSValidation:Token) using the previously copied Token as a value.
+2. Navigate to your SCEPman App Service as per [this](https://docs.scepman.com/scepman-configuration/application-settings#convenient-configuration-in-the-app-service-configuration) guide and create a new environment variable called [AppConfig:RADIUSaaSValidation:Token](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/radiusaas) using the previously copied Token as a value.
 3. Apply your settings and Restart your App Service.&#x20;
 4. &#x20;Enter the URL of your SCEPman instance in the SCEPman URL field.
 
