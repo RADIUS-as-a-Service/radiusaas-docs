@@ -246,7 +246,7 @@ The SCEPman Connection setting is designed to connect your RaaS instance to your
 5. Click **Setup Connection** and be sure to understand what this will deactivate your current Server Certificate in order to manage the newly created one.&#x20;
 6. Once the set up completed, you will see two new buttons replacing the previous ones.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (488).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2026-01-28_17h41_23.png" alt=""><figcaption></figcaption></figure>
 
 1. **Rotate Certificate**. This button will rotate and activate your server certificate between the available two slots. _Servercertificate-**upload0**_ and _Servercertificate-**upload1**_.
 2. **Delete Connection.** This button will delete your previously configured connection. Please note that this action cannot be undone. When you delete the connection, the token will also be deleted. Should you wish to set up the connection at a later time, you will need to go through the above steps.
