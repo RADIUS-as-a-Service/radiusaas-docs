@@ -25,7 +25,7 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 #### New Features
 
 * SCEPman-as-a-Service (Public beta). Please [contact us](https://support.scepman.com/support/tickets/new?ticket_form=drop_a_question_%28scepman%29&_gl=1*1ufiojk*_ga*MTEzNjMwODM1MC4xNzY5MDUyMzAy*_ga_BRDGXLVK3H*czE3NjkwNTIzMDEkbzEkZzAkdDE3NjkwNTIzMDEkajYwJGwwJGgw) to get access.
-* Automatic server certificate management using SCEPman
+* Automatic server certificate management using [SCEPman](../../admin-portal/settings/settings-server.md#scepman-connection)
 * Allow adding multiple instances of the same return attribute
 
 ### July 2025 Release
