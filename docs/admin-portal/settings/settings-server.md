@@ -243,8 +243,8 @@ The SCEPman Connection setting is designed to connect your RaaS instance to your
 
 <figure><img src="../../.gitbook/assets/image (487).png" alt=""><figcaption></figcaption></figure>
 
-5. Click **Setup Connection** and be sure to understand what this will deactivate your current Server Certificate in order to manage the newly created one.&#x20;
-6. Once the set up completed, you will see two new buttons replacing the previous ones.&#x20;
+5. Click **Setup Connection**. This action deactivates the current server certificate so the newly created certificate can be managed.
+6. After setup is complete, two new buttons will appear and replace the previous ones.&#x20;
 
 <figure><img src="../../.gitbook/assets/2026-01-28_17h41_23.png" alt=""><figcaption></figcaption></figure>
 

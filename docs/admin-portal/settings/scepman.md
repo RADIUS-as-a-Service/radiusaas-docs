@@ -6,4 +6,4 @@ description: >-
 
 # SCEPman
 
-Before documentation of this section, the page needs a bit of polishing.&#x20;
+Coming soon...
