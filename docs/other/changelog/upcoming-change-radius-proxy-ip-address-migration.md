@@ -5,7 +5,7 @@ As part of our continuous efforts to improve the reliability and scalability of 
 ## Migration Timeline
 
 * **Start of Migration Phase:** After the [July 2025 Release](./#july-2025-release) (18 July 2025)
-* **End of Migration Phase:** 28th of February 2026
+* **End of Migration Phase:** End of April 2026
 
 During this period, affected proxy servers will have two IP addresses in parallel:&#x20;
 
@@ -19,7 +19,7 @@ Both IP addresses will be **fully functional during** the migration phase. After
 If your configuration uses one of the affected RADIUS proxies, you must:
 
 1. **Update your network equipment** to use the new RADIUS proxy IP address.
-2. **Complete this change before 28th February 2026** to avoid service disruption.
+2. **Complete this change before the end of April 2026** to avoid service disruption.
 
 ## How to check if you are affected
 
