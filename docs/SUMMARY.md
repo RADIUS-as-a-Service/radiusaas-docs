@@ -33,6 +33,7 @@
   * [Rule Engine](admin-portal/insights/rule-engine.md)
   * [Logs](admin-portal/insights/log.md)
 * [Users](admin-portal/users.md)
+* [SCEPman](admin-portal/scepman.md)
 * [Settings](admin-portal/settings/README.md)
   * [Server Settings](admin-portal/settings/settings-server.md)
   * [Trusted Certificates](admin-portal/settings/trusted-roots.md)
