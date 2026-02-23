@@ -28,11 +28,13 @@ No tenant OAuth connection configured yet.
 {% tab title="Admin Consent" %}
 Connects SCEPman with Entra ID via a delegated admin consent.
 
-<figure><img src="../../.gitbook/assets/image (497).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Custom App Registration" %}
-Allows customising your own Entra ID app registration for SCEPman permissions.
+Allows customising your own Entra ID app registration for SCEPman permissions.<br>
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -69,7 +71,7 @@ These settings correspond to configurable SCEPman _environment variables_ that d
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Static Validation**           | Enables the `/static` SCEP endpoint for non-Intune/Jamf Pro MDM systems. If ruthermore allows issuing certificates to systems that don’t have MDM integration by using a static challenge password. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/static-validation#appconfig-staticvalidation-enabled).          |
 | **Default Extended Key Usage**  | OIDs of the extended key usages (EKUs) that are added by default to the certificate if the Jamf Pro or Static endpoint is used. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/jamf-validation#appconfig-jamfvalidation-defaultekus).                                                                              |
-| **Request Password**            | A challenge password that Jamf Pro or other MDM systems must include in every SCEP request to acquire a certificate. [Learn more](/broken/pages/-MYxpWCI2Iv9pvQLDMOz).                                                                                                                                                                                              |
+| **Request Password**            | A challenge password that Jamf Pro or other MDM systems must include in every SCEP request to acquire a certificate. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/jamf-validation#appconfig-jamfvalidation-requestpassword).                                                                                     |
 | **Client ID and Client Secret** | **ClientID** and **ClientSecret** are required to establish a connection to the Jamf Pro backend via its API and are an alternative to APIUsername and APIPassword. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/jamf-validation).                                                                               |
 | **Allow Renewals**              | This allows using the _RenewalReq_ operation on this SCEP endpoint. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/static-validation#appconfig-dbcsrvalidation-allowrenewals).                                                                                                                                     |
 

@@ -78,7 +78,7 @@ The information provided throughout this article is analogously applicable for R
 * The downgrade will become effective upon the next regular renewal of your subscription.
 * In case you change your mind and would like to change the user quantity or cancel the downgrade altogether, navigate back to your **RADIUSaaS subscription** and click **Cancel downgrade**.
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Change Plan
 

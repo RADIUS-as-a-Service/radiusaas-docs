@@ -22,4 +22,4 @@
 1. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 2. Finally, under **Client Authentication** select **Certificates as** **Authentication method**&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Showing wired network profile for macOS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Showing wired network profile for macOS</p></figcaption></figure>

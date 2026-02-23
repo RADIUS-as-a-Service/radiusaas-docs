@@ -55,7 +55,7 @@ To set a NAS Identifier filter, either select **Identifiers** or **Groups**.&#x2
 * If you select **Identifiers**, you can specify multiple **Identifiers.**
 * If you select **Groups,** you can reference one or more of your pre-defined **NAS Identifier Groups**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Showing NAS Identifier</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Showing NAS Identifier</p></figcaption></figure>
 
 ### NAS IP Address filter
 

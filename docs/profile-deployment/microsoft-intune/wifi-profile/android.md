@@ -18,7 +18,7 @@
 
     of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates) . Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Showing certificate details</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Showing certificate details</p></figcaption></figure>
 
 11\. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 
