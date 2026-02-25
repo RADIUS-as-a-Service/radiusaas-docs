@@ -15,14 +15,14 @@ To establish a valid RadSec connection, your Access Points must trust the **RADI
 1.  Download the root certificate of the CA that has issued your active **RADIUS Server Certificate** as described [here](../../../admin-portal/settings/settings-server.md#download).\
     In this example SCEPman is used as Root CA and has issued the RADIUS server certificate. So, we download the root CA certificate from SCEPman portal:\
     \
-    ![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)\
+    ![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)\
     Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:<br>
 
-    <figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 2.  Create a **RadSec Client Certificate** for your access points. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).\
     In this example we generate a certificate in the format "PEM". Please note down the password, as we need this later.<br>
 
-    <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 3.  Split the generated certificate into the private key (named "priv.key" in this example) and the certificate (named "clientcert.cer"). This can be easily done via a text editor:<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot 2024-09-24 101150.png" alt=""><figcaption></figcaption></figure>
@@ -30,7 +30,7 @@ To establish a valid RadSec connection, your Access Points must trust the **RADI
     In case the **RadSec Client Certificate** has been issued by SCEPman (this example) and you already trust the SCEPman Root CA for client authentication, simply edit the trusted SCEPman Root CA certificate and select **Both** under **Use for**:\
     <br>
 
-    <figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## UniFi configuration
 

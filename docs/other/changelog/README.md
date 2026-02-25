@@ -8,6 +8,27 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 ## Versions
 
+### March 2026 Release
+
+#### Schedule
+
+* Roll-out start: 2026-02-26
+* Roll-out end: 2026-03-05
+
+#### Fixes
+
+* Fixed VLAN-related attributes not being populated in an RFC-compliant way
+* Fixed incorrect expiration date in access token table
+* Several bug fixes in configuring the [SCEPman Connection](../../admin-portal/settings/settings-server.md#scepman-connection)
+
+#### New Features
+
+* [VLAN](../../admin-portal/settings/rules/general-structure.md#vlan-attributes) and [additional return attributes (VSAs)](../../admin-portal/settings/rules/general-structure.md#radius-attributes) can now be managed directly via the RADIUSaaS Admin Portal
+* Removed RADIUS server certificate slot limitation
+* Popup Notifications:
+  * Added certificate expiry and other important alerts
+  * Added configuration improvement recommendations
+
 ### January 2026 Release
 
 #### Schedule

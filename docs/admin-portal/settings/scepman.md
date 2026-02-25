@@ -28,13 +28,13 @@ No tenant OAuth connection configured yet.
 {% tab title="Admin Consent" %}
 Connects SCEPman with Entra ID via a delegated admin consent.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Custom App Registration" %}
 Allows customising your own Entra ID app registration for SCEPman permissions.<br>
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

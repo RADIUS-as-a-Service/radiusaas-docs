@@ -78,6 +78,10 @@ If you can not find the used MAC addresses in your AP admin interface, you can a
 
 ### VLAN assignment
 
+{% hint style="info" %}
+In case you require vendor-specific VLAN return attributes, you can manage them [here](general-structure.md#vlan-attributes).
+{% endhint %}
+
 The RADIUSaaS rule engine provides several ways to assign Virtual-LAN IDs. The following options are available:
 
 #### Static
@@ -114,7 +118,7 @@ As an example, the following rule will assign the VLAN ID 15 based on the `Subje
 ### Additional RADIUS attributes
 
 {% hint style="info" %}
-In case you require return attributes that are not available by default, please [contact our support](https://www.radius-as-a-service.com/help/).
+In case you require return attributes that are not available by default, please add them [here](general-structure.md#radius-attributes).
 {% endhint %}
 
 The RADIUSaaS rule engine provides several ways to return additional RADIUS attributes (besides the VLAN ID). The following options are available:

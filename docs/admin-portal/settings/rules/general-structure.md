@@ -62,3 +62,15 @@ We therefore recommend using the Certificate Subject Name instead to [dynamicall
 ![Showing VLAN assignment by Certificate Extension](../../../.gitbook/assets/2024-05-28_10h41_47.png)
 
 <figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Showing a Certificate Extension</p></figcaption></figure>
+
+## VLAN Attributes
+
+This section allows the configuration of vendor-specific VLAN attributes that RADIUSaaS will return if a relevant rule (static or dynamic VLAN tagging enabled) is matched. In case the pre-configured values lead to issues with your networking equipment, they can be removed from here, too.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+## RADIUS Attributes
+
+In this section, vendor-specific attributes (VSAs) can be managed. The attributes configured here can then be used in your rules under [**Additional RADIUS Return Attributes**](./#additional-radius-return-attributes).
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>

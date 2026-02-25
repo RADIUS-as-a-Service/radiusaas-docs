@@ -69,7 +69,7 @@ To set a NAS IP address filter, either select **IPs** or **Groups**.&#x20;
 ### RADIUS attribute return
 
 {% hint style="info" %}
-In case you require return attributes that are not available by default, please [contact our support](https://www.radius-as-a-service.com/help/).
+In case you require return attributes that are not available by default, please add them [here](general-structure.md#radius-attributes).
 {% endhint %}
 
 The RADIUSaaS rule engine provides several ways to return additional RADIUS attributes. The following options are available:

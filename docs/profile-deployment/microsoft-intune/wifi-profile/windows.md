@@ -42,7 +42,7 @@ Please consider, that the common name is case-sensitive.
 
 <figure><img src="../../../.gitbook/assets/2024-05-13_15h20_31.png" alt=""><figcaption><p>Showing Wi-Fi profile configuration 1/2</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Fast roaming
 
