@@ -16,6 +16,6 @@ The status page of your SCEPman-as-a-Service instance provides you with the most
 
 * review the connectivity status to dependencies, such as the KeyVault, Graph API (Intune), or Jamf Pro,
 * download the public portion of the CA certificate, or
-* to access the SCEP enrolment endpoint(s) that are required for configuration in your MDM system(s).
+* access the SCEP enrolment endpoint(s) that are required for configuration in your MDM system(s).
 
 <figure><img src="../.gitbook/assets/image (498).png" alt=""><figcaption></figcaption></figure>
