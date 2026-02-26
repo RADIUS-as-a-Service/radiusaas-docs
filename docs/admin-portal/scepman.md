@@ -4,7 +4,7 @@
 To use SCEPman-as-a-Service, please ensure to configure it first under Settings > [SCEPman](settings/scepman.md).
 {% endhint %}
 
-The **SCEPman** menu hive gives you access to your SCEPman-as-a-Service instance built right into RADIUSaaS (requires a suitable subscription add-on).
+The **SCEPman** menu hive gives you access to your SCEPman-as-a-Service instance built right into RADIUSaaS (requires SCEPman Enterprise Edition).
 
 The submenus allow you to perform manual certificate tasks leveraging the Certificate Master component. More information on how to **Manage Certificates**, **Request Certificates**, and **Tasks**, can be found in the corresponding SCEPman documentation:
 
