@@ -20,7 +20,7 @@ As part of the [**March 2026 Release**](./#march-2026-release), we are finalizin
 
 <figure><img src="../../.gitbook/assets/image (500).png" alt=""><figcaption></figcaption></figure>
 
-Before you start the update, **adapt your network equipment configuration** to the **new proxy IP addresses** (see [How to check if you are affected](upcoming-change-radius-proxy-ip-address-migration.md#how-to-check-if-you-are-affected) for details).&#x20;
+If you haven’t already, ensure your network equipment is configured for the new proxy IP addresses (see [How to check if you are affected](upcoming-change-radius-proxy-ip-address-migration.md#how-to-check-if-you-are-affected) for details).&#x20;
 
 When you click _**Update**_, your tenant’s proxies will be updated. **Once the update completes, the legacy proxy IP addresses will no longer work**.&#x20;
 
