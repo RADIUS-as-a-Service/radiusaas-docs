@@ -16,7 +16,7 @@ description: >-
 
 ## Tenant Connection
 
-This controls how SCEPman connects/consents with Entra ID:
+This controls how SCEPman connects to your Azure/Intune tenant (required when using SCEPman with Intune):
 
 {% tabs %}
 {% tab title="Disabled" %}
@@ -42,7 +42,7 @@ Allows customising your own Entra ID app registration for SCEPman permissions.<b
 
 ## Settings
 
-These settings correspond to configurable SCEPman _environment variables_ that determine how the SCEP server behaves.
+These settings correspond to configurable SCEPman _environment variables_ that determine how SCEPman behaves.
 
 <figure><img src="../../.gitbook/assets/2026-02-10_17h20_15.png" alt=""><figcaption></figcaption></figure>
 
