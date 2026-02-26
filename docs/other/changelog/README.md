@@ -10,6 +10,14 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 ### March 2026 Release
 
+{% hint style="info" %}
+**Action required** (for customers using RADIUSaaS Proxies)**:**\
+The current release includes an update to the RADIUSaaS proxies that must be initiated by customers **before the end of April**. This is the final step of the proxy IP address migration announced last year.\
+Before starting, make sure your network equipment is prepared for the new proxy IP addresses.\
+Then run the Proxy Update. **After the update, legacy proxy IPs will stop working.**\
+For details, please see [here](upcoming-change-radius-proxy-ip-address-migration.md).
+{% endhint %}
+
 #### Schedule
 
 * Roll-out start: 2026-02-26
