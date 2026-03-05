@@ -92,7 +92,7 @@ Please see [here](../../../admin-portal/settings/permissions.md#permissions-cons
 
     No specific data is made available by granting consent to this permission.
 
-### 7. Which externally accessible endpoints does RADIUSaaS expose?
+### &#x20;     7. Which externally accessible endpoints does RADIUSaaS expose?
 
 1. RADIUS Server Backend API
    * Provides configuration information to the RadSec proxy.
@@ -119,7 +119,7 @@ Please see [here](../../../admin-portal/settings/permissions.md#permissions-cons
 
 * RADIUS Server Backend API
   * HTTPS (TCP / 443)
-* RADIUS Proxy and RadSec Server Ports
+* RADIUS Proxy and RadSec Server Ports &#x20;
   * RadSec server ports: RadSec (TCP / 2083)
   * RADIUS proxy server ports: RADIUS (UDP / 1812, 1813)
 * RADIUSaaS Admin Portal
@@ -142,6 +142,12 @@ Please see [here](../../../admin-portal/settings/permissions.md#permissions-cons
 
 * Login credentials: Depends on the configured Microsoft Entra ID (Azure AD) policies in the customer tenant.
 * Username + password credentials as well as all certificates for network access can be recovered from Azure KeyVault with a retention policy of 90 days after they have been deleted.
+
+### 4. What to do to recover lost access to the RADIUSaaS instance?
+
+* If your business lost access to RADIUSaaS instance because the previous administrator(s) left or the UPN / domain has changed, the easiest way to recover access is to re-create a user account that matches the existing UPN at RADIUSaaS > Permissions > Administrators. This is by far the fastest approach, since it does not require any actions on our side.
+* If the above is not feasible, recovering access to the portal will be subject to a rigorous identity verification process that is not only time-consuming but will require significant effort from both sides. There is a one-time fee of 420.00 EUR (excl. VAT) for this process. To start the process, please create a technical support ticket.
+* To prevent loss of access to your RADIUSaaS tenant, please follow our best practices by carefully working through each step of our [Getting Started Guides](../../../configuration/get-started/).
 
 ## Data Protection
 

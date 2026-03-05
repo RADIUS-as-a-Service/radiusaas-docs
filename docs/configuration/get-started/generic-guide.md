@@ -1,8 +1,8 @@
 # Generic Guide
 
-## Configuration steps
-
-### Step 1: PKI setup
+{% stepper %}
+{% step %}
+### PKI Setup
 
 {% hint style="warning" %}
 This is a **mandatory** step.&#x20;
@@ -17,8 +17,10 @@ If you are using any of the below PKIs, please follow the relevant guides instea
 {% content-ref url="scenario-based-guides/microsoft-cloud-pki.md" %}
 [microsoft-cloud-pki.md](scenario-based-guides/microsoft-cloud-pki.md)
 {% endcontent-ref %}
+{% endstep %}
 
-### Step 2: Trusted CA(s) setup
+{% step %}
+### Trusted CA(s) Setup
 
 {% hint style="warning" %}
 This is a **mandatory** step.
@@ -29,11 +31,17 @@ Tell your RADIUSaaS instance which client authentication certificates will be al
 {% content-ref url="../../admin-portal/settings/trusted-roots.md" %}
 [trusted-roots.md](../../admin-portal/settings/trusted-roots.md)
 {% endcontent-ref %}
+{% endstep %}
 
-### Step 3: RADIUS Server Certificate configuration
+{% step %}
+### RADIUS Server Certificate Configuration
 
 {% hint style="warning" %}
 This is a **mandatory** step.
+{% endhint %}
+
+{% hint style="info" %}
+For customers that use **SCEPman** as PKI, we recommend to leverage the [SCEPman integration](../../admin-portal/settings/settings-server.md#scepman-connection)  to fully automate the **RADIUS Server Certificate** lifecycle.
 {% endhint %}
 
 Since endpoint devices will establish a TLS connection to RADIUSaaS during network authentication, RADIUSaaS must present a server certificate to the client (the **RADIUS Server Certificate**). This certificate can be generated directly from the **RADIUSaaS Admin Portal** or imported if you already own a suitable certificate (**BYO**). The same server certificate is also used to secure the RadSec connection to your authenticator devices (WiFi access points, switches, VPN gateways), if applicable.
@@ -41,18 +49,20 @@ Since endpoint devices will establish a TLS connection to RADIUSaaS during netwo
 In case you are happy to use the **built-in** [**Customer CA**](../../admin-portal/settings/settings-server.md#customer-ca), whose sole purpose it is to issue the **RADIUS Server Certificate**, no further action is required as part of this step.
 
 In case you'd prefer to bring your own TLS server certificate, issued by your preferred CA, please follow [these steps](../../admin-portal/settings/settings-server.md#bring-your-own-certificate).
+{% endstep %}
 
-### Step 4: Network equipment configuration
+{% step %}
+### Network Equipment Configuration
 
 {% hint style="warning" %}
 This is a **mandatory** step.
 {% endhint %}
 
-#### RadSec
+### RadSec
 
 If your network equipment supports the **RadSec** protocol, follow below steps:
 
-**WiFi Access Points**
+#### **WiFi Access Points**
 
 For some popular vendors, we have prepared representative step-by-step guides on setting up the RadSec connection [here](../access-point-setup/radsec-available/). While we are not able to provide documentation for every vendor, in general, the following steps apply:
 
@@ -67,7 +77,7 @@ For some popular vendors, we have prepared representative step-by-step guides on
 
 Currently, we have not prepared sample guides for networking switches yet. However, the configuration steps are similar to the ones for WiFi Access Points. In case you face difficulties, please [reach out to us](https://www.radius-as-a-service.com/help/).
 
-#### RADIUS
+### RADIUS
 
 If your network equipment **does not support RadSec**, you must first deploy proxies that handle the protocol conversion from [RADIUS](../../details.md#what-is-radius) to [RadSec](../../details.md#what-is-radsec) :
 
@@ -77,7 +87,7 @@ If your network equipment **does not support RadSec**, you must first deploy pro
 
 Next, move on to configuring your equipment:
 
-**WiFi Access Points**
+#### **WiFi Access Points**
 
 For some popular vendors, we have prepared representative step-by-step guides [here](../access-point-setup/proxy-needed/). While we are not able to provide documentation for every vendor, in general, the following steps apply:
 
@@ -88,11 +98,13 @@ For some popular vendors, we have prepared representative step-by-step guides [h
    * Configure the standard ports for RADIUS authentication (1812) and accounting (1813 - optional).
 3. Assign the created profile to your SSID(s).
 
-**Wired (LAN) Switches**
+#### **Wired (LAN) Switches**
 
 Currently, we have not prepared sample guides for switch appliances yet. However, the configuration steps are similar to the ones for WiFi Access Points. In case you face difficulties, please [reach out to us](https://www.radius-as-a-service.com/help/).
+{% endstep %}
 
-### Step 5: Configure your MDM profiles
+{% step %}
+### MDM Profiles
 
 {% hint style="warning" %}
 This is a **mandatory** step.
@@ -104,7 +116,7 @@ This is a **mandatory** step.
 We strongly recommend to configure all 802.1X-relevant payloads in a **single** Configuration Profile in Jamf Pro - and one Configuration Profile per assignment type (Computers, Devices, Users).&#x20;
 {% endhint %}
 
-#### Server Certificate
+### Server Certificate
 
 To enable trust between your endpoint devices and the server certificate RADIUSaaS presents upon authentication, configure a trusted certificate profile in your preferred MDM solution. Therefore, first download the Root CA certificate that has issued your currently active **RADIUS Server Certificate** as described [here](../../admin-portal/settings/settings-server.md#download).
 
@@ -114,7 +126,7 @@ When downloading the relevant certificate, ensure to **only** **download** the *
 
 Move on to push out this certificate via MDM:
 
-**Microsoft Intune**
+#### **Microsoft Intune**
 
 {% content-ref url="../../profile-deployment/microsoft-intune/trusted-root.md" %}
 [trusted-root.md](../../profile-deployment/microsoft-intune/trusted-root.md)
@@ -126,39 +138,47 @@ Move on to push out this certificate via MDM:
 [server-trust.md](../../profile-deployment/jamf-pro/server-trust.md)
 {% endcontent-ref %}
 
-#### WiFi Profile
+### WiFi Profile
 
 To configure a WiFi profile in your preferred MDM solution, follow one of these guides:
 
-**Microsoft Intune**
+#### **Microsoft Intune**
 
 {% content-ref url="../../profile-deployment/microsoft-intune/wifi-profile/" %}
 [wifi-profile](../../profile-deployment/microsoft-intune/wifi-profile/)
 {% endcontent-ref %}
 
-**Jamf Pro**
+#### **Jamf Pro**
 
 {% content-ref url="../../profile-deployment/jamf-pro/wifi-profile.md" %}
 [wifi-profile.md](../../profile-deployment/jamf-pro/wifi-profile.md)
 {% endcontent-ref %}
 
-#### Wired (LAN) Profile
+### Wired (LAN) Profile
 
 To configure a wired (LAN) profile for your stationary devices in your preferred MDM solution, follow one of these guides:
 
-**Microsoft Intune**
+#### **Microsoft Intune**
 
 {% content-ref url="../../profile-deployment/microsoft-intune/wired-profile/" %}
 [wired-profile](../../profile-deployment/microsoft-intune/wired-profile/)
 {% endcontent-ref %}
 
-**Jamf Pro**
+#### **Jamf Pro**
 
 {% content-ref url="../../profile-deployment/jamf-pro/wired-profile.md" %}
 [wired-profile.md](../../profile-deployment/jamf-pro/wired-profile.md)
 {% endcontent-ref %}
+{% endstep %}
 
-### Step 6: Rules
+{% step %}
+### Permissions and Technical Contacts
+
+{% include "../../.gitbook/includes/permissions-and-notificatio....md" %}
+{% endstep %}
+
+{% step %}
+### Rules
 
 {% hint style="info" %}
 This is an **optional** step.
@@ -169,3 +189,10 @@ If you would like to configure additional rules, for example to assign VLAN IDs 
 {% content-ref url="../../admin-portal/settings/rules/" %}
 [rules](../../admin-portal/settings/rules/)
 {% endcontent-ref %}
+{% endstep %}
+{% endstepper %}
+
+{% content-ref url="../../admin-portal/settings/rules/" %}
+[rules](../../admin-portal/settings/rules/)
+{% endcontent-ref %}
+
