@@ -227,6 +227,12 @@ If the triangle is displayed next to the active RADIUS Server Certificate, follo
 
 ## SCEPman Connection
 
+{% hint style="warning" %}
+SCEPman Enterprise Edition only
+
+Applicable to version 3.0 and above
+{% endhint %}
+
 The SCEPman Connection setting is designed to connect your RaaS instance to your SCEPman instance directly. When you configure this connection RaaS will perform the following task:
 
 1. Create and activate a new Server Certificate
