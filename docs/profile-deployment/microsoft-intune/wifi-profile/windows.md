@@ -18,23 +18,17 @@ description: >-
 8. Enter your **SSID**. The **Connection Name** can assume the same name.
 9. Configure the **Authentication Method** to **User** if you want to use user-type certificates for authentication or **Machine** if you would like to use device-type certificates for authentication.
 10. Then for **EAP type** choose **EAP - TLS**
-11. Next, as **Certificate server names** add the&#x20;
+11. Next, as **Certificate server names** add the **Subject Alternative Name (SAN)** of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates). This property can be found by expanding the active server certificate and copying the relevant value.
 
-    * **Subject Alternative Name (SAN)**
-    * and **Common Name (CN)** (only the value, without _CN=_)
-
-    of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates). Those properties can be found by expanding the active server certificate and copying the relevant values. \
-    If the SAN and the CN values are identical, you need to add the server name only once.
-
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2026-03-24_11h46_26.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-Please consider, that the common name is case-sensitive.
+The Subject Alternative Name (SAN) is **case-insensitive** when used for hostname verification.
 {% endhint %}
 
 12. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 13. Under **Client Authentication** select **SCEP certificate as** **Authentication method**&#x20;
-14. Finally, **Client certificate for client authentication (Identity certificate)** select the SCEP profile you would like to use for authentication.
+14. Finally for **Client certificate for client authentication (Identity certificate),** select the SCEP profile you would like to use for authentication.
 
     All other settings can be configured according to your own needs and preferences.
 

@@ -19,12 +19,7 @@ description: >-
 9. Enter your **SSID**. The **Network name** can assume the same name.
 10. Select the applicable **Security type** (iOS/iPadOS only)
 11. Then for **EAP type** choose **EAP - TLS**
-12. Next, as **Certificate server names** add the&#x20;
-
-    * **Subject Alternative Name (SAN)**
-    * and **Common Name (CN)**&#x20;
-
-    of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.** <br>
+12. Next, as **Certificate server names** add the **Subject Alternative Name (SAN)** of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) This property can be found by expanding the active server certificate and copying the relevant value.&#x20;
 
     <figure><img src="../../../.gitbook/assets/2024-05-23_15h40_00.png" alt=""><figcaption></figcaption></figure>
 13. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.

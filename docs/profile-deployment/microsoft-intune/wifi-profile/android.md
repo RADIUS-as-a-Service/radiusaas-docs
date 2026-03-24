@@ -12,17 +12,13 @@
 8. Enter your **SSID**
 9. As **EAP type** choose **EAP - TLS**
 10. Next, as **Radius server name** add the&#x20;
-
-    * **Subject Alternative Name (SAN)**
-    * and **Common Name (CN)**&#x20;
-
-    of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates) . Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**
+    * **Subject Alternative Name (SAN)** of your _active_ RADIUS [**Server Certificate**](../../../admin-portal/settings/settings-server.md#server-certificates) . This property can be found by expanding the active server certificate and copying the relevant value.
 
 <figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Showing certificate details</p></figcaption></figure>
 
 11\. For the **Root certificates for server validation** select the Trusted certificate profile you have previously created for the RADIUS Server Certificate.
 
-12\. under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
+12\. Under **Client Authentication** select **Certificates** as **Authentication method**&#x20;
 
 13\. Finally, under **Certificates** select the SCEP profile you would like to use for authentication.
 

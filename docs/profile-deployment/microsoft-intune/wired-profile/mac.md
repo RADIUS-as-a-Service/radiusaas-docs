@@ -10,12 +10,7 @@
 6. Click **Create** and provide a descriptive name and optional **Description**
 7. Choose your **Network Interface**
 8. As **EAP type** choose **EAP - TLS**
-9.  Next, as **Certificate server names** add the&#x20;
-
-    * **Subject Alternative Name (SAN)**
-    * and **Common Name (CN)**&#x20;
-
-    of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) Those properties can be found by expanding the active server certificate and copying the relevant values. **Please consider, that the common name is case-sensitive.**
+9. Next, as **Certificate server names** add the **Subject Alternative Name (SAN)** of your _active_ RADIUS [**Server Certificate.**](../../../admin-portal/settings/settings-server.md#server-certificates) This property can be found by expanding the active server certificate and copying the relevant values.
 
 <figure><img src="../../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
