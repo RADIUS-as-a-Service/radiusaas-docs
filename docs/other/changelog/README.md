@@ -8,6 +8,23 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 ## Versions
 
+### April 2026 Release&#x20;
+
+#### Schedule
+
+* Roll-out start: 2026-03-26
+* Roll-out end: 2026-04-01
+
+#### Fixes
+
+* Stability update
+
+#### New Features
+
+* SCEPman as a Service GA
+
+
+
 ### March 2026 Release
 
 {% hint style="info" %}
