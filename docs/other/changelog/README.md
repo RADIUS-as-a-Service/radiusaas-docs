@@ -21,7 +21,7 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 #### New Features
 
-* SCEPman as a Service GA
+* [SCEPman-as-a-Service](../../admin-portal/scepman.md) GA
 
 
 
