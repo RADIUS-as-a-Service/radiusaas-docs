@@ -12,7 +12,7 @@ description: >-
 ### Deploy SCEPman Enterprise
 
 {% hint style="warning" %}
-Please note that this scenario requires Certificate Master, available with [SCEPman Enterprise Edition.](https://docs.scepman.com/editions#edition-comparison)
+Please note that this scenario requires [SCEPman Enterprise Edition.](https://docs.scepman.com/editions#edition-comparison)
 {% endhint %}
 
 First and foremost, you will need to set up and configure your SCEPman PKI. Please use [documentation](https://docs.scepman.com/scepman-deployment/deployment-guides) relevant to your environment to perform the installation and configuration of SCEPman. Once completed, return to this article.
