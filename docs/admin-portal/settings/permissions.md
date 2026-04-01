@@ -88,7 +88,7 @@ Add up to 5 technical contacts to receive e-mail notifications related to your i
 
 Access tokens are required to authenticate calls to the [RADIUSaaS REST API](../../other/rest-api/).
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Add
 
@@ -155,7 +155,7 @@ Alternatively, administrators can grant the consent on behalf of the organizatio
 {% tab title="Apple" %}
 When using an Apple ID to log into RADIUSaaS, make sure to **not hide** your email address.
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 If you chose to hide your email in this dialog you will not be able to log into your portal. You will then need to remove the RADIUSaaS app on **account.apple.com** in the **Sign in with Apple** section
@@ -165,13 +165,13 @@ If you chose to hide your email in this dialog you will not be able to log into 
 {% tab title="Digital Ocean" %}
 Digital Ocean will require you to authorize the application on a team to be able to login:
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Google" %}
 Google will require you to allow the application to access limited data on your account.
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Custom OIDC Provider (Okta)" %}

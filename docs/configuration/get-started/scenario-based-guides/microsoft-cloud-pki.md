@@ -36,14 +36,14 @@ Please take note of the CRL distribution point as you will need this later in [S
 {% step %}
 ### Establish trust between RADIUSaaS and the Microsoft Cloud PKI
 
-Configure RADIUSaaS to trust client authentication certificates issued by the Microsoft Cloud PKI. Since the cloud PKI requires a tiered CA structure, you must upload both, Root CA and Issuing CA (i.e. the complete chain of trust). To achieve this, please follow below steps:
+Configure RADIUSaaS to trust client authentication certificates issued by the Microsoft Cloud PKI. Since the cloud PKI requires a tiered CA structure, you must upload both, Root CA and Issuing CA (i.e. the complete chain of trust). To achieve this, please follow the steps below:
 
 1. Navigate to [Trusted Certificates](../../../admin-portal/settings/trusted-roots.md).
-2. [Upload](../../../admin-portal/settings/trusted-roots.md#add) the Contoso Cloud PKI **Root CA** selecting **Client Authentication** in the upload process.
-3. As verification method select **CRL** along with **DER** encoding.
+2. [Upload](../../../admin-portal/settings/trusted-roots.md#add) the Contoso Cloud PKI **Root CA,** selecting **Client Authentication** in the upload process.
+3. As a verification method, select **CRL** along with **DER** encoding.
 4. Use the copied CRL distribution point URL of the Root CA in the **CRL Distribution Points** URL input field.\
    ![](<../../../.gitbook/assets/image (366).png>)
-5. Upload the Contoso Cloud PKI **Issuing CA** selecting **Client Authentication** in the upload process.
+5. Upload the Contoso Cloud PKI **Issuing CA,** selecting **Client Authentication** in the upload process.
 6. Again, select **CRL** as verification method along with **DER** encoding.
 7. Use the copied CRL distribution point URL of the Issuing CA in the **CRL Distribution Points** URL input field.\
    ![](<../../../.gitbook/assets/image (367).png>)

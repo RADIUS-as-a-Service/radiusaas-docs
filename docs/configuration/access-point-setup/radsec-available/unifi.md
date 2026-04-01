@@ -18,7 +18,7 @@ To establish a valid RadSec connection, your Access Points must trust the **RADI
     ![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)\
     Afterwards, please convert your certificate to Base-64. This can be easily done via Windows Certificate Export Wizard, OpenSSL or other tools:<br>
 
-    <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 2.  Create a **RadSec Client Certificate** for your access points. If you are using **SCEPman Certificate Master**, the process is described [here](https://docs.scepman.com/certificate-deployment/certificate-master/client-certificate-pkcs-12).\
     In this example we generate a certificate in the format "PEM". Please note down the password, as we need this later.<br>
 
@@ -41,7 +41,7 @@ Below settings are the necessary settings to establish a functional RadSec conne
 1. Navigate to your Unifi Network controller and open **Settings** **> Profiles > RADIUS**.
 2.  Create a new profile or update an existing one:<br>
 
-    <figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 3. Fill in the required information:
    1. **RADIUS Assigned VLAN Support**: optional / if needed
    2. **RADIUS Settings**:
@@ -61,13 +61,13 @@ Below settings are the necessary settings to establish a functional RadSec conne
          \- **Shared Secret**: `radsec`
       9.  **Interim Update Interval**: optional / if needed<br>
 
-          <figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+          <figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 4.  Assign this profile to the desired WiFi profile:<br>
 
-    <figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 5. Give your Access Points some time to apply the new configuration:\
    \
-   ![](<../../../.gitbook/assets/image (9) (1) (1).png>)
+   ![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 ### Reference: UniFi Help Center
 

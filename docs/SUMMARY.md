@@ -9,7 +9,8 @@
   * [Generic Guide](configuration/get-started/generic-guide.md)
   * [Scenario-based Guides](configuration/get-started/scenario-based-guides/README.md)
     * [Microsoft Cloud PKI](configuration/get-started/scenario-based-guides/microsoft-cloud-pki.md)
-    * [SCEPman PKI](configuration/get-started/scenario-based-guides/scepman-pki.md)
+    * [SCEPman Enterprise](configuration/get-started/scenario-based-guides/scepman-enterprise.md)
+    * [SCEPman SaaS](configuration/get-started/scenario-based-guides/scepman-saas.md)
 * [Access Point Setup](configuration/access-point-setup/README.md)
   * [RadSec](configuration/access-point-setup/radsec-available/README.md)
     * [Aruba](configuration/access-point-setup/radsec-available/aruba.md)
@@ -25,6 +26,8 @@
     * [Sophos UTM](configuration/access-point-setup/proxy-needed/sophos-utm.md)
     * [UniFi](configuration/access-point-setup/proxy-needed/unifi.md)
 * [Server Certificate Renewal](configuration/renew-certificate.md)
+* [🆕 SCEPman SaaS](configuration/scepman-saas/README.md)
+  * [Migrate from SCEPman Enterprise](configuration/scepman-saas/migrate-from-scepman-enterprise.md)
 
 ## Admin Portal
 

@@ -1,7 +1,7 @@
 ---
 description: >-
   This page describes the controls related to the connectivity to the SCEPman
-  PKI as a service.
+  SaaS.
 ---
 
 # SCEPman
@@ -34,7 +34,7 @@ Connects SCEPman with Entra ID via a delegated admin consent.
 {% tab title="Custom App Registration" %}
 Allows customising your own Entra ID app registration for SCEPman permissions.<br>
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
