@@ -62,7 +62,7 @@ Configure **EAP parameters and timeouts** according to [this](../../../other/faq
 {% step %}
 ### Add RadSec Server Certificate
 
-To upload and generate the required certificates that make the RadSec connection functional, navigate to **Organization > Certificates**.
+To upload and generate the required certificates that make the RadSec connection functional, navigate to **Organization > Certificates > RADSEC**.
 
 <figure><img src="../../../.gitbook/assets/image (70) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -70,11 +70,11 @@ In the top table, click **Upload certificate** and provide the root certificate 
 
 {% tabs %}
 {% tab title="Using RADIUSaaS Customer CA" %}
-<figure><img src="../../../.gitbook/assets/image (71) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (518).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Using SCEPman or other CA" %}
-<figure><img src="../../../.gitbook/assets/image (72) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (519).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 {% endstep %}
