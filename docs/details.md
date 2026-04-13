@@ -71,7 +71,7 @@ For both options the [SCEPman Connection](admin-portal/settings/settings-server.
 | **Infrastructure Cost**                                                    |                       Customer                       |                     Vendor                     |
 | **Infrastructure Maintenance**                                             |                   Customer / Azure                   |                     Vendor                     |
 | **Configuration**                                                          |                       Customer                       |                    Customer                    |
-| **Geo-Redundancy**                                                         |                          Yes                         |                 No<sup>1</sup>                 |
+| **Geo-Redundancy Option**                                                  |                          Yes                         |                 No<sup>1</sup>                 |
 | **RBAC for Certificate Master**                                            |                          Yes                         |                       No                       |
 | <p><strong>GPO-based enrolment</strong> <br>("AD enrolment")</p>           |                          Yes                         |                 No<sup>1</sup>                 |
 | **Enrollment REST API**                                                    |                          Yes                         |                 No<sup>1</sup>                 |
