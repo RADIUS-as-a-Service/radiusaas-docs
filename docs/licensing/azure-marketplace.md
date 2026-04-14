@@ -132,9 +132,10 @@ To get started with your RADIUSaaS or Solution Bundle subscription, follow below
     * the [RADIUSaaS & SCEPman SaaS Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-saas-bundle-prod)<br>
 
     in the **Azure Marketplace**. In case we have extended a **Private Offer** to you or your MSP/distribution has extended a **Multiparty Offer (MPO)** to you, navigate to **Marketplace** in your **Azure Portal** and then to **Private Offer Management** to locate the Private Offer.
-* More details on Private Offers and MPOs can be found in Microsoft's documentation.
-  * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
-  * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
+
+    * More details on Private Offers and MPOs can be found in Microsoft's documentation.
+      * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
+      * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
 * Select the **Plan** based on your preferred renewal interval and click **Subscribe**.
 
 ![](<../.gitbook/assets/image (351).png>)

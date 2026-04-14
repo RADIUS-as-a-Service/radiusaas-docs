@@ -21,7 +21,7 @@ RADIUSaaS is offered as a **monthly or** **annual subscription plan** with diffe
 * pre-selected in case we provide a quotation or order link to you, or
 *   must be manually selected during checkout:<br>
 
-    <figure><img src="../.gitbook/assets/image (53) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (522).png" alt=""><figcaption></figcaption></figure>
 
 ## Payment Options
 
