@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-In order to purchase solutions from independent software vendors (ISV) such as RADIUSaaS or the RADIUSaaS & SCEPman Bundle, you must fulfil the following requirements:
+In order to purchase solutions from independent software vendors (ISV) you must fulfil the following requirements:
 
 1. You have an active Azure subscription.
 2. The account you want to purchase our solution with must have the **Owner** or **Contributor** role assigned on the Azure subscription you are going to pay with.
@@ -49,13 +49,25 @@ The following user segments are available for both, monthly and annual plans:&#x
 
 For prices in Euro (EUR), please check out our [website](https://www.radius-as-a-service.com/pricing/). For prices in _your_ currency, please directly refer to the **Marketplace** in the [Azure Portal](https://portal.azure.com/).
 
-## RADIUSaaS & SCEPman Bundle
+## Solution Bundles
 
-We offer RADIUSaaS as well as our cloud-CA solution [SCEPman](https://www.scepman.com/) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](azure-marketplace.md#user-segments).&#x20;
+{% hint style="info" %}
+The information provided throughout this article is analogously applicable for solution bundle subscriptions.
+{% endhint %}
 
-Furthermore, the bundle plans allow the **one-time** purchase of the [SCEPman Setup Support](https://docs.scepman.com/licensing#optional-scepman-setup-support).
+{% hint style="success" %}
+Please refer to our [SCEPman Edition Comparison](../details.md#scepman-edition-comparison) for details on the differences between SCEPman Enterprise and SCEPman SaaS.
+{% endhint %}
 
-The information provided throughout this article is analogously applicable for RADIUSaaS & SCEPman Bundle subscriptions.
+#### RADIUSaaS & SCEPman Enterprise Bundle
+
+We offer RADIUSaaS as well as our cloud-CA solution **for** **in-customer tenant deployment** [SCEPman Enterprise](https://www.scepman.com/) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](azure-marketplace.md#user-segments).&#x20;
+
+Furthermore, the plans allow the **one-time** purchase of the [SCEPman Setup Support](https://docs.scepman.com/licensing#optional-scepman-setup-support).
+
+#### RADIUSaaS & SCEPman SaaS Bundle
+
+If you'd prefer to use our cloud-based PKI SCEPman **without having to deploy infrastructure in your Azure tenant**, you can opt for the RADIUSaaS & SCEPman SaaS Bundle, that allows you to leverage SCEPman SaaS, built righ into your RADIUSaaS instance. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](azure-marketplace.md#user-segments).&#x20;
 
 ## Subscription Management
 
@@ -103,20 +115,26 @@ In case you would like to test RADIUSaaS, please [get in contact with us](https:
 
 ## FAQs
 
-### How to purchase RADIUSaaS (RADIUSaaS & SCEPman Bundle)?
+### How to purchase RADIUSaaS or a Solution Bundle?
 
 {% hint style="info" %}
-Deploying a RADIUSaaS (RADIUSaaS & SCEPman Bundle) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
+Deploying a RADIUSaaS or [Solution Bundle](azure-marketplace.md#solution-bundles) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
 
 For **new customers**, we will provision a new instance of RADIUSaaS once below steps are completed. Please allow up to 1 business day for us to complete the provisioning.
 {% endhint %}
 
-To get started with your RADIUSaaS or RADIUSaaS & SCEPman Bundle subscription, follow below steps:
+To get started with your RADIUSaaS or Solution Bundle subscription, follow below steps:
 
-* Locate [RADIUSaaS](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-transactable-prod) or the [RADIUSaaS & SCEPman Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-bundle-prod) on the **Marketplace** in your **Azure Portal**. In case we have extended a **Private Offer** to you or your MSP/distribution has extended a **Multiparty Offer (MPO)** to you, navigate to **Marketplace** in your **Azure Portal** and then to **Private Offer Management** to locate the Private Offer.
-  * More details on Private Offers and MPOs can be found in Microsoft's documentation.
-    * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
-    * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
+*   Locate&#x20;
+
+    * [RADIUSaaS](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-transactable-prod),&#x20;
+    * the [RADIUSaaS & SCEPman Enterprise Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-bundle-prod),  or
+    * the [RADIUSaaS & SCEPman SaaS Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-saas-bundle-prod)<br>
+
+    in the **Azure Marketplace**. In case we have extended a **Private Offer** to you or your MSP/distribution has extended a **Multiparty Offer (MPO)** to you, navigate to **Marketplace** in your **Azure Portal** and then to **Private Offer Management** to locate the Private Offer.
+* More details on Private Offers and MPOs can be found in Microsoft's documentation.
+  * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
+  * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
 * Select the **Plan** based on your preferred renewal interval and click **Subscribe**.
 
 ![](<../.gitbook/assets/image (351).png>)
@@ -143,7 +161,7 @@ The **Technical contact** must have a mailbox connected to it, so we are able to
 {% endhint %}
 
 {% hint style="success" %}
-If the plan contains chargeable add-ons, you can select them under **Extras**. For example, all RADIUSaaS & SCEPman Bundle plans allow you to purchase the optional [SCEPman Setup Support](https://docs.scepman.com/support#scepman-setup-support) package.
+If the plan contains chargeable add-ons, you can select them under **Extras**. For example, the RADIUSaaS & SCEPman Enterprise Bundle plans allow you to purchase the optional [SCEPman Setup Support](https://docs.scepman.com/support#scepman-setup-support) package.
 {% endhint %}
 
 ![](../.gitbook/assets/Screenshot_2022-02-18_at_12_23_47.png)
@@ -186,6 +204,6 @@ You may encounter problems when purchasing through Azure Marketplace. Here is a 
 5. Private Marketplace is enabled for the subscription and the offer isn't in the list of allowed offers.
 6. Purchases are not permitted for subscriptions with a spending cap, including Free subscriptions, Sponsorships, and similar types.
 
-### Does RADIUSaaS (RADIUSaaS & SCEPman Bundle) count towards my Microsoft Azure Consumption Commitment (MACC)?
+### Does RADIUSaaS or the Solution Bundles count towards my Microsoft Azure Consumption Commitment (MACC)?
 
 Currently (March 2025), this is the case. Since Microsoft may change their policy on what counts towards MACC in the future, please always [confirm](https://learn.microsoft.com/en-us/marketplace/azure-consumption-commitment-benefit#find-and-purchase-azure-benefit-eligible-offers-in-azure-marketplace) eligibility first.
