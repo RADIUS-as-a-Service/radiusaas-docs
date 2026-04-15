@@ -72,3 +72,27 @@ In the event of a reported service outage, affected customers are entitled to ap
 * service availability < 99.5% => 10%
 * service availability < 99.0% => 25%
 
+### Data loss
+
+#### Scope
+
+This section applies to all services operated by glueckkanja on behalf of the customer, including RADIUSaaS and SCEPman SaaS.
+
+#### Risk of data loss
+
+Despite careful operation and maintenance of our services, the possibility of customer data loss cannot be fully excluded. This includes, but is not limited to, the potential loss of the private key of the Certificate Authority (CA) managed by glueckkanja as part of the SCEPman SaaS service.
+
+#### Compensation for data loss
+
+Customers affected by the loss of the CA private key are entitled to apply within one week after occurrence of the loss for a credit of six (6) months of their subscription.
+
+Beyond the credit described above, glueckkanja accepts no further liability and is under no obligation to pay any additional compensation for damages arising from data loss. This exclusion applies to all forms of damage, including but not limited to:
+
+* Loss of business or revenue
+* Operational disruption or downtime
+* Cost of rebuilding the PKI environment and redistributing certificates
+* Indirect, incidental, or consequential damages of any kind
+
+### Credits
+
+Credits are appended as additional free months as an extension to the current subscription term.
