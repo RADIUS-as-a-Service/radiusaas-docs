@@ -71,15 +71,13 @@ For both options the [SCEPman Connection](admin-portal/settings/settings-server.
 | **Infrastructure Cost**                                                    |                       Customer                       |                     Vendor                     |
 | **Infrastructure Maintenance**                                             |                   Customer / Azure                   |                     Vendor                     |
 | **Configuration**                                                          |                       Customer                       |                    Customer                    |
-| **Geo-Redundancy Option**                                                  |                          Yes                         |                 No<sup>1</sup>                 |
+| **Geo-Redundancy Option**                                                  |                          Yes                         |                     Planned                    |
 | **RBAC for Certificate Master**                                            |                          Yes                         |                       No                       |
-| <p><strong>GPO-based enrolment</strong> <br>("AD enrolment")</p>           |                          Yes                         |                 No<sup>1</sup>                 |
-| **Enrollment REST API**                                                    |                          Yes                         |                 No<sup>1</sup>                 |
+| <p><strong>GPO-based enrolment</strong> <br>("AD enrolment")</p>           |                          Yes                         |                     Planned                    |
+| **Enrollment REST API**                                                    |                          Yes                         |                     Planned                    |
 | **Logging**                                                                |             Azure Monitor / Log Analytics            |                   WebConsole                   |
 | <p><strong>Subordinate CA /</strong> <br><strong>CA hierarchy</strong></p> |                          Yes                         | <p>with<br>Bring your own Key Vault (BYOK)</p> |
 | **Licensing Options**                                                      | <p> SCEPman Enterprise<br>or<br>RADIUSaaS Bundle</p> |                RADIUSaaS Bundle                |
-
-<sup>1</sup> We plan to add this feature to the SCEPman SaaS in the future.
 
 ## Getting Started
 
