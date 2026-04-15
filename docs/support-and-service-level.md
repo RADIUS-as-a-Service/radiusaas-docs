@@ -42,6 +42,13 @@ Response time is defined as the duration between the report of the incident and 
 
 ## Service level
 
+### Services in scope
+
+The services in scope for the service level are:
+
+* RADIUSaaS
+* SCEPman SaaS
+
 ### Service hours
 
 Our service is operated 24x7
@@ -56,7 +63,7 @@ where
 
 * `Service period` is the corresponding calendar month\
   and&#x20;
-* `Downtime` is the accumulated amount of time where the RADIUSaaS service is unavailable. The RADIUSaaS service is considered unavailable, when there is no connectivity between the RADIUSaaS service and the internet.
+* `Downtime` is the accumulated amount of time where the service is unavailable. The service is considered unavailable, when there is no connectivity between the service and the internet.
 
 Service outages must be reported by customers to our support as soon as possible and at the latest within 24 hours after occurrence.
 
