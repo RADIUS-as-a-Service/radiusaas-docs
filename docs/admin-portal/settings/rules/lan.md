@@ -99,7 +99,7 @@ The VLAN ID is not required to have a prefix. However, it can be useful in case 
 
 As an example, the following rule will assign the VLAN ID 15 based on the `Subject Name` attribute `OU` prefixed with `vlan-`&#x20;
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-04-28 at 16.58.30 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-04-28 at 16.58.30 (3).png" alt=""><figcaption></figcaption></figure>
 
 ![](<../../../.gitbook/assets/image (335).png>)
 
