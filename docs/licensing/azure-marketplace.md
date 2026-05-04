@@ -111,7 +111,7 @@ If you decide to disable **Recurring billing**, your subscription will not renew
 
 ## **Trials**
 
-In case you would like to test RADIUSaaS, please [get in contact with us](https://www.radius-as-a-service.com/start-now/) or send us an email to [sales@radiusaas.com](mailto:sales@radiusaas.com).
+In case you would like to test RADIUSaaS, please [request a trial via our website](https://support.radiusaas.com/support/tickets/new?ticket_form=trial_request_%28radiusaas%29) or send us an email to [sales@radiusaas.com](mailto:sales@radiusaas.com).
 
 ## FAQs
 
