@@ -177,3 +177,22 @@ Please note that Intune does not currently include an option in its SCEP profile
 {% hint style="success" %}
 As Intune's WiFi profile only provides WPA2-Enterprise you will need to use an external tool to create a WPA3-Enterprise WiFi profile. For convenience, RADIUSaaS includes this tool [here](https://docs.radiusaas.com/admin-portal/settings/trusted-roots#xml).
 {% endhint %}
+
+## Identity Providers
+
+### **Does RADIUSaaS support Okta as an identity provider?**
+
+* **Yes** for admin & users login to the web-console
+* **No** for authentication via the RADIUS protocol
+
+#### **User and admin Portal (web-console) login**
+
+Okta is fully supported as an identity provider for signing in to the RADIUSaaS Web Portal. RADIUSaaS does not maintain its own administrator identities and instead delegates authentication to your existing identity provider, so administrators, viewers, and invited users can log in with their Okta accounts. Okta is integrated through the **Custom OIDC Provider** option in the [Permissions](../../admin-portal/settings/permissions.md#custom-oidc-provider-okta) section. Step-by-step setup instructions, including the required redirect URI, authentication and token URLs, client ID, client secret, and `openid email` scope, are documented in the [Permissions](../../admin-portal/settings/permissions.md#overview) article.
+
+#### **RADIUS protocol authentication (Wi-Fi, wired 802.1X, VPN)**
+
+Okta is **not** supported as an identity provider for authentication that takes place over the RADIUS protocol. As described in the [Users](../../admin-portal/users.md) section, RADIUSaaS does not integrate with any external IDP for username/password-based network authentication. All username/password accounts used for RADIUS authentication must be created and managed directly in the RADIUSaaS Admin Portal.
+
+{% hint style="info" %}
+For RADIUS-based network authentication, we generally recommend **against** username/password approaches that rely on an external identity provider. Such setups require credentials to be transmitted or relayed during the network authentication and broaden the attack surface in ways we consider a relevant security risk. Wherever possible, use **certificate-based authentication** (EAP-TLS) instead. For background and a detailed explanation of the risks of password-based network authentication, see [Certificate-Based Network Authentication](https://www.scepman.com/certificate-network-authentication/).
+{% endhint %}
