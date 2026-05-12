@@ -150,29 +150,30 @@ Please follow these steps to leverage SCEPman Certificate Master to generate a n
 
 1. Navigate to your SCEPman Certificate Master web portal.
 2. Select Request Certificate on the left
-3. Select **(Web) Server** on the top
+3. Select **(Web) Server** at the top
 4. Select **Form**
-5. Enter all Subject Alternative Names (SANs) that the certificate shall be valid for separated by commas, semicolons, or line breaks. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend adapting the SAN of the default server certificate, e.g. `radsec-<your RADIUSaaS instance name>.radius-as-a-service.com`.
+5. Enter all Subject Alternative Names (SANs) that the certificate shall be valid for, separated by commas, semicolons, or line breaks. Generate a server certificate as described [here](https://docs.scepman.com/certificate-deployment/certificate-master/tls-server-certificate-pkcs-12) and provide any FQDN you want. We recommend adapting the SAN of the default server certificate, e.g. `radsec-<your RADIUSaaS instance name>.radius-as-a-service.com`.
 6. Set the **Download file format** to **PEM**&#x20;
 7. Select **Include Certificate Chain** and download the certificate.&#x20;
-8. **Submit** the request to download the new server certificate.
+8. Make sure to include **both Server and Client Authentication** for the EKU.
+9. **Submit** the request to download the new server certificate.
 
 {% hint style="warning" %}
 **Important**: Take temporary note of the password since it cannot be recovered from Certificate Master.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Create a new server certificate</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (524).png" alt=""><figcaption></figcaption></figure>
 
 ### Upload the new server certificate to **RADIUSaaS**
 
-To add your server certificate created in above steps, navigate to **RADIUSaaS instance** > **Settings** > **Server Settings** > **Add** then
+To add your server certificate created in the above steps, navigate to **RADIUSaaS instance** > **Settings** > **Server Settings** > **Add,** then
 
-8. Choose **PEM or PKCS#12 encoded Certificate** (If you selected PKCS#12 in step 5, this contains both public and private key)
-9. Drag & drop your certificate file or click to browse for it
-10. Enter the password of your **Private Key**&#x20;
-11. Click **Save**
+1. Choose **PEM or PKCS#12 encoded Certificate** (If you selected PKCS#12 in step 5, this contains both public and private key)
+2. Drag & drop your certificate file or click to browse for it
+3. Enter the password of your **Private Key**&#x20;
+4. Click **Save**
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (525).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Please note: By default, SCEPman Certificate Master issues certificates that are valid for 730 days. If you'd like to change this, please refer to SCEPman's [documentation](https://docs.scepman.com/advanced-configuration/application-settings/certificates#appconfig-validityperioddays).

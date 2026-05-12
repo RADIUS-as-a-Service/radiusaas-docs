@@ -59,7 +59,7 @@ Currently it is not supported to add custom certificate extensions to SCEP profi
 We therefore recommend using the Certificate Subject Name instead to [dynamically assign VLANs](./#vlan-assignment).
 {% endhint %}
 
-![Showing VLAN assignment by Certificate Extension](../../../.gitbook/assets/2024-05-28_10h41_47.png)
+<img src="../../../.gitbook/assets/2024-05-28_10h41_47.png" alt="Showing VLAN assignment by Certificate Extension" width="268">
 
 <figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Showing a Certificate Extension</p></figcaption></figure>
 
