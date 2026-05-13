@@ -5,7 +5,7 @@ As part of our continuous efforts to improve the reliability and scalability of 
 ## Migration Timeline
 
 * **Start of Migration Phase:** After the [July 2025 Release](./#july-2025-release) (18 July 2025)
-* **End of Migration Phase:** End of April 2026
+* **End of Migration Phase:** End of May 2026
 
 During this period, affected proxy servers will have two IP addresses in parallel:&#x20;
 
