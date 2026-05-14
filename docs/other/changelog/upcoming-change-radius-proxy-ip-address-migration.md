@@ -54,6 +54,18 @@ In the following example, the proxy with the region "Europe (London)" is affecte
 
 <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
+## How to Verify Your Change?
+
+1. If your devices are successfully authenticating, then that's a good sign that your new Proxy IP is forwarding traffic. Congratulations!
+2. If you want to see the logs hitting your new proxy address, you can see this in&#x20;
+   1. Insights > Logs.
+   2. Set your timeframe to include your proxy update.
+   3. Click the plus sign to add a filter and type in `proxyip.keywords`
+   4. Operator `is`, `is one of` and select your new Proxy IPs.
+   5. Click Add filter.&#x20;
+   6. Select **Log type** `proxy`&#x20;
+3. Now, drop down the **Packet Type** and if you see any `Access-Accept`, `Access-Reject` or `Access-Request`, that means the new proxy is forwarding traffic between RaaS and your Authenticator.&#x20;
+
 ## Need Help?
 
 If you have any questions or need assistance updating your configuration, please contact our support team via the [RADIUSaaS Support Portal](https://support.radiusaas.com/support/tickets/new?ticket_form=technical_support_request_%28radiusaas%29).
