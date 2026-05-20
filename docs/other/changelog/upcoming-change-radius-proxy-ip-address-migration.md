@@ -50,26 +50,9 @@ You can verify whether your proxy configuration is impacted by logging into the 
   * A **new IP address** is listed.
   * A **legacy IP address** is shown in parentheses, labeled with the word **"legacy"**.
 
-In the following example, the proxy with the region "Europe (London)" is affected, while the proxy with the region "North America (Dallas)" is not affected. The customer is required to change the IP address for the Europe (London) proxy in their network equipment, while 165.227.229.49 is the old IP address and  139.59.200.190 is the new address:
+In the following example, the proxy with the region "Europe (London)" is affected, while the proxy with the region "North America (Dallas)" is not affected. The customer is required to change the IP address for the Europe (London) proxy in their network equipment, while 165.227.229.49 is the old IP address and 139.59.200.190 is the new address:
 
 <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
-
-## How to Verify Your Change?
-
-If your devices are successfully authenticating, then that's a good sign that your new Proxy IP is forwarding traffic. Congratulations!
-
-**Optional:**
-
-If you want to see the logs hitting your new proxy address, you can see this in Insights > Logs.
-
-1. Set your timeframe to include your proxy update.
-2. Set **Logtype** to `detail`
-3. Click the plus sign to add a filter and type in `Packet-Dst-IP-Address.keyword`, Operator `is` or `is one of` and select your new Proxy IP or IPs. Click Add filter.&#x20;
-4. Drop down the **Packet Type** and if you see any `Access-Accept`, `Access-Reject` , that means the new proxy is forwarding traffic between RaaS and your Authenticator.&#x20;
-
-Additionally, you can toggle the `Packet-Dst-IP-Address` column to be added to the table by expanding one of the logs and clicking the `Toggle column in table` button.&#x20;
-
-<figure><img src="../../.gitbook/assets/image (527).png" alt=""><figcaption></figcaption></figure>
 
 ## Need Help?
 
