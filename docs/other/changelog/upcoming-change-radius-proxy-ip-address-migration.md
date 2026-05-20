@@ -56,15 +56,20 @@ In the following example, the proxy with the region "Europe (London)" is affecte
 
 ## How to Verify Your Change?
 
-1. If your devices are successfully authenticating, then that's a good sign that your new Proxy IP is forwarding traffic. Congratulations!
-2. If you want to see the logs hitting your new proxy address, you can see this in&#x20;
-   1. Insights > Logs.
-   2. Set your timeframe to include your proxy update.
-   3. Click the plus sign to add a filter and type in `proxyip.keywords`
-   4. Operator `is`, `is one of` and select your new Proxy IPs.
-   5. Click Add filter.&#x20;
-   6. Select **Log type** `proxy`&#x20;
-3. Now, drop down the **Packet Type** and if you see any `Access-Accept`, `Access-Reject` or `Access-Request`, that means the new proxy is forwarding traffic between RaaS and your Authenticator.&#x20;
+If your devices are successfully authenticating, then that's a good sign that your new Proxy IP is forwarding traffic. Congratulations!
+
+**Optional:**
+
+If you want to see the logs hitting your new proxy address, you can see this in Insights > Logs.
+
+1. Set your timeframe to include your proxy update.
+2. Set **Logtype** to `detail`
+3. Click the plus sign to add a filter and type in `Packet-Dst-IP-Address.keyword`, Operator `is` or `is one of` and select your new Proxy IP or IPs. Click Add filter.&#x20;
+4. Drop down the **Packet Type** and if you see any `Access-Accept`, `Access-Reject` , that means the new proxy is forwarding traffic between RaaS and your Authenticator.&#x20;
+
+Additionally, you can toggle the `Packet-Dst-IP-Address` column to be added to the table by expanding one of the logs and clicking the `Toggle column in table` button.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (527).png" alt=""><figcaption></figcaption></figure>
 
 ## Need Help?
 
