@@ -12,3 +12,31 @@ Before your access points are able to establish a valid **RadSec connection** (w
 The RadSec protocol requires a shared secret to compute the MD5 integrity checks.\
 The [RadSec RFC](https://datatracker.ietf.org/doc/html/rfc6614) defines this shared secret as the literal string "radsec".
 {% endhint %}
+
+{% content-ref url="aruba.md" %}
+[aruba.md](aruba.md)
+{% endcontent-ref %}
+
+{% content-ref url="fortinet.md" %}
+[fortinet.md](fortinet.md)
+{% endcontent-ref %}
+
+{% content-ref url="juniper-mist.md" %}
+[juniper-mist.md](juniper-mist.md)
+{% endcontent-ref %}
+
+{% content-ref url="meraki.md" %}
+[meraki.md](meraki.md)
+{% endcontent-ref %}
+
+{% content-ref url="mikrotik.md" %}
+[mikrotik.md](mikrotik.md)
+{% endcontent-ref %}
+
+{% content-ref url="ruckus.md" %}
+[ruckus.md](ruckus.md)
+{% endcontent-ref %}
+
+{% content-ref url="unifi.md" %}
+[unifi.md](unifi.md)
+{% endcontent-ref %}
