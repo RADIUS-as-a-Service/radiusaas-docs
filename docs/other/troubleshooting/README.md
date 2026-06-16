@@ -133,6 +133,52 @@ then one of your access points or switches that is trying to connect to your RAD
 
 To identify the affected access point or switch, first determine the RADIUS proxy by expanding the error message and searching for the `proxyip` property. Now that you know the proxy, use your inventory and knowledge of specific locations or groups of devices that cannot connect to your network to identify the misconfigured network device. Finally, update the shared secret to match the value configured in your RADIUSaaS instance for that proxy.
 
+### Troubleshooting Connection Issues with CAPI2 Logs
+
+Windows clients use the **Cryptographic API (CAPI2)** subsystem to handle certificate operations during EAP-TLS authentication. When a connection fails and neither the client UI nor the RADIUSaaS server logs provide a clear indication of the root cause, enabling CAPI2 logging on the affected device can reveal certificate validation failures, chain-building errors, or private-key access issues that would otherwise be invisible.
+
+***
+
+#### **Step 1: Enable CAPI2 Logging**
+
+CAPI2 logging is disabled by default. To turn it on:
+
+1. Open **Event Viewer**: press **Win + R**, type `eventvwr.exe`, and press **Enter**.
+2. In the left-hand tree, expand **Applications and Services Logs**.
+3. Expand **Microsoft → Windows → CAPI2**.
+4. Right-click **Operational** and select **Enable Log**.
+
+Once enabled, Windows will start recording all CAPI2 events. Reproduce the connection failure. Now try to connect to the Wi-Fi or wired network, then move on to the next step.
+
+> **Tip:** Disable the log again after collecting the data (**right-click Operational → Disable Log**) to avoid unnecessary disk usage.
+
+***
+
+#### **Step 2: Locate the Relevant Events**
+
+After reproducing the issue, look for events in the following log sources:
+
+| Log source          | Path in Event Viewer                                                                 |
+| ------------------- | ------------------------------------------------------------------------------------ |
+| **CAPI2**           | Applications and Services Logs → Microsoft → Windows → CAPI2 → Operational           |
+| **WLAN AutoConfig** | Applications and Services Logs → Microsoft → Windows → WLAN-AutoConfig → Operational |
+
+Focus on events that were recorded **at the time of the failed connection attempt**. Useful indicators include:
+
+* **CAPI2** — errors related to certificate chain building, revocation checks, or private-key access (e.g., Event IDs 11, 70, 90).
+* **WLAN-AutoConfig** — events describing the 802.1X negotiation outcome (e.g., Event IDs 8001, 8002, 12013).
+
+***
+
+#### **Step 3: Export and Send the Logs**
+
+To send us the logs for review:
+
+1. In Event Viewer, right-click the **Operational** log under **CAPI2** and select **Save All Events As…**
+2. Save the file as an **Event Log (\*.evtx)** file and name it something descriptive, e.g. `CAPI2_<device-name>_<date>.evtx`.
+3. Repeat the same steps for the **WLAN-AutoConfig → Operational** log.
+4. Send both `.evtx` files to our support team at [https://www.radius-as-a-service.com/help/](https://www.radius-as-a-service.com/help/) along with a brief description of the affected device, OS version, and when the issue occurs.
+
 ## Certificate issues
 
 ### Certificate chain could not be verified
