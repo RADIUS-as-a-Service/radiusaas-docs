@@ -32,7 +32,7 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 The current release includes an update to the RADIUSaaS proxies that must be initiated by customers **before the end of April**. This is the final step of the proxy IP address migration announced last year.\
 Before starting, make sure your network equipment is prepared for the new proxy IP addresses.\
 Then run the Proxy Update. **After the update, legacy proxy IPs will stop working.**\
-For details, please see [here](upcoming-change-radius-proxy-ip-address-migration.md).
+For details, please see [here](final-notice-radius-proxy-ip-migration-required-before-10-july-2026.md).
 {% endhint %}
 
 #### Schedule
@@ -90,7 +90,7 @@ For details, please see [here](upcoming-change-radius-proxy-ip-address-migration
 
 #### Upcoming Service Updates
 
-* Preparation for [upcoming IP address change of RADIUS Proxies](upcoming-change-radius-proxy-ip-address-migration.md)
+* Preparation for [upcoming IP address change of RADIUS Proxies](final-notice-radius-proxy-ip-migration-required-before-10-july-2026.md)
 
 ### February 2025 Release
 

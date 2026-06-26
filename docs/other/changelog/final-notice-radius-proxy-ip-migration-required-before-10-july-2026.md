@@ -1,18 +1,26 @@
-# Upcoming Change: RADIUS Proxy IP Address Migration
+# FINAL NOTICE: RADIUS Proxy IP Migration Required Before 10 July 2026
 
-As part of our continuous efforts to improve the reliability and scalability of **RADIUSaaS**, we are updating the IP addresses of certain **RADIUS proxy systems**. This change will be rolled out using a **soft migration approach** to ensure a smooth transition for all affected customers.
+As part of the ongoing RADIUSaaS Proxy IP address migration, all customers using RADIUSaaS Proxies are required to complete the proxy update before **10 July 2026.**
 
-## Migration Timeline
+This is a **mandatory change**. Customers who have not completed the migration by this date will no longer be able to use the existing (legacy) RADIUS Proxy IP addresses.
 
-* **Start of Migration Phase:** After the [July 2025 Release](./#july-2025-release) (18 July 2025)
-* **End of Migration Phase:** End of May 2026
+## Required action
 
-During this period, affected proxy servers will have two IP addresses in parallel:&#x20;
+Before 10 July 2026:
 
-* **The old/legacy IP address**
-* **a new IP address**&#x20;
+1. Review your network configuration and ensure your network equipment is prepared for the new RADIUS Proxy IP addresses.
+2. Complete the Proxy Update from the RADIUSaaS Admin Portal.
+3. Verify that your network devices are configured to communicate with the new proxy IP addresses.
 
-Both IP addresses will be **fully functional during** the migration phase. After the migration phase ends, the **old**/**legacy IP addresses will stop working**.
+## Important notice
+
+The previous proxy IP addresses will be retired after **10 July 2026**. After this date, they will no longer be supported and authentication traffic using the legacy addresses may fail.
+
+No further extensions or exceptions to this deadline will be provided. Customers who do not complete the migration before the deadline will need to update their configuration before RADIUS authentication can resume.
+
+We recommend completing this change as soon as possible to avoid any potential service disruption.
+
+***
 
 ## Proxy Update
 
@@ -20,11 +28,9 @@ As part of the [**March 2026 Release**](./#march-2026-release), we are finalizin
 
 <figure><img src="../../.gitbook/assets/image (500).png" alt=""><figcaption></figcaption></figure>
 
-If you haven’t already, ensure your network equipment is configured for the new proxy IP addresses (see [How to check if you are affected](upcoming-change-radius-proxy-ip-address-migration.md#how-to-check-if-you-are-affected) for details).&#x20;
+If you haven’t already, ensure your network equipment is configured for the new proxy IP addresses (see [How to check if you are affected](final-notice-radius-proxy-ip-migration-required-before-10-july-2026.md#how-to-check-if-you-are-affected) for details).&#x20;
 
 When you click _**Update**_, your tenant’s proxies will be updated. **Once the update completes, the legacy proxy IP addresses will no longer work**.&#x20;
-
-If you need time to adapt your network equipment configuration, choose _**Postpone**_**.**
 
 _**Go To Proxies**_ open the **Proxy Settings** page to review your configuration.
 
@@ -33,12 +39,12 @@ _**Go To Proxies**_ open the **Proxy Settings** page to review your configuratio
 If your configuration uses one of the affected RADIUS proxies, you must:
 
 1. **Update your network equipment** to use the new RADIUS proxy IP address.
-2. **Run the** [**Proxy Update**](upcoming-change-radius-proxy-ip-address-migration.md#proxy-update) (latest by the end of April 2026).
+2. **Run the** [**Proxy Update**](final-notice-radius-proxy-ip-migration-required-before-10-july-2026.md#proxy-update) (latest by **10 July 2026**).
 
 ## How to check if you are affected
 
 {% hint style="info" %}
-In general only customers using the **RADIUS protocol** may be affected. If you are using **RadSec only**, no action is required, since you are not using the RADIUSaaS Proxy services.
+In general, only customers using the **RADIUS protocol** may be affected. If you are using **RadSec only**, no action is required, since you are not using the RADIUSaaS Proxy services.
 
 Note that not every proxy server requires an IP address change.
 {% endhint %}

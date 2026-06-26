@@ -90,7 +90,7 @@
 * [REST API](other/rest-api/README.md)
   * [External Monitoring](other/rest-api/external-monitoring.md)
 * [Changelog](other/changelog/README.md)
-  * [Upcoming Change: RADIUS Proxy IP Address Migration](other/changelog/upcoming-change-radius-proxy-ip-address-migration.md)
+  * [FINAL NOTICE: RADIUS Proxy IP Migration Required Before 10 July 2026](other/changelog/final-notice-radius-proxy-ip-migration-required-before-10-july-2026.md)
 
 ***
 
