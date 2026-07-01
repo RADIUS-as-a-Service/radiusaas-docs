@@ -26,7 +26,7 @@ We recommend completing this change as soon as possible to avoid any potential s
 
 As part of the [**March 2026 Release**](./#march-2026-release), we are finalizing the migration of our managed **RADIUSaaS proxies**. Administrators using RADIUSaaS proxies will see a pop-up window titled **“Proxy Infrastructure Update”** with three options: _**Postpone**_, _**Go To Proxies**_, and _**Update**_.
 
-<figure><img src="../../.gitbook/assets/image (500).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (528).png" alt=""><figcaption></figcaption></figure>
 
 If you haven’t already, ensure your network equipment is configured for the new proxy IP addresses (see [How to check if you are affected](final-notice-radius-proxy-ip-migration-required-before-10-july-2026.md#how-to-check-if-you-are-affected) for details).&#x20;
 
