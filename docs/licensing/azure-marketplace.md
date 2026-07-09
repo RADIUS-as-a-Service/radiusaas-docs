@@ -56,7 +56,7 @@ The information provided throughout this article is analogously applicable for s
 {% endhint %}
 
 {% hint style="success" %}
-Please refer to our [SCEPman Edition Comparison](../details.md#scepman-edition-comparison) for details on the differences between SCEPman Enterprise and SCEPman SaaS.
+Please refer to our [SCEPman Edition Comparison](../overview.md#scepman-edition-comparison) for details on the differences between SCEPman Enterprise and SCEPman SaaS.
 {% endhint %}
 
 #### RADIUSaaS & SCEPman Enterprise Bundle

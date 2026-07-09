@@ -191,7 +191,7 @@ RADIUSaaS relies on well-established protocols to handle network authentication 
 
 ### 2. Is the UDP-based RADIUS protocol secure?
 
-We are recommending to use the modern [RadSec](../../../details.md#what-is-radsec) protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
+We are recommending to use the modern [RadSec](../../../overview.md#what-is-radsec) protocol to authentication against RADIUSaaS. However, there are many network infrastructure components still out there, which do not support RadSec.
 
 The following diagram shows the RADIUS authentication flow:
 

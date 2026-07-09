@@ -1,4 +1,4 @@
-# Details
+# Overview
 
 ## What is RADIUS?
 
@@ -34,7 +34,7 @@ Each customer has access to their own personal instance through their own RADIUS
 
 #### RADIUS to RadSec Proxy
 
-The service's internal RADIUS server only allows [RadSec](details.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, RADIUSaaS features a [proxy](admin-portal/settings/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use the service with traditional UDP-based RADIUS.
+The service's internal RADIUS server only allows [RadSec](overview.md#what-is-radsec) connections. If your WiFi infrastructure does not support RadSec, RADIUSaaS features a [proxy](admin-portal/settings/settings-proxy.md) functionality, which will establish a secure tunnel allowing you to use the service with traditional UDP-based RADIUS.
 
 #### Guests, BYOD and IOT Devices&#x20;
 
@@ -53,31 +53,6 @@ RADIUSaaS can be used globally.
 * United States of America
 
 **RADIUS proxies** can be deployed into datacenters on [all continents](admin-portal/settings/settings-proxy.md#regions).&#x20;
-
-### SCEPman Integration
-
-Customers can choose from two RADIUSaaS & SCEPman Bundles:
-
-* RADIUSaaS & SCEPman Enterprise
-* RADIUSaaS & <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>
-
-For both options the [SCEPman Connection](admin-portal/settings/settings-server.md#scepman-connection) feature enables automatic issuance and renewal of RADIUSaaS server certificates through SCEPman.
-
-#### SCEPman Edition Comparison
-
-|                                                                            |                  SCEPman Enterprise                  |                  SCEPman SaaS                  |
-| -------------------------------------------------------------------------- | :--------------------------------------------------: | :--------------------------------------------: |
-| **SCEPman runs in**                                                        |                Customer's Azure Tenant               |              Vendor's Datacenters              |
-| **Infrastructure Cost**                                                    |                       Customer                       |                     Vendor                     |
-| **Infrastructure Maintenance**                                             |                   Customer / Azure                   |                     Vendor                     |
-| **Configuration**                                                          |                       Customer                       |                    Customer                    |
-| **Geo-Redundancy Option**                                                  |                          Yes                         |                     Planned                    |
-| **RBAC for Certificate Master**                                            |                          Yes                         |                       No                       |
-| <p><strong>GPO-based enrolment</strong> <br>("AD enrolment")</p>           |                          Yes                         |                     Planned                    |
-| **Enrollment REST API**                                                    |                          Yes                         |                     Planned                    |
-| **Logging**                                                                |             Azure Monitor / Log Analytics            |                   WebConsole                   |
-| <p><strong>Subordinate CA /</strong> <br><strong>CA hierarchy</strong></p> |                          Yes                         | <p>with<br>Bring your own Key Vault (BYOK)</p> |
-| **Licensing Options**                                                      | <p> SCEPman Enterprise<br>or<br>RADIUSaaS Bundle</p> |                RADIUSaaS Bundle                |
 
 ## Getting Started
 

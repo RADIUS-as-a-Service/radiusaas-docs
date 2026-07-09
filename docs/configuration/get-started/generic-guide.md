@@ -79,7 +79,7 @@ Currently, we have not prepared sample guides for networking switches yet. Howev
 
 ### RADIUS
 
-If your network equipment **does not support RadSec**, you must first deploy proxies that handle the protocol conversion from [RADIUS](../../details.md#what-is-radius) to [RadSec](../../details.md#what-is-radsec) :
+If your network equipment **does not support RadSec**, you must first deploy proxies that handle the protocol conversion from [RADIUS](../../overview.md#what-is-radius) to [RadSec](../../overview.md#what-is-radsec) :
 
 {% content-ref url="../../admin-portal/settings/settings-proxy.md" %}
 [settings-proxy.md](../../admin-portal/settings/settings-proxy.md)

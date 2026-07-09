@@ -1,7 +1,9 @@
 # Table of contents
 
-* [Welcome](README.md)
-* [Details](details.md)
+* [RADIUSaaS Website](https://www.radius-as-a-service.com/)
+* [RADIUSaaS Documentation](README.md)
+* [Overview](overview.md)
+* [SCEPman Integration](scepman-integration.md)
 
 ## Configuration
 
@@ -98,4 +100,3 @@
   * [Azure Marketplace](licensing/azure-marketplace.md)
   * [cleverbridge](licensing/cleverbridge.md)
 * [Support & Service Level](support-and-service-level.md)
-* [RADIUSaaS Website](https://www.radius-as-a-service.com/)

@@ -8,7 +8,7 @@ If you are currently using SCEPman Enterprise in your own tenant and want to fur
 
 ### Pre-Migration Considerations
 
-* **Features**: Some features of SCEPman Enterprise are not available in <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>. Please have a look in our [SCEPman Edition Comparison](../../details.md#scepman-edition-comparison) to ensure, that you have all your use-cases covered, before you start the migration.&#x20;
+* **Features**: Some features of SCEPman Enterprise are not available in <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>. Please have a look in our [SCEPman Edition Comparison](../../overview.md#scepman-edition-comparison) to ensure, that you have all your use-cases covered, before you start the migration.&#x20;
 * **MDM SCEP profiles**: You'll need to update your SCEP profiles to point to the new <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> URL and reference the new Root CA. Plan for how you want to roll this out (all at once vs. phased).
 * **Network Environment**: If you are using RadSec, migrating to <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> can mean that the server certificate used for the connection might change.
 * **DNS or firewall rules**: If you have any network rules tied to your current SCEPman endpoint, these will need to be updated.

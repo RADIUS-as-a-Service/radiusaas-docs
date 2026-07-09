@@ -1,8 +1,8 @@
 ---
-description: RADIUSaaS | Hassle Free WiFi Auth
+description: Certificate-Based Authentication for Wi‑Fi, VPN, and Wired Networks
 ---
 
-# Welcome
+# RADIUSaaS Documentation
 
 RADIUSaaS offers easy and secure authentication for accessing network resources. It delivers the comfort, reliability, and scalability of a native cloud SaaS. Supported protocols are RADIUS as well as RadSec. Authentication is based on certificates. RADIUSaaS is generally capable of validating every certificate that can be used for client authentication. However, to be able to lock someone with a revoked certificate out of your network, choose a CA which provides a publicly accessible OCSP or CRL endpoint.
 

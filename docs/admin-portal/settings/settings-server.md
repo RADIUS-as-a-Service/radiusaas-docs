@@ -99,7 +99,7 @@ This section is available when you have configured at least on [RADIUS Proxy](se
 ### **Server IP Addresses and Location**
 
 {% hint style="warning" %}
-These IP addresses only listen on [RADIUS](../../details.md#what-is-radius) over UDP ports 1812/1813.
+These IP addresses only listen on [RADIUS](../../overview.md#what-is-radius) over UDP ports 1812/1813.
 {% endhint %}
 
 Geo-location of the RADIUS Proxy/Proxies as well as the respective public IP address(es).
