@@ -4,9 +4,95 @@
 
 In order to purchase solutions from independent software vendors (ISV) you must fulfil the following requirements:
 
-1. You have an active Azure subscription.
+1. You have an active Azure subscription in one of the following countries: Armenia, Australia, Austria, Bulgaria, Belgium, Canada, Chile, Colombia, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, India, Indonesia, Ireland, Italy, Kenya, Latvia, Liechtenstein, Lithuania, Luxembourg, Malaysia, Malta, Monaco, Netherlands, New Zealand, Nigeria, Norway, Poland, Portugal, Puerto Rico, Romania, Saudi Arabia, Serbia, Singapore, Slovakia, Slovenia, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, Thailand, Türkiye, United Arab Emirates, United Kingdom, United States, Vietnam.
 2. The account you want to purchase our solution with must have the **Owner** or **Contributor** role assigned on the Azure subscription you are going to pay with.
 3. The billing account linked to your Azure subscription is properly set up. Depending on your billing account type (Microsoft Customer Agreement or Enterprise Agreement), you might need to enable marketplace purchases in the Azure portal first.
+
+## How to purchase RADIUSaaS or a Solution Bundle?
+
+{% hint style="info" %}
+Deploying a RADIUSaaS or [Solution Bundle](azure-marketplace.md#solution-bundles) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
+
+For **new customers**, we will provision a new instance of RADIUSaaS once below steps are completed. Please allow up to 1 business day for us to complete the provisioning.
+{% endhint %}
+
+To get started with your RADIUSaaS or Solution Bundle subscription, follow below steps:
+
+{% stepper %}
+{% step %}
+### Locate the product version on the Microsoft Marketplace
+
+Choose between the following:&#x20;
+
+* [RADIUSaaS](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-transactable-prod)
+* [RADIUSaaS & SCEPman Enterprise Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-bundle-prod)
+* [RADIUSaaS & SCEPman SaaS Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-saas-bundle-prod)
+
+In case we have extended a **Private Offer** to you or your MSP/distribution has extended a **Multiparty Offer (MPO)** to you, navigate to **Marketplace** in your **Azure Portal** and then to **Private Offer Management** to locate the Private Offer.
+
+* More details on Private Offers and MPOs can be found in Microsoft's documentation.
+  * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
+  * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
+* Select the **Subscription** where RADIUSaaS should be billed to
+* Select the **Plan** (monthly or yearly) based on your preferred renewal interval&#x20;
+* Click **Subscribe**.
+
+<figure><img src="../.gitbook/assets/Bildschirmfoto 2026-08-06 um 11.16.09.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Subscribe to RADIUSaaS / bundle version
+
+* Create or select the **Resource group** you would like to deploy the subscription to.
+* Assign a descriptive **Name** to later identify your subscription.
+* We recommend to keep **Recurring billing** **On** so that you do not have to worry about an automatic termination of your subscription.
+* Click **Review + subscribe** and then **Subscribe** to deploy the **SaaS** resource to your **Resource group**.
+
+<figure><img src="../.gitbook/assets/image (529).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
+{% endhint %}
+{% endstep %}
+
+{% step %}
+### Configure your account
+
+Once the deployment is complete, please navigate to our platform to complete the checkout. Therefore click **Configure account now**.
+
+<figure><img src="../.gitbook/assets/image (530).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Add additional information
+
+After authenticating on our platform using your Microsoft credentials, you will be prompted for additional information, such as the desired total **User** amount and a **Technical contact**.
+
+{% hint style="info" %}
+The **Technical contact** must have a mailbox connected to it, so we are able to notify you in case there are relevant issues with RADIUSaaS. By default, we also configure the **Technical contact** as initial administrator on your RADIUSaaS instance. In case you'd like to change that, please [let us know](https://www.radius-as-a-service.com/help/).
+{% endhint %}
+
+{% hint style="success" %}
+If the plan contains chargeable add-ons, you can select them under **Extras**. For example, the RADIUSaaS & SCEPman Enterprise Bundle plans allow you to purchase the optional [SCEPman Setup Support](https://docs.scepman.com/support#scepman-setup-support) package.
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/image (531).png" alt=""><figcaption></figcaption></figure>
+
+Based on the amount of users provided, we will charge the relevant base fee for your user segment as well as additional users, in case you require more than the included amount in your base fee. **The platform automatically selects the best price / tier**.
+
+The platform will show you the licensing fees you have to expect under **Cost Projection**.
+
+If you are happy with it, please click **Review & Submit** for a final review and a fee summary.
+
+Complete the checkout by confirming your choice and clicking **Submit**.
+
+This triggers us to deploy your RADIUSaaS instance (and issue a SCEPman Enterprise Edition license key if the RADIUSaaS and SCEPman Bundle is purchased). We will inform you via email with all relevant information on the next steps once the instance (and license key) is available for you. This won't take any longer than one business day.
+
+{% hint style="info" %}
+You will only be charged by Microsoft, once you have completed the enrolment on our platform and received our welcome email.
+{% endhint %}
+{% endstep %}
+{% endstepper %}
 
 ## Pricing Model
 
@@ -115,67 +201,7 @@ In case you would like to test RADIUSaaS, please [request a trial via our websit
 
 ## FAQs
 
-### How to purchase RADIUSaaS or a Solution Bundle?
 
-{% hint style="info" %}
-Deploying a RADIUSaaS or [Solution Bundle](azure-marketplace.md#solution-bundles) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
-
-For **new customers**, we will provision a new instance of RADIUSaaS once below steps are completed. Please allow up to 1 business day for us to complete the provisioning.
-{% endhint %}
-
-To get started with your RADIUSaaS or Solution Bundle subscription, follow below steps:
-
-*   Locate&#x20;
-
-    * [RADIUSaaS](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-transactable-prod),&#x20;
-    * the [RADIUSaaS & SCEPman Enterprise Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-bundle-prod),  or
-    * the [RADIUSaaS & SCEPman SaaS Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-saas-bundle-prod)<br>
-
-    in the **Azure Marketplace**. In case we have extended a **Private Offer** to you or your MSP/distribution has extended a **Multiparty Offer (MPO)** to you, navigate to **Marketplace** in your **Azure Portal** and then to **Private Offer Management** to locate the Private Offer.
-
-    * More details on Private Offers and MPOs can be found in Microsoft's documentation.
-      * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
-      * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
-* Select the **Plan** based on your preferred renewal interval and click **Subscribe**.
-
-![](<../.gitbook/assets/image (351).png>)
-
-* Create or select the **Resource group** you would like to deploy the subscription to.
-* Assign a descriptive **Name** to later identify your subscription.
-* We recommend to keep **Recurring billing** **On** so that you do not have to worry about an automatic termination of your subscription.
-* Click **Review + subscribe** and then **Subscribe** to deploy the **SaaS** resource to your **Resource group**.
-
-![](<../.gitbook/assets/image (235).png>)
-
-{% hint style="info" %}
-The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
-{% endhint %}
-
-* Once the deployment is complete, please navigate to our platform to complete the checkout. Therefore click **Configure account now**.
-
-![](<../.gitbook/assets/image (239).png>)
-
-* After authenticating on our platform using your Microsoft credentials, you will be prompted for additional information, such as the desired total **User** amount and a **Technical contact**.
-
-{% hint style="info" %}
-The **Technical contact** must have a mailbox connected to it, so we are able to notify you in case there are relevant issues with RADIUSaaS. By default, we also configure the **Technical contact** as initial administrator on your RADIUSaaS instance. In case you'd like to change that, please [let us know](https://www.radius-as-a-service.com/help/).
-{% endhint %}
-
-{% hint style="success" %}
-If the plan contains chargeable add-ons, you can select them under **Extras**. For example, the RADIUSaaS & SCEPman Enterprise Bundle plans allow you to purchase the optional [SCEPman Setup Support](https://docs.scepman.com/support#scepman-setup-support) package.
-{% endhint %}
-
-![](../.gitbook/assets/Screenshot_2022-02-18_at_12_23_47.png)
-
-* Based on the amount of users provided, we will charge the relevant base fee for your user segment as well as additional users, in case you require more than the included amount in your base fee. **The platform automatically selects the best price / tier**.
-* The platform will show you the licensing fees you have to expect under **Cost Projection**.
-* If you are happy with it, please click **Review & Submit** for a final review and a fee summary.
-* Complete the checkout by confirming your choice and clicking **Submit**.
-* This triggers us to deploy your RADIUSaaS instance (and issue a SCEPman Enterprise Edition license key if the RADIUSaaS and SCEPman Bundle is purchased). We will inform you via email with all relevant information on the next steps once the instance (and license key) is available for you. This won't take any longer than one business day.
-
-{% hint style="info" %}
-You will only be charged by Microsoft, once you have completed the enrolment on our platform and received our welcome email.
-{% endhint %}
 
 ### Why is my "Plan no longer available for purchase"?
 

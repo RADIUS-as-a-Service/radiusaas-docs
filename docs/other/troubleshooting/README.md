@@ -227,7 +227,7 @@ Common error codes: 0xc7d24fc5 or -942518331
 Key points are:
 
 * select the **Root CA certificate** for **server validation** (important: do not upload the server certificate of the RADIUSaaS)\
-  &#xNAN;**- and -**
+  **- and -**
 * define a **radius server name**
   * Note: There seems to be a character limit for this field. To solve possible issues, you might just use the domain part without subdomain like "radius-as-a-service.com" (instead of "contoso.radius-as-a-service.com").
   * [Android developers](https://developer.android.com/guide/topics/connectivity/wifi-enterprise) states: "\[...] must configure **both a Root CA certificate**, and either a **domain suffix match** or an alternate subject match". So, the MDM can use "setAltSubjectMatch" or "setDomainSuffixMatch" after adding a root certificate to the Wi-Fi configuration. Intune seems to use "setDomainSuffixMatch" as just "radius-as-a-service.com" is sufficient.
