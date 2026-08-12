@@ -1,4 +1,4 @@
-# Azure Marketplace
+# Microsoft Marketplace
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ In order to purchase solutions from independent software vendors (ISV) you must 
 ## How to purchase RADIUSaaS or a Solution Bundle?
 
 {% hint style="info" %}
-Deploying a RADIUSaaS or [Solution Bundle](azure-marketplace.md#solution-bundles) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
+Deploying a RADIUSaaS or [Solution Bundle](microsoft-marketplace.md#solution-bundles) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
 
 For **new customers**, we will provision a new instance of RADIUSaaS once below steps are completed. Please allow up to 1 business day for us to complete the provisioning.
 {% endhint %}
@@ -96,7 +96,7 @@ You will only be charged by Microsoft, once you have completed the enrolment on 
 
 ## Pricing Model
 
-* RADIUSaaS is offered as a **monthly or** **annual subscription plan** with different [User Segments](azure-marketplace.md#user-segments). The correct **user segment** is automatically selected by our platform based on the amount of desired users.
+* RADIUSaaS is offered as a **monthly or** **annual subscription plan** with different [User Segments](microsoft-marketplace.md#user-segments). The correct **user segment** is automatically selected by our platform based on the amount of desired users.
 * All subscription plans consist of a **base fee** which includes a certain amount of users per subscription cycle - depending on the **user segment**. For example, the **base fee** for the user segment _RADIUSaaS (M) 50_ includes 50 users per month.
 * If more than the included amount of users is required, **additional users** can be added to the  plan. For each additional user, we charge an additional per-user fee.
 
@@ -147,13 +147,13 @@ Please refer to our [SCEPman Edition Comparison](../overview.md#scepman-edition-
 
 #### RADIUSaaS & SCEPman Enterprise Bundle
 
-We offer RADIUSaaS as well as our cloud-CA solution **for** **in-customer tenant deployment** [SCEPman Enterprise](https://www.scepman.com/) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](azure-marketplace.md#user-segments).&#x20;
+We offer RADIUSaaS as well as our cloud-CA solution **for** **in-customer tenant deployment** [SCEPman Enterprise](https://www.scepman.com/) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](microsoft-marketplace.md#user-segments).&#x20;
 
 Furthermore, the plans allow the **one-time** purchase of the [SCEPman Setup Support](https://docs.scepman.com/licensing#optional-scepman-setup-support).
 
 #### RADIUSaaS & SCEPman SaaS Bundle
 
-If you'd prefer to use our cloud-based PKI SCEPman **without having to deploy infrastructure in your Azure tenant**, you can opt for the RADIUSaaS & SCEPman SaaS Bundle, that allows you to leverage SCEPman SaaS, built righ into your RADIUSaaS instance. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](azure-marketplace.md#user-segments).&#x20;
+If you'd prefer to use our cloud-based PKI SCEPman **without having to deploy infrastructure in your Azure tenant**, you can opt for the RADIUSaaS & SCEPman SaaS Bundle, that allows you to leverage SCEPman SaaS, built righ into your RADIUSaaS instance. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](microsoft-marketplace.md#user-segments).&#x20;
 
 ## Subscription Management
 
@@ -201,8 +201,6 @@ In case you would like to test RADIUSaaS, please [request a trial via our websit
 
 ## FAQs
 
-
-
 ### Why is my "Plan no longer available for purchase"?
 
 In case you see hint in your subscription as shown in below screenshot, **there is no need to worry**!
@@ -215,7 +213,7 @@ The reasons for this hint is that - from time to time - we might have to depreca
 
 * As an existing customer, you may continue to use the deprecated plan indefinitely (until the subscription is cancelled).
 * In case a newer plan gives you better pricing or other advantages, we will inform you about this.
-* You can change to the most recent version of the plan by leveraging the [Change Plan](azure-marketplace.md#change-plan) action.
+* You can change to the most recent version of the plan by leveraging the [Change Plan](microsoft-marketplace.md#change-plan) action.
 
 ### Why is my Azure Marketplace purchase not working?
 

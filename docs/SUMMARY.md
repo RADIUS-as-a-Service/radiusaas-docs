@@ -97,7 +97,7 @@
 ***
 
 * [Licensing](licensing/README.md)
-  * [Azure Marketplace](licensing/azure-marketplace.md)
+  * [Microsoft Marketplace](licensing/microsoft-marketplace.md)
   * [cleverbridge](licensing/cleverbridge.md)
 * [Support & Service Level](support-and-service-level.md)
 * [RADIUSaaS Website](https://www.radius-as-a-service.com/)
