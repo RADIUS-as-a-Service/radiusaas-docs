@@ -16,7 +16,7 @@ Both RadSec and RADIUS service offer public IP address that enable your network 
 
 ## RadSec / TCP
 
-<figure><img src="../../.gitbook/assets/image (404).png" alt=""><figcaption><p>Showing RadSec IP and port</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-08-12 at 09.25.56.png" alt=""><figcaption></figcaption></figure>
 
 #### **RadSec DNS**
 
@@ -34,7 +34,7 @@ This is the registered port for RadSec: 2083
 
 In cases where customers require higher levels of redundancy, multiple RadSec endpoints can be configured for your instance providing an additional IP addresses. Please note that there is an additional cost for this service.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Showing two public IP addresses, one for each of the RadSec services.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-08-12 at 09.25.56 copy.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 It is important to note that RADIUSaaS **does NOT provide failover** between RadSec endpoints. Instead, this failover is typically implemented on your network equipment as shown in below example using Meraki.&#x20;
@@ -48,15 +48,17 @@ In this configuration, the two RadSec IP addresses are listed in order of prefer
 
 ## RadSec Settings
 
-{% hint style="info" %}
-The following settings control certain aspects of the RadSec connection to your RADIUSaaS instance.
-{% endhint %}
-
 ### Maximum TLS Version
 
-This setting controls the maximum TLS version for your RadSec interface. The minimum version is fixed at 1.2, the default maximum is set to 1.3.
+This setting controls the maximum TLS version for your **RadSec interface**. The minimum version is fixed at 1.2, the default maximum is set to 1.3.
 
 TLS 1.3 offers several advantages over 1.2, including the post-handshake authentication mechanism, which allows requesting additional credentials before completing the handshake. This is important for the verification checks for RadSec certificates setting discussed next.
+
+### Maximum EAP TLS Version
+
+This setting controls the maximum TLS version used with EAP when your endpoints authenticate against your RADIUSaaS instance using a certificate.
+
+For all modern operating systems, **TLS 1.3 is the recommended default**. However, certain (older) Windows 10/11 builds advertised TLS 1.3 support with a non-conformant implementation. If Windows clients on affected builds exhibit connectivity issues, cap the negotiated protocol version at TLS 1.2 for broader compatibility.
 
 ### Revocation Check for RadSec Certificates
 
@@ -94,7 +96,7 @@ The **Revocation Check for RadSec Certificates** setting is automatically enable
 
 This section is available when you have configured at least on [RADIUS Proxy](settings-proxy.md). For each proxy, a separate public IP address is available. The public IP addresses in this section support the RADIUS protocol only and thus listen on ports 1812/1813.
 
-<figure><img src="../../.gitbook/assets/image (39) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (544).png" alt=""><figcaption></figcaption></figure>
 
 ### **Server IP Addresses and Location**
 
@@ -225,35 +227,3 @@ If the triangle is displayed next to the active RADIUS Server Certificate, follo
 {% content-ref url="../../configuration/renew-certificate.md" %}
 [renew-certificate.md](../../configuration/renew-certificate.md)
 {% endcontent-ref %}
-
-## SCEPman Connection
-
-{% hint style="warning" %}
-SCEPman Enterprise Edition only
-
-Applicable to version 3.0 and above
-{% endhint %}
-
-The SCEPman Connection setting is designed to connect your RaaS instance to your SCEPman instance directly. When you configure this connection RaaS will perform the following task:
-
-1. Create and activate a new Server Certificate
-2. It will manage this Server certificate including the renewal process.
-
-<figure><img src="../../.gitbook/assets/image (485).png" alt=""><figcaption></figcaption></figure>
-
-#### To establish this connection, follow these steps:
-
-1. Copy the API token shown.
-2. Navigate to your SCEPman App Service as per [this](https://docs.scepman.com/scepman-configuration/application-settings#convenient-configuration-in-the-app-service-configuration) guide and create a new environment variable called [AppConfig:RADIUSaaSValidation:Token](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/radiusaas) using the previously copied Token as a value.
-3. Apply your settings and Restart your App Service.&#x20;
-4. &#x20;Enter the URL of your SCEPman instance in the SCEPman URL field.
-
-<figure><img src="../../.gitbook/assets/image (487).png" alt=""><figcaption></figcaption></figure>
-
-5. Click **Setup Connection**. This action deactivates the current server certificate so the newly created certificate can be managed.
-6. After setup is complete, two new buttons will appear and replace the previous ones.&#x20;
-
-<figure><img src="../../.gitbook/assets/2026-01-28_17h41_23.png" alt=""><figcaption></figcaption></figure>
-
-1. **Rotate Certificate**. This button will rotate and activate your server certificate between the available two slots. _Servercertificate-**upload0**_ and _Servercertificate-**upload1**_.
-2. **Delete Connection.** This button will delete your previously configured connection. Please note that this action cannot be undone. When you delete the connection, the token will also be deleted. Should you wish to set up the connection at a later time, you will need to go through the above steps.

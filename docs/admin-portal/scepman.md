@@ -1,7 +1,7 @@
 # SCEPman
 
 {% hint style="info" %}
-To use <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>, please ensure to configure it first under **Settings** > [**SCEPman**](settings/scepman.md).
+To use <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>, please ensure to configure it first under **Settings** > [**SCEPman**](settings/scepman-1.md).
 {% endhint %}
 
 The **SCEPman** menu hive gives you access to your SCEPman SaaS instance built right into RADIUSaaS (requires a separate license).

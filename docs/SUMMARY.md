@@ -42,6 +42,7 @@
   * [Server Settings](admin-portal/settings/settings-server.md)
   * [Trusted Certificates](admin-portal/settings/trusted-roots.md)
   * [Proxy Settings](admin-portal/settings/settings-proxy.md)
+  * [SCEPman](admin-portal/settings/scepman.md)
   * [Permissions](admin-portal/settings/permissions.md)
   * [User Settings](admin-portal/settings/user-settings.md)
   * [Rules](admin-portal/settings/rules/README.md)
@@ -54,7 +55,7 @@
     * [Log Analytics](admin-portal/settings/log-exporter/log-analytics.md)
     * [Generic Webhook](admin-portal/settings/log-exporter/generic-webhook.md)
     * [Examples](admin-portal/settings/log-exporter/examples.md)
-  * [SCEPman](admin-portal/settings/scepman.md)
+  * [SCEPman](admin-portal/settings/scepman-1.md)
 * [My Invited Users](admin-portal/my-invited-users.md)
 
 ## Profile Deployment

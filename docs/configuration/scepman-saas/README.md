@@ -206,8 +206,8 @@ Setting up other certificate endpoints is similar to the way they are set up wit
 
 #### General
 
-{% content-ref url="../../admin-portal/settings/scepman.md" %}
-[scepman.md](../../admin-portal/settings/scepman.md)
+{% content-ref url="../../admin-portal/settings/scepman-1.md" %}
+[scepman-1.md](../../admin-portal/settings/scepman-1.md)
 {% endcontent-ref %}
 
 #### Jamf
