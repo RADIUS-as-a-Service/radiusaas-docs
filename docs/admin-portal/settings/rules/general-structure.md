@@ -206,7 +206,7 @@ As an example, the following assignment will match the DN attribute of the clien
 
 For a certificate subject (DN) of `CN=CLIENT01,OU=vlan-15` this result in a VLAN assignment of **15**.
 
-<figure><img src="../../../.gitbook/assets/image (590).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (594).png" alt=""><figcaption></figcaption></figure>
 
 #### By Certificate Extension
 
