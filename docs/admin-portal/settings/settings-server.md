@@ -56,9 +56,9 @@ TLS 1.3 offers several advantages over 1.2, including the post-handshake authent
 
 ### Maximum EAP TLS Version
 
-This setting controls the maximum TLS version used with EAP when your endpoints authenticate against your RADIUSaaS instance using a certificate.
+This setting controls the maximum TLS version used with EAP when your endpoints authenticate against your RADIUSaaS instance using a certificate (EAP-TLS) or [username/password credentials](../users.md#protocols).
 
-For all modern operating systems, **TLS 1.3 is the recommended default**. However, certain (older) Windows 10/11 builds advertised TLS 1.3 support with a non-conformant implementation. If Windows clients on affected builds exhibit connectivity issues, cap the negotiated protocol version at TLS 1.2 for broader compatibility.
+For all modern operating systems, **TLS 1.3 is the recommended default**. However, certain (older) Windows 10/11 builds advertised TLS 1.3 support for EAP-TLS with a non-conformant implementation. If Windows clients on affected builds exhibit connectivity issues, cap the negotiated protocol version at TLS 1.2 for broader compatibility.
 
 ### Revocation Check for RadSec Certificates
 
