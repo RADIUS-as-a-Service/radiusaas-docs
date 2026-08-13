@@ -8,6 +8,34 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 ## Versions
 
+### August 2026 Release
+
+#### **Schedule**
+
+* Roll-out start: 2026-08-13
+* Roll-out end: 2026-08-20
+
+#### **Fixes**
+
+* Fixed CA certificate download under Server Certificates returning the server certificate instead
+* Fixed MAC groups not being updatable
+* Reduced noisy client error entries in RADIUS server logs
+* Bug fixes in SCEPman SaaS Jamf Pro integration
+
+#### **New Features**
+
+* Reworked Admin Portal UI/UX
+* Comprehensive Rule Engine update:
+  * Match on client certificate attributes
+  * Match on Client (WAN) IP addresses
+  * Flexible assignment of VLAN IDs and attributes using regular expressions incl. fallback values
+  * Backup and restore of rule sets
+* Support for RSASSA-PSS-signed CRLs
+* SCEPman SaaS:
+  * Active Directory Enrollment
+  * REST Enrollment API
+* RADIUS Proxy: real Client (WAN) IP address is forwarded to the RADIUS server (available for Rule Engine matching)
+
 ### April 2026 Release&#x20;
 
 #### Schedule
