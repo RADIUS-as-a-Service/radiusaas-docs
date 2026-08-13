@@ -120,7 +120,7 @@ Client ID and secret of the Jamf Pro API role. [Learn more](https://docs.scepman
 
 #### Active Directory
 
-Kerberos-authenticated enrolment for domain-joined Windows clients, driven entirely by Group Policy — no SCEP profile and no MDM involved. Requires a service principal and keytab in your on-premises domain. [Learn more](https://docs.scepman.com/certificate-management/active-directory).
+Kerberos-authenticated enrolment for domain-joined Windows clients, driven entirely by Group Policy. Requires a service principal and keytab in your on-premises domain. [Learn more](https://docs.scepman.com/certificate-management/active-directory).
 
 Four certificate templates can be enabled independently, each with its own tab:
 
@@ -207,7 +207,7 @@ Certificate lifetime in days.
 
 #### Static Challenge
 
-Accepts any request presenting a shared challenge password. Convenient for appliances no MDM can enrol — but it is a shared secret with no device check behind it. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/static-validation).
+Accepts any request presenting a shared challenge password. Convenient for appliances no MDM can enrol. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/static-validation).
 
 <details>
 
@@ -248,7 +248,7 @@ Same settings as **Static Challenge**.
 Optional but required for **Intune Validation** and **Static AAD Validation** endpoints.
 {% endhint %}
 
-Optional. Controls how SCEPman reads device and user objects from your Entra ID tenant. This is what makes the Intune and Entra validation sources available — while it is disabled, those sources cannot be switched on.
+Optional. Controls how SCEPman reads device and user objects from your Entra ID tenant. This is what makes the Intune and Entra validation sources available. While it is disabled, those sources cannot be switched on.
 
 {% tabs %}
 {% tab title="Admin consent (recommended)" %}
@@ -290,7 +290,7 @@ Use an app registration you create and control. Choose this when policy forbids 
 
 Needs tenant ID, client ID and a client secret.
 
-Grant the following **application** permissions and admin-consent them — delegated permissions are not required:
+Grant the following **application** permissions and admin-consent them:
 
 | API                  | Permission                                | Purpose                          |
 | -------------------- | ----------------------------------------- | -------------------------------- |
