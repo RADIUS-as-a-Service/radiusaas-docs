@@ -214,6 +214,18 @@ Setting up other certificate endpoints is similar to the way they are set up wit
 
 {% embed url="https://docs.scepman.com/certificate-management/jamf/general" %}
 
+#### REST Enrollment API
+
+{% hint style="info" %}
+The SCEPman SaaS variant of the REST Enrollment API uses RADIUSaaS access tokens instead of Entra access tokens.
+{% endhint %}
+
+{% embed url="https://docs.scepman.com/certificate-management/api-certificates" %}
+
+#### Active Directory Validation
+
+{% embed url="https://docs.scepman.com/certificate-management/active-directory" %}
+
 #### Static Validation
 
 {% embed url="https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/static-validation" %}
