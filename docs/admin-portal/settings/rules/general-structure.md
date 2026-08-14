@@ -213,7 +213,7 @@ For a certificate subject (DN) of `CN=CLIENT01,OU=vlan-15` this result in a VLAN
 {% hint style="info" %}
 Currently it is not supported to add custom certificate extensions to SCEP profiles in many MDM systems, including Microsoft Intune and JAMF.
 
-We therefore recommend to use the [Certificate Subject Name](https://docs.radiusaas.com/admin-portal/settings/rules/wifi#by-certificate-subject) of the certificate instead to add a VLAN assignment.
+We therefore recommend to use the subject of the certificate instead to add a VLAN assignment.
 {% endhint %}
 
 * Select one of your created Certificate Extensions
