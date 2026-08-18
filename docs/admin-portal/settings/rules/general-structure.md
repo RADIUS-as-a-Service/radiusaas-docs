@@ -131,6 +131,7 @@ Use this filter type to match a rule only if a presented client certificate cont
 * Use a SAN filter `.*-ext@contoso\.com$` to match `john.smith-ext@contoso.com` → contractor identity cert, VLAN 10.
 * Use a DN `OU=Printers` to match the subject `CN=PRINTER07,OU=Printers,O=Contoso` → assign VLAN 16 (printers).
 * Use a DN `OU=Finance` to match the subject `CN=jdoe,OU=Finance,O=Contoso` → VLAN 30 (Finance).
+* Use a SAN filter `^platform:windows$` to match specific platforms. Use an URI SAN with value of `platform:windows` to match this.
 
 ### Username/Password
 
