@@ -7,7 +7,9 @@ To use the RadSec feature on your Meraki APs, firmware version **MR 30.X** or la
 {% endhint %}
 
 {% hint style="warning" %}
-Customers have reported **delays** between activating the RadSec feature on the Meraki Dashboard and becoming functional.
+Retain the existing Certificate Authority (Cisco Meraki Keeper PKI) for RadSec deployments, rather than migrating to Meraki's newly introduced [PureCA](https://documentation.meraki.com/Wireless/Design_and_Configure/Architecture_and_Best_Practices/Cisco_Keeper_to_PureCA_Migration_Strategy) service.\
+\
+**Rationale**: PureCA's inability to export the full certificate chain renders it functionally incompatible with RadSec's mutual TLS trust validation requirements.
 {% endhint %}
 
 ## Prepare certificates
