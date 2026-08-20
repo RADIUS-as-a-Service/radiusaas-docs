@@ -56,6 +56,7 @@
     * [Generic Webhook](admin-portal/settings/log-exporter/generic-webhook.md)
     * [Examples](admin-portal/settings/log-exporter/examples.md)
   * [SCEPman SaaS](admin-portal/settings/scepman-saas.md)
+  * [Copy of SCEPman SaaS](admin-portal/settings/copy-of-scepman-saas.md)
 * [My Invited Users](admin-portal/my-invited-users.md)
 
 ## Profile Deployment
