@@ -4,7 +4,7 @@ description: >-
   https://YOURNAME.radius-as-a-service.com/users
 ---
 
-# Users
+# All Users
 
 ## General
 
@@ -15,7 +15,7 @@ RADIUSaaS **does not provide** any **integration** with Identity Providers (IDPs
 RADIUSaaS offers username/password-based authentication as an **alternative** to certificate-based authentication whenever the usage of certificates is technically hard to reach or not feasible. Such scenarios may include:
 
 * Bring your own Device (BYOD)
-* [Guest Access ](my-invited-users.md)
+* [Guest Access ](../my-invited-users.md)
 * Devices lacking EAP-TLS support for 802.1X (e.g. printers, TVs, ...)
 
 ## Protocols
@@ -42,7 +42,7 @@ To import your users from a supported file format (.xlsx, .xls or .csv file), cl
 The required columns are **Username, Password** and **Owner**.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/2025-02-21_16h11_28.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2025-02-21_16h11_28.gif" alt=""><figcaption></figcaption></figure>
 
 ## Delete
 
@@ -52,4 +52,4 @@ To **Delete** users, select all users which should be deleted in the list, click
 
 To change a user's password, disable/re-enable a user or select a new validity period, simply click on the **eye** symbol next to the user entry, change all needed entries and save them.
 
-<figure><img src="../.gitbook/assets/image (383).png" alt=""><figcaption><p>Showing update of a user</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (383).png" alt=""><figcaption><p>Showing update of a user</p></figcaption></figure>

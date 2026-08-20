@@ -195,7 +195,7 @@ If you see this message, either copy & paste the CA certificate below the server
 In order to log in to the RADIUSaaS web portal ("RADIUSaas Admin Portal"), the following requirements have to be met:
 
 * The UPN/email address you provided as technical admin has to be authenticatable against **some** Microsoft Entra ID (Azure AD) (it does not have to be an identity from the tenant whose users will leverage RADIUSaaS for network authentication).
-* The UPN/email address you provided as technical admin must have been registered on your RADIUSaaS instance as described [here](../../admin-portal/settings/permissions.md). In case it is the initial admin, please [contact us](https://www.radius-as-a-service.com/help/) if you believe we registered the wrong user.
+* The UPN/email address you provided as technical admin must have been registered on your RADIUSaaS instance as described [here](../../admin-portal/access-and-rules/permissions.md). In case it is the initial admin, please [contact us](https://www.radius-as-a-service.com/help/) if you believe we registered the wrong user.
 * The Microsoft Entra ID (Azure AD) user object behind the UPN/email address has to be entitled to grant the RADIUSaaS Enterprise Application the following permissions (see screenshot below):
   * **Read** the Basic User Profile
   * **Maintain** access to data you have given it access to (allow request of refresh token)\

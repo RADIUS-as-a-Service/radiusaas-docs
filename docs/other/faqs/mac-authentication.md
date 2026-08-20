@@ -58,7 +58,7 @@ Because of these weaknesses, most modern cloud-based authentication services (li
 
 ## MAB Implementation with EAP (a RADIUSaaS Approach to MAB)
 
-When MAB is configured on an Authenticator and a legacy device that does not support 802.1X tries to request network access, the switch or AP will pretend to be that device and takes over the authentication on behalf of the client by authenticating to RADIUSaaS using one of the supported EAP [protocols](https://docs.radiusaas.com/admin-portal/users#protocols): EAP-TTLS-PAP or PEAP-MSCHAPv2. As part of this process, RADIUSaaS will check if the MAC address is listed in the RADIUSaaS database in the form of a manually added [User](../../admin-portal/users.md). (username = password = MAC address), If so, then an `Access-Accept` message is returned, and the EAP-based authentication completes giving the legacy device network access. Since the Authenticator is establishing a TLS connection to RADIUSaaS, it must trust the [Server Certificate](../../admin-portal/settings/settings-server.md#server-certificates) RADIUSaaS uses.
+When MAB is configured on an Authenticator and a legacy device that does not support 802.1X tries to request network access, the switch or AP will pretend to be that device and takes over the authentication on behalf of the client by authenticating to RADIUSaaS using one of the supported EAP [protocols](https://docs.radiusaas.com/admin-portal/users#protocols): EAP-TTLS-PAP or PEAP-MSCHAPv2. As part of this process, RADIUSaaS will check if the MAC address is listed in the RADIUSaaS database in the form of a manually added [User](../../admin-portal/users/users.md). (username = password = MAC address), If so, then an `Access-Accept` message is returned, and the EAP-based authentication completes giving the legacy device network access. Since the Authenticator is establishing a TLS connection to RADIUSaaS, it must trust the [Server Certificate](../../admin-portal/settings/settings-server.md#server-certificates) RADIUSaaS uses.
 
 The use of the MAC address as username/password to trigger EAP is a specific workaround implemented by the Authenticator to simulate MAB while utilising stronger EAP protocols.
 
@@ -81,9 +81,9 @@ MAB in its original implementation using PAP or CHAP does not work with RADIUSaa
 * When implementing MAB-to-EAP, you must create an explicit authorisation rule on RADIUSaaS to assign all devices authenticating via this method to a fallback VLAN with minimal network access. This is essential to enforce the principle of least privilege, preventing a bad actor who has spoofed a valid MAC address from accessing critical network resources. The rule should be configured based on your environment's authentication policies:&#x20;
   * If MAB-to-EAP is the only use for username/password-based authentication: Create a broad authorisation rule (LAN/Wi-Fi) that assigns any device using this credentials type to the fallback VLAN.&#x20;
   * If username/password is used for other clients (e.g., users): This rule must be carefully tuned using regular expressions to specifically match the pattern of a MAC address in the username field (e.g., `00:11:22:33:44:55`). This ensures only MAB-to-EAP traffic is isolated to the fallback VLAN.
-* To support MAB-to-EAP, you must [add](../../admin-portal/users.md#add) users formatted as: Username = Password = MAC address. Example: `00:11:22:33:44:55` = `00:11:22:33:44:55`.
+* To support MAB-to-EAP, you must [add](../../admin-portal/users/users.md#add) users formatted as: Username = Password = MAC address. Example: `00:11:22:33:44:55` = `00:11:22:33:44:55`.
 * The MAC address format (colon, hyphen, or none) must exactly match the format your Authenticator sends in the EAP credentials. We recommend using colon notation (e.g., `00:11:22:33:44:55`) for consistency.
-* If you have multiple users, you can import them in bulk using a [CSV](../../admin-portal/users.md#csv-import) file.
+* If you have multiple users, you can import them in bulk using a [CSV](../../admin-portal/users/users.md#csv-import) file.
 
 
 

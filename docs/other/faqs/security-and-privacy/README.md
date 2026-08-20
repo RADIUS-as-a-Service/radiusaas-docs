@@ -81,7 +81,7 @@ There is no built-in log archiving mechanism. However, the [Log Exporter](../../
 
     With this permission RADIUSaaS receives the right to request a refresh token so that the user can stay logged-on.
 
-Please see [here](../../../admin-portal/settings/permissions.md#permissions-consent) for details.
+Please see [here](../../../admin-portal/access-and-rules/permissions.md#permissions-consent) for details.
 
 ### 6. What data is made available by granting the consent(s) from 5.?
 
@@ -111,7 +111,7 @@ Please see [here](../../../admin-portal/settings/permissions.md#permissions-cons
    * RadSec server ports: TLS-secured (>= version 1.2).
    * RADIUS proxy server ports: Protected via the RADIUS Shared Secret.
 3. RADIUSaaS Admin Portal
-   * Secured via OAuth 2.0 authentication against one of our [supported IDPs](../../../admin-portal/settings/permissions.md#supported-idps).
+   * Secured via OAuth 2.0 authentication against one of our [supported IDPs](../../../admin-portal/access-and-rules/permissions.md#supported-idps).
 4. Kubernetes Cluster Management API
    * TLS-secured (>= version 1.2).
 
@@ -131,7 +131,7 @@ Please see [here](../../../admin-portal/settings/permissions.md#permissions-cons
 
 ### 1. What authorization schemes are used to gain access to RADIUSaaS?
 
-* Administrative access is realized through OAuth 2.0 authentication against an [IDP](../../../admin-portal/settings/permissions.md#supported-idps) for identities or accounts that are registered on the platform.
+* Administrative access is realized through OAuth 2.0 authentication against an [IDP](../../../admin-portal/access-and-rules/permissions.md#supported-idps) for identities or accounts that are registered on the platform.
 
 ### 2. Are there conditional access / role-based access controls in place to protect RADIUSaaS?
 

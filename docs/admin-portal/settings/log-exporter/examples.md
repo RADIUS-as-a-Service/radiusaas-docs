@@ -77,7 +77,7 @@ The scope of the query provided below is as follows:
 * the admin is interested in understanding which users/devices are authenticating via certificate or username & password (accepted or rejected)
 * username and certificate details with OCSP response
 * SSID and used Access Point (MAC address)
-* RADIUSaaS [Rule](../rules/) that was triggered, if applicable: assigned VLAN
+* RADIUSaaS [Rule](../../access-and-rules/rules/) that was triggered, if applicable: assigned VLAN
 * correlation ID for further investigation
 
 ### Target

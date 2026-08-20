@@ -42,9 +42,9 @@ Furthermore, under **Custom OICD Provider** you may configure your own OpenID Co
 Identities or accounts entered here can access the RADIUSaaS Admin Portal with **full read and write permissions** on the service. These permissions include:&#x20;
 
 * View [dashboards and Logs](../insights/)
-* View, add, change, delete [Users](../users.md)
-* View, add, change, delete [RADIUS server certificates](settings-server.md#server-certificates) and [trusted certificates](trusted-roots.md) for client authentication and RadSec
-* View, add, delete [Proxies](settings-proxy.md)
+* View, add, change, delete [Users](../users/users.md)
+* View, add, change, delete [RADIUS server certificates](../settings/settings-server.md#server-certificates) and [trusted certificates](../settings/trusted-roots.md) for client authentication and RadSec
+* View, add, delete [Proxies](../settings/settings-proxy.md)
 * View and change others settings including permissions
 * Manage [RADIUSaaS REST API Access Token](permissions.md#access-tokens)
 * Access to all [API endpoints](../../other/rest-api/) and CRUD operations
@@ -54,15 +54,15 @@ Identities or accounts entered here can access the RADIUSaaS Admin Portal with *
 Identities or accounts entered here can access the RADIUSaaS Admin Portal with **full read permissions** on the service. These permissions include:&#x20;
 
 * View [dashboards and Logs](../insights/)
-* View [Users](../users.md)
-* View, add, change, delete [RADIUS server certificates](settings-server.md#server-certificates) and [trusted certificates](trusted-roots.md) for client authentication and RadSec
-* View [Proxies](settings-proxy.md)
+* View [Users](../users/users.md)
+* View, add, change, delete [RADIUS server certificates](../settings/settings-server.md#server-certificates) and [trusted certificates](../settings/trusted-roots.md) for client authentication and RadSec
+* View [Proxies](../settings/settings-proxy.md)
 * View others settings (permission cannot be viewed)
 * Access to all [API endpoints](../../other/rest-api/) - **limited to read operations**
 
 ### Users
 
-Identities or accounts entered here **cannot** access the RADIUSaaS Admin Portal, however, they can access the [**My Invited Users**](../my-invited-users.md) portal, where they are able to create [Users](../users.md) for BYOD or guest access.
+Identities or accounts entered here **cannot** access the RADIUSaaS Admin Portal, however, they can access the [**My Invited Users**](../my-invited-users.md) portal, where they are able to create [Users](../users/users.md) for BYOD or guest access.
 
 ### Invalidate user tokens
 

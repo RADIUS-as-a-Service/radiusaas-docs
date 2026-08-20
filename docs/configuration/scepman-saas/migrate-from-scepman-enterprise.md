@@ -81,7 +81,7 @@ Yes. As long as you have trusted both Root CA certificates for client connection
 
 ### Can I use my existing SCEPman Enterprise Root Certificate for <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>?
 
-While technically possible through [Bring your own Key Vault](../../admin-portal/settings/scepman-saas.md#scepman-identity-and-keys), reusing your existing Root CA certificate is not recommended for the following reasons:
+While technically possible through [Bring your own Key Vault](/broken/pages/7X1Zb4WB9Xmw7gDVwJNo#scepman-identity-and-keys), reusing your existing Root CA certificate is not recommended for the following reasons:
 
 * Already issued certificates are only stored in the tenant of the existing SCEPman Enterprise deployment while newly created certificates will be stored within <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>. This can lead to failing validations if components are not able to figure out which CA should be considered for validation
 * Depending on the deployment location of your Key Vault and your RADIUSaaS instance, added latency is expected during cryptographic operations that require the Root CA certificate

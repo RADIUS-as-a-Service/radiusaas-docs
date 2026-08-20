@@ -49,7 +49,7 @@ If you'd like to **stay up to date on the latest changes and news in the RADIUSa
 
 #### New Features
 
-* [SCEPman-as-a-Service](../../admin-portal/scepman.md) GA
+* [SCEPman-as-a-Service](../../admin-portal/scepman-saas/status.md) GA
 
 
 
@@ -76,7 +76,7 @@ For details, please see [here](final-notice-radius-proxy-ip-migration-required-b
 
 #### New Features
 
-* [VLAN](../../admin-portal/settings/rules/general-structure.md#vlan-attributes) and [additional return attributes (VSAs)](../../admin-portal/settings/rules/general-structure.md#radius-attributes) can now be managed directly via the RADIUSaaS Admin Portal
+* [VLAN](../../admin-portal/access-and-rules/rules/general-structure.md#vlan-attributes) and [additional return attributes (VSAs)](../../admin-portal/access-and-rules/rules/general-structure.md#radius-attributes) can now be managed directly via the RADIUSaaS Admin Portal
 * Removed RADIUS server certificate slot limitation
 * Popup Notifications:
   * Added certificate expiry and other important alerts
@@ -111,7 +111,7 @@ For details, please see [here](final-notice-radius-proxy-ip-migration-required-b
 
 #### New Features
 
-* More [IDP options](../../admin-portal/settings/permissions.md#supported-idps) for administrative SSO
+* More [IDP options](../../admin-portal/access-and-rules/permissions.md#supported-idps) for administrative SSO
 * [Revoked certificate cache](../faqs/log-and-common-errors.md#certificate-status-was-revoked-previously)
 * Directly [create tickets or report incidents](../../admin-portal/home.md#help) from the RADIUSaaS Admin Portal
 * Improved [notification system](../../admin-portal/home.md#notifications)
@@ -151,9 +151,9 @@ For details, please see [here](final-notice-radius-proxy-ip-migration-required-b
 
 ### June 2024 Release
 
-* Updated UI (reactive design, improved [Rule Engine](../../admin-portal/settings/rules/) structure, separation of [RADIUS server certificates](../../admin-portal/settings/settings-server.md#server-certificates) from [Trusted Certificates](../../admin-portal/settings/trusted-roots.md) for client authentication and RadSec)
+* Updated UI (reactive design, improved [Rule Engine](../../admin-portal/access-and-rules/rules/) structure, separation of [RADIUS server certificates](../../admin-portal/settings/settings-server.md#server-certificates) from [Trusted Certificates](../../admin-portal/settings/trusted-roots.md) for client authentication and RadSec)
 * Certificate verification can now be configured individually for each trusted CA (client authentication, RadSec) using OCSP, **CRL** or OCSP auto-detect (based on the certificate's AIA extension)
 * OCSP Soft-Fail / Hard-Fail is now configurable on a per trusted CA basis.
-* Introduction of [RADIUSaaS REST API documentation](../rest-api/) and [API access tokens](../../admin-portal/settings/permissions.md#access-tokens).
+* Introduction of [RADIUSaaS REST API documentation](../rest-api/) and [API access tokens](../../admin-portal/access-and-rules/permissions.md#access-tokens).
 * Improved logging:&#x20;
   * Added Accounting and [RadSec connection logs](../../admin-portal/insights/log.md#log-types).

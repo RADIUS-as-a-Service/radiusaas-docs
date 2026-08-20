@@ -117,7 +117,7 @@ Finally, disable the [revocation check for the RadSec client certificates](../..
 {% step %}
 ### Test Configuration
 
-To test that the configuration works, you can add a user in your [Portal](../../../admin-portal/users.md#add-a-new-user) and use the Meraki test function.
+To test that the configuration works, you can add a user in your [Portal](../../../admin-portal/users/users.md#add-a-new-user) and use the Meraki test function.
 
 <figure><img src="../../../.gitbook/assets/image (67) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}

@@ -4,9 +4,9 @@ description: >-
   SaaS.
 ---
 
-# SCEPman SaaS
+# Settings
 
-The entries below describe the settings available for SCEPman SaaS. They are kept short deliberately. Make sure to take a look at their respective sections in the [SCEPman documentation](https://docs.scepman.com/) for the full detail.
+The entries below describe the settings available for SCEPman SaaS. They are kept short deliberately. Make sure to take a look at their respective sections in the [SCEPman documentation](https://docs.scepman.com/) for the full details.
 
 ### Certificate Authority
 
@@ -177,7 +177,7 @@ Used on the domain controller when it requests its certificate.
 
 </details>
 
-#### Enrolment REST API
+#### Enrollment REST API
 
 Lets your own tooling request certificates over HTTPS instead of SCEP, using Microsoft identities rather than a challenge password. Leave off unless a script or service of yours uses it. [Learn more](https://docs.scepman.com/certificate-management/api-certificates).
 

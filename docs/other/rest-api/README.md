@@ -14,7 +14,7 @@ Before executing any API call that leads to a configuration change, ensure you f
 
 ## Authentication
 
-To authenticate a call to the REST API, populate an HTTP `Authorization` header with each request. This header must contain a valid [access token](../../admin-portal/settings/permissions.md#access-tokens):
+To authenticate a call to the REST API, populate an HTTP `Authorization` header with each request. This header must contain a valid [access token](../../admin-portal/access-and-rules/permissions.md#access-tokens):
 
 ```
 Authorization: Bearer

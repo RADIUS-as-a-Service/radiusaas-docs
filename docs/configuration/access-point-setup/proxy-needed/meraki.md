@@ -17,7 +17,7 @@ Starting with firmware version **MR 30.X**, Meraki APs support RadSec. Hence, we
 5.  Configure **EAP parameters and timeouts** according to [this ](https://docs.radiusaas.com/other/faqs/general)reference guide by going to **Wireless** > **Radius** > **Advanced RADIUS settings.** Once configured, it should look similar to the screenshot below.&#x20;
 
     <figure><img src="../../../.gitbook/assets/2024-05-17_11h10_26.png" alt=""><figcaption><p>Showing <strong>EAP parameters and timeouts</strong></p></figcaption></figure>
-6.  To **test** that the configuration works, you can add a user in your [Portal](../../../admin-portal/users.md#add-a-new-user) and use the Meraki test function
+6.  To **test** that the configuration works, you can add a user in your [Portal](../../../admin-portal/users/users.md#add-a-new-user) and use the Meraki test function
 
     ![](<../../../.gitbook/assets/image (255).png>)
 7. **Save** your changes.

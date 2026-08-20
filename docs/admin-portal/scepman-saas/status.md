@@ -1,7 +1,7 @@
-# SCEPman
+# Status
 
 {% hint style="info" %}
-To use <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>, please ensure to configure it first under **Settings** > [**SCEPman**](settings/scepman-saas.md).
+To use <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>, please ensure to configure it first under **Settings** > [**SCEPman**](/broken/pages/7X1Zb4WB9Xmw7gDVwJNo).
 {% endhint %}
 
 The **SCEPman** menu hive gives you access to your SCEPman SaaS instance built right into RADIUSaaS (requires a separate license).
@@ -18,4 +18,4 @@ The status page of your <code class="expression">space.vars.SCEPmanSAAS_ProductN
 * download the public portion of the CA certificate, or
 * access the SCEP enrolment endpoint(s) that are required for configuration in your MDM system(s).
 
-<figure><img src="../.gitbook/assets/image (498) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (606).png" alt=""><figcaption></figcaption></figure>

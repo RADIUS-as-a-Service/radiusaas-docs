@@ -79,8 +79,8 @@ This is an **optional** step.
 
 If you would like to configure additional rules, for example to assign VLAN IDs or limit authentication requests to certain trusted CAs or WiFi access points, please check out the RADIUSaaS Rule Engine.
 
-{% content-ref url="../../../admin-portal/settings/rules/" %}
-[rules](../../../admin-portal/settings/rules/)
+{% content-ref url="../../../admin-portal/access-and-rules/rules/" %}
+[rules](../../../admin-portal/access-and-rules/rules/)
 {% endcontent-ref %}
 {% endstep %}
 {% endstepper %}

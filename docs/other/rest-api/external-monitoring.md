@@ -28,7 +28,7 @@ Please note that we are unable to provide support for 3rd party monitoring solut
 
 {% stepper %}
 {% step %}
-### Create an Access Token as described [here](../../admin-portal/settings/permissions.md#access-tokens).
+### Create an Access Token as described [here](../../admin-portal/access-and-rules/permissions.md#access-tokens).
 {% endstep %}
 
 {% step %}

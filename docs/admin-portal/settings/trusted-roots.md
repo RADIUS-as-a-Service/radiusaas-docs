@@ -58,7 +58,7 @@ Please check [ocsp-soft-fail-consequences.md](../../other/faqs/ocsp-soft-fail-co
 Note that this setting is only available when **OCSP Autodetect** or **OCSP** is selected for certificate verification.&#x20;
 {% endhint %}
 
-By default, we **recommend enabling OCSP Soft fail** to increase the availability of the service by allowing authentication requests to be accepted even if the OCSP responder cannot be reached. With this **soft fail** mechanism, and in case OCSP is not reachable, RADIUSaaS will only check if the incoming certificate was signed by one of the [trusted CAs](trusted-roots.md) and processes any optional [Rules](rules/).
+By default, we **recommend enabling OCSP Soft fail** to increase the availability of the service by allowing authentication requests to be accepted even if the OCSP responder cannot be reached. With this **soft fail** mechanism, and in case OCSP is not reachable, RADIUSaaS will only check if the incoming certificate was signed by one of the [trusted CAs](trusted-roots.md) and processes any optional [Rules](../access-and-rules/rules/).
 
 <figure><img src="../../.gitbook/assets/image (28) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -66,7 +66,7 @@ By default, we **recommend enabling OCSP Soft fail** to increase the availabilit
 
 In a tiered CA environment with multiple issuing CAs configured, certificates issued from the root CA or any issuing CA will get access regardless of whether the certificate was issued from the root or issuing CA. This means that trusting the root will automatically trust certificates issued by any of the issuing CAs. \
 \
-If access needs to be controlled based on the issuing CAs, this can be achieved by configuring [respective rules](rules/#certificate-based-authentication).
+If access needs to be controlled based on the issuing CAs, this can be achieved by configuring [respective rules](../access-and-rules/rules/#certificate-based-authentication).
 
 ### Considerations
 

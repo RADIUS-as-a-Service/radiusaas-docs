@@ -22,7 +22,7 @@ At the top you have the ability to choose the **Common Name** as well as the **O
 The Common Name and Organization will form the subject of the CA certificate during the enrollment.
 {% endhint %}
 
-By clicking **Enroll**, the setup will start and the status is shown above. After a few minutes the deployment should have been finished and you will see that the RADIUSaaS main menu now contains a section for [**SCEPman**](../../admin-portal/scepman.md).
+By clicking **Enroll**, the setup will start and the status is shown above. After a few minutes the deployment should have been finished and you will see that the RADIUSaaS main menu now contains a section for [**SCEPman**](../../admin-portal/scepman-saas/status.md).
 
 {% tabs %}
 {% tab title="Status" %}
@@ -206,8 +206,8 @@ Setting up other certificate endpoints is similar to the way they are set up wit
 
 #### General
 
-{% content-ref url="../../admin-portal/settings/scepman-saas.md" %}
-[scepman-saas.md](../../admin-portal/settings/scepman-saas.md)
+{% content-ref url="/broken/pages/7X1Zb4WB9Xmw7gDVwJNo" %}
+[Broken link](/broken/pages/7X1Zb4WB9Xmw7gDVwJNo)
 {% endcontent-ref %}
 
 #### Jamf

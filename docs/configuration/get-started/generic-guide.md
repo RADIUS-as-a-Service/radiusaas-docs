@@ -7,7 +7,7 @@
 {% hint style="warning" %}
 This is a **mandatory** step.&#x20;
 
-May be omitted if you are using RADIUSaaS with [username/password-based authentication](../../admin-portal/users.md) only.
+May be omitted if you are using RADIUSaaS with [username/password-based authentication](../../admin-portal/users/users.md) only.
 {% endhint %}
 
 Set up your PKI so that the necessary client authentication certificates are automatically pushed to your endpoint devices.&#x20;
@@ -186,13 +186,13 @@ This is an **optional** step.
 
 If you would like to configure additional rules, for example to assign VLAN IDs or limit authentication requests to certain trusted CAs or WiFi access points, please check out the RADIUSaaS Rule Engine.
 
-{% content-ref url="../../admin-portal/settings/rules/" %}
-[rules](../../admin-portal/settings/rules/)
+{% content-ref url="../../admin-portal/access-and-rules/rules/" %}
+[rules](../../admin-portal/access-and-rules/rules/)
 {% endcontent-ref %}
 {% endstep %}
 {% endstepper %}
 
-{% content-ref url="../../admin-portal/settings/rules/" %}
-[rules](../../admin-portal/settings/rules/)
+{% content-ref url="../../admin-portal/access-and-rules/rules/" %}
+[rules](../../admin-portal/access-and-rules/rules/)
 {% endcontent-ref %}
 
