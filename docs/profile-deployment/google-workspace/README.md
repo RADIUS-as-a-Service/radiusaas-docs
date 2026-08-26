@@ -1,2 +1,6 @@
-# Google Workplace
+---
+hidden: true
+---
+
+# Google Workspace
 
