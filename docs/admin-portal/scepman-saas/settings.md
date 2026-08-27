@@ -307,6 +307,6 @@ Grant the following **application** permissions and admin-consent them:
 
 ### Remote debug
 
-Writes verbose request traces for our support team. Off by default. Traces contain device identifiers, so the setting switches itself off again on the date shown next to it.
+Enables detailed request tracing for our support team. It is disabled by default. Because traces may contain device identifiers, tracing automatically switches off on the specified date.
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
