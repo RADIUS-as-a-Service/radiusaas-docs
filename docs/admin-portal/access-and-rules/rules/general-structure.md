@@ -133,6 +133,10 @@ Use this filter type to match a rule only if a presented client certificate cont
 * Use a DN `OU=Finance` to match the subject `CN=jdoe,OU=Finance,O=Contoso` → VLAN 30 (Finance).
 * Use a SAN filter `^platform:windows$` to match specific platforms. Use an URI SAN with value of `platform:windows` to match this.
 
+{% hint style="info" %}
+Note: The rule engine matches values case-sensitively. `OU=Printers` will not match `OU=printers`
+{% endhint %}
+
 ### Username/Password
 
 <figure><img src="../../../.gitbook/assets/image (582).png" alt=""><figcaption></figcaption></figure>
