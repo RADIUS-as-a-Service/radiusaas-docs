@@ -16,7 +16,7 @@ With an enabled <code class="expression">space.vars.SCEPmanSAAS_ProductName</cod
 
 At the top you have the ability to choose the **Common Name** as well as the **Organization** name for your CA.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 The Common Name and Organization will form the subject of the CA certificate during the enrollment.
@@ -28,13 +28,13 @@ By clicking **Enroll**, the setup will start and the status is shown above. Afte
 {% tab title="Status" %}
 The **Status** page shows the current state of the CA and its integrations as well as the endpoint URLs you need to request certificates.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt="This page is equivalent to the homepage of a SCEPman Enterprise deployment"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="This page is equivalent to the homepage of a SCEPman Enterprise deployment"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Manage Certificates" %}
 Under **Manage Certificates** you can browse through issued certificates, check their validity, and also have the option to revoke them.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt="This page is equivalent to the Manage Certificates section in a SCEPman Enterprise Certificate Master"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt="This page is equivalent to the Manage Certificates section in a SCEPman Enterprise Certificate Master"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Request Certificates" %}
@@ -44,7 +44,7 @@ Under **Request Certificates**, you can request different types of certificates 
 Have a look at the dedicated [Certificate Master](https://docs.scepman.com/certificate-management/certificate-master) documentation for more information on the different types of certificates you can request here.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt="This page is equivalent to the Request Certificates section in a  SCEPman Enterprise Certificate Master"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt="This page is equivalent to the Request Certificates section in a  SCEPman Enterprise Certificate Master"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Tasks" %}

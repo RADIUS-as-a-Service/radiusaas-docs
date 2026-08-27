@@ -60,7 +60,7 @@ To set up certificate-based Wi-Fi authentication, you will need to create and de
 
 <table><thead><tr><th width="371">Profile Type</th><th>Purpose</th></tr></thead><tbody><tr><td>Trusted certificate</td><td>Deploy the Root CA certificate that has issued the RADIUS Server Certificate. <br><br>In this scenario, the relevant CA corresponds to the SCEPman Root CA. </td></tr><tr><td>SCEP certificate</td><td>Deploy the client authentication certificate.</td></tr><tr><td>Wi-Fi</td><td>Deploy the wireless network adapter settings.</td></tr></tbody></table>
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Relevant Intune Policies</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Relevant Intune Policies</p></figcaption></figure>
 
 ### Trusted Certificate Profiles
 

@@ -1,18 +1,16 @@
----
-description: >-
-  This page describes the controls related to the connectivity to the SCEPman
-  SaaS.
----
-
 # Settings
 
-The entries below describe the settings available for SCEPman SaaS. They are kept short deliberately. Make sure to take a look at their respective sections in the [SCEPman documentation](https://docs.scepman.com/) for the full details.
+The entries below provide a brief overview of the settings available for SCEPman SaaS. They are intentionally kept concise. For full details, refer to the corresponding sections of the [SCEPman documentation](https://docs.scepman.com/)
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Certificate Authority
 
-The root certificate for your tenant. Every certificate SCEPman issues chains up to it. It is created once and its subject name can not be changed afterwards.
+The root certificate for your tenant. Every certificate SCEPman issues chains up to it. It is created once and its subject name cannot be changed afterwards.
 
 The root CA itself is valid for 7300 days (20 years).
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Default Certificate Profile
 
@@ -42,6 +40,8 @@ Answers revocation live over OCSP, signed by a dedicated responder certificate. 
 
 </details>
 
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
 ### Certificate endpoints
 
 Every endpoint is a route a device can request a certificate through. Each one brings its own certificate profile and its own credentials. Switch one on to configure it.
@@ -49,6 +49,8 @@ Every endpoint is a route a device can request a certificate through. Each one b
 {% hint style="warning" %}
 Enable only the endpoints you actually use. Each enabled endpoint is an additional way to obtain a certificate from your CA.
 {% endhint %}
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 #### Microsoft Intune
 
@@ -248,7 +250,9 @@ Same settings as **Static Challenge**.
 Optional but required for **Intune Validation** and **Static AAD Validation** endpoints.
 {% endhint %}
 
-Optional. Controls how SCEPman reads device and user objects from your Entra ID tenant. This is what makes the Intune and Entra validation sources available. While it is disabled, those sources cannot be switched on.
+Controls how SCEPman reads device and user objects from your Entra ID tenant. This is what makes the Intune and Entra validation sources available. While it is disabled, those sources cannot be switched on.
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Admin consent (recommended)" %}
@@ -266,7 +270,7 @@ Sign in to Entra ID. We take the tenant from that sign-in and show you which dir
 
 You do not need to consent on behalf of your organization.
 
-This consent will add the **SCEPman as a Service (b7e47a92-f6f3-4ffb-bd89-3a03601d9fa9)** Enterprise Application to your Entra environment.
+This consent will add the **SCEPman as a Service (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)** Enterprise Application to your Entra environment.
 {% endstep %}
 
 {% step %}
@@ -304,3 +308,5 @@ Grant the following **application** permissions and admin-consent them:
 ### Remote debug
 
 Writes verbose request traces for our support team. Off by default. Traces contain device identifiers, so the setting switches itself off again on the date shown next to it.
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
