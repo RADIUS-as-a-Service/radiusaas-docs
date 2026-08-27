@@ -11,7 +11,7 @@ In order to purchase solutions from independent software vendors (ISV) you must 
 ## How to purchase RADIUSaaS or a Solution Bundle?
 
 {% hint style="info" %}
-Deploying a RADIUSaaS or [Solution Bundle](microsoft-marketplace.md#solution-bundles) subscription via Azure Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
+Deploying a RADIUSaaS or [Solution Bundle](microsoft-marketplace.md#solution-bundles) subscription via Microsoft Marketplace **will not result** **in a re-deployment of RADIUSaaS (or SCEPman) if you already have an active trial or production deployment**. Instead, we will assign the license obtained as part of this subscription to your existing deployments.
 
 For **new customers**, we will provision a new instance of RADIUSaaS once below steps are completed. Please allow up to 1 business day for us to complete the provisioning.
 {% endhint %}
@@ -22,7 +22,7 @@ To get started with your RADIUSaaS or Solution Bundle subscription, follow below
 {% step %}
 ### Locate the product version on the Microsoft Marketplace
 
-Choose between the following:&#x20;
+Choose between the following:
 
 * [RADIUSaaS](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-transactable-prod)
 * [RADIUSaaS & SCEPman Enterprise Bundle](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/glueckkanja-gabag.radiusaas-scepman-bundle-prod)
@@ -34,7 +34,7 @@ In case we have extended a **Private Offer** to you or your MSP/distribution has
   * [Private Offer](https://learn.microsoft.com/en-us/marketplace/private-offers-purchase)
   * [Multiparty Offer](https://www.youtube.com/watch?v=TANUlgLuVqI)
 * Select the **Subscription** where RADIUSaaS should be billed to
-* Select the **Plan** (monthly or yearly) based on your preferred renewal interval&#x20;
+* Select the **Plan** (monthly or yearly) based on your preferred renewal interval
 * Click **Subscribe**.
 
 <figure><img src="../.gitbook/assets/Bildschirmfoto 2026-08-06 um 11.16.09.png" alt=""><figcaption></figcaption></figure>
@@ -51,7 +51,7 @@ In case we have extended a **Private Offer** to you or your MSP/distribution has
 <figure><img src="../.gitbook/assets/image (529).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Azure Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
+The random order of **Base Fees** und **Additional Users** under the **Price** information is attributed to limitations of the Microsoft Marketplace. Later during the the enrolment process, we will provide you with transparent information on the expected licensing fees.
 {% endhint %}
 {% endstep %}
 
@@ -98,11 +98,11 @@ You will only be charged by Microsoft, once you have completed the enrolment on 
 
 * RADIUSaaS is offered as a **monthly or** **annual subscription plan** with different [User Segments](microsoft-marketplace.md#user-segments). The correct **user segment** is automatically selected by our platform based on the amount of desired users.
 * All subscription plans consist of a **base fee** which includes a certain amount of users per subscription cycle - depending on the **user segment**. For example, the **base fee** for the user segment _RADIUSaaS (M) 50_ includes 50 users per month.
-* If more than the included amount of users is required, **additional users** can be added to the  plan. For each additional user, we charge an additional per-user fee.
+* If more than the included amount of users is required, **additional users** can be added to the plan. For each additional user, we charge an additional per-user fee.
 
 ## Invoicing
 
-* During the first subscription interval, your subscription fees are not immediately due after completing the subscription enrolment. Instead we will start billing once your cancellation grace period has expired.&#x20;
+* During the first subscription interval, your subscription fees are not immediately due after completing the subscription enrolment. Instead we will start billing once your cancellation grace period has expired.
 * Upon every renewal date, you will be billed immediately.
 * You will always be billed for the entire subscription cycle in advance.
 * The related items should appear on your Microsoft Azure invoice (Pay-As-You-Go or Enterprise Agreement) the month after we have reported your fees to Microsoft.
@@ -129,7 +129,7 @@ The annual plan is discounted by 10% in comparison to the monthly plan (calculat
 
 ### User Segments
 
-The following user segments are available for both, monthly and annual plans:&#x20;
+The following user segments are available for both, monthly and annual plans:
 
 <table data-header-hidden><thead><tr><th width="240.02162801098973">Plan</th><th width="244.07580174927114">Included Users</th><th></th></tr></thead><tbody><tr><td><strong>User Segment</strong></td><td><strong>Included Users in Base Fee</strong></td><td><strong>Maximum Total Users</strong></td></tr><tr><td>RADIUSaaS (M/Y) 50</td><td>50</td><td>249</td></tr><tr><td>RADIUSaaS (M/Y) 250</td><td>250</td><td>999</td></tr><tr><td>RADIUSaaS (M/Y) 1000</td><td>1,000</td><td>4,999</td></tr><tr><td>RADIUSaaS (M/Y) 5000</td><td>5,000</td><td>9,999</td></tr><tr><td>RADIUSaaS (M/Y) 10000</td><td>10,000</td><td>unlimited</td></tr></tbody></table>
 
@@ -147,13 +147,13 @@ Please refer to our [SCEPman Edition Comparison](../overview.md#scepman-edition-
 
 #### RADIUSaaS & SCEPman Enterprise Bundle
 
-We offer RADIUSaaS as well as our cloud-CA solution **for** **in-customer tenant deployment** [SCEPman Enterprise](https://www.scepman.com/) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](microsoft-marketplace.md#user-segments).&#x20;
+We offer RADIUSaaS as well as our cloud-CA solution **for** **in-customer tenant deployment** [SCEPman Enterprise](https://www.scepman.com/) in a subscription bundle that is discounted by 25% in comparison to the individual solutions. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](microsoft-marketplace.md#user-segments).
 
 Furthermore, the plans allow the **one-time** purchase of the [SCEPman Setup Support](https://docs.scepman.com/licensing#optional-scepman-setup-support).
 
 #### RADIUSaaS & SCEPman SaaS Bundle
 
-If you'd prefer to use our cloud-based PKI SCEPman **without having to deploy infrastructure in your Azure tenant**, you can opt for the RADIUSaaS & SCEPman SaaS Bundle, that allows you to leverage SCEPman SaaS, built righ into your RADIUSaaS instance. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](microsoft-marketplace.md#user-segments).&#x20;
+If you'd prefer to use our cloud-based PKI SCEPman **without having to deploy infrastructure in your Azure tenant**, you can opt for the RADIUSaaS & SCEPman SaaS Bundle, that allows you to leverage SCEPman SaaS, built righ into your RADIUSaaS instance. The bundle plans are available with monthly or annual renewal as well as the same [User Segments](microsoft-marketplace.md#user-segments).
 
 ## Subscription Management
 
@@ -207,7 +207,7 @@ In case you see hint in your subscription as shown in below screenshot, **there 
 
 <figure><img src="../.gitbook/assets/azure-saas-plan-no-longer-available-for-purchase copy.png" alt=""><figcaption></figcaption></figure>
 
-The reasons for this hint is that - from time to time - we might have to deprecate plans for technical reasons.&#x20;
+The reasons for this hint is that - from time to time - we might have to deprecate plans for technical reasons.
 
 **Important:**
 
@@ -215,12 +215,12 @@ The reasons for this hint is that - from time to time - we might have to depreca
 * In case a newer plan gives you better pricing or other advantages, we will inform you about this.
 * You can change to the most recent version of the plan by leveraging the [Change Plan](microsoft-marketplace.md#change-plan) action.
 
-### Why is my Azure Marketplace purchase not working?
+### Why is my Microsoft Marketplace purchase not working?
 
-You may encounter problems when purchasing through Azure Marketplace. Here is a list of reasons, why buying through Azure Marketplace may fail:
+You may encounter problems when purchasing through Microsoft Marketplace. Here is a list of reasons, why buying through Microsoft Marketplace may fail:
 
-1. You do not have permissions in your Azure tenant to purchase through Azure Marketplace. You must be assigned the role of Owner or Contributor in the Azure subscription you want to pay with.
-2. The subscription belongs to an Enterprise Agreement (EA) and the EA admin disabled Azure Marketplace purchases. Or the EA admin has enabled purchases only for free offers and the offer is a paid offer. Please see [here](https://learn.microsoft.com/en-us/marketplace/purchase-control-options) for details.
+1. You do not have permissions in your Azure tenant to purchase through Microsoft Marketplace. You must be assigned the role of Owner or Contributor in the Azure subscription you want to pay with.
+2. The subscription belongs to an Enterprise Agreement (EA) and the EA admin disabled Microsoft Marketplace purchases. Or the EA admin has enabled purchases only for free offers and the offer is a paid offer. Please see [here](https://learn.microsoft.com/en-us/marketplace/purchase-control-options) for details.
 3.  The subscription you're using belongs to a billing account in a region where the offer isn't available.\
     Our Marketplace offers are available in the following countries/regions:
 
