@@ -38,6 +38,10 @@ To add a new trusted certificate, follow these steps:
    * **None:** If your CA supports neither OCSP nor CRL, select **None** to skip the verification.
 6. Click **Save**
 
+{% hint style="info" %}
+In case your PKI has a multi-tier hierarchy (Root CA, Intermediate CA, Issuing CA), make sure to upload all of them to the RADIUSaaS Trusted Certificates store.
+{% endhint %}
+
 ## Delete
 
 To delete a certificate, expand the corresponding row, click **Delete** and confirm your choice.&#x20;

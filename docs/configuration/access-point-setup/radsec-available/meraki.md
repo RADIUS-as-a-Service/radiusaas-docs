@@ -103,7 +103,9 @@ Now, upload the downloaded CA certificate to your [Trusted Certificates in your 
 
 <figure><img src="../../../.gitbook/assets/image (68) (1).png" alt=""><figcaption></figcaption></figure>
 
-
+{% hint style="info" %}
+In case your PKI has a multi-tier hierarchy (Root CA, Intermediate CA, Issuing CA), make sure to upload all of them to the RADIUSaaS Trusted Certificates store.
+{% endhint %}
 {% endstep %}
 
 {% step %}
