@@ -1,6 +1,6 @@
 # 🆕 SCEPman SaaS
 
-<code class="expression">space.vars.SCEPmanSAAS_ProductName</code> is a fully managed SCEPman deployment, hosted and maintained entirely by us. It is available as part of the RADIUSaaS & <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> Bundle, which combines both services into a single subscription. This eliminates the need to set up and manage your own SCEPman instance while still providing seamless certificate-based authentication for your RADIUS environment. The following guide walks you through the initial configuration steps to get your <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> instance up and running with RADIUSaaS
+<code class="expression">space.vars.SCEPmanSAAS_ProductName</code> is a fully managed, hosted and maintained SCEPman deployment. It is included with the RADIUSaaS & <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> Bundle, which provides both services under one subscription. Use it to issue certificates for certificate-based authentication with RADIUSaaS, without managing a SCEPman instance. This guide covers the initial configuration for an **Intune** deployment.
 
 ## Setup <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>
 
@@ -10,31 +10,31 @@ If you are already using an existing SCEPman Enterprise deployment in your tenan
 
 {% stepper %}
 {% step %}
-### Enroll <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>
+### Enroll the <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> CA
 
-With an enabled <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> license, you will see that the menu section in **Settings** > **SCEPman** contains options to enroll and configure your SCEPman CA.
+With an enabled <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> license, you will see that the menu section in **SCEPman** > **Settings** contains options to enroll and configure your SCEPman CA.
 
 At the top you have the ability to choose the **Common Name** as well as the **Organization** name for your CA.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 The Common Name and Organization will form the subject of the CA certificate during the enrollment.
 {% endhint %}
 
-By clicking **Enroll**, the setup will start and the status is shown above. After a few minutes the deployment should have been finished and you will see that the RADIUSaaS main menu now contains a section for [**SCEPman**](../../admin-portal/scepman-saas/status.md).
+By clicking **Enroll root CA**, the setup will start and the status is shown above. Once finished, the SCEPman section will contain additional pages.
 
 {% tabs %}
 {% tab title="Status" %}
 The **Status** page shows the current state of the CA and its integrations as well as the endpoint URLs you need to request certificates.
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="This page is equivalent to the homepage of a SCEPman Enterprise deployment"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (614).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Manage Certificates" %}
 Under **Manage Certificates** you can browse through issued certificates, check their validity, and also have the option to revoke them.
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt="This page is equivalent to the Manage Certificates section in a SCEPman Enterprise Certificate Master"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (617).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Request Certificates" %}
@@ -44,13 +44,13 @@ Under **Request Certificates**, you can request different types of certificates 
 Have a look at the dedicated [Certificate Master](https://docs.scepman.com/certificate-management/certificate-master) documentation for more information on the different types of certificates you can request here.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt="This page is equivalent to the Request Certificates section in a  SCEPman Enterprise Certificate Master"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (618).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Tasks" %}
 The **Tasks** section shows the current status of the Certificate Master and links to sections permitted by your role.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt="This page is equivalent to the home page in a SCEPman Enterprise Certificate Master"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (619).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -60,10 +60,54 @@ SCEPman is now deployed and ready to issue certificates!
 {% endstep %}
 
 {% step %}
+### Configure the default Certificate Profile
+
+The default settings applied to certificates issued through all certificate endpoints. Each source under Certificate endpoints can override these two values with its own profile.
+
+Revocation for every certificate this CA issues is configured here as well.
+
+<details>
+
+<summary>Default Certificate Profile Settings</summary>
+
+**Default Extended Key Usage**
+
+What the certificate may be used for. Server certificates need `ServerAuthentication`; device certificates for 802.1X need `ClientAuthentication`. This is only the fallback in case the request does not contain an EKU.
+
+**Validity Period**
+
+The maximum number of days that an issued certificate is valid. [Learn more](https://docs.scepman.com/scepman-configuration/application-settings/certificates#appconfig-validityperioddays).
+
+**Certificate Revocation List (CRL)**
+
+Publishes a signed list of revoked certificates for clients that don't support OCSP. The distribution point is embedded in every certificate issued from the moment you enable it. [Learn more](https://docs.scepman.com/certificate-management/manage-certificates/enabling-crl).
+
+**OCSP Authorised Responder**
+
+Answers revocation live over OCSP, signed by a dedicated responder certificate. Always enabled for SCEPman SaaS. [Learn more](https://docs.scepman.com/certificate-management/manage-certificates).
+
+</details>
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Enable Certificate Endpoints
+
+Enable the certificate endpoints relevant to your tenant. Switching the endpoints on will reveal additional settings to configure. For more information on each endpoint, see [here](../../admin-portal/scepman-saas/settings.md#certificate-endpoints).
+
+{% hint style="warning" %}
+Microsoft Intune and Static challenge + Entra device check endpoints require Step 4 to be done first.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
 ### Connect SCEPman to your Azure Tenant
 
 {% hint style="info" %}
-You will only need to connect SCEPman to your Azure tenant if you plan to deploy certificate through Intune or the StaticAAD endpoint.
+You will only need to connect SCEPman to your Azure tenant if you plan to deploy certificate through Intune or the Static-AAD endpoint.
 {% endhint %}
 
 In most scenarios you will want SCEPman to be able to issue certificates by using Intune SCEP profiles and also revoke certificates automatically if a device has been wiped for example.
@@ -78,19 +122,19 @@ We recommend the Admin Consent / multi-tenant enterprise application approach to
 
 The first step of the **Admin Consent** flow is to enter your tenant ID and confirming it.
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-Upon clicking **Confirm Tenant** you will be redirected to Microsofts consent page for authentication and to approve this application initially:
+Upon clicking **Confirm Tenant** you will be redirected to Microsoft's consent page for authentication and to approve this application initially:
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 Accepting this consent will add the <code class="expression">space.vars.SCEPmanSAAS_ProductName</code> enterprise application to your tenant but does not yet add the required permissions.
 
 #### Consent Admin
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-After confirming the tenant, clicking **Consent Admin** will again redirect you to Microsoft's consent page and asks for your confirmation if the application should be granted the listed permissions. For more information on the required permissions, please refer to our [Security & Privacy Q\&As](../../other/faqs/security-and-privacy/#id-5.-which-tenant-permissions-do-users-accessing-the-radiusaas-web-portal-have-to-consent-to).
+After you confirm the tenant, select **Consent Admin**. Microsoft's consent page opens again. Confirm that the application can receive the listed permissions. Learn more in the Security & Privacy Q\&As.
 
 <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
@@ -100,15 +144,15 @@ SCEPman is now able to connect to your Azure tenant and retrieve information for
 {% endstep %}
 
 {% step %}
-### Enable Certificate Endpoints
+### Enable the Intune Endpoint
 
-In most scenarios, certificates will be deployed by leveraging Intune SCEP certificate profiles to trigger devices to request certificates from SCEPman. To enable this endpoint, navigate to **Settings** > **SCEPman** again and enable the **Intune Validation** setting and save the configuration:
+In most scenarios, certificates will be deployed by leveraging Intune SCEP certificate profiles to trigger devices to request certificates from SCEPman. To enable this endpoint, navigate to **SCEPman** > **Settings** and enable the **Intune Validation** setting and save the configuration:
 
-<figure><img src="../../.gitbook/assets/image (507).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 #### Compliance Check
 
-As with SCEPman Enterprise, SCEPman can evaluate the validity of a certificate by checking the compliance state of a bound device. Please refer to the  [SCEPman documentation on this setting](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/intune-validation#appconfig-intunevalidation-compliancecheck) for more information.
+As with SCEPman Enterprise, SCEPman can evaluate the validity of a certificate by checking the compliance state of a bound device. Please refer to the [SCEPman documentation](https://docs.scepman.com/scepman-configuration/application-settings/scep-endpoints/intune-validation#appconfig-intunevalidation-compliancecheck) for more information.
 
 #### Device Directory
 
@@ -130,7 +174,7 @@ The Intune validation is now enabled and its certificate endpoint is available!
 
 With the Intune validation enabled, you will find that the SCEPman status page now shows an endpoint URL for the Intune MDM:
 
-<figure><img src="../../.gitbook/assets/image (508).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (615).png" alt=""><figcaption></figcaption></figure>
 
 This URL will be used in the Intune SCEP certificate profile for the **SCEP Server URL**.
 
@@ -164,11 +208,11 @@ To allow devices to authenticate using certificates from your <code class="expre
 
 Having the CA certificate in place, navigate to **Settings** > **Trusted Certificates** and add a new certificate.
 
-<figure><img src="../../.gitbook/assets/image (502).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 Upload your downloaded certificate file and save:
 
-<figure><img src="../../.gitbook/assets/image (503).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 RADIUSaaS will now accept accept incoming connections that use certificates issued by SCEPman!
@@ -176,9 +220,9 @@ RADIUSaaS will now accept accept incoming connections that use certificates issu
 
 ## Enable Management of the RADIUSaaS Server Certificate
 
-After you have enrolled <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>, you will notice that the SCEPman Connection section under **Settings** > **Server Settings** allows you to pregenerate a certificate and setup a connection.
+After you have enrolled <code class="expression">space.vars.SCEPmanSAAS_ProductName</code>, you will notice that the SCEPman Connection section under **Connectivity** > **SCEPman** allows you to pregenerate a certificate and setup a connection.
 
-<figure><img src="../../.gitbook/assets/image (504).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 A connection to your SCEPman instance has already been established at this point and RADIUSaaS can request server certificates. The correct way of going further now depends on if you already use RADIUSaaS to authenticate clients at this point or if this is a fresh setup.
 
@@ -194,7 +238,7 @@ In case you currently have clients authenticating to RADIUSaaS, this allows you 
 
 If this is a fresh setup or after you have verified that your clients use the correct information for validating the server certificate, you can enable the automatic management of the server certificate by clicking **Setup Connection**.
 
-<figure><img src="../../.gitbook/assets/image (514).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 RADIUSaaS will now request a server certificate from SCEPman, activate it, and renew it in time before it expires!
@@ -203,12 +247,6 @@ RADIUSaaS will now request a server certificate from SCEPman, activate it, and r
 ## Other Certificate Endpoints
 
 Setting up other certificate endpoints is similar to the way they are set up with SCEPman Enterprise. Make sure to take a look at the relevant documentation:
-
-#### General
-
-{% content-ref url="/broken/pages/7X1Zb4WB9Xmw7gDVwJNo" %}
-[Broken link](/broken/pages/7X1Zb4WB9Xmw7gDVwJNo)
-{% endcontent-ref %}
 
 #### Jamf
 
@@ -247,5 +285,4 @@ You can find all application logs that you would expect in SCEPman Enterprise in
 * OCSP Responses
 * Warnings and Errors during Validation and Issuance
 
-<figure><img src="../../.gitbook/assets/image (512).png" alt=""><figcaption></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>

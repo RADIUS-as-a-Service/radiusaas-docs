@@ -2,7 +2,7 @@
 
 The entries below provide a brief overview of the settings available for SCEPman SaaS. They are intentionally kept concise. For full details, refer to the corresponding sections of the [SCEPman documentation](https://docs.scepman.com/)
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Certificate Authority
 
@@ -10,7 +10,7 @@ The root certificate for your tenant. Every certificate SCEPman issues chains up
 
 The root CA itself is valid for 7300 days (20 years).
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 ### Default Certificate Profile
 
@@ -40,7 +40,7 @@ Answers revocation live over OCSP, signed by a dedicated responder certificate. 
 
 </details>
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Certificate endpoints
 
@@ -50,7 +50,7 @@ Every endpoint is a route a device can request a certificate through. Each one b
 Enable only the endpoints you actually use. Each enabled endpoint is an additional way to obtain a certificate from your CA.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Microsoft Intune
 
@@ -252,7 +252,7 @@ Optional but required for **Intune Validation** and **Static AAD Validation** en
 
 Controls how SCEPman reads device and user objects from your Entra ID tenant. This is what makes the Intune and Entra validation sources available. While it is disabled, those sources cannot be switched on.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="Admin consent (recommended)" %}
@@ -309,4 +309,4 @@ Grant the following **application** permissions and admin-consent them:
 
 Enables detailed request tracing for our support team. It is disabled by default. Because traces may contain device identifiers, tracing automatically switches off on the specified date.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
