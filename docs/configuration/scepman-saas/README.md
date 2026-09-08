@@ -16,7 +16,7 @@ With an enabled <code class="expression">space.vars.SCEPmanSAAS_ProductName</cod
 
 At the top you have the ability to choose the **Common Name** as well as the **Organization** name for your CA.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (620).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 The Common Name and Organization will form the subject of the CA certificate during the enrollment.
