@@ -101,7 +101,7 @@ PureCA is currently in beta.
 
 <figure><img src="../../../.gitbook/assets/image (626).png" alt=""><figcaption></figcaption></figure>
 
-After downlading the certificate chain, you will have to split it up and upload it separately to RADIUSaaS > Trusted Certificates, starting with the root.&#x20;
+After downlading the certificate chain, you will have to split it up and upload every certificate in the chain separately to RADIUSaaS > Trusted Certificates, starting with the root.&#x20;
 
 You can use PowerShell to split the chain into 5 certificates. For example, the following script will split the downloaded chain and saves each file separately using the certificate's commonName as the file name.&#x20;
 
@@ -112,7 +112,7 @@ $c=[regex]::Matches((Get-Content .\chain.pem -Raw),'(?s)-----BEGIN CERTIFICATE--
 ```
 {% endcode %}
 
-The above script will produce the following certificate structure.&#x20;
+The above script will produce the following certificate structure.
 
 ```
 00-Cisco Meraki Dashboard Root CA.pem
