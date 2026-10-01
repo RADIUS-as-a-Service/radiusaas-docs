@@ -1,4 +1,4 @@
-# Solving EAP Fragmentation: The Key to Reliable RADIUS Authentication
+# EAP-TLS Authentication Failures over CGNAT and Cellular Links
 
 In network security, the **Maximum Transmission Unit (MTU)** is a critical networking parameter that defines the largest packet size that can be transmitted over a network link without being fragmented. While most users don't need to think about MTU, it becomes an important troubleshooting factor in specific scenarios, particularly with RADIUS and EAP-TLS authentication. This article explores how MTU affects the RADIUS protocol, especially when dealing with large payloads like the certificates used in EAP-TLS, and why this can lead to authentication failures.
 
@@ -29,9 +29,13 @@ The RADIUS client, or Authenticator, is a key player in this process. While it a
 
 ## Framed-MTU vs. EAP Fragmentation Size
 
-The Framed-MTU is often confused with EAP fragmentation. The Framed-MTU is an attribute usually sent in an `Access-Accept` message from the RADIUS server to the RADIUS client. Its purpose is to set the IP MTU for the user's data session after they have been successfully authenticated. It cannot solve fragmentation issues that occur during the authentication handshake itself, which is when EAP fragmentation is needed.
+The Framed-MTU attribute is often confused with EAP fragmentation, partly because it is used in two different ways.
 
-In a less common scenario, the Framed-MTU attribute can also be sent from the RADIUS client to the server in an `Access-Request` message to signal the MTU that the client is capable of supporting or would prefer to use. It's a hint or a suggestion, not a command. The RADIUS server is free to ignore this value or use it as a factor when deciding on the MTU for the session, however, this is not a standard mechanism for negotiating EAP fragment size.
+In an Access-Accept, Framed-MTU tells the RADIUS client which MTU to configure for the user's session after authentication. It has no effect on the authentication handshake itself.
+
+In an Access-Request, it does matter for EAP. RFC 3579, Section 2.4, explains that a RADIUS server cannot use MTU discovery to learn the link MTU, so the authenticator may include Framed-MTU in an Access-Request containing EAP to give the server this information. A server that receives it "MUST NOT send any subsequent packet in this EAP conversation" whose concatenated EAP-Message attributes exceed the advertised size, taking the link type into account. For IEEE 802.11, for example, the server may send an EAP packet up to Framed-MTU minus four octets, allowing for the 802.1X header fields.&#x20;
+
+Framed-MTU in an Access-Request is therefore the standard way for an authenticator to limit the size of EAP packets the server sends. It describes the link between the authenticator and the client, though, not the network path between the authenticator and the RADIUS server. It can reduce the size of RADIUS packets on that path as a side effect, but it isn't a guarantee against IP fragmentation on links with a reduced MTU.
 
 ***
 
@@ -64,6 +68,19 @@ The lack of a retransmission mechanism for fragmented UDP traffic is the core re
 
 ***
 
+## Solution: Use RadSec, or Keep UDP RADIUS off CGNAT Paths
+
+With RADIUSaaS, the EAP fragment size on the server side is managed by us and can't be changed per customer. The most reliable fix is therefore to keep the large authentication packets from being IP-fragmented on paths that can't handle fragments.
+
+The preferred option is to connect your authenticator to RADIUSaaS using RadSec instead of classic RADIUS over UDP. RadSec carries RADIUS over TLS on TCP port 2083, so large packets such as the server certificate chain are split into TCP segments sized for the path rather than into IP fragments. Firewalls and CGNAT devices handle these like any other TCP traffic, and the problem disappears. Many current platforms support RadSec natively. If your device connects over a link with a reduced MTU, such as a cellular or satellite backup, also make sure the TCP MSS matches the real path MTU. You can do this by setting a lower MTU on that WAN interface, so large TLS segments are not silently dropped.
+
+If your authenticator does not support RadSec, avoid sending UDP RADIUS directly across CGNAT links such as 4G/5G or Starlink. One option is to route the RADIUS traffic through an existing site-to-site VPN to a location with a fixed internet connection and send it on to the RADIUSaaS proxy from there. Inside the VPN tunnel, fragments are encapsulated and are no longer dropped by the carrier's NAT. Another option is to run a small RadSec proxy on site. It accepts UDP RADIUS from your devices on the local network and forwards it to RADIUSaaS over RadSec.
+
 ## Conclusion
 
-The interaction between large EAP-TLS certificate payloads and a network's MTU can be a hidden cause of authentication failures. While the RADIUS protocol relies on the network to handle fragmentation, firewalls and CGNAT devices often drop fragmented packets. By understanding the distinction between EAP and IP fragmentation, and by implementing the best practice of configuring EAP fragmentation on the authenticator and RADIUS server, you can ensure that authentication packets traverse the network intact. This deliberate, application-layer approach provides a robust and reliable solution, preventing common and frustrating connectivity issues.
+Large EAP-TLS messages, particularly the RADIUS server's certificate chain sent during the handshake, can exceed the MTU of some network paths. When that happens over UDP, the packets are IP-fragmented. Firewalls and CGNAT devices often drop those fragments, which causes authentication timeouts that typically appear only on certain links, such as a cellular backup connection. Because the RADIUSaaS server-side fragment size can't be tuned per customer, the most robust fix is to use RadSec wherever possible, which removes IP fragmentation entirely. Where RadSec isn't available, keep UDP RADIUS off CGNAT paths by tunnelling it or by using a local RadSec proxy.
+
+***
+
+[https://www.rfc-editor.org/rfc/rfc3579#section-2.4](https://www.rfc-editor.org/rfc/rfc3579#section-2.4)
+

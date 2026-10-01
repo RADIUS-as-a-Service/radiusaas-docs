@@ -86,7 +86,7 @@
 ## Other
 
 * [Troubleshooting](other/troubleshooting/README.md)
-  * [Solving EAP Fragmentation: The Key to Reliable RADIUS Authentication](other/troubleshooting/solving-eap-fragmentation-the-key-to-reliable-radius-authentication.md)
+  * [EAP-TLS Authentication Failures over CGNAT and Cellular Links](other/troubleshooting/eap-tls-authentication-failures-over-cgnat-and-cellular-links.md)
 * [FAQs](other/faqs/README.md)
   * [General](other/faqs/general.md)
   * [Log & Common Errors](other/faqs/log-and-common-errors.md)
