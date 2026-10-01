@@ -1,86 +1,77 @@
 # EAP-TLS Authentication Failures over CGNAT and Cellular Links
 
-In network security, the **Maximum Transmission Unit (MTU)** is a critical networking parameter that defines the largest packet size that can be transmitted over a network link without being fragmented. While most users don't need to think about MTU, it becomes an important troubleshooting factor in specific scenarios, particularly with RADIUS and EAP-TLS authentication. This article explores how MTU affects the RADIUS protocol, especially when dealing with large payloads like the certificates used in EAP-TLS, and why this can lead to authentication failures.
+In network security, the Maximum Transmission Unit (MTU) is a critical networking parameter that defines the largest packet size that can be transmitted over a network link without being fragmented. While most users don't need to think about MTU, it becomes an important troubleshooting factor in specific scenarios, particularly with RADIUS and EAP-TLS authentication. A typical symptom is that authentication works over the primary internet connection but fails over a cellular or satellite backup link. This article explains how MTU affects RADIUS, especially when large payloads such as EAP-TLS certificates are involved, why this can lead to authentication failures, and how to avoid them with RADIUSaaS.
 
 ***
 
-## Introduction to MTU and Fragmentation
+#### Introduction to MTU and Fragmentation
 
-The **MTU** is the largest packet size that a network can handle without breaking it into smaller pieces. The standard MTU for most Ethernet networks is 1500 bytes. When a packet is too large for a network link, it must be either dropped or broken into smaller, acceptable pieces, a process called **IP fragmentation**. The destination host is responsible for reassembling all the fragments back into the original packet.
+The MTU is the largest packet size that a network can handle without breaking it into smaller pieces. The standard MTU for most Ethernet networks is 1500 bytes. When a packet is too large for a network link, it must be either dropped or broken into smaller pieces, a process called IP fragmentation. The destination host is responsible for reassembling all the fragments back into the original packet.
+
+Links such as 4G/5G and satellite connections often have a smaller effective MTU than a typical fixed-line connection, because the carrier adds its own tunnelling overhead. Packets that pass through unchanged on a fixed line may therefore be fragmented on these links.
 
 ***
 
-## EAP vs. IP Fragmentation: Why This Distinction Matters
+#### EAP vs. IP Fragmentation: Why This Distinction Matters
 
 The distinction between EAP and IP fragmentation is crucial for understanding authentication issues.
 
-* **IP Fragmentation (Network Layer)**: This is where a router breaks a single UDP datagram into multiple, smaller IP packets. This happens below the RADIUS application, which is unaware that its packet was fragmented.
-* **EAP Fragmentation (Application Layer)**: The EAP protocol itself does not support fragmentation, but it provides a framework where individual EAP methods, such as EAP-TLS, can implement their own fragmentation mechanisms. When a large EAP-TLS message (e.g., a certificate) is too large for the MTU, it can be broken into multiple EAP fragments. Each fragment is then encapsulated within its own RADIUS packet and sent individually.
+IP fragmentation happens at the network layer. A router or host breaks a single UDP datagram into several smaller IP packets. This happens below the RADIUS application, which is unaware that its packet was fragmented.
 
-The key difference is that **IP fragmentation** relies on the network to reassemble packets, a process that often fails. **EAP fragmentation** relies on the client and server to handle reassembly, which is a more robust process that avoids network-level issues.
+EAP fragmentation happens at the application layer. The EAP protocol itself does not support fragmentation, but individual EAP methods such as EAP-TLS implement their own. When a large EAP-TLS message, such as a certificate, is too large, it is split into multiple EAP fragments, and each fragment is carried in its own RADIUS packet.
 
-***
-
-## The Authenticator's Role in Fragmentation
-
-The RADIUS client, or Authenticator, is a key player in this process. While it acts as a proxy, it can be configured to fragment EAP messages to avoid IP fragmentation. This is the preferred method for handling large payloads. For example, an Authenticator can be configured to break down a large EAP message received from a supplicant before encapsulating it in a RADIUS packet and sending it to the server. This ensures the packet is properly sized for the network path.
+The key difference is that IP fragmentation relies on the network delivering every fragment so the packet can be reassembled, which often fails. EAP fragmentation is handled by the two EAP endpoints, the client and the RADIUS server, and avoids those network-level issues.
 
 ***
 
-## Framed-MTU vs. EAP Fragmentation Size
+#### Framed-MTU vs. EAP Fragmentation Size
 
 The Framed-MTU attribute is often confused with EAP fragmentation, partly because it is used in two different ways.
 
 In an Access-Accept, Framed-MTU tells the RADIUS client which MTU to configure for the user's session after authentication. It has no effect on the authentication handshake itself.
 
-In an Access-Request, it does matter for EAP. RFC 3579, Section 2.4, explains that a RADIUS server cannot use MTU discovery to learn the link MTU, so the authenticator may include Framed-MTU in an Access-Request containing EAP to give the server this information. A server that receives it "MUST NOT send any subsequent packet in this EAP conversation" whose concatenated EAP-Message attributes exceed the advertised size, taking the link type into account. For IEEE 802.11, for example, the server may send an EAP packet up to Framed-MTU minus four octets, allowing for the 802.1X header fields.&#x20;
+In an Access-Request, it does matter for EAP. RFC 3579, Section 2.4, explains that a RADIUS server cannot use MTU discovery to learn the link MTU, so the authenticator may include Framed-MTU in an Access-Request containing EAP to give the server this information. A server that receives it "MUST NOT send any subsequent packet in this EAP conversation" whose concatenated EAP-Message attributes exceed the advertised size, taking the link type into account. For IEEE 802.11, for example, the server may send an EAP packet up to Framed-MTU minus four octets, allowing for the 802.1X header fields.
 
 Framed-MTU in an Access-Request is therefore the standard way for an authenticator to limit the size of EAP packets the server sends. It describes the link between the authenticator and the client, though, not the network path between the authenticator and the RADIUS server. It can reduce the size of RADIUS packets on that path as a side effect, but it isn't a guarantee against IP fragmentation on links with a reduced MTU.
 
-***
-
-## Why EAP Fragmentation is the Better Solution
-
-EAP fragmentation must be configured on both the Authenticator and the RADIUS server to ensure a reliable and successful EAP-TLS authentication. Since the EAP-TLS process is a two-way conversation, both sides must be capable of fragmenting large payloads. It is also a best practice to configure both sides with the same EAP fragment size to ensure consistency and prevent authentication failures.
-
-Given this necessity, when a large certificate causes authentication to fail, it's often due to IP fragmentation. Firewalls or CGNAT devices may drop fragmented packets, causing the authentication to time out. Instead of a blanket reduction of the MTU for all network traffic, the best practice is to configure **EAP fragmentation on the authenticator and RADIUS server.**
-
-This approach offers several key advantages:
-
-* **Targeted Fix**: Configuring a specific EAP fragment size on the authenticator or RADIUS server directly solves the problem at its source. It ensures that the large authentication packets are broken into smaller, acceptable pieces before being sent over the network, preventing IP fragmentation without affecting other traffic.
-* **No Significant Performance Impact on the Overall Network**: Reducing the global MTU for an interface affects all network traffic, which can lead to increased overhead and a decrease in network efficiency. By using EAP fragmentation, the rest of the network's traffic continues to use the standard MTU, preserving optimal performance. While EAP fragmentation does create more smaller packets for the same payload and may introduce slight latency due to more roundtrips, this has a negligible performance impact on the overall network and is a necessary trade-off for a successful authentication.
-* **Protocol-Specific Design**: EAP methods that support fragmentation are designed to handle large payloads. Relying on this built-in feature is a more reliable and standards-based approach than relying on a network-layer workaround.
-
-Common appliances with RADIUS client capabilities (like switches and access points from Cisco, Aruba, and Juniper) have a feature to configure EAP fragmentation. Similarly, RADIUS servers like FreeRADIUS have a `fragment_size` setting to control the maximum EAP fragment size.&#x20;
-
-It is important to note that not all vendors provide this functionality. For example, Meraki does not offer a user-configurable EAP fragmentation setting in its dashboard, which can be a significant limitation.
+Reference: [RFC 3579, Section 2.4 – Fragmentation](https://www.rfc-editor.org/rfc/rfc3579#section-2.4)
 
 ***
 
-## Why Fragmentation Fails with CGNAT
+#### Why EAP Fragmentation Alone Is Not Enough
 
-IP fragmentation is a common cause of authentication failures, especially on networks using Carrier-Grade NAT (CGNAT), such as Starlink.
+In principle, EAP fragmentation keeps every RADIUS packet small enough to cross the network without being IP-fragmented. That is why reducing the EAP fragment size is a common recommendation for self-hosted RADIUS servers.
 
-* **Fragment Dropping**: Many firewalls and CGNAT devices are not designed to handle fragmented packets efficiently. For security or performance reasons, they may drop the fragments or fail to reassemble them correctly.
-* **Packet Loss**: If even one fragment is lost during transit, the entire original UDP datagram cannot be reassembled by the server. Since UDP is connectionless and has no retransmission mechanism, the RADIUS server never receives a complete `Access-Request`, and the authentication fails.
+In practice, the fragment size in each direction is set by the two EAP endpoints: the supplicant on the client side and the RADIUS server on the other. The authenticator acts as a pass-through and does not re-fragment EAP-TLS messages. EAP settings on switches and access points, such as those offered by Cisco, Aruba or Juniper, mainly govern the link between the authenticator and the client. They don't directly control the size of the packets the RADIUS server sends back. Some platforms, such as Meraki, don't expose this setting at all.
 
-The lack of a retransmission mechanism for fragmented UDP traffic is the core reason IP fragmentation is an unreliable solution for authentication. This is why configuring EAP fragmentation is the correct solution. It ensures that the EAP messages are already in small pieces, preventing them from being fragmented at the IP layer. This bypasses the fragmentation issues caused by firewalls or CGNAT devices that drop fragmented traffic.
+The largest message in an EAP-TLS exchange usually travels from the server to the authenticator: the Access-Challenge carrying the server certificate chain. That makes the server-side fragment size the deciding factor. With RADIUSaaS this value is managed by the service and can't be adjusted per customer, so tuning EAP fragmentation on your devices alone won't reliably prevent IP fragmentation on links with a reduced MTU.
+
+Lowering the MTU of the entire WAN interface isn't a good answer either. It affects all traffic on that link, and on its own it doesn't stop UDP RADIUS packets from being fragmented. The more robust approach is to change how the RADIUS traffic is transported, as described below.
 
 ***
 
-## Solution: Use RadSec, or Keep UDP RADIUS off CGNAT Paths
+#### Why Fragmentation Fails with CGNAT
+
+IP fragmentation is a common cause of authentication failures, especially on networks using Carrier-Grade NAT (CGNAT), such as most 4G/5G connections and Starlink.
+
+Many firewalls and CGNAT devices are not designed to handle fragmented packets. Only the first fragment carries the UDP port numbers that NAT uses to track a connection, so the remaining fragments are often dropped, either deliberately for security reasons or because the device can't match them to a session.
+
+If even one fragment is lost, the original UDP datagram cannot be reassembled. UDP has no retransmission mechanism for the missing piece, so the whole packet is lost and the authentication eventually times out.
+
+This affects both directions, but in EAP-TLS it most often hits the server's response. The Access-Challenge carrying the server certificate chain is usually the largest packet in the exchange. If its fragments are dropped, the authenticator never receives the challenge and the authentication fails.
+
+***
+
+#### Solution: Use RadSec, or Keep UDP RADIUS off CGNAT Paths
 
 With RADIUSaaS, the EAP fragment size on the server side is managed by us and can't be changed per customer. The most reliable fix is therefore to keep the large authentication packets from being IP-fragmented on paths that can't handle fragments.
 
 The preferred option is to connect your authenticator to RADIUSaaS using RadSec instead of classic RADIUS over UDP. RadSec carries RADIUS over TLS on TCP port 2083, so large packets such as the server certificate chain are split into TCP segments sized for the path rather than into IP fragments. Firewalls and CGNAT devices handle these like any other TCP traffic, and the problem disappears. Many current platforms support RadSec natively. If your device connects over a link with a reduced MTU, such as a cellular or satellite backup, also make sure the TCP MSS matches the real path MTU. You can do this by setting a lower MTU on that WAN interface, so large TLS segments are not silently dropped.
 
-If your authenticator does not support RadSec, avoid sending UDP RADIUS directly across CGNAT links such as 4G/5G or Starlink. One option is to route the RADIUS traffic through an existing site-to-site VPN to a location with a fixed internet connection and send it on to the RADIUSaaS proxy from there. Inside the VPN tunnel, fragments are encapsulated and are no longer dropped by the carrier's NAT. Another option is to run a small RadSec proxy on site. It accepts UDP RADIUS from your devices on the local network and forwards it to RADIUSaaS over RadSec.
-
-## Conclusion
-
-Large EAP-TLS messages, particularly the RADIUS server's certificate chain sent during the handshake, can exceed the MTU of some network paths. When that happens over UDP, the packets are IP-fragmented. Firewalls and CGNAT devices often drop those fragments, which causes authentication timeouts that typically appear only on certain links, such as a cellular backup connection. Because the RADIUSaaS server-side fragment size can't be tuned per customer, the most robust fix is to use RadSec wherever possible, which removes IP fragmentation entirely. Where RadSec isn't available, keep UDP RADIUS off CGNAT paths by tunnelling it or by using a local RadSec proxy.
+If your authenticator does not support RadSec, avoid sending UDP RADIUS directly across CGNAT links such as 4G/5G or Starlink. One option is to route the RADIUS traffic through an existing site-to-site VPN to a location with a fixed internet connection, and send it on to the RADIUSaaS proxy from there. Inside the VPN tunnel, fragments are encapsulated and are no longer dropped by the carrier's NAT. Another option is to run a small RadSec proxy on site. It accepts UDP RADIUS from your devices on the local network and forwards it to RADIUSaaS over RadSec.
 
 ***
 
-[https://www.rfc-editor.org/rfc/rfc3579#section-2.4](https://www.rfc-editor.org/rfc/rfc3579#section-2.4)
+#### Conclusion
 
+Large EAP-TLS messages, particularly the RADIUS server's certificate chain sent during the handshake, can exceed the MTU of some network paths. When that happens over UDP, the packets are IP-fragmented. Firewalls and CGNAT devices often drop those fragments, which causes authentication timeouts that typically appear only on certain links, such as a cellular backup connection. Because the RADIUSaaS server-side fragment size can't be tuned per customer, the most robust fix is to use RadSec wherever possible, which removes IP fragmentation entirely. Where RadSec isn't available, keep UDP RADIUS off CGNAT paths by tunnelling it or by using a local RadSec proxy.
