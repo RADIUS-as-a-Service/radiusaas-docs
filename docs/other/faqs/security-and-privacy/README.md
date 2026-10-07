@@ -220,6 +220,17 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * `TerraForm`
 * `Git CI`
 
+## Compliance <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
+
+### 1. Is glueckkanja ISO 27001 certified?
+
+Yes. The Information Security Management System (ISMS) of glueckkanja AG is certified according to **ISO/IEC 27001:2022**. The scope of the certification covers:
+
+* Product Development
+* Managed Services
+
+You can view the current certificate [here](https://www.glueckkanja.com/documents/general/gk-ISO27001Certificate-en.pdf).
+
 ## GDPR and Data-residency <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
 
 ### 1. Is data leaving Europe?
