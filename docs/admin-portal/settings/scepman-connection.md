@@ -1,4 +1,4 @@
-# SCEPman
+# SCEPman Connection
 
 ### SCEPman Connection
 
@@ -46,23 +46,29 @@ Transfer the token to SCEPman by creating the application setting [AppConfig:RAD
 
 Enter the base URL of your SCEPman instance, for example `https://<your-scepman-instance>.azurewebsites.net`. The **Connect** button stays disabled until a URL has been entered.
 
+Clicking **Connect** will attempt using the token to connect to your SCEPman instance. This action will **not** request any certificate and **not** change any RADIUSaaS settings.
+
+<figure><img src="../../.gitbook/assets/image (628).png" alt=""><figcaption></figcaption></figure>
+
 #### 3. Pregenerate a certificate (optional)
 
 Before finishing the setup, you can let RADIUSaaS request a test certificate from SCEPman. This confirms that the token and the URL are correct and that SCEPman is able to issue a certificate. The pregenerated certificate is added to your Server Certificates but is **not activated**.
 
-<figure><img src="../../.gitbook/assets/image (542).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (627).png" alt=""><figcaption></figcaption></figure>
 
-#### Connect
+#### Setup Connection
 
-Click **Connect** to establish the connection.
+Click **Setup Connection** to establish the connection.
 
 {% hint style="warning" %}
 This action deactivates the currently active server certificate so that the newly issued certificate can be managed by RADIUSaaS. Ensure that your clients and RadSec-enabled authenticators trust the SCEPman Root CA before you connect, otherwise authentication will fail.
 {% endhint %}
 
-After a successful setup, the status changes to **CONNECTED,** and two additional actions become available:
+After a successful setup, two additional actions become available:
 
 * **Rotate Certificate:** rotates and activates your server certificate.
 * **Delete Connection:** removes the configured connection. This also deletes the token and cannot be undone. To set up the connection again later, you must repeat the steps above.
 
 **Note:** A new token will be automatically created after deleting the connection.
+
+<figure><img src="../../.gitbook/assets/image (629).png" alt=""><figcaption></figcaption></figure>
