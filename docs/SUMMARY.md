@@ -87,6 +87,7 @@
 
 * [Troubleshooting](other/troubleshooting/README.md)
   * [EAP-TLS Authentication Failures over CGNAT and Cellular Links](other/troubleshooting/eap-tls-authentication-failures-over-cgnat-and-cellular-links.md)
+  * [Meraki RadSec authentication fails after PureCA migration](other/troubleshooting/meraki-radsec-authentication-fails-after-pureca-migration.md)
 * [FAQs](other/faqs/README.md)
   * [General](other/faqs/general.md)
   * [Log & Common Errors](other/faqs/log-and-common-errors.md)
