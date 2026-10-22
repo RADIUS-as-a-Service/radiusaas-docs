@@ -220,7 +220,7 @@ Conclusion: UDP-based RADIUS authentication with RADIUSaaS is secure, since&#x20
 * `TerraForm`
 * `Git CI`
 
-## Compliance <a href="#user-content-gdpr-and-data-residency" id="user-content-gdpr-and-data-residency"></a>
+## Compliance <a href="#compliance" id="compliance"></a>
 
 ### 1. Is glueckkanja ISO 27001 certified?
 
