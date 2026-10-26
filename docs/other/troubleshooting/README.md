@@ -30,24 +30,34 @@ Check that you've done the following:&#x20;
 * Imported the active RADIUS Server certificate as trusted root on your client as described [here](../../profile-deployment/microsoft-intune/trusted-root.md#to-add-a-trusted-root-profile-for-your-clients)
 * Check your [Logs](../../admin-portal/insights/log.md#logs). There is a detailed description of the error. Maybe it's [this](./#fatal-decrypt-error) issue.
 
-#### Continue connecting?
+**Continue connecting?**
 
 {% hint style="warning" %}
-Continue connecting? \
-If you expect to find Corporate WiFi in this location, go ahead and connect. Otherwise, it may be a different network with the same name.&#x20;
+**Corporate Wifi**\
+Secured
 
-Show certificate details.
+Continue connecting?\
+If you expect to find Corporate Wifi in this location, go ahead and connect. Otherwise, it may be a different network with the same name.\
+Show certificate details
 {% endhint %}
 
+![](https://content.gitbook.com/content/SWU1DQ4UGkqER7uGNUOm/blobs/8uYG1oXtvKS2IJkLbQyL/image.png)
 
+When connecting to the network for the first time, Windows shows the prompt **"Continue connecting? If you expect to find Corporate Wifi in this location, go ahead and connect. Otherwise, it may be a different network with the same name."** with the options **Connect** and **Cancel**.
 
-If your clients need to verify on connecting the first time, and you're seeing this dialog:
+This means the client **cannot automatically verify the RADIUS server's identity**. It receives the RADIUSaaS server certificate but can't match it against the server validation settings in your Wi-Fi profile, so it asks the user to decide manually.
 
-![](<../../.gitbook/assets/image (244).png>)
+Users should not confirm this prompt. Fix the configuration instead, so clients trust the server automatically. Check the following:
 
-Make sure that you have referenced the RADIUS server certificate in your WiFi profile and provided the server certificate's SAN attribute (FQDN) and common name (CN):
+* **Trusted root certificate:** The active RADIUS server certificate must be deployed to the client as a trusted root, as described here, **and** be selected for server validation in your Wi-Fi profile.
+* **Server names:** The Wi-Fi profile must contain the server certificate's SAN attribute (FQDN) and common name (CN) in the server name field:
 
-<figure><img src="../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Showing server certificate's SAN attribute (FQDN) and common name (CN)</p></figcaption></figure>
+<figure><img src="https://1222554226-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FSWU1DQ4UGkqER7uGNUOm%2Fuploads%2FnGm2WIeddAuswGilqRcF%2Fimage.png?alt=media&#x26;token=a5186af0-375c-4fc7-a2fe-24741adf14d7" alt=""><figcaption><p>Showing server certificate's SAN attribute (FQDN) and common name (CN)</p></figcaption></figure>
+
+* **Changed server certificate:** If you renewed or added a server certificate, make sure your Wi-Fi profile or XML references the new certificate and has been redeployed to your clients.
+* **Profile assignment:** The trusted root and Wi-Fi profiles must be assigned to the same group. Otherwise, the trusted root may not reach the device (see Profile assignment).
+
+If the issue persists, [export the Wi-Fi profile](./#exporting-the-wi-fi-profile-from-a-windows-client) from an affected device and send it to our support team for review.
 
 ### Server view
 
@@ -129,9 +139,43 @@ If your (proxy) [Logs](../../admin-portal/insights/log.md#logs) contain error me
 - radsrv: ignoring request from default (8.222.246.231), validation failed
 ```
 
-then one of your access points or switches that is trying to connect to your RADIUSaaS instance via a [RADIUS Proxy](../../admin-portal/settings/settings-proxy.md) is using a mismatched [Shared Secret](../../admin-portal/settings/settings-server.md#properties-1).
+Then one of your access points or switches that is trying to connect to your RADIUSaaS instance via a [RADIUS Proxy](../../admin-portal/settings/settings-proxy.md) is using a mismatched [Shared Secret](../../admin-portal/settings/settings-server.md#properties-1).
 
 To identify the affected access point or switch, first determine the RADIUS proxy by expanding the error message and searching for the `proxyip` property. Now that you know the proxy, use your inventory and knowledge of specific locations or groups of devices that cannot connect to your network to identify the misconfigured network device. Finally, update the shared secret to match the value configured in your RADIUSaaS instance for that proxy.
+
+### Exporting the Wi-Fi Profile from a Windows Client
+
+If a client can't connect and the cause isn't clear from the logs, our support team may ask you for the Wi-Fi profile that is actually applied on the affected device. This lets us check settings such as the EAP type, the trusted root certificates for server validation, and the server names.
+
+***
+
+**Step 1: Find the Profile Name**
+
+Open **Command Prompt** or **PowerShell** on the affected device and list all Wi-Fi profiles:
+
+```
+netsh wlan show profiles
+```
+
+Note the exact name of the profile used for your RADIUSaaS-protected network.
+
+***
+
+**Step 2: Export the Profile**
+
+Make sure the target folder exists (e.g. `C:\temp`), then run the following command, replacing `ProfileName` with the name from Step 1:
+
+```
+netsh wlan export profile name="ProfileName" folder=C:\temp
+```
+
+Windows saves the profile as an XML file in the target folder, named in the format `<InterfaceName>-<ProfileName>.xml` (e.g. `Wi-Fi-Corporate WiFi.xml`).
+
+***
+
+**Step 3: Send the Profile**
+
+Send the exported `.xml` file to our support team via [Submit a Ticket](https://support.radiusaas.com/support/tickets/new?ticket_form=technical_support_request_%28radiusaas%29), together with a short description of the issue.
 
 ### Troubleshooting Connection Issues with CAPI2 Logs
 
