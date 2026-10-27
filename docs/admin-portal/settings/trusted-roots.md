@@ -30,11 +30,13 @@ To add a new trusted certificate, follow these steps:
    * [**Client authentication**](trusted-roots.md#trusted-cas-for-client-authentication)
    * [**RadSec**](trusted-roots.md#trusted-radsec-connection-certificates)
    * **Both** (helpful if the same CA is issuing your client authentication certificates as well as your RadSec client certificates)
-4. Upload the certificate file by drag & drop (alternatively you can click in the blue area and select your file)
+4. Upload the certificate file by drag & drop (alternatively, you can click in the blue area and select your file)
 5. Select the certificate verification option:
    * **OCSP Autodetect**: RADIUSaaS will try to infer the OCSP responder URL from the client certificate's Authority Information Access (AIA) extension that is used for the network authentication. In case no OCSP responder URL is found or the OCSP responder is unavailable, RADIUSaaS will consider the [**Soft fail** ](trusted-roots.md#ocsp-soft-fail)configuration.
    * **OCSP**: Manually specify which OCSP responder URL will be used for any certificate that was issued by the trusted CA. If the OCSP responder is unavailable, RADIUSaaS will consider the [**Soft fail** ](trusted-roots.md#ocsp-soft-fail)configuration.
-   * **CRL**: If selected, RADIUSaaS uses a CRL instead of OCSP to verify certificates issued by this CA. Specify the CRL encoding (**DER** or **PEM**) and the **CRL distribution points**. RADIUSaaS checks the cached CRL every hour and only downloads a new one once its _Next Update_ time has passed.
+   *   **CRL**: If selected, RADIUSaaS uses a CRL instead of OCSP to verify certificates issued by this CA. Specify the CRL encoding (**DER** or **PEM**) and the **CRL distribution points**. RADIUSaaS checks the cached CRL every 3 hours and only downloads a new one once its _Next Update_ time has passed.
+
+       <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>Some CAs, such as Microsoft Cloud PKI, issue CRLs with a much longer validity period. If you use the same certificates with other applications that rely on the CRL's <em>Next Update</em> time, those applications may detect revocations later than RADIUSaaS does.</p></div>
    * **None:** If your CA supports neither OCSP nor CRL, select **None** to skip the verification.
 6. Click **Save**
 
