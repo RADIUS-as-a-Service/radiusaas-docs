@@ -288,7 +288,7 @@ No
 
 ### 3. Do you regularly perform penetration tests?
 
-Not in the form of a classic penetration test of SCEPman. Instead, glueckkanja AG undergoes an annual Red Team assessment by an independent external specialist, which goes beyond a classic penetration test (see [Does glueckkanja have its security tested by external experts?](./#id-2.-does-glueckkanja-have-its-security-tested-by-external-experts)).
+Not in the form of a classic penetration test of RADIUSaaS. Instead, glueckkanja AG undergoes an annual Red Team assessment by an independent external specialist, which goes beyond a classic penetration test (see [Does glueckkanja have its security tested by external experts?](./#id-2.-does-glueckkanja-have-its-security-tested-by-external-experts)).
 
 As part of our Secure Development Practices, we employ tools (e.g. static code analysis) that scan the code base for CVEs and other common exploits (including dependencies such as 3rd party libraries) that could impact the security of the endpoints RADIUSaaS exposes. Before any release, any relevant findings are assessed and remediated, to ensure RADIUSaaS remains free from any known vulnerabilities.&#x20;
 
