@@ -46,7 +46,7 @@ RADIUSaaS relies on the RADIUS protocol, e.g. the following data is visible to R
 
 #### **Miscellaneous**
 
-RADIUSaaS (optionally) provides functionality to generate username + password pairs for network access. Those credentials are stored and processed by the service as well.
+RADIUSaaS (optionally) provides functionality to generate username + password pairs for network access. Those credentials are stored and processed by the service as well. Passwords are never logged.&#x20;
 
 ### 3. Which data is persistently stored by/on behalf of RADIUSaaS and how?
 
@@ -55,7 +55,7 @@ RADIUSaaS (optionally) provides functionality to generate username + password pa
     The RADIUSaaS platform stores UPN/email information on the users that are allowed to access the platform. **No passwords are stored or processed by RADIUSaaS.**
 2.  Logging
 
-    For troubleshooting and analysis purposes, the RADIUSaaS platform logs all relevant data it processes (see [Question 2](./#2.-which-data-is-processed-by-radiusaas) except for the RADIUS Shared Secret and the private key of the server certificate).
+    For troubleshooting and analysis purposes, the RADIUSaaS platform logs all relevant data it processes (see [Question 2](./#2.-which-data-is-processed-by-radiusaas) except for the RADIUS Shared Secret, private key of the server certificate, and user passwords).
 
     The logs are stored directly on the RADIUSaaS platform within an _Elasticsearch_ database and segregated for every client via a dedicated space.\
     \
