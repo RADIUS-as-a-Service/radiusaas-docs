@@ -10,9 +10,15 @@ Because there are two ways to create users, some settings only affect the **My U
 
 ### System
 
-Upload your business' logo to show users upon sign in.&#x20;
-
 These settings affect all users on the platform.
+
+#### Custom Logo
+
+Show your own logo on the login page.
+
+{% hint style="info" %}
+Logo files can be at most 18 KB.
+{% endhint %}
 
 ### My Users Portal
 
