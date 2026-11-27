@@ -12,15 +12,35 @@ The RADIUSaaS homepage presents you with an interactive service state that is **
 
 ### Infrastructure
 
-When you access the homepage of your RADIUSaaS instance, the Infrastructure tab displays the RADIUSaaS instance's key components, including the RadSec Server and RADIUS proxies. The availability of the individual components is monitored in **real-time** and realized through **actual authentications** (PAP-based) that are periodically performed.  By hovering over individual nodes, additional information such as the public IP address and the data center location is shown.
+When you access the homepage of your RADIUSaaS instance, the Infrastructure tab shows how authentications reach the RadSec servers of your RADIUSaaS instance. The availability of the individual components is monitored in **real-time** and realized through **actual authentications** (PAP-based) that are periodically performed.
 
-<figure><img src="../.gitbook/assets/image (597).png" alt=""><figcaption></figcaption></figure>
+<!-- TODO reviewer: confirm that the PAP-based availability check also applies to tunnels (Local Network Connections). -->
 
-In case, a node is detected to be malfunctioning, the corresponding node along with the unavailable authentication and communication path is highlighted in red:
+<figure><img src="../.gitbook/assets/dashboard-infrastructure.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/ProxyDown (1).gif" alt=""><figcaption></figcaption></figure>
+On the left, the authentication paths are grouped by how they reach RADIUSaaS:
 
-**Important:** As long as there is at least one green path leading to **Authentications**, the service is generally available. In case you are using RADIUS proxies, ensure that you have followed our architectural [recommendations](settings/settings-proxy.md) to decrease the likelihood that a proxy failure leads to an overall outage of the service.&#x20;
+| Group        | Protocol | Description                                                                                      |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------ |
+| **Direct**   | TCP      | RadSec authentications sent directly by your authenticators.                                     |
+| **Proxied**  | UDP      | RADIUS authentications relayed by your [RADIUS proxies](settings/settings-proxy.md), per region. |
+| **Tunneled** | TCP, UDP | Authentications that arrive through a WireGuard or IPsec tunnel (Local Network Connections).     |
+
+On the right, each RadSec server is shown in a box for its instance, for example **Main Instance**, together with its cluster and its public IP address.
+
+The legend shows the state of each node: **Reachable** (green), **Unreachable** (red) and **No data** (grey). Tunnels are drawn as dashed lines (**VPN tunnel**).
+
+By hovering over individual nodes, additional information is shown:
+
+* **Proxy**: IP address, location and status
+* **RadSec server**: location and status
+* **Tunnel**: tunnel type (WireGuard or IPsec) and status
+
+When all components are reachable, the badge above the tabs reads **All systems operational**. In case a node is detected to be malfunctioning, the node along with its path to the RadSec servers is highlighted in red, and the badge shows how many issues need attention instead. Hover over the red node to see its details:
+
+<figure><img src="../.gitbook/assets/dashboard-infrastructure-down.png" alt=""><figcaption></figcaption></figure>
+
+**Important:** As long as there is at least one green path leading to a **RadSec server**, the service is generally available. In case you are using RADIUS proxies, ensure that you have followed our architectural [recommendations](settings/settings-proxy.md) to decrease the likelihood that a proxy failure leads to an overall outage of the service.&#x20;
 
 The **Service State** icon in addition to a healthy (green) state can indicate one of three error conditions.&#x20;
 
@@ -30,15 +50,36 @@ The **Service State** icon in addition to a healthy (green) state can indicate o
 
 ### Health
 
-The Health tab displays the health status of all components relevant to your RADIUSaaS instance, including certificates and the optional SCEPman-aaS module.
+The Health tab displays the health status of all components relevant to your RADIUSaaS instance:
 
-<figure><img src="../.gitbook/assets/image (603).png" alt=""><figcaption></figcaption></figure>
+* **Certificates**: your proxy and server certificates and the number of days until they expire
+* **Revocation Lists (CRL)**: each revocation list, whether it is valid, and the cluster it is loaded on
+* **SCEPman**: the optional SCEPman SaaS module
+* **RadSec Servers**: status, IP address and cluster of each RadSec server
+* **Proxies**: status, IP address and location of each RADIUS proxy
+* **Local Network Connections**: status, cluster and tunnel type of each tunnel
+
+If a component is down, a red box at the top of the tab lists it, followed by the number of errors, warnings and components that are ok.
+
+<figure><img src="../.gitbook/assets/dashboard-health.png" alt=""><figcaption></figcaption></figure>
 
 ## Other controls
 
 The RADIUSaaS homepage gives you easy access to frequently used controls and information.
 
-<figure><img src="../.gitbook/assets/image (599).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/dashboard-header-controls.png" alt=""><figcaption></figcaption></figure>
+
+### Ask AI
+
+Click **Ask AI** (or press **Ctrl+K**) to open the RADIUSaaS assistant. Ask in plain words about authentications, rules, certificates, groups or a setting. The assistant reads the live configuration and logs of your tenant, and shows you which settings an answer came from.
+
+{% hint style="info" %}
+The assistant is read-only. It can explain and locate configuration, but it cannot change rules, users or certificates. Private keys, shared secrets and key-vault credentials are never included in a prompt.
+{% endhint %}
+
+Ask AI is available to all RADIUSaaS customers, and there is no limit on how many questions you can ask. A single question can be up to 256 words long. Answers can be wrong, so verify them before you change any settings.
+
+<figure><img src="../.gitbook/assets/dashboard-ask-ai.png" alt=""><figcaption></figcaption></figure>
 
 ### Notifications
 
