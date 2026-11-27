@@ -36,7 +36,7 @@ By hovering over individual nodes, additional information is shown:
 * **RadSec server**: location and status
 * **Tunnel**: tunnel type (WireGuard or IPsec) and status
 
-In case a node is detected to be malfunctioning, the node along with its path to the RadSec servers is highlighted in red, and a badge above the tabs shows how many issues need attention:
+In case a node is detected to be malfunctioning, the node along with its path to the RadSec servers is highlighted in red, and a badge above the tabs shows how many issues need attention. Hover over the red node to see its details:
 
 <figure><img src="../.gitbook/assets/dashboard-infrastructure-down.png" alt=""><figcaption></figcaption></figure>
 
