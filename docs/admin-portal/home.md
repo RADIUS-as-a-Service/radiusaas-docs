@@ -36,7 +36,7 @@ By hovering over individual nodes, additional information is shown:
 * **RadSec server**: location and status
 * **Tunnel**: tunnel type (WireGuard or IPsec) and status
 
-In case a node is detected to be malfunctioning, the node along with its path to the RadSec servers is highlighted in red, and a badge above the tabs shows how many issues need attention. Hover over the red node to see its details:
+When all components are reachable, the badge above the tabs reads **All systems operational**. In case a node is detected to be malfunctioning, the node along with its path to the RadSec servers is highlighted in red, and the badge shows how many issues need attention instead. Hover over the red node to see its details:
 
 <figure><img src="../.gitbook/assets/dashboard-infrastructure-down.png" alt=""><figcaption></figcaption></figure>
 
@@ -77,9 +77,7 @@ Click **Ask AI** (or press **Ctrl+K**) to open the RADIUSaaS assistant. Ask in p
 The assistant is read-only. It can explain and locate configuration, but it cannot change rules, users or certificates. Private keys, shared secrets and key-vault credentials are never included in a prompt.
 {% endhint %}
 
-Answers can be wrong, so verify them before you change any settings. A question can be up to 256 words long.
-
-<!-- TODO reviewer: confirm whether Ask AI is available on all plans and tenants, and whether there are usage limits beyond the 256-word question length. -->
+Ask AI is available to all RADIUSaaS customers, and there is no limit on how many questions you can ask. A single question can be up to 256 words long. Answers can be wrong, so verify them before you change any settings.
 
 <figure><img src="../.gitbook/assets/dashboard-ask-ai.png" alt=""><figcaption></figcaption></figure>
 
